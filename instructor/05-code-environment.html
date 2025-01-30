@@ -373,7 +373,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reproducible development environment</h1>
-        <p>Last updated on 2024-10-17 |
+        <p>Last updated on 2025-01-30 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/05-code-environment.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -554,7 +554,7 @@ drwxr-xr-x   2 alex  staff   64  5 Oct 11:47 include
 drwxr-xr-x   3 alex  staff   96  5 Oct 11:47 lib
 -rw-r--r--   1 alex  staff   90  5 Oct 11:47 pyvenv.cfg</code></pre>
 </div>
-<p>So, running the <code>python -m venv venv_spacewalks</code> command
+<p>So, running the <code>python3 -m venv venv_spacewalks</code> command
 created the target directory called “venv_spacewalks” containing:</p>
 <ul><li>
 <code>pyvenv.cfg</code> configuration file with a home key pointing
@@ -659,7 +659,7 @@ e.g. <code>python3 -m pip install matplotlib==3.5.3</code>.</p>
 <p>To specify a minimum version of a Python package, you can do
 <code>python3 -m pip install matplotlib&gt;=3.5.1</code>.</p>
 <p>To upgrade a package to the latest version,
-e.g. <code>python -m pip install --upgrade matplotlib</code>.</p>
+e.g. <code>python3 -m pip install --upgrade matplotlib</code>.</p>
 <p>To display information about a particular installed package do:</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -712,7 +712,7 @@ six             1.16.0
 zope.interface  7.0.1</code></pre>
 </div>
 <p>To uninstall a package installed in the virtual environment do:
-<code>python -m pip uninstall &lt;package-name&gt;</code>. You can also
+<code>python3 -m pip uninstall &lt;package-name&gt;</code>. You can also
 supply a list of packages to uninstall at the same time.</p>
 </div>
 <div class="section level3">
@@ -724,7 +724,7 @@ everyone can replicate equivalent virtual environments on their
 machines. <code>pip</code> has a handy way of exporting, saving and
 sharing virtual environments.</p>
 <p>To export your active environment - use
-<code>python -m pip freeze</code> command to produce a list of packages
+<code>python3 -m pip freeze</code> command to produce a list of packages
 installed in the virtual environment. A common convention is to put this
 list in a <code>requirements.txt</code> file in your project’s root
 directory:</p>
@@ -903,8 +903,8 @@ any links that you are not going to use.
   "url": "https://softwaresaved.github.io/fair-research-software/instructor/05-code-environment.html",
   "identifier": "https://softwaresaved.github.io/fair-research-software/instructor/05-code-environment.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2024-10-17",
-  "datePublished": "2025-01-28"
+  "dateModified": "2025-01-30",
+  "datePublished": "2025-01-30"
 }
 
   </script><script>
