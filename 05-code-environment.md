@@ -145,7 +145,7 @@ drwxr-xr-x   2 alex  staff   64  5 Oct 11:47 include
 drwxr-xr-x   3 alex  staff   96  5 Oct 11:47 lib
 -rw-r--r--   1 alex  staff   90  5 Oct 11:47 pyvenv.cfg
 ```
-So, running the `python -m venv venv_spacewalks` command created the target directory called "venv_spacewalks"
+So, running the `python3 -m venv venv_spacewalks` command created the target directory called "venv_spacewalks"
 containing:
 
 - `pyvenv.cfg` configuration file
@@ -242,7 +242,7 @@ e.g. `python3 -m pip install matplotlib==3.5.3`.
 To specify a minimum version of a Python package,
 you can do `python3 -m pip install matplotlib>=3.5.1`.
 
-To upgrade a package to the latest version, e.g. `python -m pip install --upgrade matplotlib`.
+To upgrade a package to the latest version, e.g. `python3 -m pip install --upgrade matplotlib`.
 
 To display information about a particular installed package do:
 
@@ -290,7 +290,7 @@ six             1.16.0
 zope.interface  7.0.1
 ```
 
-To uninstall a package installed in the virtual environment do: `python -m pip uninstall <package-name>`.
+To uninstall a package installed in the virtual environment do: `python3 -m pip uninstall <package-name>`.
 You can also supply a list of packages to uninstall at the same time.
 
 ### Sharing virtual environments
@@ -302,7 +302,7 @@ and everyone can replicate equivalent virtual environments on their machines.
 `pip` has a handy way of exporting, saving and sharing virtual environments.
 
 To export your active environment -
-use `python -m pip freeze` command to produce a list of packages installed in the virtual environment.
+use `python3 -m pip freeze` command to produce a list of packages installed in the virtual environment.
 A common convention is to put this list in a `requirements.txt` file in your project's root directory:
 
 ```bash
