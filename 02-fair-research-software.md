@@ -53,8 +53,8 @@ closer to the gold standard of fully reproducible research.
 
 ### Findable
 - Create a description of your software to make it discoverable by search engines and other search tools
-- Use standards (such as [CodeMeta][codemeta]) to describe interoperable metadata for your software (see [Research Software Metadata Guidelines][rsmg-1])
-- Place your software in a public software repository (and ideally register it in a [general-purpose or domain-specific software registry][software-registries])
+- Use standards (such as [CodeMeta][codemeta]) to describe interoperable metadata for your software (see [Research Software Metadata Guidelines][rsmd-g1])
+- Place your software in a public software repository (and ideally register it in a [general-purpose or domain-specific software registry][awesome-rs-registries])
 - Use a unique and persistent identifier (DOI) for your software (e.g. by depositing your code on [Zenodo][zenodo]),
   which is also useful for citations - note that depositing your data/code on GitHub and similar software repositories
   may not be enough as they may change their open access model or disappear completely in the future, so archiving your code means it stands a better chance at being preserved
