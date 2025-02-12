@@ -95,7 +95,7 @@ Note that, instead of using the real Zenodo website, we will practice with [Zeno
 allowing users to safely experiment with its features without affecting the live system.
 It is a clone of Zenodo, created for testing purposes, that works exactly the same way as Zenodo you can use it 
 for learning, training, experimenting, and preparing uploads without impacting the primary Zenodo repository until
-you are ready to publish and release your code (ot other research outputs) officially.
+you are ready to publish and release your code (or other research outputs) officially.
 It will also not create real DOIs for a number of test repositories we use for this course and saturate the DOI space
 (remember that a DOI, once created, is meant to exist forever).
 :::
@@ -235,7 +235,7 @@ We now have our code published online, licensed as open source, archived with Ze
 What else might we want to do in order to improve how findable, accessible or reusable it is?
 One further step we could take is to publish the code with a peer reviewed journal. Some traditional journals will accept software submissions, although these are usually
 as a supplementary material for a paper. There also journals which specialise in research software such as the [Journal of Open Research Software](https://openresearchsoftware.metajnl.com/),
-[The Jornal of Open Source Software](https://joss.theoj.org/) or [SoftwareX](https://www.sciencedirect.com/journal/softwarex). With these venues, the submission will be the software
+[The Journal of Open Source Software](https://joss.theoj.org/) or [SoftwareX](https://www.sciencedirect.com/journal/softwarex). With these venues, the submission will be the software
 itself and not a paper, although a short abstract or description of the software is often required.
 :::
 

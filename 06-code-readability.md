@@ -65,7 +65,7 @@ https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tre
 
 Let's have a look our code again - the first thing we may notice is that our script currently places import statements 
 throughout the code.
-Conventionally, all import statements are placed at the top of the script so that dependant libraries
+Conventionally, all import statements are placed at the top of the script so that dependent libraries
 are clearly visible and not buried inside the code (even though there are standard ways of describing dependencies -
 e.g. using `requirements.txt` file).
 This will help readability (accessibility) and reusability of our code.
@@ -797,5 +797,5 @@ Also check the [full reference set](learners/reference.md#litref) for the course
 - Using comments and docstrings to describe parts of the code will help transmit understanding and context.
 - Use libraries or packages for common functionality to avoid duplication.
 - Creating functions from the smallest, reusable units of code will make the code more readable and help. 
-compartmentalise which parts of the code are doing what actions and isolate specific code sections for re-use.
+compartmentalise which parts of the code are doing what actions and isolate specific code sections for reuse.
 :::

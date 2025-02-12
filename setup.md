@@ -328,7 +328,7 @@ You can also change the default command line terminal from the same drop down me
 
 ![*Terminal window in VS Code*](episodes/fig/vscode-terminal.png){alt='Terminal window in VS Code with "Select Default Profile" option highlighted'}
 
-#### VS Code Extentions for Git 
+#### VS Code Extensions for Git 
 
 You could also install the following VS Code extensions (from `View > Extensions` top-level menu) 
 to make your Git experience in VS Code better:
@@ -353,7 +353,7 @@ to make your Python experience in VS Code better.
 ![*Python extension for VS Code by Microsoft*](fig/vscode-python-extension.png){ alt-text="Python extension for VS Code by Microsoft" .image-with-shadow }
 
 
-#### VS Code Extentions for Viewing Data
+#### VS Code Extensions for Viewing Data
 
 You should install the following extensions for viewing and editing data in VS Code:
 

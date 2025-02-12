@@ -512,7 +512,7 @@ def read_json_to_dataframe(input_file):
     Clean the data by removing any incomplete rows and sort by date
 
     Args:
-        input_file_ (str): The path to the JSON file.
+        input_file (str): The path to the JSON file.
 
     Returns:
          eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
@@ -534,7 +534,7 @@ def write_dataframe_to_csv(df, output_file):
         output_file (str): The path to the output CSV file.
 
     Returns:
-        None
+        (None):
     """
     print(f'Saving to CSV file {output_file}')
     df.to_csv(output_file, index=False)
@@ -585,7 +585,7 @@ def plot_cumulative_time_in_space(df, graph_file):
         graph_file (str): The path to the output graph file.
 
     Returns:
-        None
+        (None):
     """
     print(f'Plotting cumulative spacewalk duration and saving to {graph_file}')
     df = add_duration_hours_variable(df)
@@ -630,7 +630,7 @@ Remember to commit your latest changes:
 We recommend the following resources for some additional reading on the topic of this episode:
 
 - [Organizing your projects](https://coderefinery.github.io/reproducible-research/organizing-projects/) chapter from the [CodeRefinery's Reproducible Research tutorial](https://coderefinery.github.io/reproducible-research/intro/)
-- [MIT Broad Reseach Communication Lab's "File Structure" guide](https://mitcommlab.mit.edu/broad/commkit/file-structure/)
+- [MIT Broad Research Communication Lab's "File Structure" guide](https://mitcommlab.mit.edu/broad/commkit/file-structure/)
 
 Also check the [full reference set](learners/reference.md#litref) for the course.
 

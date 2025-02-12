@@ -700,7 +700,7 @@ def calculate_crew_size(crew):
         crew (str): The text entry in the crew column containing a list of crew member names
 
     Returns:
-        int: The crew size
+        (int): The crew size
     """
     if crew.split() == []:
         return None
