@@ -374,7 +374,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Code structure</h1>
-        <p>Last updated on 2024-10-17 |
+        <p>Last updated on 2025-02-12 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/07-code-structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -962,7 +962,7 @@ saved in <code>results/</code> directory. Remember to create the
 <span id="cb13-21"><a href="#cb13-21" tabindex="-1"></a><span class="co">    Clean the data by removing any incomplete rows and sort by date</span></span>
 <span id="cb13-22"><a href="#cb13-22" tabindex="-1"></a></span>
 <span id="cb13-23"><a href="#cb13-23" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb13-24"><a href="#cb13-24" tabindex="-1"></a><span class="co">        input_file_ (str): The path to the JSON file.</span></span>
+<span id="cb13-24"><a href="#cb13-24" tabindex="-1"></a><span class="co">        input_file (str): The path to the JSON file.</span></span>
 <span id="cb13-25"><a href="#cb13-25" tabindex="-1"></a></span>
 <span id="cb13-26"><a href="#cb13-26" tabindex="-1"></a><span class="co">    Returns:</span></span>
 <span id="cb13-27"><a href="#cb13-27" tabindex="-1"></a><span class="co">         eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure</span></span>
@@ -984,7 +984,7 @@ saved in <code>results/</code> directory. Remember to create the
 <span id="cb13-43"><a href="#cb13-43" tabindex="-1"></a><span class="co">        output_file (str): The path to the output CSV file.</span></span>
 <span id="cb13-44"><a href="#cb13-44" tabindex="-1"></a></span>
 <span id="cb13-45"><a href="#cb13-45" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb13-46"><a href="#cb13-46" tabindex="-1"></a><span class="co">        None</span></span>
+<span id="cb13-46"><a href="#cb13-46" tabindex="-1"></a><span class="co">        (None):</span></span>
 <span id="cb13-47"><a href="#cb13-47" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb13-48"><a href="#cb13-48" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Saving to CSV file </span><span class="sc">{</span>output_file<span class="sc">}</span><span class="ss">'</span>)</span>
 <span id="cb13-49"><a href="#cb13-49" tabindex="-1"></a>    df.to_csv(output_file, index<span class="op">=</span><span class="va">False</span>)</span>
@@ -1035,7 +1035,7 @@ saved in <code>results/</code> directory. Remember to create the
 <span id="cb13-94"><a href="#cb13-94" tabindex="-1"></a><span class="co">        graph_file (str): The path to the output graph file.</span></span>
 <span id="cb13-95"><a href="#cb13-95" tabindex="-1"></a></span>
 <span id="cb13-96"><a href="#cb13-96" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb13-97"><a href="#cb13-97" tabindex="-1"></a><span class="co">        None</span></span>
+<span id="cb13-97"><a href="#cb13-97" tabindex="-1"></a><span class="co">        (None):</span></span>
 <span id="cb13-98"><a href="#cb13-98" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb13-99"><a href="#cb13-99" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Plotting cumulative spacewalk duration and saving to </span><span class="sc">{</span>graph_file<span class="sc">}</span><span class="ss">'</span>)</span>
 <span id="cb13-100"><a href="#cb13-100" tabindex="-1"></a>    df <span class="op">=</span> add_duration_hours_variable(df)</span>
@@ -1083,7 +1083,7 @@ your projects</a> chapter from the <a href="https://coderefinery.github.io/repro
 Reproducible Research tutorial</a>
 </li>
 <li><a href="https://mitcommlab.mit.edu/broad/commkit/file-structure/" class="external-link">MIT
-Broad Reseach Communication Lab’s “File Structure” guide</a></li>
+Broad Research Communication Lab’s “File Structure” guide</a></li>
 </ul><p>Also check the <a href="reference.html#litref">full reference set</a>
 for the course.</p>
 <div id="keypoints1" class="callout keypoints">
@@ -1160,8 +1160,8 @@ any links that you are not going to use.
   "url": "https://softwaresaved.github.io/fair-research-software/07-code-structure.html",
   "identifier": "https://softwaresaved.github.io/fair-research-software/07-code-structure.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2024-10-17",
-  "datePublished": "2025-02-11"
+  "dateModified": "2025-02-12",
+  "datePublished": "2025-02-12"
 }
 
   </script><script>
