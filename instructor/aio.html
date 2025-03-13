@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Tools and good software practices for open and reproducible research: All in One View</title>
+<title>Software tools and practices for open and reproducible research: All in One View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="../assets/themetoggle.js"></script><link rel="stylesheet" type="text/css" href="../assets/styles.css">
 <script src="../assets/scripts.js" type="text/javascript"></script><!-- mathjax --><script type="text/x-mathjax-config">
@@ -94,7 +94,7 @@
       <img class="small-logo" alt="Carpentries Incubator" src="../assets/images/incubator-logo-sm.svg">
 </div>
     <div class="lesson-title-md">
-      Tools and good software practices for open and reproducible research
+      Software tools and practices for open and reproducible research
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -105,7 +105,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Tools and good software practices for open and reproducible research
+            Software tools and practices for open and reproducible research
           </span>
         </li>
         <li class="nav-item">
@@ -146,7 +146,7 @@
   </div>
 <!--/div.container-fluid -->
 </nav><div class="col-md-12 mobile-title">
-  Tools and good software practices for open and reproducible research
+  Software tools and practices for open and reproducible research
 </div>
 
 <aside class="col-md-12 lesson-progress"><div style="width: %" class="percentage">
@@ -272,7 +272,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-tools.html">3. Tools and practices for FAIR research software development</a>
+        <a href="03-tools-practices.html">3. Tools and good practices for research software</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -296,7 +296,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-code-environment.html">5. Reproducible development environment</a>
+        <a href="05-reproducible-dev-environment.html">5. Reproducible software environments</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -332,7 +332,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="08-code-correctness.html">8. Code correctness</a>
+        <a href="08-code-correctness-testing.html">8. Code correctness &amp; testing</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -344,7 +344,7 @@
 <div class="accordion accordion-flush" id="accordionFlush10">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading10">
-        <a href="09-code-documentation.html">9. Code documentation</a>
+        <a href="09-software-documentation.html">9. Software documentation</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -356,7 +356,7 @@
 <div class="accordion accordion-flush" id="accordionFlush11">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading11">
-        <a href="10-open-collaboration.html">10. Open code &amp; collaboration</a>
+        <a href="10-open-collaboration.html">10. Open software management &amp; collaboration</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -438,7 +438,7 @@
         
 <section id="aio-01-introduction"><p>Content from <a href="01-introduction.html">Course introduction</a></p>
 <hr>
-<p>Last updated on 2025-02-12 |
+<p>Last updated on 2025-03-13 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/01-introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -453,8 +453,9 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What is open, reproducible and FAIR research?</li>
-<li>Why are these practices important?</li>
+<li>What is open and reproducible research?</li>
+<li>Why are these practices important, in particular in the context of
+software used to support such research?</li>
 </ul>
 </div>
 </div>
@@ -468,6 +469,8 @@
 <li>Understand the concept of open and reproducible research</li>
 <li>Understand why these principles are of value in the research
 community</li>
+<li>Setup their machine with software and data used to teach this
+course</li>
 </ul>
 </div>
 </div>
@@ -492,7 +495,7 @@ dictionary is provided by Oxford Languages</a>)</li>
 consistent results using the same input data, computational methods
 (code), and conditions of analysis; work that can be independently
 recreated from the same data and the same code (<a href="https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions" class="external-link">definition</a>
-by the <a href="https://the-turing-way.netlify.app/reproducible-research/reproducible-research" class="external-link">Turing
+by the <a href="https://book.the-turing-way.org/reproducible-research/reproducible-research" class="external-link">Turing
 Way’s “Guide to Reproducible Research”</a>)</li>
 <li>
 <strong>Reproducible research</strong> - the idea that scientific
@@ -526,24 +529,22 @@ practices.</li>
 </div>
 </div>
 </div>
-<div id="what-does-open-and-reproducible-research-mean-to-you" class="callout discussion">
+<div id="motivation" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="what-does-open-and-reproducible-research-mean-to-you" class="callout-inner">
-<h3 class="callout-title">What does open and reproducible research mean
-to you?</h3>
+<div id="motivation" class="callout-inner">
+<h3 class="callout-title">Motivation</h3>
 <div class="callout-content">
 <p>Think about the questions below. Your instructors may ask you to
 share your answers in a shared notes document and/or discuss them with
 other participants.</p>
 <ul>
-<li>What do you understand by the words “open” and “reproducible” in the
-context of research?</li>
-<li>How many people or groups can you list that might benefit from your
-work being open and reproducible?</li>
-<li>How many times did you wish that someone else’s work you came across
-was more open or accessible to you? Can you provide some examples?</li>
+<li>What motivated you to attend this course? Did you come by choice or
+were you advised to attend?</li>
+<li>What do you hope to learn or change in your current research
+software practice? Describe how your knowledge, work or attitude may be
+different afterwards.</li>
 </ul>
 </div>
 </div>
@@ -551,7 +552,7 @@ was more open or accessible to you? Can you provide some examples?</li>
 </section><section><h2 class="section-heading" id="what-is-reproducible-research">What is reproducible research?<a class="anchor" aria-label="anchor" href="#what-is-reproducible-research"></a>
 </h2>
 <hr class="half-width">
-<p><a href="https://the-turing-way.netlify.app/reproducible-research/reproducible-research" class="external-link">The
+<p><a href="https://book.the-turing-way.org/reproducible-research/reproducible-research" class="external-link">The
 Turing Way’s “Guide to Reproducible Research”</a> provides an <a href="https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions" class="external-link">excellent
 overview of definitions of “reproducibility” and “replicability”</a>
 found in literature, and their different aspects and levels.</p>
@@ -600,7 +601,7 @@ exists.</li>
 </ul>
 </li>
 </ul>
-<figure><img src="https://the-turing-way.netlify.app/_images/reproducible-definition-grid.svg" alt="Four cartoon images depicting two researchers at two machines which take in data and output the same landscape image in 4 different ways. These visually describe the four scenarios listed above." class="figure mx-auto d-block"><div class="figcaption"><em>The Turing Way project illustration of
+<figure><img src="https://raw.githubusercontent.com/the-turing-way/the-turing-way/refs/heads/main/book/website/figures/reproducible-definition-grid.svg" alt="Four cartoon images depicting two researchers at two machines which take in data and output the same landscape image in 4 different ways. These visually describe the four scenarios listed above." class="figure mx-auto d-block"><div class="figcaption"><em>The Turing Way project illustration of
 aspects of reproducible research by Scriberia, used under a CC-BY 4.0
 licence, <a href="https://doi.org/10.5281/zenodo.3332807" class="external-link">DOI:
 10.5281/zenodo.3332807</a></em></div>
@@ -627,6 +628,28 @@ manipulations.</li>
 <p>In this course, we are concerned with computational reproducibility,
 i.e. when the application of computer science and software engineering
 is used to aid solving research problems.</p>
+<div id="what-does-open-and-reproducible-research-mean-to-you" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="what-does-open-and-reproducible-research-mean-to-you" class="callout-inner">
+<h3 class="callout-title">What does open and reproducible research mean
+to you?</h3>
+<div class="callout-content">
+<p>Think about the questions below. Your instructors may ask you to
+share your answers in a shared notes document and/or discuss them with
+other participants.</p>
+<ul>
+<li>What do you understand by the words “open” and “reproducible” in the
+context of research?</li>
+<li>How many people or groups can you list that might benefit from your
+work being open and reproducible?</li>
+<li>How many times did you wish that someone else’s work you came across
+was more open or accessible to you? Can you provide some examples?</li>
+</ul>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="why-do-reproducible-research">Why do reproducible research?<a class="anchor" aria-label="anchor" href="#why-do-reproducible-research"></a>
 </h2>
 <hr class="half-width">
@@ -691,7 +714,7 @@ formulas or macros in spreadsheets used to analyse data are considered
 “research code” as they are a form of computer programming that allow
 one to create, calculate, and change data sets in a number of different
 ways.</p>
-<figure><img src="https://github.com/esciencecenter-digital-skills/research-software-support/blob/611da359cbe1d04ecf056545ee07f977ae536273/modules/researchsoftware/media/definition.png?raw=true" alt="Quote: Research Software includes source code files, algorithms, scripts, computational workflows and executables that were created during the research process or for a research purpose. Software components (e.g., operating systems, libraries, dependencies, packages, scripts, etc.) that are used for research but were not created during or with a clear research intent should be considered software in research and not Research Software." class="figure mx-auto d-block"><div class="figcaption"><em>Definition of “research software” from the
+<figure><img src="https://raw.githubusercontent.com/esciencecenter-digital-skills/research-software-support/611da359cbe1d04ecf056545ee07f977ae536273/modules/researchsoftware/media/definition.png" alt="Quote: Research Software includes source code files, algorithms, scripts, computational workflows and executables that were created during the research process or for a research purpose. Software components (e.g., operating systems, libraries, dependencies, packages, scripts, etc.) that are used for research but were not created during or with a clear research intent should be considered software in research and not Research Software." class="figure mx-auto d-block"><div class="figcaption"><em>Definition of “research software” from the
 FAIR4RS working group, image by the Netherlands eScience Center licensed
 under CC-BY 4.0</em></div>
 </figure><p>In the <a href="https://www.software.ac.uk/blog/quick-and-dirty-analysis-software-being-used-research-python-matlab-and-r" class="external-link">software
@@ -707,22 +730,174 @@ disciplines</strong>.</p>
 not just use “off the shelf” software and the majority of researchers
 develop their own. In order to be able to produce quality software that
 outputs correct and verifiable results and that can be reused over time
-- researchers require training. This course teaches good practises and
-reproducible working methods that are agnostic of a programming language
-(although we will use Python code in our examples) and aims to provide
-researchers with the tools and knowledge to feel confident when writing
-good quality and sustainable software to support their research.
-Typically, we think of such software as being <strong>FAIR</strong>.</p>
-<p>In the rest of the course, we will explore what exactly we mean by
-“FAIR research software”, why it is important and what practices can
-help us along our “FAIRification” journey.</p>
+- researchers require training.</p>
+<p>This course teaches good practises and reproducible working methods
+that are agnostic of a programming language (although we will use Python
+code in our examples) and aims to provide researchers with the tools and
+knowledge to feel confident when writing <strong>good quality and
+sustainable software</strong> to support their research. Some aspects of
+such software are described as <strong>FAIR</strong> (Findable,
+Accessible, Interoperable, Reusable) - in the rest of the course, we
+will explore FAIR and various other practices for good quality research
+software, why it is important to use these practices and what tools can
+help us along this journey.</p>
+</section><section><h2 class="section-heading" id="software-and-data-used-in-this-course">Software and data used in this course<a class="anchor" aria-label="anchor" href="#software-and-data-used-in-this-course"></a>
+</h2>
+<hr class="half-width">
+<p>We are going to follow a fairly typical experience of a new PhD or
+postdoc joining a research group. They were emailed some data and
+analysis code bundled in a <code>.zip</code> archive and written by
+another group member who worked on similar things but has since left the
+group. They need to be able to install and run this code on their
+machine, check they can understand it and then adapt it to their own
+project.</p>
+<p>As part of the <a href="./index.html#astronaut-data-and-analysis-code">setup for this
+course</a>, you should have downloaded a <code>.zip</code> archive
+containing the software project the new research team member was given.
+Let’s unzip this archive and inspect its content in VS Code. The
+software project contains:</p>
+<ol style="list-style-type: decimal">
+<li>a JSON file (<code>data.json</code>) - a snippet of which is shown
+below - with data on extra-vehicular activities (EVAs or spacewalks)
+undertaken by astronauts and cosmonauts from 1965 to 2013 (data provided
+by NASA via its <a href="https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/about_data" class="external-link">Open
+Data Portal</a>) <img src="../fig/astronaut-data-json-snippet.png" alt="JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose" class="figure">
+</li>
+<li>a Python script (<code>my code v2.py</code>) containing some
+analysis. <img src="../fig/astronaut-analysis-bad-code-screenshot.png" alt="A first few lines of a Python script used as example code for the episode" class="figure">
+</li>
+</ol>
+<p>The code in the Python script does some common research tasks:</p>
+<ul>
+<li>Read in the data from the JSON file</li>
+<li>Change the data from one data format to another and save to a file
+in the new format (CSV)</li>
+<li>Perform some calculations to generate summary statistics about the
+data</li>
+<li>Make a plot to visualise the data</li>
+</ul></section><section><h2 class="section-heading" id="checking-your-setup">Checking your setup<a class="anchor" aria-label="anchor" href="#checking-your-setup"></a>
+</h2>
+<hr class="half-width">
+<p>Let’s check your setup now to make sure you are ready for the rest of
+this course.</p>
+<div id="checking-your-setup-1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="checking-your-setup-1" class="callout-inner">
+<h3 class="callout-title">Checking your setup</h3>
+<div class="callout-content">
+<p>Open a command line terminal and look at the prompt. Compare what you
+see in the terminal with your neighbour, does it look the same or
+different? What information is it telling you and why might this be
+useful? What other information might you want?</p>
+<p>Run the following commands in a terminal to check you have installed
+the tools listed in the Setup page. Compare the output with your
+neighbour and see if you can see any differences.</p>
+<p>Checking the command line terminal:</p>
+<ol style="list-style-type: decimal">
+<li><code>$ date</code></li>
+<li><code>$ echo $SHELL</code></li>
+<li><code>$ pwd</code></li>
+<li><code>$ whoami</code></li>
+</ol>
+<p>Checking Python:</p>
+<ol start="5" style="list-style-type: decimal">
+<li><code>$ python3 --version</code></li>
+<li><code>$ python3 --version</code></li>
+<li><code>$ which python</code></li>
+<li><code>$ which python3</code></li>
+</ol>
+<p>Checking Git and GitHub:</p>
+<ol start="9" style="list-style-type: decimal">
+<li><code>$ git --help</code></li>
+<li><code>$ git config --list</code></li>
+<li><code>$ ssh -T git@github.com</code></li>
+</ol>
+<p>Checking VS Code:</p>
+<ol start="12" style="list-style-type: decimal">
+<li><code>$ code</code></li>
+<li><code>$ code --list-extensions</code></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div class="accordion-body">
+<p>The prompt is the <code>$</code> character and any text that comes
+before it, that is shown on every new line before you type in commands.
+Type each of the commands one at a time and press enter. They should
+give you a result by printing some text in the terminal.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>The expected out put of each command is:</p>
+<ol style="list-style-type: decimal">
+<li>Today’s date</li>
+<li>
+<code>bash</code> or <code>zsh</code> - this tells you what shell
+language you are using. In this course we show examples in Bash.</li>
+<li>Your “present working directory” or the folder where your shell is
+running</li>
+<li>Your username</li>
+<li>In this course we are using Python 3. If
+<code>python --version</code> gives you Python 2.x you may have two
+versions of Python installed on your computer and need to be careful
+which one you are using.</li>
+<li>Use this command to be certain you are using Python version 3, not
+2, if you have both installed.</li>
+<li>The file path to where the Python version you are calling is
+installed.</li>
+<li>If you have more than one version these should be different paths,
+if both 5. and 6. gave the same result then 7. and 8. should match as
+well.</li>
+<li>The help message explaining how to use the <code>git</code>
+command.</li>
+<li>You should have <code>user.name</code>, <code>user.email</code> and
+<code>core.editor</code> set in your Git configuration. Check that the
+editor listed is one you know how to use.</li>
+<li>This checks if you have set up your connection to GitHub correctly.
+If is says <code>permission denied</code> you may need to look at the
+instructions for setting up SSH keys again on the Setup page.</li>
+<li>This should open VSCode in your current working directory. macOS
+users may need to first open VS Code and <a href="https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line" class="external-link">add
+it to the PATH</a>.</li>
+<li>You should have the extensions GitLens, Git Graph, Python, JSON and
+Excel Viewer installed to use in this course.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<p>You may have noticed that our researcher has received the software
+project they are meant to be working as a <code>.zip</code> archive via
+email. This is not very good practice for several reasons - email does
+not track changes, does not allow for multiple people to work on the
+same file, code reviews or issue tracking, attachments can be mistakenly
+sent with outdated versions and may have storage and scalability
+limitations. In the rest of the course, we will learn some better
+practices for developing, sharing, tracking changes and collaborating on
+a software project.</p>
 </section><section><h2 class="section-heading" id="further-reading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
 </h2>
 <hr class="half-width">
 <p>We recommend the following resources for some additional reading on
 the topic of this episode:</p>
 <ul>
-<li><a href="https://the-turing-way.netlify.app/reproducible-research/reproducible-research" class="external-link">The
+<li><a href="https://book.the-turing-way.org/reproducible-research/reproducible-research" class="external-link">The
 Turing Way’s “Guide for Reproducible Research”</a></li>
 <li>
 <a href="https://esajournals.onlinelibrary.wiley.com/doi/10.1002/bes2.1801" class="external-link">A
@@ -761,7 +936,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-fair-research-software"><p>Content from <a href="02-fair-research-software.html">FAIR research software</a></p>
 <hr>
-<p>Last updated on 2025-02-12 |
+<p>Last updated on 2025-03-13 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/02-fair-research-software.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 60 minutes</p>
@@ -776,8 +951,8 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What are FAIR research principles?</li>
-<li>How do FAIR principles apply to software (and data)?</li>
+<li>What are the FAIR research principles?</li>
+<li>How do FAIR principles apply to software?</li>
 </ul>
 </div>
 </div>
@@ -789,7 +964,7 @@ any links that you are not going to use.
 <p>After completing this episode, participants should be able to:</p>
 <ul>
 <li>Explain the FAIR research principles in the context of research
-software and data</li>
+software</li>
 <li>Explain why these principles are of value in the research
 community</li>
 </ul>
@@ -798,26 +973,8 @@ community</li>
 </div>
 </div>
 </div>
-<div id="motivation" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="motivation" class="callout-inner">
-<h3 class="callout-title">Motivation</h3>
-<div class="callout-content">
-<p>Think about the questions below. Your instructors may ask you to
-share your answers in a shared notes document and/or discuss them with
-other participants.</p>
-<ul>
-<li>What motivated you to attend this course? Did you come by choice or
-were you advised to attend?</li>
-<li>What do you hope to learn or change in your current research
-software practice? Describe how your knowledge, work or attitude may be
-different afterwards.</li>
-</ul>
-</div>
-</div>
-</div>
+<p>Let’s explore a subset of good software practices based on the FAIR
+principles.</p>
 <section><h2 class="section-heading" id="what-is-fair">What is FAIR?<a class="anchor" aria-label="anchor" href="#what-is-fair"></a>
 </h2>
 <hr class="half-width">
@@ -857,7 +1014,7 @@ standard of fully reproducible research.</p>
 <ul>
 <li>Create a description of your software to make it discoverable by
 search engines and other search tools</li>
-<li>Use standards (such as <a href="" title="https://codemeta.github.io/">CodeMeta</a>) to describe
+<li>Use standards (such as <a href="https://codemeta.github.io/" class="external-link">CodeMeta</a>) to describe
 interoperable metadata for your software (see <a href="https://fair-impact.github.io/RSMD-guidelines/1.General/" class="external-link">Research
 Software Metadata Guidelines</a>)</li>
 <li>Place your software in a public software repository (and ideally
@@ -876,7 +1033,7 @@ code means it stands a better chance at being preserved</li>
 </h3>
 <ul>
 <li>Make sure people can obtain get a copy your software using standard
-communication protocols (e.g. HTTP, FTP, etc.)</li>
+communication protocols (e.g. HTTP(S), (S)FTP, etc.)</li>
 <li>The code and its description (metadata) has to be available even
 when the software is no longer actively developed (this includes earlier
 versions of the software)</li>
@@ -886,10 +1043,8 @@ versions of the software)</li>
 <h3 id="interoperable">Interoperable<a class="anchor" aria-label="anchor" href="#interoperable"></a>
 </h3>
 <ul>
-<li>Explain the functionality of your software and protocols for
-interaction with it</li>
 <li>Use community-agreed standard formats for inputs and outputs of your
-software and its metadata (e.g. <a href="" title="https://codemeta.github.io/">CodeMeta</a>)</li>
+software and its metadata</li>
 <li>Communicate with other software and tools via standard protocols and
 APIs</li>
 </ul>
@@ -899,17 +1054,11 @@ APIs</li>
 </h3>
 <ul>
 <li>Document your software (including its functionality, how to install
-and run it) to make it more understandable by others who may wish to
-reuse or extend it</li>
-<li>Follow best practices for software development, e.g. structure your
-code using common patterns and use coding conventions to make your code
-readable and understandable by people</li>
-<li>Test your software and make sure it works on different
-platforms/operating systems</li>
+and run it) so it is both usable (can be executed) and reusable (can be
+understood, modified, built upon, or incorporated into other
+software)</li>
 <li>Give a licence to your software clearly stating how it can be
 reused</li>
-<li>State how to cite your software, so people can give you credit when
-they reuse it</li>
 </ul>
 <div id="fair-is-a-process-not-a-perfect-metric" class="callout">
 <div class="callout-square">
@@ -921,8 +1070,9 @@ they reuse it</li>
 <p>FAIR is not a binary metric - there is no such thing as “FAIR or”not
 FAIR”.</p>
 <p>FAIR is not a perfect metric, nor does it provide a full and
-exhaustive software quality checklist. Software may be FAIR but still
-not very good in terms of its functionality.</p>
+exhaustive software quality checklist - there are other good software
+quality practices not covered by FAIR. Conversely, software may be FAIR
+but still not very good in terms of its functionality.</p>
 <p>FAIR is <strong>not meant</strong> to criticise or discredit
 work.</p>
 <p>FAIR refers to the specific <strong>values</strong> of and describes
@@ -931,15 +1081,13 @@ research that can be a helpful guide for researchers who want to improve
 their practices (by helping them see where they are on the <strong>FAIR
 spectrum</strong> and help them on a <strong>journey</strong> to make
 their software more FAIR).</p>
-<figure><img src="../fig/fair-spectrum.png" alt="FAIR represented as as a 4-dimensional spectrum with 4 axes - findable, accessible, interoperable and reusable, image by the Netherlands eScience Center licensed under CC-BY 4.0" class="figure mx-auto d-block"><div class="figcaption"><em>FAIR as a 4D spectrum, image by the
-Netherlands eScience Center licensed under CC-BY 4.0</em></div>
-</figure>
 </div>
 </div>
 </div>
-<p>We are going to explore the above practices on an example software
-project we will be working on as part of this course.</p>
-<div id="discussion2" class="callout discussion">
+<p>We are going to explore the FAIR and other good software quality
+practices on an example software project we will be working on as part
+of this course.</p>
+<div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -963,52 +1111,14 @@ as a guide for each principle:</p>
 </div>
 </div>
 </div>
-</div>
-</section><section><h2 class="section-heading" id="software-and-data-used-in-this-course">Software and data used in this course<a class="anchor" aria-label="anchor" href="#software-and-data-used-in-this-course"></a>
-</h2>
-<hr class="half-width">
-<p>We are going to follow a fairly typical experience of a new PhD or
-postdoc joining a research group. They were emailed some data and
-analysis code bundled in a <code>.zip</code> archive and written by
-another group member who worked on similar things but has since left the
-group. They need to be able to install and run this code on their
-machine, check they can understand it and then adapt it to their own
-project.</p>
-<p>As part of the <a href="./index.html#astronaut-data-and-analysis-code">setup for this
-course</a>, you should have downloaded a <code>.zip</code> archive
-containing the software project the new research team member was given.
-Let’s unzip this archive and inspect its content in VS Code. The
-software project contains:</p>
-<ol style="list-style-type: decimal">
-<li>a JSON file (<code>data.json</code>) - a snippet of which is shown
-below - with data on extra-vehicular activities (EVAs or spacewalks)
-undertaken by astronauts and cosmonauts from 1965 to 2013 (data provided
-by NASA via its <a href="https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/about_data" class="external-link">Open
-Data Portal</a>) <img src="../fig/astronaut-data-json-snippet.png" alt="JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose" class="figure">
-</li>
-<li>a Python script (<code>my code v2.py</code>) containing some
-analysis. <img src="../fig/astronaut-analysis-bad-code-screenshot.png" alt="A first few lines of a Python script used as example code for the episode" class="figure">
-</li>
-</ol>
-<p>The code in the Python script does some common research tasks:</p>
-<ul>
-<li>Read in the data from the JSON file</li>
-<li>Change the data from one data format to another and save to a file
-in the new format (CSV)</li>
-<li>Perform some calculations to generate summary statistics about the
-data</li>
-<li>Make a plot to visualise the data</li>
-</ul>
-<p>Let’s have a critical look at this code and think about how FAIR this
-piece of software is.</p>
-<div id="discussion3" class="callout discussion">
+<div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div class="callout-inner">
 <h3 class="callout-title">Discussion</h3>
 <div class="callout-content">
-<p>Look at our code in VS Code and compare this data and code to the
+<p>Look at our software project compare its data and code to the
 software you chose earlier (or assess it on its own). Do you think it is
 Findable, Accessible, Interoperable and Reusable? Give it a score from 1
 to 5 in each category, as in the previous exercise, and then we will
@@ -1021,7 +1131,7 @@ discuss it together.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Here are some questions to help you assess where on the FAIR spectrum
 the code is:</p>
@@ -1087,7 +1197,7 @@ calculate a different statistic, or run on a different input file?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>I would give the following scores:</p>
 <p>F - 1/5</p>
@@ -1127,7 +1237,21 @@ names, hardcoded inputs, no clear structure or documentation.</li>
 </div>
 <p>Let’s now have a look into tools and practices that are commonly used
 in research that can help us develop software in a more FAIR way.</p>
-</section><section><h2 class="section-heading" id="further-reading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
+</div>
+</section><section><h2 class="section-heading" id="tools-for-assessing-fairness">Tools for assessing FAIRness<a class="anchor" aria-label="anchor" href="#tools-for-assessing-fairness"></a>
+</h2>
+<hr class="half-width">
+<p>Here are some tools that can check your software and provide an
+assessment of its FAIRness:</p>
+<ul>
+<li><a href="https://openebench.bsc.es/observatory/Evaluation" class="external-link">FAIRsoft
+evaluator</a></li>
+<li><a href="https://github.com/marioa/fair-test?tab=readme-ov-file" class="external-link">FAIR
+software test</a></li>
+<li><a href="https://github.com/fair-software/howfairis/" class="external-link"><code>How FAIR is your software</code>
+- command line tool to evaluate a software repository’s compliance with
+the FAIR principles</a></li>
+</ul></section><section><h2 class="section-heading" id="further-reading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
 </h2>
 <hr class="half-width">
 <p>We recommend the following resources for some additional reading on
@@ -1186,11 +1310,11 @@ output.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-03-tools"><p>Content from <a href="03-tools.html">Tools and practices for FAIR research software development</a></p>
+</section></section><section id="aio-03-tools-practices"><p>Content from <a href="03-tools-practices.html">Tools and good practices for research software</a></p>
 <hr>
-<p>Last updated on 2024-10-17 |
+<p>Last updated on 2025-03-13 |
 
-        <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/03-tools.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/03-tools-practices.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 90 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -1203,9 +1327,10 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What tools are available to help us develop research software in a
-FAIR way?</li>
-<li>How do the tools fit together to enable FAIR research?</li>
+<li>What tools and practices are available to help us develop good
+quality and FAIR research software?</li>
+<li>How do such tools and practices fit together to enable open and
+reproducible research?</li>
 </ul>
 </div>
 </div>
@@ -1216,67 +1341,59 @@ FAIR way?</li>
 <h3 class="card-title">Objectives</h3>
 <p>After completing this episode, participants should be able to:</p>
 <ul>
-<li>Identify some key tools to aid the development of FAIR research
-software</li>
+<li>Identify some key tools and practices to aid the development of
+quality research software</li>
 <li>Explain how can these tools help us work in a FAIR way</li>
-<li>Install and run these key tools on learner’s machines</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="tools-and-good-practices">Tools and good practices<a class="anchor" aria-label="anchor" href="#tools-and-good-practices"></a>
+<section><h2 class="section-heading" id="good-practices-for-developing-research-software">Good practices for developing research software<a class="anchor" aria-label="anchor" href="#good-practices-for-developing-research-software"></a>
 </h2>
 <hr class="half-width">
-<p>There are various tools and practices that support the development of
-FAIR research software, contributing to each of the four FAIR
-principles. These tools and practices work together, as no single tool
-or practice will fully address one principle, and conversely each one
-can contribute to multiple principles simultaneously. It is important to
-note that simply using these tools, without following good practice and
-guidance on how best to align their usage with the FAIR principles, is
-not enough to produce FAIR software.</p>
-<p>You should already have these tools installed on your machine by
-following the <a href="./index.html#astronaut-data-and-analysis-code">setup
-instructions</a>. Here we will give an overview of the tools and good
-practices and how, when used in combination, they can help you achieve
-the aims of FAIR research software. In later episodes we will describe
-these tools and practices in more detail.</p>
+<p>Along with the FAIR principles covered in the previous episode, other
+good practices exist for developing research software that foster open
+and reproducible research. We list some of them here and then cover them
+in more detail in the rest of the course.</p>
 <div class="section level3">
-<h3 id="development-environments">Development environments<a class="anchor" aria-label="anchor" href="#development-environments"></a>
+<h3 id="use-version-control">Use version control<a class="anchor" aria-label="anchor" href="#use-version-control"></a>
 </h3>
-<p>Virtual and integrated development environments (IDEs), such as VS
-Code or PyCharm, help with reading, running, testing, and debugging
-code. Virtual environments further enable us to share our working
-environments with others, making it easier to reuse and extend our code.
-IDEs often provide integrations with other tools, e.g. version control
-and command line terminals, enabling you to do many tasks from a single
-environment, saving time in switching between different tools.</p>
+<p>Using a version control system (like Git) is a fundamental best
+practice in software development, ensuring that changes to code are
+tracked, managed, and reversible. Version control systems enable
+efficient collaboration and maintaining a history of modifications.</p>
 </div>
 <div class="section level3">
-<h3 id="command-line-terminals">Command line terminals<a class="anchor" aria-label="anchor" href="#command-line-terminals"></a>
+<h3 id="organise-software-project-and-structure-code">Organise software project and structure code<a class="anchor" aria-label="anchor" href="#organise-software-project-and-structure-code"></a>
 </h3>
-<p>Command line terminals (e.g. Bash, GitBash) enable us to run and test
-our code without graphical user interfaces (GUI) afforded to us by IDEs
-- this is sometimes needed for running our code remotely on servers and
-high-performance systems without a GUI provision, where time, memory and
-processing power are expensive or in high demand.</p>
-<p>Version control systems are typically provided as command line tools,
-making them often only accessible from command line terminals to enter
-commands and access remote version control servers to backing up and
-sharing our work.</p>
-<p>Finally, command line tools are interoperable software that use
-standard protocols for passing parameters, inputs and outputs via the
-command line terminal. This makes it easier to integrate with other
-tools, allowing us to chain command line tools and build up complex and
-reproducible workflows and analysis pipelines using several programs in
-different steps. If we write our software in a way which provides such
-an interoperable command line interface - we will be able to integrate
-it with other command line tools to automate and speed up our work.</p>
+<p>Structure your software project following community best practices
+and write clean, modular, and reusable code to enhance readability,
+testing, extensibility, and reusability.</p>
 </div>
 <div class="section level3">
-<h3 id="standard-inputoutput-formats-and-communication-protocols">Standard input/output formats and communication protocols<a class="anchor" aria-label="anchor" href="#standard-inputoutput-formats-and-communication-protocols"></a>
+<h3 id="use-reproducible-software-environments">Use reproducible software environments<a class="anchor" aria-label="anchor" href="#use-reproducible-software-environments"></a>
+</h3>
+<p>Using virtual development environments (e.g. Conda, venv) or
+containerisation (e.g. <a href="https://www.docker.com/" class="external-link">Docker</a>)
+ensures software can be developed and run consistently across different
+systems.</p>
+</div>
+<div class="section level3">
+<h3 id="comply-with-coding-conventions">Comply with coding conventions<a class="anchor" aria-label="anchor" href="#comply-with-coding-conventions"></a>
+</h3>
+<p>Applying relevant coding style guidelines (e.g. PEP8 for Python) is
+crucial for writing clean, readable, and maintainable code. These
+guidelines help ensure consistency across a codebase, making it easier
+for developers to understand and collaborate on projects.</p>
+<p>Following coding conventions and guides for your programming language
+that is agreed upon by the community and other programmers are important
+practices to ensure that others find it easy to read your code, reuse or
+extend it in their own examples and applications.</p>
+</div>
+<div class="section level3">
+<h3 id="use-standard-data-formats-and-communication-protocols">Use standard data formats and communication protocols<a class="anchor" aria-label="anchor" href="#use-standard-data-formats-and-communication-protocols"></a>
 </h3>
 <p>Using standard data exchange, input and output formats and
 communication protocols helps create interoperable software that can
@@ -1284,95 +1401,189 @@ more readily integrate with other tools into more complex pipelines -
 increasing its interoperability and reusability.</p>
 </div>
 <div class="section level3">
-<h3 id="version-control-tools">Version control tools<a class="anchor" aria-label="anchor" href="#version-control-tools"></a>
+<h3 id="test-your-software">Test your software<a class="anchor" aria-label="anchor" href="#test-your-software"></a>
 </h3>
-<p>Version control means knowing what changes were made to your code,
-when and by whom - promoting code ownership, responsibility and credit.
-When combined with software sharing and collaborative platforms such as
-GitHub or GitLab, it facilitates code publication, sharing and
-findability, teamwork and discussions about software and design
-decisions, provides backup facilities for your code and speeds up
-collaboration on shared code by allowing edits by more than one person
-at a time.</p>
-</div>
-<div class="section level3">
-<h3 id="code-testing">Code testing<a class="anchor" aria-label="anchor" href="#code-testing"></a>
-</h3>
-<p>Testing ensures that your code is correct and does what it is set out
-to do. When you write code you often feel very confident that it is
+<p>Implement tests to validate code functionality, ensure result
+accuracy, and maintain result consistency over time when updating the
+code. Testing ensures that your code is correct and does what it is set
+out to do. When you write code you often feel very confident that it is
 perfect, but when writing bigger codes or code that is meant to do
 complex operations it is very hard to consider all possible edge cases
-or notice every single typing mistake. Testing also gives other people
-confidence in your code as they can see an example of how it is meant to
-run and be assured that it does work correctly on their machine -
-helping with code understanding and reusability.</p>
+or notice every single typing mistake.</p>
+<p>Testing also gives other people confidence in your code as they can
+see an example of how it is meant to run and be assured that it does
+work correctly on their machine - helping with code understanding and
+reusability.</p>
 </div>
 <div class="section level3">
-<h3 id="coding-conventions">Coding conventions<a class="anchor" aria-label="anchor" href="#coding-conventions"></a>
+<h3 id="document-your-software">Document your software<a class="anchor" aria-label="anchor" href="#document-your-software"></a>
 </h3>
-<p>Following coding conventions and guides for your programming language
-that is agreed upon by the community and other programmers are important
-practices to ensure that others find it easy to read your code, reuse or
-extend it in their own examples and applications.</p>
+<p>Provide clear and comprehensive documentation, including code
+comments, API specifications, setup guides, and usage instructions, to
+ensure the software is easy to understand, use, and extend.</p>
+<p>Software documentation varies in scope and intended audience
+(developers and contributors, end-users, system administrators, etc.),
+ranging from <strong>code-level documentation</strong> for developers
+and end-users looking to modify and extend the code to <strong>project
+and product-level</strong> documentation help different users discover
+the software, understand its functionality, legal terms, installation,
+contribution guidelines and project governance. More extensive
+documentation, including full websites with function definitions, usage
+examples, tutorials, and guides, can further support adoption.</p>
+<p>While you may not need as much documentation as a large commercial
+product, ensuring your code is well-documented is essential for making
+it discoverable, reusable, and maintainable.</p>
 </div>
 <div class="section level3">
-<h3 id="code-licensing">Code licensing<a class="anchor" aria-label="anchor" href="#code-licensing"></a>
+<h3 id="license-your-software">License your software<a class="anchor" aria-label="anchor" href="#license-your-software"></a>
 </h3>
 <p>A licence is a legal document which sets down the terms under which
 the creator of work (such as written text, photographs, films, music,
 software code) is releasing what they have created for others to use,
 modify, extend or exploit. It is important to state the terms under
-which software can be reused - the lack of a licence for your software
+which software can be reused - the lack of a licence for the software
 implies that no one can reuse the software at all.</p>
-<p>A common way to declare your copyright of a piece of software and the
-license you are distributing it under is to include a file called
-<strong>LICENSE</strong> in the root directory of your code
-repository.</p>
+<p>Use open-source licenses (e.g., MIT, BSD) to make your code freely
+accessible, modifiable, and redistributable.</p>
 </div>
 <div class="section level3">
-<h3 id="code-citation">Code citation<a class="anchor" aria-label="anchor" href="#code-citation"></a>
+<h3 id="share-your-software-encourage-review">Share your software &amp; encourage review<a class="anchor" aria-label="anchor" href="#share-your-software-encourage-review"></a>
 </h3>
-<p>We should add a <strong>CITATION</strong> file to our repository to
-provide instructions on how and when to cite our code. A citation file
-can be a plain text (CITATION.txt) or a Markdown file (CITATION.md), but
-there are certain benefits to using use a special file format called the
-<a href="https://citation-file-format.github.io/" class="external-link">Citation File Format
-(CFF)</a>, which provides a way to include richer metadata about code
-(or datasets) we want to cite, making it easy for both humans and
-machines to use this information.</p>
+<p>Openly publish your research software with proper documentation,
+licence and storage in accessible repositories for reuse and supporting
+reproducibility of your results. Share your code on platforms like
+GitHub or GitLab to promote collaboration, transparency, and peer review
+to identify bugs, improve software correctness and quality, and promote
+knowledge sharing.</p>
 </div>
 <div class="section level3">
-<h3 id="code--and-project--level-documentation">Code- and project- level documentation<a class="anchor" aria-label="anchor" href="#code--and-project--level-documentation"></a>
+<h3 id="use-persistent-identifiers-for-your-software">Use persistent identifiers for your software<a class="anchor" aria-label="anchor" href="#use-persistent-identifiers-for-your-software"></a>
 </h3>
-<p>Documentation comes in many forms - from <strong>code-level
-documentation</strong> including descriptive names of variables and
-functions and additional comments that explain lines of your code, to
-<strong>project-level documentation</strong> (including README, LICENCE,
-CITATION, CONTRIBUTING, etc. files) that help to discover it, explain
-the legal terms of reusing it, describe its functionality and how to
-install, run and contribute to it, to whole websites full of
-documentation with function definitions, usage examples, tutorials and
-guides. You many not need as much documentation as a large commercial
-software product, but making your code reusable relies on other people
-being able to understand what your code does and how to use it.</p>
+<p>Using unique persistent identifiers, such as <strong>Digital Object
+Identifiers</strong> (DOIs) provided by <a href="https://zenodo.org/" class="external-link">Zenodo</a> or <a href="https://figshare.com/" class="external-link">FigShare</a>, or <strong>SoftWare Heritage
+persistent IDentifiers</strong> (<a href="swhid">SWHID</a>) provided by
+<a href="https://www.softwareheritage.org/" class="external-link">Software Heritage</a>, and
+similar digital archiving services help with uniquely identifying your
+software and its various versions. Code sharing platforms such as <a href="https://github.com" class="external-link">GitHub</a>, <a href="https://about.gitlab.com/" class="external-link">GitLab</a> or <a href="https://bitbucket.org/" class="external-link">BitBucket</a> provide commit/tag/release
+identifiers which are very useful but typically only unique within a
+project or a repository and not globally.</p>
+<p>Identifiers also help with findability of your software, as well as
+citing your software (and getting credit for your work by providing
+citable references).</p>
+</div>
+<div class="section level3">
+<h3 id="provide-citation-info-for-your-software">Provide citation info for your software<a class="anchor" aria-label="anchor" href="#provide-citation-info-for-your-software"></a>
+</h3>
+<p>Provide identification and citation information in documentation for
+your software (including its versions) to ensure that software can be
+properly cited in publications and research outputs.</p>
+</div>
+<div class="section level3">
+<h3 id="build-community-encourage-collaboration-around-your-software">Build community &amp; encourage collaboration around your
+software<a class="anchor" aria-label="anchor" href="#build-community-encourage-collaboration-around-your-software"></a>
+</h3>
+<p>Foster a community and promote collaboration around your software by
+engaging with users, encouraging contributions, and providing clear
+guidelines for participation. Use platforms like GitHub or GitLab to
+facilitate discussions, issue tracking, and pull requests. Maintain
+clear documentation, respond to feedback, and recognise contributors to
+create an inclusive and supportive environment that encourages long-term
+involvement, maintenance and sustainability of your software.</p>
+</div>
+</section><section><h2 class="section-heading" id="tools-services-for-research-software">Tools &amp; services for research software<a class="anchor" aria-label="anchor" href="#tools-services-for-research-software"></a>
+</h2>
+<hr class="half-width">
+<p>There are various tools for the development of research software that
+support open and reproducible research and support the FAIR and other
+quality software principles. These tools and practices work together -
+no single one will fully address one principle, and each one can
+contribute to multiple principles simultaneously. It is important to
+understand that merely using these tools, without adhering to best
+practices and aligning their use with the FAIR principles, is not
+sufficient to create FAIR and quality software.</p>
+<p>You should already have some of these tools installed on your machine
+by following the <a href="./index.html#astronaut-data-and-analysis-code">setup
+instructions</a>. Here, we will provide an overview of some of the
+tools, and explain how their combined use with best practices can help
+you achieve the goal of research software that supports open and
+reproducible research. The following list is not exhaustive — you should
+choose the best set of tools and practices based on your specific
+domain, problem and community.</p>
+<div class="section level3">
+<h3 id="software-development-environments">Software development environments<a class="anchor" aria-label="anchor" href="#software-development-environments"></a>
+</h3>
+<p><strong>Integrated development environments (IDEs)</strong>, such as
+Visual Studio Code (VS Code) or PyCharm, help with reading, running,
+testing, and debugging code. <strong>Virtual software development
+environments</strong> (such as <code>venv</code> for Python) further
+enable us to share our working environments with others, making it
+easier to reuse and extend our code. IDEs often provide integrations
+with other tools, e.g. version control and command line terminals,
+enabling you to do many tasks from a single environment, saving time in
+switching between different tools.</p>
+<p>We have also mentioned <a href="https://www.docker.com/" class="external-link">Docker</a> -
+an open-source platform that allows developers to package software along
+with its dependencies (libraries, configurations, etc.) into a
+<strong>container</strong> that can be deployed and run on different
+operating systems. We will not cover Docker in this course, and will
+focus on environments for developing software.</p>
+</div>
+<div class="section level3">
+<h3 id="command-line-tools">Command line tools<a class="anchor" aria-label="anchor" href="#command-line-tools"></a>
+</h3>
+<p><strong>Command line terminals</strong> (e.g. Bash, GitBash) enable
+us to run and test our code without graphical user interfaces (GUI)
+afforded to us by IDEs - this is sometimes needed for running our code
+remotely on servers and high-performance systems without a GUI
+provision, where time, memory and processing power are expensive or in
+high demand.</p>
+<p><strong>Version Control Systems</strong> (VCS) are typically provided
+as <strong>command line tools</strong> and used from command line
+terminals to enter commands, interact with VCSs and access remote
+version control servers to back up and share our work. Many IDEs now
+provide integrations with VCSs too - making them accessible using a GUI
+instead of typing commands in a terminal.</p>
+<p>Well designed command line tools support interoperability by using
+standard protocols for passing parameters, inputs and outputs. Such
+tools integrate well with one another - allowing us to chain them and
+build up complex and reproducible workflows and analysis pipelines using
+several tools in different steps. If we write our software in a way
+which provides such an interoperable Command Line Interface (CLI) - we
+will be able to integrate it with other existing command line tools to
+automate and speed up our work.</p>
+</div>
+<div class="section level3">
+<h3 id="version-control-tools">Version control tools<a class="anchor" aria-label="anchor" href="#version-control-tools"></a>
+</h3>
+<p><strong>Version control</strong> means knowing what changes were made
+to your code, when and by whom - promoting code ownership,
+responsibility and credit. When combined with software sharing and
+collaborative platforms such as <a href="https://github.com" class="external-link">GitHub</a>,
+<a href="https://about.gitlab.com/" class="external-link">GitLab</a> or <a href="https://bitbucket.org/" class="external-link">BitBucket</a>, it facilitates code
+publication, sharing and findability, teamwork and discussions about
+software and design decisions, provides backup facilities for your code
+and speeds up collaboration on shared code by allowing edits by more
+than one person at a time.</p>
 </div>
 <div class="section level3">
 <h3 id="software-repositories-and-registries">Software repositories and registries<a class="anchor" aria-label="anchor" href="#software-repositories-and-registries"></a>
 </h3>
-<p>Having somewhere to share your code is fundamental to making it
-findable and accessible. Your institution might have a code repository,
-your research field may have a practice of sharing code via a specific
-website, archive or journal, or your version control system might
-include an online component that makes sharing different versions of
-your code easy. You should check the rules or guidelines of your
+<p>Having somewhere to share or publish your code is fundamental to
+making it findable and accessible. Your institution might have a code
+repository, your research field may have a practice of sharing code via
+a specific website, archive or journal, or your version control system
+might include an online component that makes sharing different versions
+of your code easy. You should check the rules or guidelines of your
 institution, grant or domain on publishing code, as well as any licenses
 of the code your software depends on or reuses.</p>
 <p>Some examples of commonly used software repositories and registries
 include:</p>
 <ul>
-<li>general-purpose software repositories - <a href="https://github.com" class="external-link">GitHub</a> and <a href="https://about.gitlab.com/" class="external-link">GitLab</a>
+<li>general-purpose software repositories - <a href="https://github.com" class="external-link">GitHub</a>, <a href="https://about.gitlab.com/" class="external-link">GitLab</a> or <a href="https://bitbucket.org/" class="external-link">BitBucket</a>
 </li>
-<li>programming language-specific software repositories - <a href="https://pypi.org/" class="external-link">PyPi</a> (for Python) and <a href="https://cran.r-project.org/web/packages/" class="external-link">CRAN</a> (for R)</li>
+<li>programming language-specific software repositories for publishing
+software packages and libraries- <a href="https://pypi.org/" class="external-link">PyPi</a>
+(for Python) and <a href="https://cran.r-project.org/web/packages/" class="external-link">CRAN</a> (for R)</li>
 <li>software registries - <a href="https://biotools.us/" class="external-link">BioTools</a>
 (for biosciences) and <a href="https://github.com/NLeSC/awesome-research-software-registries" class="external-link">Awesome
 Research Software Registries</a>, providing a list of research software
@@ -1380,272 +1591,201 @@ registries (by country, organisation, domain and programming language)
 where research software can be registered to help promote its
 discovery</li>
 </ul>
+<p>Platforms like GitHub, GitLab and BitBucket are more than just source
+code repositories - they provide social platforms to facilitate
+discussions, issue tracking, and collaboration around your software
+projects and promote long-term involvement, maintenance and
+sustainability of your software.</p>
 </div>
 <div class="section level3">
-<h3 id="persistent-identifiers">Persistent identifiers<a class="anchor" aria-label="anchor" href="#persistent-identifiers"></a>
+<h3 id="software-identifying-and-archiving-services">Software identifying and archiving services<a class="anchor" aria-label="anchor" href="#software-identifying-and-archiving-services"></a>
 </h3>
-<p>Unique persistent identifiers, such as <strong>Digital Object
-Identifiers</strong> (DOIs) provided by <a href="https://zenodo.org/" class="external-link">Zenodo</a>, <a href="https://figshare.com/" class="external-link">FigShare</a>, etc., or <strong>SoftWare
-Heritage persistent IDentifiers</strong> (<a href="swhid">SWHID</a>)
-provided by <a href="https://www.softwareheritage.org/" class="external-link">Software
-Heritage</a>, and similar digital archiving services, and
-commits/tags/releases used by GitHub and similar code sharing platforms,
-help with findability and accessibility of your software, and can help
-you get credit for your work by providing citable references.</p>
+<p>Services like <a href="https://zenodo.org/" class="external-link">Zenodo</a> help with
+publishing, archiving, and identifying research software and data (and
+their multiple versions) - supporting open access, making research
+software and data publicly available and promoting reproducibility. They
+provide DOI assignment services for proper citation and tracking (by
+providing globally unique identifiers and resolvable references) and
+permanent archiving (storage) ensuring long-term availability and
+accessibility of research outputs (even if code sharing services go
+offline for any reason). Zenodo also integrates with code sharing and
+development platform GitHub allowing for automatic archiving of software
+repositories.</p>
+<p>These services improve the visibility, credibility, and preservation
+of research software.</p>
 </div>
 <div class="section level3">
-<h3 id="tools-for-assessing-fairness-of-software">Tools for assessing FAIRness of software<a class="anchor" aria-label="anchor" href="#tools-for-assessing-fairness-of-software"></a>
+<h3 id="software-citation-tools">Software citation tools<a class="anchor" aria-label="anchor" href="#software-citation-tools"></a>
 </h3>
-<p>Here are some tools that can check your software and provide an
-assessment of its FAIRness:</p>
-<ul>
-<li><a href="https://openebench.bsc.es/observatory/Evaluation" class="external-link">FAIRsoft
-evaluator</a></li>
-<li><a href="https://github.com/marioa/fair-test?tab=readme-ov-file" class="external-link">FAIR
-software test</a></li>
-<li><a href="https://github.com/fair-software/howfairis/" class="external-link"><code>How FAIR is your software</code>
-- command line tool to evaluate a software repository’s compliance with
-the FAIR principles</a></li>
-</ul>
+<p>Software citation tools help researchers and developers properly cite
+software in publications, ensuring credit and reproducibility. These
+tools generate standardised citation formats and often integrate with
+repositories like GitHub, Zenodo, and DOI services.</p>
+<p>There are multiple formats for providing citation information for
+software, such as including plain text files
+(e.g. <code>CITATION.txt</code>) or Markdown files
+(e.g. <code>CITATION.md</code>) or BibTeX files within the software and
+its repository.</p>
+<p><a href="https://citation-file-format.github.io/" class="external-link">Citation File
+Format (CFF)</a> and <a href="https://codemeta.github.io/" class="external-link">CodeMeta</a>
+are both standard formats for describing software metadata. CFF is a
+YAML format, while CodeMeta is a JSON format; there are related tools to
+generate them (e.g. <code>cffinit</code>) Using
+<code>CITATION.cff</code> or <code>codemeta.json</code> files for
+software citation offers advantages by enabling richer metadata for
+citing code, making citation information more accessible and usable by
+both humans and machines and interoperability with various
+repositories.</p>
 </div>
-<div class="section level3">
-<h3 id="tools-and-practices-summary">Tools and practices summary<a class="anchor" aria-label="anchor" href="#tools-and-practices-summary"></a>
-</h3>
-<p>The table below provides a summary of how different tools and
-practices help with the FAIR software principles.</p>
+</section><section><h2 class="section-heading" id="tools-practices-summary">Tools &amp; practices summary<a class="anchor" aria-label="anchor" href="#tools-practices-summary"></a>
+</h2>
+<hr class="half-width">
+<p>The table below provides a summary of some good practices that you
+should be adhering to when developing research software, together with
+different tools that can help with such practices and how they
+contribute to the the FAIR and other good software principles.</p>
 <table style="width:100%;" class="table">
 <colgroup>
-<col width="69%">
+<col width="27%">
+<col width="46%">
+<col width="2%">
+<col width="8%">
 <col width="6%">
 <col width="8%">
-<col width="10%">
-<col width="5%">
 </colgroup>
 <thead><tr class="header">
-<th>Tools and practices</th>
-<th>Findable</th>
-<th>Accessible</th>
-<th>Interoperable</th>
-<th>Reusable</th>
+<th>Practices</th>
+<th>Tools</th>
+<th>FAIR</th>
+<th>Readable/Understandable</th>
+<th>Correct/Reliable</th>
+<th>Sustainable/Maintainable</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td>Virtual development environments</td>
+<td>Use version control</td>
+<td>
+<code>git</code>, GitHub, GitLab, BitBucket</td>
+<td>F</td>
 <td></td>
 <td></td>
 <td></td>
-<td>x</td>
 </tr>
 <tr class="even">
-<td>Integrated development environments (IDEs)</td>
-<td></td>
-<td></td>
+<td>Good software project &amp; modular code structure</td>
+<td>Use conventional folder structures, write modular code with well
+defined interfaces</td>
+<td>R</td>
+<td>x</td>
 <td></td>
 <td>x</td>
 </tr>
 <tr class="odd">
-<td>Command line terminals - automated and reproducible pipelines</td>
+<td>Connect reusable software modules into automated/reproducible
+software pipelines</td>
+<td>Command line tools, CLI, workflow tools (Galaxy, Snakemake,
+WorkflowHub, CWL)</td>
+<td>I, R</td>
 <td></td>
 <td></td>
-<td>x</td>
-<td>x</td>
+<td></td>
 </tr>
 <tr class="even">
-<td>Standard data exchange formats - e.g. for data exchange (CSV,
-YAML)</td>
-<td></td>
-<td></td>
-<td>x</td>
-<td>x</td>
-</tr>
-<tr class="odd">
-<td>Communication protocols - Command Line Interface (CLI) or
-Application Programming Interface (API)</td>
-<td></td>
-<td></td>
-<td>x</td>
-<td>x</td>
-</tr>
-<tr class="even">
-<td>Version control tools</td>
-<td>x</td>
+<td>Use reproducible software development environments</td>
+<td>
+<code>venv</code>, <code>conda</code>, IDEs (integration with
+virtual envs.), Docker, etc.</td>
+<td>R</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>Code testing &amp; correctness</td>
+<td>Format your code to comply with coding conventions</td>
+<td>PEP8, IDEs (help with formatting and conforming with coding
+conventions)</td>
+<td>R</td>
 <td></td>
 <td></td>
 <td></td>
-<td>x</td>
 </tr>
 <tr class="even">
-<td>Coding conventions</td>
-<td></td>
+<td>Use standard exchange data formats/communication
+protocols/interfaces</td>
+<td>CSV, YAML, JSON, CLI, REST, HTTP(S), etc.</td>
+<td>I</td>
 <td></td>
 <td></td>
 <td>x</td>
 </tr>
 <tr class="odd">
-<td>Code-level documentation (comments and docstrings, explaining
-functionality)</td>
+<td>Test your software</td>
+<td>Write unit, functional, integration, regression, etc. tests, IDEs
+(testing and debugging), CI/CD to run tests automatically in
+pipelines</td>
 <td></td>
+<td></td>
+<td>x</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Document your software</td>
+<td>Comments and documentation strings, README, guides, contributions
+guidelines</td>
+<td>R</td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Share your software &amp; encourage review</td>
+<td>Code sharing platforms/services (e.g. GitHub, GitLab, BitBucket) and
+their code review facilities</td>
+<td>F, A</td>
 <td></td>
 <td></td>
 <td>x</td>
 </tr>
 <tr class="even">
-<td>Project-level documentation &amp; metadata (README, explaining
-functionality/installation/running, etc.)</td>
+<td>License your software</td>
+<td>Various open source licences for code (MIT, BSD, GPL, LGPL, etc.),
+LICENSE</td>
+<td>R</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Use persistent identifiers for your software</td>
+<td>DOIs, SWHIDs, Zenodo, FigShare, Software Heritage, etc.</td>
+<td>F</td>
 <td></td>
 <td></td>
 <td>x</td>
+</tr>
+<tr class="even">
+<td>Provide citation &amp; metadata info for your software</td>
+<td>CITATION, DOIs, Zenodo, CFF, <code>cffinit</code>, CodeMeta,
+etc.</td>
+<td>R</td>
+<td></td>
+<td></td>
 <td>x</td>
 </tr>
 <tr class="odd">
-<td>License - code sharing &amp; reuse</td>
+<td>Build community &amp; encourage collaboration around your
+software</td>
+<td>Code of Conduct, README, CONTRIBUTING, open source project
+governance processes</td>
 <td></td>
 <td></td>
 <td></td>
 <td>x</td>
-</tr>
-<tr class="even">
-<td>Citation - code reuse &amp; credit</td>
-<td></td>
-<td></td>
-<td></td>
-<td>x</td>
-</tr>
-<tr class="odd">
-<td>Software repositories &amp; registries</td>
-<td>x</td>
-<td>x</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Unique persistent identifiers</td>
-<td>x</td>
-<td>x</td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
-</div>
-</section><section><h2 class="section-heading" id="checking-your-setup">Checking your setup<a class="anchor" aria-label="anchor" href="#checking-your-setup"></a>
-</h2>
-<hr class="half-width">
-<p>Let’s check your setup now to make sure you are ready for the rest of
-this course.</p>
-<div id="checking-your-setup-1" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="checking-your-setup-1" class="callout-inner">
-<h3 class="callout-title">Checking your setup</h3>
-<div class="callout-content">
-<p>Open a command line terminal and look at the prompt. Compare what you
-see in the terminal with your neighbour, does it look the same or
-different? What information is it telling you and why might this be
-useful? What other information might you want?</p>
-<p>Run the following commands in a terminal to check you have installed
-the tools listed in the Setup page. Compare the output with your
-neighbour and see if you can see any differences.</p>
-<p>Checking the command line terminal:</p>
-<ol style="list-style-type: decimal">
-<li><code>$ date</code></li>
-<li><code>$ echo $SHELL</code></li>
-<li><code>$ pwd</code></li>
-<li><code>$ whoami</code></li>
-</ol>
-<p>Checking Python:</p>
-<ol start="5" style="list-style-type: decimal">
-<li><code>$ python3 --version</code></li>
-<li><code>$ python3 --version</code></li>
-<li><code>$ which python</code></li>
-<li><code>$ which python3</code></li>
-</ol>
-<p>Checking Git and GitHub:</p>
-<ol start="9" style="list-style-type: decimal">
-<li><code>$ git --help</code></li>
-<li><code>$ git config --list</code></li>
-<li><code>$ ssh -T git@github.com</code></li>
-</ol>
-<p>Checking VS Code:</p>
-<ol start="12" style="list-style-type: decimal">
-<li><code>$ code</code></li>
-<li><code>$ code --list-extensions</code></li>
-</ol>
-</div>
-</div>
-</div>
-<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
-  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
-</button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
-<div class="accordion-body">
-<p>The prompt is the <code>$</code> character and any text that comes
-before it, that is shown on every new line before you type in commands.
-Type each of the commands one at a time and press enter. They should
-give you a result by printing some text in the terminal.</p>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
-<div class="accordion-body">
-<p>The expected out put of each command is:</p>
-<ol style="list-style-type: decimal">
-<li>Today’s date</li>
-<li>
-<code>bash</code> or <code>zsh</code> - this tells you what shell
-language you are using. In this course we show examples in Bash.</li>
-<li>Your “present working directory” or the folder where your shell is
-running</li>
-<li>Your username</li>
-<li>In this course we are using Python 3. If
-<code>python --version</code> gives you Python 2.x you may have two
-versions of Python installed on your computer and need to be careful
-which one you are using.</li>
-<li>Use this command to be certain you are using Python version 3, not
-2, if you have both installed.</li>
-<li>The file path to where the Python version you are calling is
-installed.</li>
-<li>If you have more than one version these should be different paths,
-if both 5. and 6. gave the same result then 7. and 8. should match as
-well.</li>
-<li>The help message explaining how to use the <code>git</code>
-command.</li>
-<li>You should have <code>user.name</code>, <code>user.email</code> and
-<code>core.editor</code> set in your Git configuration. Check that the
-editor listed is one you know how to use.</li>
-<li>This checks if you have set up your connection to GitHub correctly.
-If is says <code>permission denied</code> you may need to look at the
-instructions for setting up SSH keys again on the Setup page.</li>
-<li>This should open VSCode in your current working directory. macOS
-users may need to first open VS Code and <a href="https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line" class="external-link">add
-it to the PATH</a>.</li>
-<li>You should have the extensions GitLens, Git Graph, Python, JSON and
-Excel Viewer installed to use in this course.</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<p>You may have noticed that our researcher has received the software
-project they are meant to be working as a <code>.zip</code> archive via
-email. In the next episode, we will learn a better practice for sharing
-and tracking changes to a software project using version control
-software Git and project sharing and collaboration platform GitHub.</p>
+<p>Let’s explore some of these practices and tools in detail over the
+next few episodes.</p>
 </section><section><h2 class="section-heading" id="further-reading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
 </h2>
 <hr class="half-width">
@@ -1661,6 +1801,8 @@ IDEs and Code Editors (Guide) - Real Python</a></li>
 <li><a href="https://faircookbook.elixir-europe.org/content/recipes/findability/zenodo-deposition.html" class="external-link">The
 Fair Cookbook - Depositing to generic repositories - Zenodo use
 case</a></li>
+<li><a href="https://book.the-turing-way.org/" class="external-link">The Turing Way “Handbook
+to reproducible, ethical and collaborative research”</a></li>
 </ul>
 <p>Also check the <a href="reference.html#litref">full reference set</a>
 for the course.</p>
@@ -1694,7 +1836,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-04-version-control"><p>Content from <a href="04-version-control.html">Version control</a></p>
 <hr>
-<p>Last updated on 2024-10-24 |
+<p>Last updated on 2025-03-13 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/04-version-control.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 90 minutes</p>
@@ -1744,7 +1886,7 @@ safe-keeping.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>At this point, the downloaded code to start working with in this
 episode should be as in: <a href="https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/04-version-control" class="external-link uri">https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/04-version-control</a>.</p>
@@ -2082,7 +2224,7 @@ time.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To save the changes to the renamed Python file, use the following Git
 commands:</p>
@@ -2253,7 +2395,7 @@ did. What about the commit messages do you find helpful or not?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Commit message (2) is the better commit message since it is more
 descriptive about what the author did. This message could be improved
@@ -2292,9 +2434,9 @@ change you do want to remove.</p>
 <div class="callout-content">
 <p>Below are the <code>diffs</code> of two commits. A <code>diff</code>
 shows the differences in a file (or files!) compared to the previous
-commit in the history so you can what has changed. The lines that begin
-with <code>+</code>s represent additions, and the lines that begin with
-<code>-</code>s represent deletions. Compare these two commit
+commit in the history so you can see what has changed. The lines that
+begin with <code>+</code>s represent additions, and the lines that begin
+with <code>-</code>s represent deletions. Compare these two commit
 <code>diff</code>s. Can you understand what the commit author was trying
 to achieve in each commit? How many changes have they tried to make in
 each commit? Discuss in pairs or small groups.</p>
@@ -2316,7 +2458,7 @@ Version control with Git lesson</a>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>The git <code>diff</code> presented in option (1) is cleaner. The
 author has only tackled one thing: placing the import statements at the
@@ -2373,7 +2515,7 @@ work.</li>
 <li>
 <a href="https://git-scm.com/docs/git-reset" class="external-link"><code>git reset</code></a>:
 This command will recover the state of the project at the specified
-commit. What is done with the commits you had mave since is defined by
+commit. What is done with the commits you had made since is defined by
 some optional flags:
 <ul>
 <li>
@@ -2520,7 +2662,7 @@ each term?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <ul>
 <li>
@@ -2599,11 +2741,11 @@ descriptive</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-05-code-environment"><p>Content from <a href="05-code-environment.html">Reproducible development environment</a></p>
+</section></section><section id="aio-05-reproducible-dev-environment"><p>Content from <a href="05-reproducible-dev-environment.html">Reproducible software environments</a></p>
 <hr>
-<p>Last updated on 2025-01-30 |
+<p>Last updated on 2025-03-13 |
 
-        <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/05-code-environment.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/05-reproducible-dev-environment.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -2646,7 +2788,7 @@ contribute to it.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/05-reproducible-environment" class="external-link uri">https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/05-reproducible-environment</a>.</p>
@@ -2694,10 +2836,11 @@ separate to avoid confusion between projects. The solution for this
 problem is to create a self-contained <strong>virtual
 environment</strong> per project, which contains a particular version of
 Python installation plus a number of additional external libraries.</p>
-<section><h2 class="section-heading" id="virtual-development-environments">Virtual development environments<a class="anchor" aria-label="anchor" href="#virtual-development-environments"></a>
+<section><h2 class="section-heading" id="what-are-virtual-software-environments">What are virtual software environments?<a class="anchor" aria-label="anchor" href="#what-are-virtual-software-environments"></a>
 </h2>
 <hr class="half-width">
-<p>So what exactly are virtual environments, and why use them?</p>
+<p>So what exactly are virtual software environments, and why use
+them?</p>
 <p>A Python virtual environment helps us create an <strong>isolated
 working copy</strong> of a software project that uses a specific version
 of Python interpreter together with specific versions of a number of
@@ -2723,9 +2866,9 @@ libraries that your project depends on most of the time. Virtual
 environments also enable you to always use the latest available version
 without specifying it explicitly. They also enable you to use a specific
 older version of a package for your project, should you need to.</p>
-<div class="section level3">
-<h3 id="managing-virtual-environments">Managing virtual environments<a class="anchor" aria-label="anchor" href="#managing-virtual-environments"></a>
-</h3>
+</section><section><h2 class="section-heading" id="managing-virtual-environments">Managing virtual environments<a class="anchor" aria-label="anchor" href="#managing-virtual-environments"></a>
+</h2>
+<hr class="half-width">
 <p>There are several command line tools used for managing Python virtual
 environments - we will use <code>venv</code>, available by default from
 the standard <code>Python</code> distribution since
@@ -2737,10 +2880,9 @@ this - it interacts and obtains the packages from the central repository
 called <a href="https://pypi.org/" class="external-link">Python Package Index (PyPI)</a>.</p>
 <p>So, we will use <code>venv</code> and <code>pip</code> in combination
 to help us create and share our virtual development environments.</p>
-</div>
-<div class="section level3">
-<h3 id="creating-virtual-environments">Creating virtual environments<a class="anchor" aria-label="anchor" href="#creating-virtual-environments"></a>
-</h3>
+</section><section><h2 class="section-heading" id="creating-virtual-environments">Creating virtual environments<a class="anchor" aria-label="anchor" href="#creating-virtual-environments"></a>
+</h2>
+<hr class="half-width">
 <p>Creating a virtual environment with <code>venv</code> is done by
 executing the following command:</p>
 <div class="codewrapper sourceCode" id="cb5">
@@ -2850,7 +2992,6 @@ reactivate the environment ready for the next part:</p>
 newly created virtual environment will show up in version control - we
 will see how to handle it using Git in one of the subsequent
 episodes.</p>
-</div>
 <div class="section level3">
 <h3 id="installing-external-packages">Installing external packages<a class="anchor" aria-label="anchor" href="#installing-external-packages"></a>
 </h3>
@@ -2947,9 +3088,9 @@ zope.interface  7.0.1</code></pre>
 <code>python3 -m pip uninstall &lt;package-name&gt;</code>. You can also
 supply a list of packages to uninstall at the same time.</p>
 </div>
-<div class="section level3">
-<h3 id="sharing-virtual-environments">Sharing virtual environments<a class="anchor" aria-label="anchor" href="#sharing-virtual-environments"></a>
-</h3>
+</section><section><h2 class="section-heading" id="sharing-virtual-environments">Sharing virtual environments<a class="anchor" aria-label="anchor" href="#sharing-virtual-environments"></a>
+</h2>
+<hr class="half-width">
 <p>You are collaborating on a project with a team so, naturally, you
 will want to share your environment with your collaborators so they can
 easily ‘clone’ your software project with all of its dependencies and
@@ -3038,8 +3179,7 @@ environment) is update the contents of the <code>requirements.txt</code>
 file accordingly by re-issuing <code>pip freeze</code> command and
 propagate the updated <code>requirements.txt</code> file to your
 collaborators via your code sharing platform.</p>
-</div>
-</section><section><h2 class="section-heading" id="running-the-code">Running the code<a class="anchor" aria-label="anchor" href="#running-the-code"></a>
+</section><section><h2 class="section-heading" id="running-the-code-and-reproducing-results">Running the code and reproducing results<a class="anchor" aria-label="anchor" href="#running-the-code-and-reproducing-results"></a>
 </h2>
 <hr class="half-width">
 <p>We are now setup to run our code from the newly created virtual
@@ -4842,11 +4982,11 @@ creating readable, accessible and reproducibile projects.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-08-code-correctness"><p>Content from <a href="08-code-correctness.html">Code correctness</a></p>
+</section></section><section id="aio-08-code-correctness-testing"><p>Content from <a href="08-code-correctness-testing.html">Code correctness &amp; testing</a></p>
 <hr>
-<p>Last updated on 2025-02-12 |
+<p>Last updated on 2025-03-13 |
 
-        <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/08-code-correctness.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/08-code-correctness-testing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 90 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -4920,7 +5060,7 @@ environment from the root of the software project directory:</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/08-code-correctness" class="external-link uri">https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/08-code-correctness</a>.</p>
@@ -5006,7 +5146,7 @@ working together correctly.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>End-to-end tests compare the actual output of a program to the
@@ -5128,7 +5268,7 @@ verify that a piece of code is behaving as expected?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>It can be tempting to test our code informally because this
 approach:</p>
@@ -5601,7 +5741,7 @@ mean?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: lower-alpha">
 <li>9 tests were detected in the test suite</li>
@@ -5748,7 +5888,7 @@ function. Cover typical cases and edge cases.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>We can add the following test functions to out test suite.</p>
 <div class="codewrapper sourceCode" id="cb29">
@@ -5986,7 +6126,7 @@ test suite?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <ol style="list-style-type: lower-alpha">
 <li>You can find this information on the “Files” tab of the HTML report
@@ -6111,11 +6251,11 @@ require additional testing.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-09-code-documentation"><p>Content from <a href="09-code-documentation.html">Code documentation</a></p>
+</section></section><section id="aio-09-software-documentation"><p>Content from <a href="09-software-documentation.html">Software documentation</a></p>
 <hr>
-<p>Last updated on 2024-10-24 |
+<p>Last updated on 2025-03-13 |
 
-        <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/09-code-documentation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/09-software-documentation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 90 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -6225,7 +6365,7 @@ software independently and make use of its basic features</li>
 understand our code sufficiently to modify/extend/repurpose it.</li>
 </ul>
 </li>
-</ul></section><section><h2 class="section-heading" id="software-level-documentation">Software-level documentation<a class="anchor" aria-label="anchor" href="#software-level-documentation"></a>
+</ul></section><section><h2 class="section-heading" id="code-level-documentation">Code-level documentation<a class="anchor" aria-label="anchor" href="#code-level-documentation"></a>
 </h2>
 <hr class="half-width">
 <p>In previous episodes we encountered several different forms of
@@ -7374,9 +7514,9 @@ guidelines that can helps us write high quality documentation.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-10-open-collaboration"><p>Content from <a href="10-open-collaboration.html">Open code &amp; collaboration</a></p>
+</section></section><section id="aio-10-open-collaboration"><p>Content from <a href="10-open-collaboration.html">Open software management &amp; collaboration</a></p>
 <hr>
-<p>Last updated on 2025-02-12 |
+<p>Last updated on 2025-03-13 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/10-open-collaboration.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 90 minutes</p>
@@ -7453,7 +7593,7 @@ environment from the root of the software project directory:</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/10-open-collaboration" class="external-link uri">https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/10-open-collaboration</a></p>
@@ -8253,8 +8393,8 @@ any links that you are not going to use.
   "url": "https://softwaresaved.github.io/fair-research-software/instructor/aio.html",
   "identifier": "https://softwaresaved.github.io/fair-research-software/instructor/aio.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2025-03-11",
-  "datePublished": "2025-03-11"
+  "dateModified": "2025-03-13",
+  "datePublished": "2025-03-13"
 }
 
   </script><script>
