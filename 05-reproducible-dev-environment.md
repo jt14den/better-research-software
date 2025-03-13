@@ -1,5 +1,5 @@
 ---
-title: Reproducible development environment
+title: Reproducible software environments
 teaching: 30
 exercises: 0
 ---
@@ -66,8 +66,9 @@ The solution for this problem is to create a self-contained
 which contains a particular version of Python installation
 plus a number of additional external libraries.
 
-## Virtual development environments
-So what exactly are virtual environments, and why use them?
+## What are virtual software environments?
+
+So what exactly are virtual software environments, and why use them?
 
 A Python virtual environment helps us create an **isolated working copy** of a software project
 that uses a specific version of Python interpreter
@@ -94,7 +95,7 @@ Virtual environments also enable you to always use
 the latest available version without specifying it explicitly.
 They also enable you to use a specific older version of a package for your project, should you need to.
 
-### Managing virtual environments
+## Managing virtual environments
 
 There are several command line tools used for managing Python virtual environments - we will use `venv`, 
 available by default from the standard `Python` distribution since `Python 3.3`.
@@ -107,7 +108,7 @@ it interacts and obtains the packages from the central repository called
 
 So, we will use `venv` and `pip` in combination to help us create and share our virtual development environments.
 
-### Creating virtual environments
+## Creating virtual environments
 
 Creating a virtual environment with `venv` is done by executing the following command:
 
@@ -293,7 +294,7 @@ zope.interface  7.0.1
 To uninstall a package installed in the virtual environment do: `python3 -m pip uninstall <package-name>`.
 You can also supply a list of packages to uninstall at the same time.
 
-### Sharing virtual environments
+## Sharing virtual environments
 
 You are collaborating on a project with a team so, naturally,
 you will want to share your environment with your collaborators
@@ -370,7 +371,7 @@ from your virtual environment) is update the contents of the `requirements.txt` 
 by re-issuing `pip freeze` command and propagate the updated `requirements.txt` file to your collaborators
 via your code sharing platform.
 
-## Running the code
+## Running the code and reproducing results
 
 We are now setup to run our code from the newly created virtual environment:
 

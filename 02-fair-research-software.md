@@ -6,31 +6,20 @@ exercises: 15
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What are FAIR research principles?
-- How do FAIR principles apply to software (and data)?
+- What are the FAIR research principles?
+- How do FAIR principles apply to software?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 After completing this episode, participants should be able to:
 
-- Explain the FAIR research principles in the context of research software and data
+- Explain the FAIR research principles in the context of research software
 - Explain why these principles are of value in the research community 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-
-::::::::::::::::::::::::::::::::::::: discussion
-
-### Motivation
-Think about the questions below. Your instructors may ask you to share your answers in a shared notes document and/or
-discuss them with other participants.
-
-- What motivated you to attend this course? Did you come by choice or were you advised to attend?
-- What do you hope to learn or change in your current research software practice? Describe how your knowledge, 
-work or attitude may be different afterwards.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
+Let's explore a subset of good software practices based on the FAIR principles.
 
 ## What is FAIR?
 
@@ -60,22 +49,17 @@ closer to the gold standard of fully reproducible research.
   may not be enough as they may change their open access model or disappear completely in the future, so archiving your code means it stands a better chance at being preserved
 
 ### Accessible
-- Make sure people can obtain get a copy your software using standard communication protocols (e.g. HTTP, FTP, etc.)
+- Make sure people can obtain get a copy your software using standard communication protocols (e.g. HTTP(S), (S)FTP, etc.)
 - The code and its description (metadata) has to be available even when the software is no longer actively developed (this includes earlier versions of the software)
 
 ### Interoperable
-- Explain the functionality of your software and protocols for interaction with it
-- Use community-agreed standard formats for inputs and outputs of your software and its metadata (e.g. [CodeMeta][codemeta])
+- Use community-agreed standard formats for inputs and outputs of your software and its metadata
 - Communicate with other software and tools via standard protocols and APIs
 
 ### Reusable
-- Document your software (including its functionality, how to install and run it) to make it more understandable by
-  others who may wish to reuse or extend it
-- Follow best practices for software development, e.g. structure your code using common patterns and use coding
-  conventions to make your code readable and understandable by people
-- Test your software and make sure it works on different platforms/operating systems
+- Document your software (including its functionality, how to install and run it) so it is both usable (can be executed) 
+and reusable (can be understood, modified, built upon, or incorporated into other software)
 - Give a licence to your software clearly stating how it can be reused
-- State how to cite your software, so people can give you credit when they reuse it
 
 :::::: callout
 
@@ -83,8 +67,9 @@ closer to the gold standard of fully reproducible research.
 
 FAIR is not a binary metric - there is no such thing as "FAIR or "not FAIR".
 
-FAIR is not a perfect metric, nor does it provide a full and exhaustive software quality checklist.
-Software may be FAIR but still not very good in terms of its functionality.
+FAIR is not a perfect metric, nor does it provide a full and exhaustive software quality checklist - there are other 
+good software quality practices not covered by FAIR. 
+Conversely, software may be FAIR but still not very good in terms of its functionality.
 
 FAIR is **not meant** to criticise or discredit work. 
 
@@ -92,11 +77,9 @@ FAIR refers to the specific **values** of and describes a set of **principles** 
 that can be a helpful guide for researchers who want to improve their practices (by helping them see where they are 
 on the **FAIR spectrum** and help them on a **journey** to make their software more FAIR). 
 
-![*FAIR as a 4D spectrum, image by the Netherlands eScience Center licensed under CC-BY 4.0*](episodes/fig/fair-spectrum.png){alt='FAIR represented as as a 4-dimensional spectrum  with 4 axes - findable, accessible, interoperable and reusable, image by the Netherlands eScience Center licensed under CC-BY 4.0'}
-
 ::::::
 
-We are going to explore the above practices on an example software project we will be working on as part of this
+We are going to explore the FAIR and other good software quality practices on an example software project we will be working on as part of this
 course.
 
 :::  challenge
@@ -114,38 +97,10 @@ Think where on the FAIR spectrum it fits, using the following scale as a guide f
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Software and data used in this course
-
-We are going to follow a fairly typical experience of a new PhD or postdoc joining a research group. 
-They were emailed some data and analysis code bundled in a `.zip` archive and written by another group member 
-who worked on similar things but has since left the group. 
-They need to be able to install and run this code on their machine, check they can understand it and then adapt it to 
-their own project.
-
-As part of the [setup for this course](./index.html#astronaut-data-and-analysis-code), you should have downloaded a `.zip` archive containing the software project
-the new research team member was given. 
-Let's unzip this archive and inspect its content in VS Code. 
-The software project contains:
-
-(1) a JSON file (`data.json`) - a snippet of which is shown below - with data on extra-vehicular activities 
-(EVAs or spacewalks) undertaken by astronauts and cosmonauts from 1965 to 2013 (data provided by NASA 
-via its [Open Data Portal](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/about_data))
-![JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose)](episodes/fig/astronaut-data-json-snippet.png){alt='JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose'}
-(2) a Python script (`my code v2.py`) containing some analysis.
-![A first few lines of a Python script](episodes/fig/astronaut-analysis-bad-code-screenshot.png){alt='A first few lines of a Python script used as example code for the episode'}
-
-The code in the Python script does some common research tasks:
-
-* Read in the data from the JSON file
-* Change the data from one data format to another and save to a file in the new format (CSV)
-* Perform some calculations to generate summary statistics about the data
-* Make a plot to visualise the data
-
-Let's have a critical look at this code and think about how FAIR this piece of software is.
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
-Look at our code in VS Code and compare this data and code to the software you chose earlier (or assess 
+Look at our software project compare its data and code to the software you chose earlier (or assess 
 it on its own).
 Do you think it is Findable, Accessible, Interoperable and Reusable? 
 Give it a score from 1 to 5 in each category, as in the previous exercise, and then we will discuss it together.
@@ -203,6 +158,14 @@ R - 2/5
 
 Let's now have a look into tools and practices that are commonly used in research that can help us develop software in a 
 more FAIR way.
+
+## Tools for assessing FAIRness
+
+Here are some tools that can check your software and provide an assessment of its FAIRness:
+
+- [FAIRsoft evaluator][fair-rs-evaluator]
+- [FAIR software test][fair-rs-test]
+- [`How FAIR is your software` - command line tool to evaluate a software repository's compliance with the FAIR principles][howfairis]
 
 
 ## Further reading

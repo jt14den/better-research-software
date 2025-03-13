@@ -1,5 +1,5 @@
 ---
-title: Code documentation
+title: Software documentation
 teaching: 60
 exercises: 30
 ---
@@ -68,7 +68,7 @@ conduct **better research** and produce **FAIR software**:
   - Reference guides and background information can help developers understand our code sufficiently to 
   modify/extend/repurpose it.
 
-## Software-level documentation
+## Code-level documentation
 
 In previous episodes we encountered several different forms of in-code documentation aspects, 
 including in-line comments and docstrings. 

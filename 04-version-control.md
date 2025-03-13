@@ -469,7 +469,7 @@ work along with the change you do want to remove.
 ### Understanding commit contents
 
 Below are the `diffs` of two commits. A `diff` shows the differences in a file (or files!) compared to the previous 
-commit in the history so you can what has changed. 
+commit in the history so you can see what has changed. 
 The lines that begin with `+`s represent additions, and the lines that begin with `-`s represent deletions. 
 Compare these two commit `diff`s. 
 Can you understand what the commit author was trying to achieve in each commit? 
@@ -538,7 +538,7 @@ methods:
   deciding to discard some work.
 - [`git reset`](https://git-scm.com/docs/git-reset): This command will recover
   the state of the project at the specified commit. What is done with the commits
-  you had mave since is defined by some optional flags:
+  you had made since is defined by some optional flags:
   - `--soft`: Any changes you have made since the specified commit would be preserved and left as "Changes to be committed"
   - `--mixed`: Any changes you have made since the specified commit would be preserved but not marked for commit (this is the default action)
   - `--hard`: Any changes you have made since the specified commit are discarded.

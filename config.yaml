@@ -11,7 +11,7 @@
 carpentry: 'incubator'
 
 # Overall title for pages.
-title: 'Tools and good software practices for open and reproducible research'
+title: 'Software tools and practices for open and reproducible research' 
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: 2023-10-03 # FIXME
@@ -62,13 +62,13 @@ episodes:
 #- writing-content.md
 - 01-introduction.md
 - 02-fair-research-software.md
-- 03-tools.md
+- 03-tools-practices.md
 - 04-version-control.md
-- 05-code-environment.md
+- 05-reproducible-dev-environment.md
 - 06-code-readability.md
 - 07-code-structure.md
-- 08-code-correctness.md
-- 09-code-documentation.md
+- 08-code-correctness-testing.md
+- 09-software-documentation.md
 - 10-open-collaboration.md
 - 11-wrap-up.md
 
