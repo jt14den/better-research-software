@@ -21,10 +21,9 @@ After completing this episode, participants should be able to:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-In this episode, we will begin to cover the basics of version control and explore
-how this tool assists us in producing reproducible and sustainable scientific projects.
-We will create a new software project from our existing code, make some changes to it and track them with
-version control, and then push those changes to a remote server for safe-keeping.
+In this episode, we'll cover the basics of version control, and explore
+how it can help us produce reproducible and sustainable scientific projects.
+We'll create a new software project from our existing code, make some changes to it (tracking them with version control), and then store those changes remotely - both for safe-keeping, and to make them easier to share.
 
 
 ::: instructor
@@ -36,81 +35,90 @@ https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tre
 
 ## What is a version control system?
 
-Version control is the practice of tracking and managing changes to files.
-Version control systems are software tools that assist in the management of these
-file changes over time. They keep track of every modification to the files in a
-special database that allows users to "travel through time" and compare earlier
-versions of the files with the current state.
+Version control systems are tools that let you track changes in files over time, and use that information.
+They keep track of every modification to the files in a special database that allows users to "travel through time",
+and compare earlier versions of the files with the current state.
+Think of a version control system like turning on 'Track Changes' on Microsoft Word/Google Docs,
+but for *any* files you want, and a lot more powerful and flexible.
 
 ### Why use a version control system?
 
-The main motivation as scientists to use version control in our projects is for
-reproducibility purposes. As hinted to above, by tracking and storing every change
-we make, we can more effectively restore the state of the project at any point
-in time. This is incredibly useful if we want to reproduce results from a
-specific version of the code, or track down changes that broke some functionality.
+As scientists, our main motivation for using version control is **reproducibility**.
+By tracking and storing every change we make,
+we can restore our project to the state it was at any point in time.
+This is incredibly useful for reproducing results from a specific version of the code,
+or tracking down which changes we (or others!) made introduced bugs or changed our results.
 
-The other benefit we gain is that version control provides us with the provenance of
-the project. As we make each change, we also leave a message about what the
-change was and why it was made. This improves the transparency of the project and
-makes it auditable, which is good scientific practice.
+The other benefit of version control is it provides us with a *history* of our development.
+As we make each change, we record what it was, and why we made it.
+This helps make our development process transparent, and auditable -- good scientific practice.
 
-Later on in this workshop, we will also see how using a version control system
-allows many people to collaborate on the same project without a lot of manual
-effort to combine different items of work.
+Later on in the course, we'll also see how version control makes it easier for multiple collaborators to work together on the same project, and easily combine their contributions.
 
-## Git version control system 
+## Git version control system
 
-Git is one of the version control systems around and the one we will be using in this course. 
-It is primarily used for source code management in software development but it can be used to track changes in files 
-in general - it is particularly effective for tracking text-based files (e.g. source code files in any programming 
-language, CSV, Markdown, HTML, CSS, Tex, etc. files).
+**Git** is the most popular version control system, and the one we'll be using.
+It's used mostly for managing code when developing software, but it can track *any* files - and it's particularly effective with text-based files (e.g. source code like `.py`, `.c`, `.r`, but also `.csv`, `.tex` and more).
 
-The diagram below shows a typical software development lifecycle with Git (starting from making changes locally) and 
-the commonly used commands to interact with different parts of the Git infrastructure. 
-We will cover all of the commands below during this course, this is just a high level overview.
+Git stores files in **repositories** - directories where changes to the files can be tracked.
+The diagram below shows the different parts of a repository,
+and the most common commands used to work with one.
+We'll cover these commands in more detail -- this is just a high-level overview.
 
 ![Software development lifecycle with Git](episodes/fig/ep03_fig05-git-lifecycle.svg){alt='Software development lifecycle with Git showing Git commands and flow of data between components of a Git system, including working directory, staging area, local and remote repository'}
 
-- **working directory** - a local directory (including any subdirectories) where your project files live and where you 
-are currently working. It is also known as the “untracked” area of Git. Any changes to files will be marked by Git in 
-the working directory. If you make changes to the working directory and do not explicitly tell Git to save them - 
-you will likely lose those changes. Using `git add FILENAME` command, you tell Git to start tracking changes to file 
-FILENAME within your working directory.
-- **staging area (index)** - once you tell Git to start tracking changes to files (with `git add FILENAME` command), 
-Git saves those changes in the staging area on your local machine. Each subsequent change to the same file needs to be 
-followed by another `git add FILENAME` command to tell Git to update it in the staging area. To see what is in your 
-working directory and staging area at any moment (i.e. what changes is Git tracking), run the command `git status`.
-- **local repository** - stored within the `.git` directory of your project locally, this is where Git wraps together 
-all your changes from the staging area and puts them using the `git commit` command. Each commit is a new, permanent 
-snapshot (checkpoint, record) of your project in time, which you can share or revert to.
-- **remote repository** - this is a version of your project that is hosted somewhere on the Internet 
-(e.g., on GitHub, GitLab or somewhere else). While your project is nicely version-controlled in your local repository, 
-and you have snapshots of its versions from the past, if your machine crashes - you still may lose all your work. 
-Furthermore, you cannot share or collaborate on this local work with others easily. Working with a remote repository 
-involves pushing your local changes remotely (using `git push`) and pulling other people’s changes from a remote 
-repository to your local copy (using `git fetch` or `git pull`) to keep the two in sync in order to collaborate 
-(with a bonus that your work also gets backed up to another machine). Note that a common best practice when 
-collaborating with others on a shared repository is to always do a `git pull` before a `git push`, to ensure you have 
-any latest changes before you push your own.
+- **Working directory** - a local directory (including any subdirectories) where your project files live,
+  and where you are currently working.
+  It's also known as the “untracked” area of Git.
+  Any changes to files will be marked by Git in the working directory.
+  Git will only *save* changes that you explicitly tell it to.
+  Using `git add FILENAME` command, can you tell Git to start tracking changes to file `FILENAME` in your working directory.
+- **Staging area (index)** - once you tell Git to start tracking changes to files (with `git add FILENAME` command),
+  Git saves those changes in the staging area on your local machine.
+  Each subsequent change to the same file needs to be followed by another `git add FILENAME` command to tell Git to update it in the staging area.
+  To see what's in your working directory and staging area at any moment (i.e. what changes is Git tracking),
+  you can run the command `git status`.
+  The staging area lets you bundle together groups of changes to save to your repository.
+- **Local repository** - stored within the `.git` directory of your project locally,
+  this is where Git wraps together all your changes from the staging area and puts them using the `git commit` command.
+  Each commit is a new, permanent snapshot (checkpoint, record) of your project in time, which you can share or revert to.
+- **Remote repository** - this is a version of your project that is hosted somewhere on the Internet (e.g., on GitHub, GitLab or somewhere else).
+  While your project is nicely version-controlled in your local repository, and you have snapshots of its versions from the past,
+  if your machine crashes - you still may lose all your work.
+  Plus, you can't share or collaborate on local work with others easily (other than by emailing back and forth).
+  Working with a remote repository involves 'pushing' your local changes to it (using `git push`),
+  and pulling other people’s changes back to your local copy (using `git fetch` or `git pull`).
+  This keeps the two in sync in order to collaborate, with a bonus that your work also gets backed up to another machine.
+  Best practice when collaborating with others on a shared repository is to always do a `git pull` before a `git push`,
+  to ensure you have any latest changes before you push your own.
 
-
-Git is a distributed version control system allowing for multiple people to be working on the same project 
-(even the same file) at the same time. 
+Git is a distributed version control system allowing for multiple people to be working on the same project
+(even the same file) at the same time.
 Initially, we will use Git to start tracking changes to files on our local machines; later on we will start sharing our
 work on GitHub allowing other people to see and contribute to our work.
 
+
 ### Create a new repository
 
-Before we start using Git, if you have not done this step during setup, make sure to tell Git now to use `main` 
-as the default branch (instead of `master`) which is what we use in this course:
+We'll demo Git using the command line, so open VS Code and start a new terminal via **Terminal -> New Terminal**.
+
+::: instructor
+
+Open up VS Code, and launch a **Git Bash** terminal.
+Call out how your prompt looks, and make sure that Windows users aren't accidentally using PowerShell.
+[Refer back to the setup section on configuring VS Code if anyone hasn't got it right.](https://carpentries-incubator.github.io/fair-research-software/instructor/installation-instructions.html#visual-studio-code)
+
+:::
+
+Before we start, if you didn't do it during setup, tell Git to use `main` as the default branch.
+More modern versions of Git use `main`, but older ones still use `master`.
+They work the same, but we want to keep things consistent for clarity.
 
 ```bash
 $ git config --global init.defaultBranch main
 ```
 
-Let us create a new empty directory in the `Desktop` folder for our work, and then change the current working directory 
-to the newly created one:
+We'll start by creating a new empty folder on our desktop, called `spacewalks`, and moving to it:
 
 ```bash
 $ cd ~/Desktop
@@ -118,13 +126,13 @@ $ mkdir spacewalks
 $ cd spacewalks
 ```
 
-We will now tell Git to make `spacewalks` a repository -- a place where Git can store versions of our files:
+Then, we tell Git to make `spacewalks` a repository -- a directory where Git can track changes to our files:
 
 ```bash
 $ git init
 ```
 
-We can check everything is setup correctly by asking Git to tell us the status of our project:
+We can check everything is set up correctly by asking Git to tell us the status of our project:
 
 ```bash
 $ git status
@@ -140,16 +148,20 @@ nothing to commit (create/copy files and use "git add" to track)
 
 The exact wording of this output may be slightly different if you are using a different version of Git.
 
+Now, we'll open the directory in VS Code -- go to **File -> Open Folder** and find **Desktop / spacewalks**.
+You might need to open a new terminal afterwards!
+
+
 ### Add initial files into our repository
 
-During the [setup](./index.html#astronaut-data-and-analysis-code) for this course, you have been provided with a `.zip` archive containing, among other things, 
-these two code and data files:
+As part of [our setup](./index.html#astronaut-data-and-analysis-code), we downloaded `astronaut-data-not-so-fair.zip`.
+This contained, among other things, two files we'll be using for this episode:
 
 - `my code v2.py`
 - `data.json`
 
-We need to move these files into our Git folder.
-You can either drag and drop the files from a file explorer window into the left pane of the VS Code IDE, 
+We want to move these files into the folder we just set up.
+You can either drag and drop the files from a file explorer window into the left pane of the VS Code,
 or you can use the [`mv` command](https://linuxcommandlibrary.com/man/mv) in the command line terminal.
 
 ```bash
@@ -157,7 +169,7 @@ mv /path/where/you/saved/the/file/my\ code\ v2.py ~/Desktop/spacewalks/
 mv /path/where/you/saved/the/file/data.json ~/Desktop/spacewalks/
 ```
 
-Let's see what that has done to our repository by running `git status` again:
+Let's see what that's done to our repository by running `git status` again:
 
 ```bash
 git status
@@ -176,8 +188,10 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-This is telling us that Git has noticed the new files.
-The "untracked files" message means that there is a file in the directory that Git isn't keeping track of.
+This tells us that Git has noticed the new files, but unlike something like Dropbox or OneDrive, it doesn't *automatically* track them.
+Helpful, given scientific code can have vast inputs or outputs we might not want to store (e.g. 10s of GB of space telescope data),
+or require sensitive information we can't share (e.g. medical records).
+
 We can tell Git to track a file using `git add`:
 
 ```bash
@@ -202,8 +216,9 @@ Changes to be committed:
 	new file:   my code v2.py
 ```
 
-Git now knows that it's supposed to keep track of `my code v2.py` and `data.json`, but it hasn't recorded these changes as a commit yet.
-To get it to do that, we need to run one more command:
+Git now knows that it's supposed to keep track of `my code v2.py` and `data.json`, but it hasn't 'committed' those changes to the record yet.
+A commit is a snapshot of how your tracked files have changed at a stage in time.
+To create one a commit, and record that we've added two new files, we need to run one more command:
 
 ```bash
 $ git commit -m "Add an example script and dataset to work on"
@@ -216,13 +231,11 @@ $ git commit -m "Add an example script and dataset to work on"
  create mode 100644 my code v2.py
 ```
 
-When we run `git commit`, Git takes everything we have told it to save by using `git add` and stores a copy permanently 
-in a special `.git` directory.
-This permanent copy is called a commit (or revision).
+Now, Git has taken everything we have told it to save by using `git add` and stored a copy in a special, hidden `.git` directory.
+This is called a commit (or revision).
 
-We use the flag `-m` (for message) to record a short, descriptive, and specific comment that will help us remember 
-later on what we did and why.
-If we only run `git commit` without the `-m` option, Git will launch a text editor so that we can write a longer message.
+The `-m` option means message, and records a short, descriptive, and specific comment that will help us remember later on what we did and why.
+If we run `git commit` *without* `-m` , Git will still expect a message - and will launch a text editor so that we can write a longer one.
 
 Good commit messages start with a brief (<50 characters) statement about the changes made in the commit.
 Generally, the message should complete the sentence "If applied, this commit will...".
@@ -246,22 +259,36 @@ This tells us that everything is up to date.
 
 ## Where are my changes?
 
-If we run `ls` at this point, we will still see only two files, the script and the dataset.
-That's because Git saves information about files' history in the special `.git` directory mentioned earlier 
-so that our filesystem does not become cluttered (and so that we cannot accidentally edit or delete an old version).
+If we run `ls` at this point, we'll still only see two files - our script, and our dataset.
+That's because Git saves information about files' history in the special `.git` directory mentioned earlier.
+This both stops our folders being cluttered with old versions, and *also* stops us accidentally deleting them!
+
+You can see the hidden Git directory using the `-a` flag to show all files and folders:
+
+```bash
+$ ls -a
+```
+
+```output
+.
+..
+.git
+```
+
+If you delete it, your directory will stop being a repository, and you'll lose your history of changes.
+You never need to look into `.git` yourself -- we'll go into how to look at the history of your changes later.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Make a change
 
-Did you notice how when we were typing the Python script into the terminal, we had to add a slash before the space 
+Did you notice how when we were typing the Python script into the terminal, we had to add a slash before the space
 like this: `my\ code\ v2.py`?
-Using a backslash in this way is called 'escaping' and it lets the terminal know to treat the space 
+Using a backslash in this way is called 'escaping' and it lets the terminal know to treat the space
 as part of the filename, and not a separate argument.
-However, it is pretty annoying and considered bad practice to have spaces in your filenames like this, 
-especially if you will be manipulating them from the terminal.
-So, let's go ahead and remove the space from the filename altogether and replace it with an underscore `_` instead.
-You can use the `mv` command again like so:
+It's a bit inconvenient and can cause problems if you forget, so best practise is to avoid spaces in filenames.
+We'll go ahead and replace the spaces with underscores `_` instead.
+You can use the `mv` command to rename files:
 
 ```bash
 $ mv my\ code\ v2.py my_code_v2.py
@@ -326,9 +353,9 @@ $ git commit -m "Replace spaces in Python filename with underscores"
 
 ### Advanced solution
 
-We initially renamed the Python file using the `mv` command, and we than had to `git add` *both* `my_code_v2.py` 
+We initially renamed the Python file using the `mv` command, and we than had to `git add` *both* `my_code_v2.py`
 and `my\ code\ v2.py`.
-Alternatively, we could have used Git's own `mv` command like so:
+Alternatively, we could've used Git's own `mv` command like so:
 
 ```bash
 $ git mv my\ code\ v2.py my_code_v2.py
@@ -342,9 +369,8 @@ Changes to be committed:
 	renamed:    my code v2.py -> my_code_v2.py
 ```
 
-`git mv` is the equivalent of running `mv ...` followed immediately by `git add ...` of the old and new filenames, 
-so the changes have been staged automatically.
-All that needs to be done is to commit them.
+`git mv <old> <new>` is the equivalent of running `mv <old> <new>` immediately followed by `git add <new>`, so the changes have been staged automatically.
+We just need to commit them.
 
 ```bash
 $ git commit -m "Replace spaces in Python filename with underscores"
@@ -362,9 +388,9 @@ $ git commit -m "Replace spaces in Python filename with underscores"
 
 ### Rename our data and output files
 
-Now that we have seen how to rename files in Git, let's:
+Now that we've seen how to rename files in Git, let's:
 
-(i) give our input data file and script more meaningful names and 
+(i) give our input data file and script more meaningful names and
 (ii) choose informative file names for our output data file and plot.
 
 First let's update file names in our script using VS Code.
@@ -372,10 +398,10 @@ First let's update file names in our script using VS Code.
 ```python
 data_f = open('./eva-data.json', 'r')
 data_t = open('./eva-data.csv','w')
-g_file = './cumulative_eva_graph.png'   
+g_file = './cumulative_eva_graph.png'
 ```
 
-Now, let's actually rename our files on the file system using git and commit our changes.
+Now, let's actually rename our files on the file system using Git, and commit our changes.
 ```bash
 git mv data.json eva-data.json
 git mv my_code_v2.py eva_data_analysis.py
@@ -390,7 +416,7 @@ Changes to be committed:
 	renamed:    my_code_v2.py -> eva_data_analysis.py
 ```
 
-Finally, let's commit out changes:
+Finally, let's commit our changes:
 ```bash
 git commit -m "Implement informative file names"
 ```
@@ -398,29 +424,54 @@ git commit -m "Implement informative file names"
 
 ### Commit messages
 
-We have already met the concept of commit messages when we made and stored changes to our code files. 
-Commit messages are short descriptions of, and the motivation for, what a commit will achieve. 
-It is therefore important to take some time to ensure these commit messages are helpful and descriptive, 
-as when work is reviewed (by your future self or a collaborator) they provide the context about what changes were made and why. 
-This can make tracking down specific changes in commits much
-easier, without having to inspect the code or files themselves.
+We've already met the concept of commit messages in our first commit,
+but we'll go into them in a bit more depth.
+Commit messages are short descriptions of what a commit does, and why you did it.
+It's important to make sure they're helpful and descriptive,
+as when you or a collaborator look back at your code they provide vital context.
+This can make tracking down specific changes in commits much easier,
+compared to having to trawl through all the previous versions of your files to figure out what change altered your code's behaviour.
 
-Generally, commit messages should complete the sentence "If applied, this commit
-will...". 
-Most often a short, 50 character (ish) title will suffice, but a longer-form description of the changes can also be 
-provided by leaving a blank space between the summary line and the rest of the message. 
-There are many different conventions that can be used for commit messages that range from very structured (such as
-[conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)) to the fun (such as [gitmoji](https://gitmoji.dev/)). 
-The important thing is that it is clear to the reader what a commit is doing and why. 
-If a project is using a specific commit message convention, this will often be described in their
+Generally, commit messages should complete the sentence "If applied, this commit will...".
+Usualy a short, 50 character (ish) summary is enough,
+but if you'd like to give more detail you can leave a blank line then write a long-form description.
+There's a range of conventions for commit messages,
+that range from very structured (such as [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)) to the friendly (such as [gitmoji](https://gitmoji.dev/)).
+The most important thing is that the message is clear to the reader.
+If a project is using a specific commit message convention, this will usually be described in their
 [contributing guidelines](https://en.wikipedia.org/wiki/Contributing_guidelines).
+
+::: instructor
+
+If demonstrating remotely, copy the challenge text into the collaborative notes document.
+Leave 2-3 minutes for people to write their thoughts, and then go through them for 1-2 minutes.
+
+```
+### Good commit messages
+
+Read the two commit messages below.
+Write down your thoughts, and respond to those of others - which is the most helpful? Why?
+Do you have any examples of when commit messages would've helped you (or have helped you)?
+
+1. [main 7cf85f6] Change variable
+     1 file changed, 1 insertion(+), 1 deletion(-)
+
+2. [main 8baf69d] Change variable name from columns to column_headers
+    1 file changed, 1 insertion(+), 1 deletion(-)
+
+#### Responses
+* (Your response here)
+```
+
+:::
+
 
 :::  challenge
 
 ### Good commit messages
 
-Read the two commit messages below. In pairs or small groups, discuss which messages help you understand more 
-about what the commit author did.
+Read the two commit messages below. In pairs or small groups,
+discuss which messages help you understand more about what the commit author did.
 What about the commit messages do you find helpful or not?
 
 1. ```output
@@ -436,9 +487,12 @@ What about the commit messages do you find helpful or not?
 
 ### Solution
 
-Commit message (2) is the better commit message since it is more descriptive about what the author did. 
-This message could be improved further by adding a blank line then further describing the change discussing, 
-for example, why the variable name was changed.
+Commit message (2) is pretty clearly better, as it actually tells you what the author did.
+If a section of your code that depended on this code broke after this change,
+you could easily tell why, and how to fix it.
+The message could be improved further by adding a blank line then some detail on *why* this change was made.
+Not every change needs more than 50 characters,
+but a few extra seconds of writing can save you hours of bug-hunting!
 
 :::::::::::::::::::::::::
 
@@ -446,34 +500,67 @@ for example, why the variable name was changed.
 
 ### Self-contained commits
 
-If we want our commit messages to be descriptive and help us understand the
-changes in the project over time, then we also have to make commits that are
-very self-contained. 
-That is to say that each commit we make should only change
-one, logical thing. 
-By "logical" here, we mean that one aspect of updating the
-files has been achieved to completion - such as adding docstrings or refactoring
-a function - we don't mean that changes are committed line-by-line. 
+If we want our commit messages to be descriptive and helpful,
+then we have to make very self-contained commits.
+Each one should only change one logical thing, to completion -
+ for example, adding documentation, or renaming a function.
+We don't mean that changes are committed line-by-line!
+This is partly why Git has the staging area,
+rather than automatically saving changes file-by-file like Dropbox or OneDrive.
+If a change requires modifying multiple files to make sense, like when we renamed the input data file,
+then you can commit *all* the edits required for it in one go,
+so you don't have logical inconsistencies in your code.
+
+Equally, don't avoid committing code until it's *totally* finished.
+Most changes can be broken down into smaller steps. which can be completed.
+It's better to have part-finished code in a repository,
+with clear commit messages saying what still needs doing,
+than code that never gets committed and can be lost in a hard drive crash!
+
 See the ["Things to avoid when creating commits" section][git-commit-avoid]
 of [Openstack's "Git Commit Good Practice" documentation][git-commit-good-practice] for examples of logical,
 self-contained commits, and commits that don't follow this practice.
 
-The reasons that self-contained commits are important are that: it helps with
-reviewing changes if each commit tackles one step; if code breaks, tracking down
-the specific change that caused the break is simpler; if you need to undo changes,
-you can remove them in small increments, rather than losing a lot of unrelated
-work along with the change you do want to remove.
+Self-contained commits are important as:
+* Reviewing changes is easier when each commit tackles one step
+* Tracking down changes that broke functionality is simpler
+* Unwanted changes can be undone in small increments, without losing a lot of unrelated work.
+
+
+::: instructor
+
+If demonstrating remotely, copy the challenge text into the collaborative notes document.
+Leave 2-3 minutes for people to write their thoughts, and then go through them for 1-2 minutes.
+
+```
+### Understanding commit contents
+
+Below are the `diffs` of two commits, showing what's changed in one or more file(s) between them.
+Lines starting with `+`s are additions, while lines starting with `-`s are deletions.
+Compare the two `diff`s - can you understand what the commit author was trying to achieve in each commit?
+How many changes have they tried to make in each commit?
+
+1. ![Example Diff 1](https://carpentries-incubator.github.io/fair-research-software/fig/ex-diff-1.png)
+2. ![Example Diff 2](https://carpentries-incubator.github.io/fair-research-software/fig/ex-diff-2.png)
+
+#### Responses
+* (Your response here)
+
+```
+
+:::
+
+
 
 :::  challenge
 
 ### Understanding commit contents
 
-Below are the `diffs` of two commits. A `diff` shows the differences in a file (or files!) compared to the previous 
-commit in the history so you can see what has changed. 
-The lines that begin with `+`s represent additions, and the lines that begin with `-`s represent deletions. 
-Compare these two commit `diff`s. 
-Can you understand what the commit author was trying to achieve in each commit? 
-How many changes have they tried to make in each commit? 
+Below are the `diffs` of two commits.
+A `diff` shows what's changed in one or more file(s) between two commits.
+Lines starting with `+`s are additions, while lines starting with `-`s are deletions.
+Compare the two `diff`s - can you understand what the commit author was trying to achieve in each commit?
+How many changes have they tried to make in each commit?
 Discuss in pairs or small groups.
 
 1. ![Example Diff 1](fig/ex-diff-1.png)
@@ -488,7 +575,7 @@ from the [Software Carpentry Version control with Git lesson][swc-git-lesson].
 ### Solution
 
 The git `diff` presented in option (1) is cleaner. The author has only tackled
-one thing: placing the import statements at the top of the file. 
+one thing: placing the import statements at the top of the file.
 This kind of commit is much easier to review in isolation, and will be easier to track down
 if [`git bisect`](https://git-scm.com/docs/git-bisect) is required.
 
@@ -518,57 +605,54 @@ Date:   Mon Jun 17 11:52:02 2024 +0100
     Add and example script and dataset to work on
 ```
 
-This output demonstrates why it is important to write meaningful and descriptive
-commit messages. 
-Without the messages, we will only have the commit hashes (the
-strings of random numbers and letters after "commit") to identify each commit,
-which would be impossible for us.
+This output demonstrates why it's important to write meaningful and descriptive commit messages.
+Without them, we'd only have the commit hashes (the strings of letters and numbers after "commit") to identify each one,
+which is realistically impossible.
 
-We may need to inspect our recent commits to establish where a bug was introduced
-or because we have decided that our recent work isn't suitable and we wish to discard
-it and start again. 
-Once we have identified the last commit we want to keep, we 
-can revert the state of our project back to that commit with a few different
-methods:
+We might need to inspect our recent commits to establish where a bug was introduced,
+or because we've realised we made a mistake and want to go back to an older, working version of the code.
+Once we've identified the last commit we want to keep,
+we can revert the state of our project back to that commit with a few different methods:
 
-- [`git revert`](https://git-scm.com/docs/git-revert): This command reverts a
-  commit by creating a new commit that reverses the action of the supplied commit
-  or list of commits. Because this command creates new commits, your Git history
-  is more complete and tells the story of exactly what work you did, i.e.,
-  deciding to discard some work.
-- [`git reset`](https://git-scm.com/docs/git-reset): This command will recover
-  the state of the project at the specified commit. What is done with the commits
-  you had made since is defined by some optional flags:
-  - `--soft`: Any changes you have made since the specified commit would be preserved and left as "Changes to be committed"
-  - `--mixed`: Any changes you have made since the specified commit would be preserved but not marked for commit (this is the default action)
-  - `--hard`: Any changes you have made since the specified commit are discarded.
-  
-Using `git reset` command produces a "cleaner" history, but does not tell the full story and your work.
+- [`git revert`](https://git-scm.com/docs/git-revert):
+  This command reverts a commit by creating a new commit that undoes the changes in the supplied commit (or list of commits).
+  Because this command creates new commits, your history is more complete,
+  and tells the story of exactly what work you did, i.e., deciding to discard some work.
+- [`git reset`](https://git-scm.com/docs/git-reset):
+  This command will recover the state of the project at the specified commit.
+  What's done with the commits you had made since then is defined by some optional flags:
+  - `--soft`: Changes you've made since then are kept, but left as "Changes to be committed".
+  - `--mixed`: Changes you've made since then are kept, but not marked for commit (the default).
+  - `--hard`: All changes you've made since that commit are thrown away.
+
+Using `git reset` command produces a "cleaner" history, but doesn't tell the full story of your work.
+Generally, you'll want to `git revert`, both to avoid accidentally deleting changes you wanted to keep,
+and to keep a record of what you tried but wasn't successful.
+A negative result is still a result, and if you forget what didn't work you're likely to repeat it.
+
 
 ## Interacting with a remote Git server
 
-Git is also a distributed version control system, allowing us to synchronise work between any two or more copies of 
-the same repository - the ones that are not located on your machine.
-So far we have have been working with a project on our
-local machines and, even though we have been incrementally saving our work in a
-way that is recoverable (version control), if anything happened to our laptops,
-the whole project would be lost. 
-However, we can use the distribution aspect of
-Git to push our projects and histories to a server (someone else's computer) so
-that they are accessible and retrievable if the worst were to happen to our
-machines. 
+Git is also a distributed version control system, and lets us synchronise work between multiple copies of
+the same repository - including ones that aren't on your machine (**'remote repositories'**).
+So far, we've been working with a **local repository** on our machine and,
+even though we have been incrementally saving our work in a way that is recoverable (version control),
+if we lost our machine then we'd lose all our code along with it,
+
+Fortunately, we can easily upload our **local repository**,
+with all our code and the history of our devleopment,
+to a remote server so that it can be recovered in future.
 
 ![Git - distributed version control system, image from W3Docs (freely available)](episodes/fig/git-distributed.png){alt='2 Git repositories belonging to 2 different developers linked to a central repository and one another showing two way flow of information in each link'}
 
 [GitHub][github] is an online software development platform that can act as a central remote server.
-It uses Git underneath and provides facilities for storing, tracking, and collaborating on software projects.
+It uses Git, and provides facilities for storing, tracking, and collaborating on software projects.
 Other Git hosting services are available, such as [GitLab](https://gitlab.com) and [Bitbucket](https://bitbucket.org).
 
-Distributing our projects in this way also opens us up to collaboration,
-since colleagues would be able to access our projects, make their own copies on
-their machines, and conduct their own work.
+Putting our projects on GitHub doesn't just make them accident-proof, but also makes it easy to collaborate and share them.
+Our collaborators can access the project, download their own copy, and even contribute work back to us.
 
-We will now go through how to push a local project on [GitHub](https://github.com) and share it publicly.
+We'll now go through how to push a **local repository** to [GitHub](https://github.com) and share it publicly.
 
 1. In your browser, navigate to <https://github.com> and sign into your account
 2. In the top right hand corner of the screen, there is a menu labelled "+" with
@@ -589,17 +673,22 @@ We will now go through how to push a local project on [GitHub](https://github.co
 
    ![*Complete GitHub repository creation*](fig/ep03_fig03-create_repository.jpg){ alt-text="Completing the creation of the GitHub repository" .image-with-shadow }
 
-4. Now you have created your repository, you need to send the files and the history
-   you have stored on your local computer to GitHub's servers. GitHub provides
-   some instructions on how to do that for different scenarios. You want to use
-   the instructions under the heading "...or push an existing repository from the
-   command line". These instructions will look like this:
+4. Now you've created your **remote repository**, you need to send the files and the history
+   you have stored on your local computer to GitHub's servers.
+   GitHub provides some instructions on how to do that for different scenarios.
+   Change the toggle on the right side from "HTTPS" to "SSH",
+   then look at the heading "...or push an existing repository from the command line".
+   You should see instructions will look like this:
 
    ```bash
-   git remote add origin https://github.com/<YOUR_GITHUB_HANDLE>/spacewalks.git
+   git remote add origin git@github.com/<YOUR_GITHUB_HANDLE>/spacewalks.git
    git branch -M main
    git push -u origin main
    ```
+
+  **It's very important you make sure you've switched from "HTTPS" to "SSH".**
+  In the setup, we configured our GitHub account and our local machine for SSH.
+  If you select HTTPS, you won't be able to upload your files.
 
    You can copy these commands using the button that looks like two overlapping
    squares to the right-hand side of the commands. Paste them into your terminal
@@ -608,22 +697,19 @@ We will now go through how to push a local project on [GitHub](https://github.co
    ![*Copy the commands to sync the local and remote repositories*](fig/ep03_fig04-copy_commands.jpg){ alt-text="Copying the commands to sync the local and remote repositories" .image-with-shadow }
 
 5. If you refresh your browser window, you should now see the two files `my-code-v2.py`
-   and `data.json` visible in
+   and `eva-data.json` visible in
    the GitHub repository, matching what you have locally on your machine.
 
 Let's explain a bit more about what those commands did...
 
 ```bash
-git remote add origin https://github.com/<YOUR_GITHUB_HANDLE>/spacewalks.git
+git remote add origin git@github.com/<YOUR_GITHUB_HANDLE>/spacewalks.git
 ```
 
-This command tells Git to create a `remote` called "origin" and link it to the
-URL of your GitHub repository. 
-A `remote` is a version control concept where two
-(or more) repositories are connected to each other in such a way that they can
-be kept in sync by exchanging commits. 
-"origin" is a name used to refer to the
-remote repository. 
+This command tells Git to create a `remote` called "origin" and link it to the URL of your GitHub repository.
+A `remote` is a version control concept where two (or more) repositories are connected to each other,
+ in such a way that they can be kept in sync by exchanging commits.
+"origin" is a name used to refer to the remote repository.
 It could be called anything, but "origin" is a convention that
 is often used by default in Git and GitHub since it indicates which repository
 is considered the "source of truth", particularly useful when many people are
@@ -633,21 +719,39 @@ collaborating on the same repository.
 git branch -M main
 ```
 
-`git branch` is a command used to manage branches. 
-We will discuss branches later
-on in the course. This command ensures the branch we are working on is called
-"main". 
+`git branch` is a command used to manage branches.
+We'll discuss branches later on in the course.
+This command ensures the branch we are working on is called "main".
 This will be the default branch of the project for everyone working on it.
 
 ```bash
 git push -u origin main
 ```
 
-The `git push` command is used to update remote references with any changes you
-have made locally. This command tells Git to update the "main" branch on the
-"origin" remote. The `-u` flag (short for `--set-upstream`) will set a tracking
-reference, so that in the future `git push` can be run without the need to
-specify the remote and reference name.
+The `git push` command is used to update remote repositories with any changes you've made locally.
+This command tells Git to update the "main" branch on the "origin" remote.
+The `-u` flag (short for `--set-upstream`) sets the 'tracking reference' for the current branch,
+so that in future `git push` will default to sending to `origin main`.
+
+
+::: instructor
+
+If demonstrating remotely, copy the challenge text into the collaborative notes document.
+Leave 2-3 minutes for people to write their thoughts, and then go through them for 1-2 minutes.
+
+```
+### Terminology
+
+Consider the difference between the terms `remote` and `origin`.
+How does their definition relate to how they work here?
+
+#### Responses
+* (Your response here)
+
+```
+
+:::
+
 
 :::  challenge
 
@@ -672,22 +776,18 @@ and `origin`. What is the definition of each term?
 
 ### Summary
 
-During this episode, we have covered the basics of using version control to
-track changes to our projects. We have seen how to: create new projects,
-incrementally save progress, construct informative commit messages and content,
-inspect the history of our projects and retrieve the state, and push our projects
-to distributed servers.
+We've covered the basics of using version control to track changes to our projects.
+We created a new project, and used it to log our changes as 'commits', with informative messages.
+From this information we looked back at our work, compared different versions, and even recovered past states.
+Finally, we published our work to remote servers, where it's both secure and shareable.
 
-These skills are critical to reproducible and sustainable science since using
-version control makes our work self-documenting - the commit messages provide
-the narrative of what changed and why - and we can recover the exact state of
-our projects at a specific time, so we can more reliably run the "same" code
-again. We can also back up our projects by pushing them to distributed, remote
-servers and reduce the risk of data loss over the course of a project's lifetime.
+These skills are critical to reproducible and sustainable science.
+Software *is* science, and being able to share the specific version of code used in a paper is required for reproducibility.
+But we, as researchers, also benefit from having a clear, self-documented record of what we did, when and why.
+It makes it much easier to track down and fix our bugs, or to return to projects we've taken a break from.
 
-Version control is a vast topic and we have only covered the absolute basics
-here as a brief introduction. For a deeper and more complete dive into the
-subject matter, please see the "Further reading" section below.
+Version control's a vast topic and this brief introduction has only covered the absolute basics.
+If you'd like a deeper and more complete dive into it, there's more in our **Further Reading** section.
 
 ## Further reading
 
@@ -703,8 +803,8 @@ Also check the [full reference set](learners/reference.md#litref) for the course
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- A version control system is software that tracks and manages changes to a project over time
-- Using version control aids reproducibility since the exact state of the software that produced an output can be 
+- Version control systems are software that tracks and manages changes to a project over time
+- Using version control aids reproducibility since the exact state of the software that produced an output can be
 recovered
 - A commit represents the smallest unit of change to a project
 - Commit messages describe what each commit contains and should be descriptive
