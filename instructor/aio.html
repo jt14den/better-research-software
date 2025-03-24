@@ -1131,7 +1131,7 @@ discuss it together.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>Here are some questions to help you assess where on the FAIR spectrum
 the code is:</p>
@@ -1197,7 +1197,7 @@ calculate a different statistic, or run on a different input file?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>I would give the following scores:</p>
 <p>F - 1/5</p>
@@ -1836,7 +1836,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-04-version-control"><p>Content from <a href="04-version-control.html">Version control</a></p>
 <hr>
-<p>Last updated on 2025-03-13 |
+<p>Last updated on 2025-03-24 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/04-version-control.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 90 minutes</p>
@@ -1875,18 +1875,18 @@ work</li>
 </div>
 </div>
 </div>
-<p>In this episode, we will begin to cover the basics of version control
-and explore how this tool assists us in producing reproducible and
-sustainable scientific projects. We will create a new software project
-from our existing code, make some changes to it and track them with
-version control, and then push those changes to a remote server for
-safe-keeping.</p>
+<p>In this episode, we’ll cover the basics of version control, and
+explore how it can help us produce reproducible and sustainable
+scientific projects. We’ll create a new software project from our
+existing code, make some changes to it (tracking them with version
+control), and then store those changes remotely - both for safe-keeping,
+and to make them easier to share.</p>
 <div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>At this point, the downloaded code to start working with in this
 episode should be as in: <a href="https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/04-version-control" class="external-link uri">https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/04-version-control</a>.</p>
@@ -1897,86 +1897,86 @@ episode should be as in: <a href="https://github.com/carpentries-incubator/astro
 <section><h2 class="section-heading" id="what-is-a-version-control-system">What is a version control system?<a class="anchor" aria-label="anchor" href="#what-is-a-version-control-system"></a>
 </h2>
 <hr class="half-width">
-<p>Version control is the practice of tracking and managing changes to
-files. Version control systems are software tools that assist in the
-management of these file changes over time. They keep track of every
+<p>Version control systems are tools that let you track changes in files
+over time, and use that information. They keep track of every
 modification to the files in a special database that allows users to
-“travel through time” and compare earlier versions of the files with the
-current state.</p>
+“travel through time”, and compare earlier versions of the files with
+the current state. Think of a version control system like turning on
+‘Track Changes’ on Microsoft Word/Google Docs, but for <em>any</em>
+files you want, and a lot more powerful and flexible.</p>
 <div class="section level3">
 <h3 id="why-use-a-version-control-system">Why use a version control system?<a class="anchor" aria-label="anchor" href="#why-use-a-version-control-system"></a>
 </h3>
-<p>The main motivation as scientists to use version control in our
-projects is for reproducibility purposes. As hinted to above, by
-tracking and storing every change we make, we can more effectively
-restore the state of the project at any point in time. This is
-incredibly useful if we want to reproduce results from a specific
-version of the code, or track down changes that broke some
-functionality.</p>
-<p>The other benefit we gain is that version control provides us with
-the provenance of the project. As we make each change, we also leave a
-message about what the change was and why it was made. This improves the
-transparency of the project and makes it auditable, which is good
-scientific practice.</p>
-<p>Later on in this workshop, we will also see how using a version
-control system allows many people to collaborate on the same project
-without a lot of manual effort to combine different items of work.</p>
+<p>As scientists, our main motivation for using version control is
+<strong>reproducibility</strong>. By tracking and storing every change
+we make, we can restore our project to the state it was at any point in
+time. This is incredibly useful for reproducing results from a specific
+version of the code, or tracking down which changes we (or others!) made
+introduced bugs or changed our results.</p>
+<p>The other benefit of version control is it provides us with a
+<em>history</em> of our development. As we make each change, we record
+what it was, and why we made it. This helps make our development process
+transparent, and auditable – good scientific practice.</p>
+<p>Later on in the course, we’ll also see how version control makes it
+easier for multiple collaborators to work together on the same project,
+and easily combine their contributions.</p>
 </div>
 </section><section><h2 class="section-heading" id="git-version-control-system">Git version control system<a class="anchor" aria-label="anchor" href="#git-version-control-system"></a>
 </h2>
 <hr class="half-width">
-<p>Git is one of the version control systems around and the one we will
-be using in this course. It is primarily used for source code management
-in software development but it can be used to track changes in files in
-general - it is particularly effective for tracking text-based files
-(e.g. source code files in any programming language, CSV, Markdown,
-HTML, CSS, Tex, etc. files).</p>
-<p>The diagram below shows a typical software development lifecycle with
-Git (starting from making changes locally) and the commonly used
-commands to interact with different parts of the Git infrastructure. We
-will cover all of the commands below during this course, this is just a
-high level overview.</p>
+<p><strong>Git</strong> is the most popular version control system, and
+the one we’ll be using. It’s used mostly for managing code when
+developing software, but it can track <em>any</em> files - and it’s
+particularly effective with text-based files (e.g. source code like
+<code>.py</code>, <code>.c</code>, <code>.r</code>, but also
+<code>.csv</code>, <code>.tex</code> and more).</p>
+<p>Git stores files in <strong>repositories</strong> - directories where
+changes to the files can be tracked. The diagram below shows the
+different parts of a repository, and the most common commands used to
+work with one. We’ll cover these commands in more detail – this is just
+a high-level overview.</p>
 <figure><img src="../fig/ep03_fig05-git-lifecycle.svg" alt="Software development lifecycle with Git showing Git commands and flow of data between components of a Git system, including working directory, staging area, local and remote repository" class="figure mx-auto d-block"><div class="figcaption">Software development lifecycle with Git</div>
 </figure><ul>
 <li>
-<strong>working directory</strong> - a local directory (including
-any subdirectories) where your project files live and where you are
-currently working. It is also known as the “untracked” area of Git. Any
-changes to files will be marked by Git in the working directory. If you
-make changes to the working directory and do not explicitly tell Git to
-save them - you will likely lose those changes. Using
-<code>git add FILENAME</code> command, you tell Git to start tracking
-changes to file FILENAME within your working directory.</li>
+<strong>Working directory</strong> - a local directory (including
+any subdirectories) where your project files live, and where you are
+currently working. It’s also known as the “untracked” area of Git. Any
+changes to files will be marked by Git in the working directory. Git
+will only <em>save</em> changes that you explicitly tell it to. Using
+<code>git add FILENAME</code> command, can you tell Git to start
+tracking changes to file <code>FILENAME</code> in your working
+directory.</li>
 <li>
-<strong>staging area (index)</strong> - once you tell Git to start
+<strong>Staging area (index)</strong> - once you tell Git to start
 tracking changes to files (with <code>git add FILENAME</code> command),
 Git saves those changes in the staging area on your local machine. Each
 subsequent change to the same file needs to be followed by another
 <code>git add FILENAME</code> command to tell Git to update it in the
-staging area. To see what is in your working directory and staging area
-at any moment (i.e. what changes is Git tracking), run the command
-<code>git status</code>.</li>
+staging area. To see what’s in your working directory and staging area
+at any moment (i.e. what changes is Git tracking), you can run the
+command <code>git status</code>. The staging area lets you bundle
+together groups of changes to save to your repository.</li>
 <li>
-<strong>local repository</strong> - stored within the
+<strong>Local repository</strong> - stored within the
 <code>.git</code> directory of your project locally, this is where Git
 wraps together all your changes from the staging area and puts them
 using the <code>git commit</code> command. Each commit is a new,
 permanent snapshot (checkpoint, record) of your project in time, which
 you can share or revert to.</li>
 <li>
-<strong>remote repository</strong> - this is a version of your
+<strong>Remote repository</strong> - this is a version of your
 project that is hosted somewhere on the Internet (e.g., on GitHub,
 GitLab or somewhere else). While your project is nicely
 version-controlled in your local repository, and you have snapshots of
 its versions from the past, if your machine crashes - you still may lose
-all your work. Furthermore, you cannot share or collaborate on this
-local work with others easily. Working with a remote repository involves
-pushing your local changes remotely (using <code>git push</code>) and
-pulling other people’s changes from a remote repository to your local
-copy (using <code>git fetch</code> or <code>git pull</code>) to keep the
-two in sync in order to collaborate (with a bonus that your work also
-gets backed up to another machine). Note that a common best practice
-when collaborating with others on a shared repository is to always do a
+all your work. Plus, you can’t share or collaborate on local work with
+others easily (other than by emailing back and forth). Working with a
+remote repository involves ‘pushing’ your local changes to it (using
+<code>git push</code>), and pulling other people’s changes back to your
+local copy (using <code>git fetch</code> or <code>git pull</code>). This
+keeps the two in sync in order to collaborate, with a bonus that your
+work also gets backed up to another machine. Best practice when
+collaborating with others on a shared repository is to always do a
 <code>git pull</code> before a <code>git push</code>, to ensure you have
 any latest changes before you push your own.</li>
 </ul>
@@ -1988,18 +1988,35 @@ allowing other people to see and contribute to our work.</p>
 <div class="section level3">
 <h3 id="create-a-new-repository">Create a new repository<a class="anchor" aria-label="anchor" href="#create-a-new-repository"></a>
 </h3>
-<p>Before we start using Git, if you have not done this step during
-setup, make sure to tell Git now to use <code>main</code> as the default
-branch (instead of <code>master</code>) which is what we use in this
-course:</p>
+<p>We’ll demo Git using the command line, so open VS Code and start a
+new terminal via <strong>Terminal -&gt; New Terminal</strong>.</p>
+<div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
+  <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
+<div class="accordion-body">
+<p>Open up VS Code, and launch a <strong>Git Bash</strong> terminal.
+Call out how your prompt looks, and make sure that Windows users aren’t
+accidentally using PowerShell. <a href="https://carpentries-incubator.github.io/fair-research-software/instructor/installation-instructions.html#visual-studio-code" class="external-link">Refer
+back to the setup section on configuring VS Code if anyone hasn’t got it
+right.</a></p>
+</div>
+</div>
+</div>
+</div>
+<p>Before we start, if you didn’t do it during setup, tell Git to use
+<code>main</code> as the default branch. More modern versions of Git use
+<code>main</code>, but older ones still use <code>master</code>. They
+work the same, but we want to keep things consistent for clarity.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> init.defaultBranch main</span></code></pre>
 </div>
-<p>Let us create a new empty directory in the <code>Desktop</code>
-folder for our work, and then change the current working directory to
-the newly created one:</p>
+<p>We’ll start by creating a new empty folder on our desktop, called
+<code>spacewalks</code>, and moving to it:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2007,14 +2024,14 @@ the newly created one:</p>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="ex">$</span> mkdir spacewalks</span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="ex">$</span> cd spacewalks</span></code></pre>
 </div>
-<p>We will now tell Git to make <code>spacewalks</code> a repository – a
-place where Git can store versions of our files:</p>
+<p>Then, we tell Git to make <code>spacewalks</code> a repository – a
+directory where Git can track changes to our files:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> git init</span></code></pre>
 </div>
-<p>We can check everything is setup correctly by asking Git to tell us
+<p>We can check everything is set up correctly by asking Git to tell us
 the status of our project:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2032,20 +2049,23 @@ nothing to commit (create/copy files and use "git add" to track)</code></pre>
 </div>
 <p>The exact wording of this output may be slightly different if you are
 using a different version of Git.</p>
+<p>Now, we’ll open the directory in VS Code – go to <strong>File -&gt;
+Open Folder</strong> and find <strong>Desktop / spacewalks</strong>. You
+might need to open a new terminal afterwards!</p>
 </div>
 <div class="section level3">
 <h3 id="add-initial-files-into-our-repository">Add initial files into our repository<a class="anchor" aria-label="anchor" href="#add-initial-files-into-our-repository"></a>
 </h3>
-<p>During the <a href="./index.html#astronaut-data-and-analysis-code">setup</a> for this
-course, you have been provided with a <code>.zip</code> archive
-containing, among other things, these two code and data files:</p>
+<p>As part of <a href="./index.html#astronaut-data-and-analysis-code">our setup</a>, we
+downloaded <code>astronaut-data-not-so-fair.zip</code>. This contained,
+among other things, two files we’ll be using for this episode:</p>
 <ul>
 <li><code>my code v2.py</code></li>
 <li><code>data.json</code></li>
 </ul>
-<p>We need to move these files into our Git folder. You can either drag
-and drop the files from a file explorer window into the left pane of the
-VS Code IDE, or you can use the <a href="https://linuxcommandlibrary.com/man/mv" class="external-link"><code>mv</code>
+<p>We want to move these files into the folder we just set up. You can
+either drag and drop the files from a file explorer window into the left
+pane of the VS Code, or you can use the <a href="https://linuxcommandlibrary.com/man/mv" class="external-link"><code>mv</code>
 command</a> in the command line terminal.</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2053,7 +2073,7 @@ command</a> in the command line terminal.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">mv</span> /path/where/you/saved/the/file/my\ code\ v2.py ~/Desktop/spacewalks/</span>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">mv</span> /path/where/you/saved/the/file/data.json ~/Desktop/spacewalks/</span></code></pre>
 </div>
-<p>Let’s see what that has done to our repository by running
+<p>Let’s see what that’s done to our repository by running
 <code>git status</code> again:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2074,10 +2094,13 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)</code></pre>
 </div>
-<p>This is telling us that Git has noticed the new files. The “untracked
-files” message means that there is a file in the directory that Git
-isn’t keeping track of. We can tell Git to track a file using
-<code>git add</code>:</p>
+<p>This tells us that Git has noticed the new files, but unlike
+something like Dropbox or OneDrive, it doesn’t <em>automatically</em>
+track them. Helpful, given scientific code can have vast inputs or
+outputs we might not want to store (e.g. 10s of GB of space telescope
+data), or require sensitive information we can’t share (e.g. medical
+records).</p>
+<p>We can tell Git to track a file using <code>git add</code>:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2104,8 +2127,10 @@ Changes to be committed:
 </div>
 <p>Git now knows that it’s supposed to keep track of
 <code>my code v2.py</code> and <code>data.json</code>, but it hasn’t
-recorded these changes as a commit yet. To get it to do that, we need to
-run one more command:</p>
+‘committed’ those changes to the record yet. A commit is a snapshot of
+how your tracked files have changed at a stage in time. To create one a
+commit, and record that we’ve added two new files, we need to run one
+more command:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2119,15 +2144,14 @@ run one more command:</p>
  create mode 100644 data.json
  create mode 100644 my code v2.py</code></pre>
 </div>
-<p>When we run <code>git commit</code>, Git takes everything we have
-told it to save by using <code>git add</code> and stores a copy
-permanently in a special <code>.git</code> directory. This permanent
-copy is called a commit (or revision).</p>
-<p>We use the flag <code>-m</code> (for message) to record a short,
+<p>Now, Git has taken everything we have told it to save by using
+<code>git add</code> and stored a copy in a special, hidden
+<code>.git</code> directory. This is called a commit (or revision).</p>
+<p>The <code>-m</code> option means message, and records a short,
 descriptive, and specific comment that will help us remember later on
-what we did and why. If we only run <code>git commit</code> without the
-<code>-m</code> option, Git will launch a text editor so that we can
-write a longer message.</p>
+what we did and why. If we run <code>git commit</code> <em>without</em>
+<code>-m</code> , Git will still expect a message - and will launch a
+text editor so that we can write a longer one.</p>
 <p>Good commit messages start with a brief (&lt;50 characters) statement
 about the changes made in the commit. Generally, the message should
 complete the sentence “If applied, this commit will…”. If you want to go
@@ -2154,11 +2178,30 @@ nothing to commit, working tree clean</code></pre>
 <div id="where-are-my-changes" class="callout-inner">
 <h3 class="callout-title">Where are my changes?</h3>
 <div class="callout-content">
-<p>If we run <code>ls</code> at this point, we will still see only two
-files, the script and the dataset. That’s because Git saves information
-about files’ history in the special <code>.git</code> directory
-mentioned earlier so that our filesystem does not become cluttered (and
-so that we cannot accidentally edit or delete an old version).</p>
+<p>If we run <code>ls</code> at this point, we’ll still only see two
+files - our script, and our dataset. That’s because Git saves
+information about files’ history in the special <code>.git</code>
+directory mentioned earlier. This both stops our folders being cluttered
+with old versions, and <em>also</em> stops us accidentally deleting
+them!</p>
+<p>You can see the hidden Git directory using the <code>-a</code> flag
+to show all files and folders:</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-a</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">.</span></span>
+<span><span class="va">..</span></span>
+<span><span class="va">.git</span></span></code></pre>
+</div>
+<p>If you delete it, your directory will stop being a repository, and
+you’ll lose your history of changes. You never need to look into
+<code>.git</code> yourself – we’ll go into how to look at the history of
+your changes later.</p>
 </div>
 </div>
 </div>
@@ -2170,23 +2213,22 @@ so that we cannot accidentally edit or delete an old version).</p>
 terminal, we had to add a slash before the space like this:
 <code>my\ code\ v2.py</code>? Using a backslash in this way is called
 ‘escaping’ and it lets the terminal know to treat the space as part of
-the filename, and not a separate argument. However, it is pretty
-annoying and considered bad practice to have spaces in your filenames
-like this, especially if you will be manipulating them from the
-terminal. So, let’s go ahead and remove the space from the filename
-altogether and replace it with an underscore <code>_</code> instead. You
-can use the <code>mv</code> command again like so:</p>
-<div class="codewrapper sourceCode" id="cb16">
+the filename, and not a separate argument. It’s a bit inconvenient and
+can cause problems if you forget, so best practise is to avoid spaces in
+filenames. We’ll go ahead and replace the spaces with underscores
+<code>_</code> instead. You can use the <code>mv</code> command to
+rename files:</p>
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">$</span> mv my<span class="dt">\ </span>code<span class="dt">\ </span>v2.py my_code_v2.py</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">$</span> mv my<span class="dt">\ </span>code<span class="dt">\ </span>v2.py my_code_v2.py</span></code></pre>
 </div>
 <p>If you run <code>git status</code> again, you’ll see Git has noticed
 the change in the filename.</p>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2224,15 +2266,15 @@ time.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>To save the changes to the renamed Python file, use the following Git
 commands:</p>
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> git add my<span class="dt">\ </span>code<span class="dt">\ </span>v2.py my_code_v2.py</span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">$</span> git add my<span class="dt">\ </span>code<span class="dt">\ </span>v2.py my_code_v2.py</span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2242,10 +2284,10 @@ Changes to be committed:
   (use "git restore --staged &lt;file&gt;..." to unstage)
 	renamed:    my code v2.py -&gt; my_code_v2.py</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb21">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Replace spaces in Python filename with underscores"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Replace spaces in Python filename with underscores"</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2260,13 +2302,13 @@ Changes to be committed:
 <p>We initially renamed the Python file using the <code>mv</code>
 command, and we than had to <code>git add</code> <em>both</em>
 <code>my_code_v2.py</code> and <code>my\ code\ v2.py</code>.
-Alternatively, we could have used Git’s own <code>mv</code> command like
+Alternatively, we could’ve used Git’s own <code>mv</code> command like
 so:</p>
-<div class="codewrapper sourceCode" id="cb23">
+<div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="ex">$</span> git mv my<span class="dt">\ </span>code<span class="dt">\ </span>v2.py my_code_v2.py</span>
-<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="ex">$</span> git mv my<span class="dt">\ </span>code<span class="dt">\ </span>v2.py my_code_v2.py</span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2276,14 +2318,14 @@ Changes to be committed:
   (use "git restore --staged &lt;file&gt;..." to unstage)
 	renamed:    my code v2.py -&gt; my_code_v2.py</code></pre>
 </div>
-<p><code>git mv</code> is the equivalent of running <code>mv ...</code>
-followed immediately by <code>git add ...</code> of the old and new
-filenames, so the changes have been staged automatically. All that needs
-to be done is to commit them.</p>
-<div class="codewrapper sourceCode" id="cb25">
+<p><code>git mv &lt;old&gt; &lt;new&gt;</code> is the equivalent of
+running <code>mv &lt;old&gt; &lt;new&gt;</code> immediately followed by
+<code>git add &lt;new&gt;</code>, so the changes have been staged
+automatically. We just need to commit them.</p>
+<div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Replace spaces in Python filename with underscores"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Replace spaces in Python filename with underscores"</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2301,29 +2343,29 @@ to be done is to commit them.</p>
 <div class="section level3">
 <h3 id="rename-our-data-and-output-files">Rename our data and output files<a class="anchor" aria-label="anchor" href="#rename-our-data-and-output-files"></a>
 </h3>
-<p>Now that we have seen how to rename files in Git, let’s:</p>
+<p>Now that we’ve seen how to rename files in Git, let’s:</p>
 <ol style="list-style-type: lower-roman">
 <li>give our input data file and script more meaningful names and</li>
 <li>choose informative file names for our output data file and
 plot.</li>
 </ol>
 <p>First let’s update file names in our script using VS Code.</p>
-<div class="codewrapper sourceCode" id="cb27">
+<div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a>data_f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>data_t <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>,<span class="st">'w'</span>)</span>
-<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>g_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span>   </span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a>data_f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a>data_t <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>,<span class="st">'w'</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a>g_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span></span></code></pre>
 </div>
-<p>Now, let’s actually rename our files on the file system using git and
-commit our changes.</p>
-<div class="codewrapper sourceCode" id="cb28">
+<p>Now, let’s actually rename our files on the file system using Git,
+and commit our changes.</p>
+<div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="fu">git</span> mv data.json eva-data.json</span>
-<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a><span class="fu">git</span> mv my_code_v2.py eva_data_analysis.py</span>
-<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a><span class="fu">git</span> add eva_data_analysis.py</span>
-<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="fu">git</span> mv data.json eva-data.json</span>
+<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a><span class="fu">git</span> mv my_code_v2.py eva_data_analysis.py</span>
+<span id="cb30-3"><a href="#cb30-3" tabindex="-1"></a><span class="fu">git</span> add eva_data_analysis.py</span>
+<span id="cb30-4"><a href="#cb30-4" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2334,35 +2376,62 @@ Changes to be committed:
 	renamed:    data.json -&gt; eva-data.json
 	renamed:    my_code_v2.py -&gt; eva_data_analysis.py</code></pre>
 </div>
-<p>Finally, let’s commit out changes:</p>
-<div class="codewrapper sourceCode" id="cb30">
+<p>Finally, let’s commit our changes:</p>
+<div class="codewrapper sourceCode" id="cb32">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Implement informative file names"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Implement informative file names"</span></span></code></pre>
 </div>
 </div>
 <div class="section level3">
 <h3 id="commit-messages">Commit messages<a class="anchor" aria-label="anchor" href="#commit-messages"></a>
 </h3>
-<p>We have already met the concept of commit messages when we made and
-stored changes to our code files. Commit messages are short descriptions
-of, and the motivation for, what a commit will achieve. It is therefore
-important to take some time to ensure these commit messages are helpful
-and descriptive, as when work is reviewed (by your future self or a
-collaborator) they provide the context about what changes were made and
-why. This can make tracking down specific changes in commits much
-easier, without having to inspect the code or files themselves.</p>
+<p>We’ve already met the concept of commit messages in our first commit,
+but we’ll go into them in a bit more depth. Commit messages are short
+descriptions of what a commit does, and why you did it. It’s important
+to make sure they’re helpful and descriptive, as when you or a
+collaborator look back at your code they provide vital context. This can
+make tracking down specific changes in commits much easier, compared to
+having to trawl through all the previous versions of your files to
+figure out what change altered your code’s behaviour.</p>
 <p>Generally, commit messages should complete the sentence “If applied,
-this commit will…”. Most often a short, 50 character (ish) title will
-suffice, but a longer-form description of the changes can also be
-provided by leaving a blank space between the summary line and the rest
-of the message. There are many different conventions that can be used
-for commit messages that range from very structured (such as <a href="https://www.conventionalcommits.org/en/v1.0.0/" class="external-link">conventional
-commits</a>) to the fun (such as <a href="https://gitmoji.dev/" class="external-link">gitmoji</a>). The important thing is that it
-is clear to the reader what a commit is doing and why. If a project is
-using a specific commit message convention, this will often be described
-in their <a href="https://en.wikipedia.org/wiki/Contributing_guidelines" class="external-link">contributing
+this commit will…”. Usualy a short, 50 character (ish) summary is
+enough, but if you’d like to give more detail you can leave a blank line
+then write a long-form description. There’s a range of conventions for
+commit messages, that range from very structured (such as <a href="https://www.conventionalcommits.org/en/v1.0.0/" class="external-link">conventional
+commits</a>) to the friendly (such as <a href="https://gitmoji.dev/" class="external-link">gitmoji</a>). The most important thing is
+that the message is clear to the reader. If a project is using a
+specific commit message convention, this will usually be described in
+their <a href="https://en.wikipedia.org/wiki/Contributing_guidelines" class="external-link">contributing
 guidelines</a>.</p>
+<div id="accordionInstructor3" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor3" aria-expanded="false" aria-controls="collapseInstructor3">
+  <h3 class="accordion-header" id="headingInstructor3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor3" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor3" aria-labelledby="headingInstructor3">
+<div class="accordion-body">
+<p>If demonstrating remotely, copy the challenge text into the
+collaborative notes document. Leave 2-3 minutes for people to write
+their thoughts, and then go through them for 1-2 minutes.</p>
+<pre><code>### Good commit messages
+
+Read the two commit messages below.
+Write down your thoughts, and respond to those of others - which is the most helpful? Why?
+Do you have any examples of when commit messages would've helped you (or have helped you)?
+
+1. [main 7cf85f6] Change variable
+     1 file changed, 1 insertion(+), 1 deletion(-)
+
+2. [main 8baf69d] Change variable name from columns to column_headers
+    1 file changed, 1 insertion(+), 1 deletion(-)
+
+#### Responses
+* (Your response here)</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div id="good-commit-messages" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -2395,12 +2464,15 @@ did. What about the commit messages do you find helpful or not?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<p>Commit message (2) is the better commit message since it is more
-descriptive about what the author did. This message could be improved
-further by adding a blank line then further describing the change
-discussing, for example, why the variable name was changed.</p>
+<p>Commit message (2) is pretty clearly better, as it actually tells you
+what the author did. If a section of your code that depended on this
+code broke after this change, you could easily tell why, and how to fix
+it. The message could be improved further by adding a blank line then
+some detail on <em>why</em> this change was made. Not every change needs
+more than 50 characters, but a few extra seconds of writing can save you
+hours of bug-hunting!</p>
 </div>
 </div>
 </div>
@@ -2409,22 +2481,56 @@ discussing, for example, why the variable name was changed.</p>
 <div class="section level3">
 <h3 id="self-contained-commits">Self-contained commits<a class="anchor" aria-label="anchor" href="#self-contained-commits"></a>
 </h3>
-<p>If we want our commit messages to be descriptive and help us
-understand the changes in the project over time, then we also have to
-make commits that are very self-contained. That is to say that each
-commit we make should only change one, logical thing. By “logical” here,
-we mean that one aspect of updating the files has been achieved to
-completion - such as adding docstrings or refactoring a function - we
-don’t mean that changes are committed line-by-line. See the <a href="https://wiki.openstack.org/wiki/GitCommitMessages#Things_to_avoid_when_creating_commits" class="external-link">“Things
+<p>If we want our commit messages to be descriptive and helpful, then we
+have to make very self-contained commits. Each one should only change
+one logical thing, to completion - for example, adding documentation, or
+renaming a function. We don’t mean that changes are committed
+line-by-line! This is partly why Git has the staging area, rather than
+automatically saving changes file-by-file like Dropbox or OneDrive. If a
+change requires modifying multiple files to make sense, like when we
+renamed the input data file, then you can commit <em>all</em> the edits
+required for it in one go, so you don’t have logical inconsistencies in
+your code.</p>
+<p>Equally, don’t avoid committing code until it’s <em>totally</em>
+finished. Most changes can be broken down into smaller steps. which can
+be completed. It’s better to have part-finished code in a repository,
+with clear commit messages saying what still needs doing, than code that
+never gets committed and can be lost in a hard drive crash!</p>
+<p>See the <a href="https://wiki.openstack.org/wiki/GitCommitMessages#Things_to_avoid_when_creating_commits" class="external-link">“Things
 to avoid when creating commits” section</a> of <a href="https://wiki.openstack.org/wiki/GitCommitMessages" class="external-link">Openstack’s
 “Git Commit Good Practice” documentation</a> for examples of logical,
 self-contained commits, and commits that don’t follow this practice.</p>
-<p>The reasons that self-contained commits are important are that: it
-helps with reviewing changes if each commit tackles one step; if code
-breaks, tracking down the specific change that caused the break is
-simpler; if you need to undo changes, you can remove them in small
-increments, rather than losing a lot of unrelated work along with the
-change you do want to remove.</p>
+<p>Self-contained commits are important as: * Reviewing changes is
+easier when each commit tackles one step * Tracking down changes that
+broke functionality is simpler * Unwanted changes can be undone in small
+increments, without losing a lot of unrelated work.</p>
+<div id="accordionInstructor4" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor4" aria-expanded="false" aria-controls="collapseInstructor4">
+  <h3 class="accordion-header" id="headingInstructor4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor4" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor4" aria-labelledby="headingInstructor4">
+<div class="accordion-body">
+<p>If demonstrating remotely, copy the challenge text into the
+collaborative notes document. Leave 2-3 minutes for people to write
+their thoughts, and then go through them for 1-2 minutes.</p>
+<pre><code>### Understanding commit contents
+
+Below are the `diffs` of two commits, showing what's changed in one or more file(s) between them.
+Lines starting with `+`s are additions, while lines starting with `-`s are deletions.
+Compare the two `diff`s - can you understand what the commit author was trying to achieve in each commit?
+How many changes have they tried to make in each commit?
+
+1. ![Example Diff 1](https://carpentries-incubator.github.io/fair-research-software/fig/ex-diff-1.png)
+2. ![Example Diff 2](https://carpentries-incubator.github.io/fair-research-software/fig/ex-diff-2.png)
+
+#### Responses
+* (Your response here)
+</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div id="understanding-commit-contents" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -2433,13 +2539,12 @@ change you do want to remove.</p>
 <h3 class="callout-title">Understanding commit contents</h3>
 <div class="callout-content">
 <p>Below are the <code>diffs</code> of two commits. A <code>diff</code>
-shows the differences in a file (or files!) compared to the previous
-commit in the history so you can see what has changed. The lines that
-begin with <code>+</code>s represent additions, and the lines that begin
-with <code>-</code>s represent deletions. Compare these two commit
-<code>diff</code>s. Can you understand what the commit author was trying
-to achieve in each commit? How many changes have they tried to make in
-each commit? Discuss in pairs or small groups.</p>
+shows what’s changed in one or more file(s) between two commits. Lines
+starting with <code>+</code>s are additions, while lines starting with
+<code>-</code>s are deletions. Compare the two <code>diff</code>s - can
+you understand what the commit author was trying to achieve in each
+commit? How many changes have they tried to make in each commit? Discuss
+in pairs or small groups.</p>
 <ol style="list-style-type: decimal">
 <li><figure><img src="../fig/ex-diff-1.png" alt="Example Diff 1" class="figure mx-auto d-block"><div class="figcaption">Example Diff 1</div>
 </figure></li>
@@ -2458,7 +2563,7 @@ Version control with Git lesson</a>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The git <code>diff</code> presented in option (1) is cleaner. The
 author has only tackled one thing: placing the import statements at the
@@ -2475,10 +2580,10 @@ is required.</p>
 </h3>
 <p>If we want to know what we’ve done recently, we can ask Git to show
 us the project’s history using <code>git log</code>:</p>
-<div class="codewrapper sourceCode" id="cb33">
+<div class="codewrapper sourceCode" id="cb37">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="ex">$</span> git log</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a><span class="ex">$</span> git log</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2495,69 +2600,75 @@ Date:   Mon Jun 17 11:52:02 2024 +0100
 
     Add and example script and dataset to work on</code></pre>
 </div>
-<p>This output demonstrates why it is important to write meaningful and
-descriptive commit messages. Without the messages, we will only have the
-commit hashes (the strings of random numbers and letters after “commit”)
-to identify each commit, which would be impossible for us.</p>
-<p>We may need to inspect our recent commits to establish where a bug
-was introduced or because we have decided that our recent work isn’t
-suitable and we wish to discard it and start again. Once we have
-identified the last commit we want to keep, we can revert the state of
-our project back to that commit with a few different methods:</p>
+<p>This output demonstrates why it’s important to write meaningful and
+descriptive commit messages. Without them, we’d only have the commit
+hashes (the strings of letters and numbers after “commit”) to identify
+each one, which is realistically impossible.</p>
+<p>We might need to inspect our recent commits to establish where a bug
+was introduced, or because we’ve realised we made a mistake and want to
+go back to an older, working version of the code. Once we’ve identified
+the last commit we want to keep, we can revert the state of our project
+back to that commit with a few different methods:</p>
 <ul>
 <li>
 <a href="https://git-scm.com/docs/git-revert" class="external-link"><code>git revert</code></a>:
-This command reverts a commit by creating a new commit that reverses the
-action of the supplied commit or list of commits. Because this command
-creates new commits, your Git history is more complete and tells the
-story of exactly what work you did, i.e., deciding to discard some
+This command reverts a commit by creating a new commit that undoes the
+changes in the supplied commit (or list of commits). Because this
+command creates new commits, your history is more complete, and tells
+the story of exactly what work you did, i.e., deciding to discard some
 work.</li>
 <li>
 <a href="https://git-scm.com/docs/git-reset" class="external-link"><code>git reset</code></a>:
 This command will recover the state of the project at the specified
-commit. What is done with the commits you had made since is defined by
-some optional flags:
+commit. What’s done with the commits you had made since then is defined
+by some optional flags:
 <ul>
 <li>
-<code>--soft</code>: Any changes you have made since the specified
-commit would be preserved and left as “Changes to be committed”</li>
+<code>--soft</code>: Changes you’ve made since then are kept, but
+left as “Changes to be committed”.</li>
 <li>
-<code>--mixed</code>: Any changes you have made since the specified
-commit would be preserved but not marked for commit (this is the default
-action)</li>
+<code>--mixed</code>: Changes you’ve made since then are kept, but
+not marked for commit (the default).</li>
 <li>
-<code>--hard</code>: Any changes you have made since the specified
-commit are discarded.</li>
+<code>--hard</code>: All changes you’ve made since that commit are
+thrown away.</li>
 </ul>
 </li>
 </ul>
 <p>Using <code>git reset</code> command produces a “cleaner” history,
-but does not tell the full story and your work.</p>
+but doesn’t tell the full story of your work. Generally, you’ll want to
+<code>git revert</code>, both to avoid accidentally deleting changes you
+wanted to keep, and to keep a record of what you tried but wasn’t
+successful. A negative result is still a result, and if you forget what
+didn’t work you’re likely to repeat it.</p>
 </div>
 </section><section><h2 class="section-heading" id="interacting-with-a-remote-git-server">Interacting with a remote Git server<a class="anchor" aria-label="anchor" href="#interacting-with-a-remote-git-server"></a>
 </h2>
 <hr class="half-width">
-<p>Git is also a distributed version control system, allowing us to
-synchronise work between any two or more copies of the same repository -
-the ones that are not located on your machine. So far we have have been
-working with a project on our local machines and, even though we have
-been incrementally saving our work in a way that is recoverable (version
-control), if anything happened to our laptops, the whole project would
-be lost. However, we can use the distribution aspect of Git to push our
-projects and histories to a server (someone else’s computer) so that
-they are accessible and retrievable if the worst were to happen to our
-machines.</p>
+<p>Git is also a distributed version control system, and lets us
+synchronise work between multiple copies of the same repository -
+including ones that aren’t on your machine (<strong>‘remote
+repositories’</strong>). So far, we’ve been working with a <strong>local
+repository</strong> on our machine and, even though we have been
+incrementally saving our work in a way that is recoverable (version
+control), if we lost our machine then we’d lose all our code along with
+it,</p>
+<p>Fortunately, we can easily upload our <strong>local
+repository</strong>, with all our code and the history of our
+devleopment, to a remote server so that it can be recovered in
+future.</p>
 <figure><img src="../fig/git-distributed.png" alt="2 Git repositories belonging to 2 different developers linked to a central repository and one another showing two way flow of information in each link" class="figure mx-auto d-block"><div class="figcaption">Git - distributed version control system, image
 from W3Docs (freely available)</div>
 </figure><p><a href="https://github.com" class="external-link">GitHub</a> is an online software
 development platform that can act as a central remote server. It uses
-Git underneath and provides facilities for storing, tracking, and
-collaborating on software projects. Other Git hosting services are
-available, such as <a href="https://gitlab.com" class="external-link">GitLab</a> and <a href="https://bitbucket.org" class="external-link">Bitbucket</a>.</p>
-<p>Distributing our projects in this way also opens us up to
-collaboration, since colleagues would be able to access our projects,
-make their own copies on their machines, and conduct their own work.</p>
-<p>We will now go through how to push a local project on <a href="https://github.com" class="external-link">GitHub</a> and share it publicly.</p>
+Git, and provides facilities for storing, tracking, and collaborating on
+software projects. Other Git hosting services are available, such as <a href="https://gitlab.com" class="external-link">GitLab</a> and <a href="https://bitbucket.org" class="external-link">Bitbucket</a>.</p>
+<p>Putting our projects on GitHub doesn’t just make them accident-proof,
+but also makes it easy to collaborate and share them. Our collaborators
+can access the project, download their own copy, and even contribute
+work back to us.</p>
+<p>We’ll now go through how to push a <strong>local repository</strong>
+to <a href="https://github.com" class="external-link">GitHub</a> and share it publicly.</p>
 <ol style="list-style-type: decimal">
 <li><p>In your browser, navigate to <a href="https://github.com" class="external-link uri">https://github.com</a> and sign into your account</p></li>
 <li>
@@ -2583,67 +2694,95 @@ creation</em></div>
 </figure>
 </li>
 <li>
-<p>Now you have created your repository, you need to send the files
-and the history you have stored on your local computer to GitHub’s
-servers. GitHub provides some instructions on how to do that for
-different scenarios. You want to use the instructions under the heading
-“…or push an existing repository from the command line”. These
-instructions will look like this:</p>
-<div class="codewrapper sourceCode" id="cb35">
+<p>Now you’ve created your <strong>remote repository</strong>, you
+need to send the files and the history you have stored on your local
+computer to GitHub’s servers. GitHub provides some instructions on how
+to do that for different scenarios. Change the toggle on the right side
+from “HTTPS” to “SSH”, then look at the heading “…or push an existing
+repository from the command line”. You should see instructions will look
+like this:</p>
+<div class="codewrapper sourceCode" id="cb39">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/<span class="op">&lt;</span>YOUR_GITHUB_HANDLE<span class="op">&gt;</span>/spacewalks.git</span>
-<span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
-<span id="cb35-3"><a href="#cb35-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com/<span class="op">&lt;</span>YOUR_GITHUB_HANDLE<span class="op">&gt;</span>/spacewalks.git</span>
+<span id="cb39-2"><a href="#cb39-2" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
+<span id="cb39-3"><a href="#cb39-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
 </div>
+</li>
+</ol>
+<p><strong>It’s very important you make sure you’ve switched from
+“HTTPS” to “SSH”.</strong> In the setup, we configured our GitHub
+account and our local machine for SSH. If you select HTTPS, you won’t be
+able to upload your files.</p>
 <p>You can copy these commands using the button that looks like two
 overlapping squares to the right-hand side of the commands. Paste them
 into your terminal and run them.</p>
 <figure><img src="../fig/ep03_fig04-copy_commands.jpg" class="image-with-shadow figure mx-auto d-block" alt-text="Copying the commands to sync the local and remote repositories" alt="Copy the commands to sync the local and remote repositories"><div class="figcaption"><em>Copy the commands to sync the local and
 remote repositories</em></div>
-</figure>
-</li>
-<li><p>If you refresh your browser window, you should now see the two
-files <code>my-code-v2.py</code> and <code>data.json</code> visible in
-the GitHub repository, matching what you have locally on your
-machine.</p></li>
+</figure><ol start="5" style="list-style-type: decimal">
+<li>If you refresh your browser window, you should now see the two files
+<code>my-code-v2.py</code> and <code>eva-data.json</code> visible in the
+GitHub repository, matching what you have locally on your machine.</li>
 </ol>
 <p>Let’s explain a bit more about what those commands did…</p>
-<div class="codewrapper sourceCode" id="cb36">
+<div class="codewrapper sourceCode" id="cb40">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/<span class="op">&lt;</span>YOUR_GITHUB_HANDLE<span class="op">&gt;</span>/spacewalks.git</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com/<span class="op">&lt;</span>YOUR_GITHUB_HANDLE<span class="op">&gt;</span>/spacewalks.git</span></code></pre>
 </div>
 <p>This command tells Git to create a <code>remote</code> called
 “origin” and link it to the URL of your GitHub repository. A
 <code>remote</code> is a version control concept where two (or more)
-repositories are connected to each other in such a way that they can be
+repositories are connected to each other, in such a way that they can be
 kept in sync by exchanging commits. “origin” is a name used to refer to
 the remote repository. It could be called anything, but “origin” is a
 convention that is often used by default in Git and GitHub since it
 indicates which repository is considered the “source of truth”,
 particularly useful when many people are collaborating on the same
 repository.</p>
-<div class="codewrapper sourceCode" id="cb37">
+<div class="codewrapper sourceCode" id="cb41">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span></code></pre>
 </div>
-<p><code>git branch</code> is a command used to manage branches. We will
+<p><code>git branch</code> is a command used to manage branches. We’ll
 discuss branches later on in the course. This command ensures the branch
 we are working on is called “main”. This will be the default branch of
 the project for everyone working on it.</p>
-<div class="codewrapper sourceCode" id="cb38">
+<div class="codewrapper sourceCode" id="cb42">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
 </div>
-<p>The <code>git push</code> command is used to update remote references
-with any changes you have made locally. This command tells Git to update
-the “main” branch on the “origin” remote. The <code>-u</code> flag
-(short for <code>--set-upstream</code>) will set a tracking reference,
-so that in the future <code>git push</code> can be run without the need
-to specify the remote and reference name.</p>
+<p>The <code>git push</code> command is used to update remote
+repositories with any changes you’ve made locally. This command tells
+Git to update the “main” branch on the “origin” remote. The
+<code>-u</code> flag (short for <code>--set-upstream</code>) sets the
+‘tracking reference’ for the current branch, so that in future
+<code>git push</code> will default to sending to
+<code>origin main</code>.</p>
+<div id="accordionInstructor5" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor5" aria-expanded="false" aria-controls="collapseInstructor5">
+  <h3 class="accordion-header" id="headingInstructor5">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor5" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor5" aria-labelledby="headingInstructor5">
+<div class="accordion-body">
+<p>If demonstrating remotely, copy the challenge text into the
+collaborative notes document. Leave 2-3 minutes for people to write
+their thoughts, and then go through them for 1-2 minutes.</p>
+<pre><code>### Terminology
+
+Consider the difference between the terms `remote` and `origin`.
+How does their definition relate to how they work here?
+
+#### Responses
+* (Your response here)
+</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div id="terminology" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -2662,7 +2801,7 @@ each term?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <ul>
 <li>
@@ -2681,22 +2820,22 @@ collaborators</li>
 <div class="section level3">
 <h3 id="summary">Summary<a class="anchor" aria-label="anchor" href="#summary"></a>
 </h3>
-<p>During this episode, we have covered the basics of using version
-control to track changes to our projects. We have seen how to: create
-new projects, incrementally save progress, construct informative commit
-messages and content, inspect the history of our projects and retrieve
-the state, and push our projects to distributed servers.</p>
-<p>These skills are critical to reproducible and sustainable science
-since using version control makes our work self-documenting - the commit
-messages provide the narrative of what changed and why - and we can
-recover the exact state of our projects at a specific time, so we can
-more reliably run the “same” code again. We can also back up our
-projects by pushing them to distributed, remote servers and reduce the
-risk of data loss over the course of a project’s lifetime.</p>
-<p>Version control is a vast topic and we have only covered the absolute
-basics here as a brief introduction. For a deeper and more complete dive
-into the subject matter, please see the “Further reading” section
-below.</p>
+<p>We’ve covered the basics of using version control to track changes to
+our projects. We created a new project, and used it to log our changes
+as ‘commits’, with informative messages. From this information we looked
+back at our work, compared different versions, and even recovered past
+states. Finally, we published our work to remote servers, where it’s
+both secure and shareable.</p>
+<p>These skills are critical to reproducible and sustainable science.
+Software <em>is</em> science, and being able to share the specific
+version of code used in a paper is required for reproducibility. But we,
+as researchers, also benefit from having a clear, self-documented record
+of what we did, when and why. It makes it much easier to track down and
+fix our bugs, or to return to projects we’ve taken a break from.</p>
+<p>Version control’s a vast topic and this brief introduction has only
+covered the absolute basics. If you’d like a deeper and more complete
+dive into it, there’s more in our <strong>Further Reading</strong>
+section.</p>
 </div>
 </section><section><h2 class="section-heading" id="further-reading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
 </h2>
@@ -2725,7 +2864,7 @@ for the course.</p>
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>A version control system is software that tracks and manages changes
+<li>Version control systems are software that tracks and manages changes
 to a project over time</li>
 <li>Using version control aids reproducibility since the exact state of
 the software that produced an output can be recovered</li>
@@ -3317,7 +3456,7 @@ environment from the root of the software project directory:</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/06-code-readability" class="external-link uri">https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/06-code-readability</a>.</p>
@@ -3485,7 +3624,7 @@ suggest a new name for this variable.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><span class="math display">\[ 9.81 m/s^2 \]</span> is the <a href="https://en.wikipedia.org/wiki/Gravity_of_Earth" class="external-link">gravitational
 force exerted by the Earth</a>. It is often referred to as “little g” to
@@ -3531,7 +3670,7 @@ informative commit message.</p></li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Updated code:</p>
 <div class="codewrapper sourceCode" id="cb6">
@@ -3774,7 +3913,7 @@ informative commit message.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Some good comments may look like the example below.</p>
 <div class="codewrapper sourceCode" id="cb15">
@@ -4059,7 +4198,7 @@ docstring may look like:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Our <code>write_dataframe_to_csv</code> function fully described by a
 docstring may look like:</p>
@@ -6331,7 +6470,7 @@ environment from the root of the software project directory:</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/09-code-documentation" class="external-link uri">https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/09-code-documentation</a>.</p>
@@ -6505,7 +6644,7 @@ principles? Which are optional?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To support the FAIR principles (Findability, Accessibility,
 Interoperability, and Reusability), certain sections in a README file
@@ -6616,7 +6755,7 @@ installed. You will also need the following libraries (minimum versions in brack
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Installation instructions:</p>
 <p>NB: In the solution below the back ticks of each code block have been
@@ -6686,7 +6825,7 @@ choose for your code and that we recommend for further reading.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
   <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
 <div class="accordion-body">
 <p>Make sure to mention the <a href="licensing.html">extra content on
 different open source software licences</a>, briefly cover it if there
@@ -6748,7 +6887,7 @@ your code repository.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Licence can be done in either of the following two ways:
@@ -7093,7 +7232,7 @@ deploying our documentation to a hosting service.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Some options for hosting documentation </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="github-pages">GitHub Pages<a class="anchor" aria-label="anchor" href="#github-pages"></a>
@@ -7228,7 +7367,7 @@ dataset generated by the Spacewalks software.</p></li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Discussion hints &amp; solution </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>An effective how-to guide should:</p>
 <ul>
@@ -7287,7 +7426,7 @@ dataset when running the analysis script.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
   <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Solution </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <p>Here is what an example tutorial may look like.</p>
 <div class="section level4">
@@ -7421,7 +7560,7 @@ our example how-to guide?</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
   <h3 class="accordion-header" id="headingSpoiler4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Discussion hints </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
 <div class="accordion-body">
 <div class="section level4">
 <h4 id="content">Content<a class="anchor" aria-label="anchor" href="#content"></a>
@@ -7595,7 +7734,7 @@ environment from the root of the software project directory:</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/10-open-collaboration" class="external-link uri">https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/10-open-collaboration</a></p>
@@ -8395,8 +8534,8 @@ any links that you are not going to use.
   "url": "https://softwaresaved.github.io/fair-research-software/instructor/aio.html",
   "identifier": "https://softwaresaved.github.io/fair-research-software/instructor/aio.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2025-03-18",
-  "datePublished": "2025-03-18"
+  "dateModified": "2025-03-24",
+  "datePublished": "2025-03-24"
 }
 
   </script><script>
