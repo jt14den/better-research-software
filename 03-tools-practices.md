@@ -170,6 +170,17 @@ using several tools in different steps.
 If we write our software in a way which provides such an interoperable Command Line Interface (CLI) - we will be able to integrate it with 
 other existing command line tools to automate and speed up our work.
 
+:::::::::::::::::: challenge
+
+Individually,
+
+- reflect on what practices (and tools) you are already using in your software development workflow,
+- list at least 3 new practices or tools that you would like to start employing or using.
+
+Write your reflections in the shared collaborative document.
+
+::::::::::::::::::
+
 
 ## Tools & practices summary
 
