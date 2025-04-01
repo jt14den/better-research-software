@@ -166,6 +166,7 @@ Here are some tools that can check your software and provide an assessment of it
 - [FAIRsoft evaluator][fair-rs-evaluator]
 - [FAIR software test][fair-rs-test]
 - [`How FAIR is your software` - command line tool to evaluate a software repository's compliance with the FAIR principles][howfairis]
+- [Codecheck][codecheck] - supporting codecheckers with a workflow, guidelines and tools to evaluate computer programs underlying scientific papers (not just FAIR)
 
 
 ## Further reading

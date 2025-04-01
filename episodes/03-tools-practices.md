@@ -214,6 +214,7 @@ We recommend the following resources for some additional reading on the topic of
 - [The Zenodo data repository][zenodo-org]
 - [The Fair Cookbook - Depositing to generic repositories - Zenodo use case][fair-cookbook-zenodo]
 - [The Turing Way "Handbook to reproducible, ethical and collaborative research"][ttw-handbook]
+- [Codecheck][codecheck] - supporting codecheckers with a workflow, guidelines and tools to evaluate computer programs underlying scientific papers (not just FAIR)
 
 Also check the [full reference set](learners/reference.md#litref) for the course.
 
