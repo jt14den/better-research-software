@@ -185,7 +185,7 @@ who worked on similar things but has since left the group.
 They need to be able to install and run this code on their machine, check they can understand it and then adapt it to
 their own project.
 
-As part of the [setup for this course](./index.html#astronaut-data-and-analysis-code), you should have downloaded a `.zip` archive containing the software project
+As part of the [setup for this course](./installation-instructions.html#astronaut-data-and-analysis-code), you should have downloaded a `.zip` archive containing the software project
 the new research team member was given.
 Let's unzip this archive and inspect its content in VS Code.
 The software project contains:
@@ -229,7 +229,7 @@ Checking the command line terminal:
 
 Checking Python:
 
-5. `$ python3 --version`
+5. `$ python --version`
 6. `$ python3 --version`
 7. `$ which python`
 8. `$ which python3`
