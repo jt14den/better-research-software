@@ -507,7 +507,7 @@ nav:
 Note `font: false` variable is for GDPR compliance; `use_directory_url: false` variable tells MKDocs tools how to 
 handle URLs for documentation that is served as a website (we will cover this in a moment).  
 
-Let's add support for `mkdocstrings` - this will allow us to automatically our docstrings
+Let's add support for `mkdocstrings` - this will allow us to automatically add our docstrings
 into our documentation using a simple tag.
 
 ```yaml
