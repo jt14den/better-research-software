@@ -578,8 +578,6 @@ For real software releases, you should use Zenodo.
 Markdown format. Check that this is the DOI for the latest version and not the DOI for a specific version, 
 if not you will be updating this every time you make a release.
 
-## Episode: Spacewalks
-
 ### Exercise: 
 ### Add a DOI to your citation file
 
