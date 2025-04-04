@@ -41,7 +41,6 @@ reproducible research, including those commensurate with the FAIR (Findable, Acc
 - Build on top of your existing knowledge of Python, Git and command line tools to enhance your research
 software development workflow with some good open and reproducible research software practices around 
 structuring, writing, documenting, testing, sharing and reusing code (including software licencing and citation)
-- Understand some ethical issues around research software development and usage and how our work impacts others
 
 ## What we do not teach 
 
