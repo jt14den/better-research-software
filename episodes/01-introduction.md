@@ -107,8 +107,7 @@ discuss them with other participants.
 
 - How would you define the words "open" and "reproducible" in the context of research?
 - Who might benefit from your work being open and reproducible? *Think about both groups and individuals.*
-- Have you wished that someone else's work was more open or accessible to you?
-  Can you provide some examples?
+- Have you wished that someone else's work was more open or accessible to you? What did you do in that instance? Why do you think the author didn't make their work more open or accessible?
 - Have you ever gone back to an old project and struggled to understand what you did or why? How did that feel?  Were you able to find the information you needed?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
