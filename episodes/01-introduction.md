@@ -101,14 +101,15 @@ software engineering is used to aid solving research problems.
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
-### What does open and reproducible research mean to you?
+### What do the terms open and reproducible research mean to you?
 Think about the questions below. Your instructors may ask you to share your answers in a shared notes document and/or
 discuss them with other participants.
 
-- What do you understand by the words "open" and "reproducible" in the context of research?
-- How many people or groups can you list that might benefit from your work being open and reproducible?
-- How many times did you wish that someone else's work you came across was more open or accessible to you?
+- How would you define the words "open" and "reproducible" in the context of research?
+- Who might benefit from your work being open and reproducible? *Think about both groups and individuals.*
+- Have you wished that someone else's work was more open or accessible to you?
   Can you provide some examples?
+- Have you ever gone back to an old project and struggled to understand what you did or why? How did that feel?  Were you able to find the information you needed?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
