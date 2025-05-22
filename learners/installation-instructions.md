@@ -371,7 +371,7 @@ You should install the following extensions for viewing and editing data in VS C
 
 ## Astronaut data and analysis code
 
-Download the [data and code `spacewalks.zip` archive](https://github.com/carpentries-incubator/fair-research-software/raw/refs/heads/main/learners/spacewalks.zip) to be used 
+Download and save on your machine the [`spacewalks.zip` archive](https://github.com/carpentries-incubator/fair-research-software/raw/refs/heads/main/learners/spacewalks.zip) to be used 
 for code examples and exercises throughout the course.
 
 The `spacewalks.zip` archive contains [NASA's open data on spacewalks](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/data_preview)
