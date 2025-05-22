@@ -168,13 +168,12 @@ You might need to open a new terminal afterwards!
 ### Add initial files into our repository
 
 As part of [our setup](./index.html#astronaut-data-and-analysis-code),
-we downloaded `astronaut-data-not-so-fair.zip`.
-This contained, among other things, two files we'll be using for this episode:
+we downloaded or received via email `spacewalks.zip` archive which, when unzipped, contains two files we will be using in this course:
 
 - `my code v2.py`
 - `data.json`
 
-We want to move these files into the folder we just set up.
+We want to move these files into the folder we just have set up.
 You can either drag and drop the files from a file explorer window into the left pane of the VS Code,
 or you can use the [`mv` command](https://linuxcommandlibrary.com/man/mv) in the command line terminal.
 
