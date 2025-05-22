@@ -21,6 +21,6 @@
 "learners/ci-for-testing.md" "54f72155a009c524c4bc93fda946313b" "site/built/ci-for-testing.md" "2024-09-26"
 "learners/licensing.md" "a1929a660164e48b952774d23292788b" "site/built/licensing.md" "2024-10-14"
 "learners/ethical-environmental-considerations.md" "41640e0e7f180a42994da3c78e8539cb" "site/built/ethical-environmental-considerations.md" "2024-09-17"
-"learners/installation-instructions.md" "3163374d11b624e1c03a3ef86acff046" "site/built/installation-instructions.md" "2025-03-11"
+"learners/installation-instructions.md" "9e848f7878e95d05e8019c1cc14720c4" "site/built/installation-instructions.md" "2025-05-22"
 "learners/setup.md" "b22d9381caa6b2cb8b6657188401c388" "site/built/setup.md" "2025-03-11"
 "profiles/learner-profiles.md" "8fb91d65843f75b9b4aa60783eb65389" "site/built/learner-profiles.md" "2024-07-05"
