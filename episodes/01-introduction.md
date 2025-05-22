@@ -277,8 +277,8 @@ The expected out put of each command is:
 ::::::
 
 
-You may have noticed that our researcher has received the software project they are meant to be working as
-a `.zip` archive via email. This is not very good practice for several reasons - email does not track changes, does not allow 
+You may have noticed that our researcher has received the software project they are meant to be working on as
+a Zip archive via email. This is not very good practice for several reasons - email does not track changes, does not allow 
 for multiple people to work on the same file, code reviews or issue tracking, attachments can be mistakenly sent with 
 outdated versions and may have storage and scalability limitations. 
 In the rest of the course, we will learn some better practices for developing, sharing, tracking changes and 
