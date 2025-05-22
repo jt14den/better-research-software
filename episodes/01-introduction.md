@@ -180,12 +180,12 @@ why it is important to use these practices and what tools can help us along this
 ## Software and data used in this course
 
 We are going to follow a fairly typical experience of a new PhD or postdoc joining a research group.
-They were emailed some data and analysis code bundled in a `.zip` archive and written by another group member
+They were emailed some data and analysis code bundled in `spacewalks.zip` archive and written by another group member
 who worked on similar things but has since left the group.
 They need to be able to install and run this code on their machine, check they can understand it and then adapt it to
 their own project.
 
-As part of the [setup for this course](./installation-instructions.html#astronaut-data-and-analysis-code), you should have downloaded a `.zip` archive containing the software project
+As part of the [setup for this course](./installation-instructions.html#astronaut-data-and-analysis-code), you should have downloaded the `spacewalks.zip` archive containing the software project
 the new research team member was given.
 Let's unzip this archive and inspect its content in VS Code.
 The software project contains:
