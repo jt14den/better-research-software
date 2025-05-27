@@ -1,7 +1,7 @@
 ---
 title: "Course introduction"
-teaching: 30
-exercises: 0
+teaching: 10
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
