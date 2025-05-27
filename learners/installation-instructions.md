@@ -371,13 +371,8 @@ You should install the following extensions for viewing and editing data in VS C
 
 ## Astronaut data and analysis code
 
-Download the data and code from the
-[software repository](https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-good) by clicking the
-green `<> Code` button, then selecting `Download ZIP` option from the drop-down menu.
+Download and save on your machine the [`spacewalks.zip` archive](https://github.com/carpentries-incubator/fair-research-software/raw/refs/heads/main/learners/spacewalks.zip) to be used 
+for code examples and exercises throughout the course.
 
-![*Code and data bundle download as a zip file from GitHub*](fig/github-code-download.png){ alt-text="Code download as a zip file from GitHub" .image-with-shadow }
-
-This repository contains [NASA's open data on spacewalks](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/data_preview)
-(i.e. extravehicular activities - EVAs) undertaken by astronauts and cosmonauts from 1965 to 2013
-and some Python code to analyse and plot this data.
-We will use it for code examples and exercises throughout this course.
+The `spacewalks.zip` archive contains [NASA's open data on spacewalks](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/data_preview)
+(i.e. extravehicular activities - EVAs) undertaken by astronauts and cosmonauts from 1965 to 2013 and a Python script to analyse and plot this data.

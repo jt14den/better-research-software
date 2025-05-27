@@ -19,10 +19,10 @@ Please follow the [installation instructions](installation-instructions.md) to i
 ## Example Data & Research Software
 
 We are going to follow a fairly typical experience of a new PhD or postdoc joining a research group.
-They were emailed some data and analysis code bundled in a `.zip` archive and written by another group member who worked on similar things but has since left the group.
+They were emailed some data and analysis code bundled in `spacewalks.zip` archive and written by another group member who worked on similar things but has since left the group.
 They need to be able to install and run this code on their machine, check they can understand it and then adapt it to their own project.
 
-As part of the [setup for this course](./installation-instructions.html#astronaut-data-and-analysis-code), you should have downloaded a `.zip` archive containing the software project the new research team member was given.
+As part of the [setup for this course](./installation-instructions.html#astronaut-data-and-analysis-code), you should have downloaded the `spacewalks.zip` archive containing the software project the new research team member was given.
 Let's unzip this archive and inspect its content in VS Code.
 The software project contains:
 
@@ -111,6 +111,6 @@ The expected out put of each command is:
 ::::::
 
 
-You may have noticed that our researcher has received the software project they are meant to be working as a `.zip` archive via email. 
+You may have noticed that our researcher has received the software project they are meant to be working on as a Zip archive via email. 
 This is not very good practice for several reasons - email does not track changes, does not allow for multiple people to work on the same file, code reviews or issue tracking, attachments can be mistakenly sent with outdated versions and may have storage and scalability limitations. 
 In the rest of the course, we will learn some better practices for developing, sharing, tracking changes and collaborating on a software project. 
