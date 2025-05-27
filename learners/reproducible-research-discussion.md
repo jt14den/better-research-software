@@ -1,5 +1,5 @@
 ---
-title: Further Discussion: Reproducible Research
+title: Reproducible Research Discussion
 ---
 
 ## Jargon busting
