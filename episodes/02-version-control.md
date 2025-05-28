@@ -13,6 +13,7 @@ exercises: 30
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
+
 After completing this episode, participants should be able to:
 
 - Create self-contained commits using Git to incrementally save work
@@ -20,6 +21,11 @@ After completing this episode, participants should be able to:
 - Push new work from a local machine to a remote server
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+You may have noticed that our researcher has received the software project they are meant to be working on as a Zip archive via email.
+This is not very good practice for several reasons - email does not track changes, does not allow for multiple people to work on the same file, code reviews or issue tracking, attachments can be mistakenly sent with outdated versions and may have storage and scalability limitations.
+In the rest of the course, we will learn some better practices for developing, sharing, tracking changes and collaborating on a software project.
+
 
 In this episode, we'll cover the basics of version control, and explore
 how it can help us produce reproducible and sustainable scientific projects.
@@ -167,7 +173,7 @@ You might need to open a new terminal afterwards!
 
 ### Add initial files into our repository
 
-As part of [our setup](./index.html#astronaut-data-and-analysis-code),
+As part of [our setup](./index.html#spacewalks),
 we downloaded or received via email `spacewalks.zip` archive which, when unzipped, contains two files we will be using in this course:
 
 - `my code v2.py`

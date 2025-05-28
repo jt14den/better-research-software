@@ -35,6 +35,7 @@ That is, enabling others to run our code and obtain the same results we did.
 :::::::::::::::::::::: callout
 
 ## Why should I care about reproducibility?
+
 Scientific transparency and rigor are key factors in research. 
 Scientific methodology and results need to be published openly and replicated and confirmed by several independent parties.
 However, research papers often lack the full details required for independent reproduction or replication. 
@@ -59,7 +60,8 @@ This course aims to teach some of these practices and tools pertaining to the us
 
 ::::::::::::::::::::::::::::::
 
-## Practices for Building Better Research Software
+## Practices for building better research software
+
 The practices we will cover for building better research software fall into three areas.
 
 ### 1. Things you can do with your own computing environment to enhance the software
@@ -103,5 +105,110 @@ We recommend the following resources for some additional reading on reproducible
 * [Training materials on different aspects of research software engineering][intersect-rse-training] (including open source, reproducibility, research software testing, engineering, design, continuous integration, collaboration, version control, packaging,  etc.), compiled by the [INTERSECT project](https://intersect-training.org/) 
 * [Curated resources][forrt-resources] by the [Framework for Open and Reproducible Research Training](https://forrt.org/) (FORRT)
 
+## Research software project
+
+We are going to follow a fairly typical experience of a new researcher (e.g. a PhD student or a postdoc) joining a research group.
+They were emailed some spacewalks data and analysis code bundled in `spacewalks.zip` archive, written by another group 
+member who worked on similar things but has since left.
+They need to be able to install and run this code on their machine, check they can understand it and then adapt it to their own project.
+
+As part of the setup for this course, you may have been emailed the `spacewalks.zip` archive (if not - 
+you can [download it](./installation-instructions.html#spacewalks)) containing the software project the new research team member was given.
+You will play they role of this new researcher throughout the course.
+
+The first thing you may want to do is unzip this archive and inspect its content in VS Code. VS Code is a very handy tool 
+for software development - it "understands" the syntax of many different file types - for example Python, JSON, CSV, etc. - 
+either natively or via extensions that can be installed. You may notice that the software project contains:
+
+1. A JSON file called `data.json` - a snippet of which is shown below - with data on extra-vehicular activities 
+(EVAs, i.e. spacewalks) undertaken by astronauts and cosmonauts from 1965 to 2013 (data provided by NASA via its [Open Data Portal](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/about_data)).
+
+   ![JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose)](episodes/fig/astronaut-data-json-snippet.png){alt='JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose'}
+2. A Python script called `my code v2.py` containing some analysis code.
+
+   ![A first few lines of a Python script](episodes/fig/astronaut-analysis-bad-code-screenshot.png){alt='A first few lines of a Python script used as example code for the episode'}
+
+   The code in the Python script does some common research tasks:
+
+  * Reads in the data from the JSON file
+  * Changes the data from one data format to another and saves to a file in the new format (CSV)
+  * Performs some calculations to generate summary statistics about the data
+  * Makes a plot to visualise the data
+
+Let's check your setup now to make sure you are ready for the rest of this course.
+
+::::::  challenge
+
+### Check your setup
+
+Open a command line terminal and look at the prompt.
+Compare what you see in the terminal with your neighbour, does it look the same or different?
+What information is it telling you and why might this be useful?
+What other information might you want?
+
+Run the following commands in a terminal to check you have installed the tools listed in the Setup page.
+Compare the output with your neighbour and see if you can see any differences.
+
+Checking the command line terminal:
+
+1. `$ date`
+2. `$ echo $SHELL`
+3. `$ pwd`
+4. `$ whoami`
+
+Checking Python:
+
+5. `$ python --version`
+6. `$ python3 --version`
+7. `$ which python`
+8. `$ which python3`
+
+Checking Git and GitHub:
+
+9. `$ git --help`
+10. `$ git config --list`
+11. `$ ssh -T git@github.com`
+
+Checking VS Code:
+
+12. `$ code`
+13. `$ code --list-extensions`
+
+::: hint
+
+The prompt is the `$` character and any text that comes before it, that is shown on every new line before you type in
+commands.
+Type each of the commands one at a time and press enter.
+They should give you a result by printing some text in the terminal.
+
+:::
+
+::: solution
+
+The expected out put of each command is:
+
+1. Today's date
+2. `bash` or `zsh` - this tells you what shell language you are using. In this course we show examples in Bash.
+3. Your "present working directory" or the folder where your shell is running
+4. Your username
+5. In this course we are using Python 3. If `python --version` gives you Python 2.x you may have two versions of Python installed on your computer and need to be careful which one you are using.
+6. Use this command to be certain you are using Python version 3, not 2, if you have both installed.
+7. The file path to where the Python version you are calling is installed.
+8. If you have more than one version these should be different paths, if both 5. and 6. gave the same result then 7. and 8. should match as well.
+9. The help message explaining how to use the `git` command.
+10. You should have `user.name`, `user.email` and `core.editor` set in your Git configuration. Check that the editor listed is one you know how to use.
+11. This checks if you have set up your connection to GitHub correctly. If is says `permission denied` you may need to look at the instructions for setting up SSH keys again on the Setup page.
+12. This should open VSCode in your current working directory. macOS users may need to first open VS Code and [add it to the PATH](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line).
+13. You should have the extensions GitLens, Git Graph, Python, JSON and Excel Viewer installed to use in this course.
+
+:::
+
+::::::
+
+You may have noticed a few things that are not "quite right" with this software project. 
+And if you have not - do not worry, we will point them out throughout the course, fix them and try to make this 
+research software project a "bit better" for the future (re)use.
+
 ## Acknowledgements and references
+
 The content of this course borrows from or references [various work](learners/reference.md#litref).
