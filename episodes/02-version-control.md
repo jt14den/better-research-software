@@ -602,7 +602,7 @@ Discuss in pairs or small groups.
 
 
 To find out more about how to generate `diffs`,
-you can read the [Git documentation](git-diff-docs) or the [Tracking Changes episode][swc-git-lesson-track] from the [Software Carpentry Version control with Git lesson][swc-git-lesson].
+you can read the [Git documentation][git-diff-docs] or the [Tracking Changes episode][swc-git-lesson-track] from the [Software Carpentry Version control with Git lesson][swc-git-lesson].
 
 :::  solution
 
