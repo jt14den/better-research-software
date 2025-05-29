@@ -75,7 +75,9 @@ their contributions.
 
 :::::: callout 
 
-### What is a version control system?
+### Version control refresher
+
+#### What is a version control system?
 
 Version control systems are tools that let you track changes in files over time in a special database that allows 
 users to "travel through time", and compare earlier versions of the files with the current state.
