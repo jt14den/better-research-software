@@ -149,7 +149,7 @@ and the most common commands used to work with one.
 
 ::::::
 
-### Create a new repository
+### Start tracking changes with Git
 
 ::: instructor
 
