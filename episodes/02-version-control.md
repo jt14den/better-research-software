@@ -44,7 +44,7 @@ In the previous episode you have unzipped `spacewalks.zip` into a directory `spa
 If you have not opened the software directory in VS Code already – go to **File -> Open Folder** and find `spacewalks`.
 
 We also need access to a command line terminal to type various commands. In VS Code start a new terminal 
-via **Terminal -> New Terminal** (Windows users need to make sure the new terminal is "GitBash" and not "PowerShell" or "cdm"). 
+via **Terminal -> New Terminal** (Windows users need to make sure the new terminal is "GitBash"; not "PowerShell" nor "cdm"). 
 Alternatively, you can work with a shell terminal directly (and not within VS Code), if you so prefer.
 
 If you are not already inside this directory, from your command line terminal you can navigate to it and list its 
@@ -300,13 +300,14 @@ Git adds useful commands to do that, which are covered later on.
 ### Make a change
 
 You may have noticed that the script we received contain blank spaces in filename.
-This meant that, when we were typing the script's name into the terminal, we had to add a slash before the space like this: `my\ code\ v2.py`?
-Using a backslash in this way is called 'escaping'.
+This meant that, when we were typing the script's name into the terminal, we had to add a slash before the space like this: `my\ code\ v2.py`.
+Using a backslash in this way is called "escaping".
 It lets the terminal know to treat the space as part of the filename,
 and not a separate argument.
 It is a bit inconvenient and can cause problems if you forget,
 so best practise is to avoid spaces in filenames.
 The simplest fix is to replace the spaces with underscores `_` instead.
+
 You can use the `mv` command to rename files:
 
 ```bash
@@ -368,6 +369,9 @@ $ git status
 `git mv <old> <new>` command is the equivalent of running `mv <old> <new>` immediately followed by `git add <new>`,
 so the changes have been staged automatically. We just need to commit them.
 
+There is another small advantage to using `git mv` over the `mv` command: with `mv` only, Git thinks one file has been 
+deleted and a new one created, when you use `git mv`, Git "understands" that it is the same file but with a new name.
+
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -377,13 +381,13 @@ so the changes have been staged automatically. We just need to commit them.
 Now that we know how to rename files in Git,
 we can use it to make our files and code a bit easier to understand.
 
-We want to:
+We may want to:
 
 1. Give our input data file and script more meaningful names. For example, we do not need to keep version history in filenames 
-any more as Git will keep track of that for us now so our script can be renamed to `eva_data_analysis.py` and data file to `eva-data.json`.
+any more as Git will keep track of that for us, so our script can be renamed to `eva_data_analysis.py` and data file to `eva-data.json`.
 2. Choose informative file names for our output data file (e.g. `eva-data.csv`) and plot (`cumulative_eva_graph.png`).
 
-First we need to update the file names in our script using VS Code:
+Firstly, let's update the file names in our Python script from VS Code:
 
 ```python
 data_f = open('./eva-data.json', 'r')
@@ -391,7 +395,7 @@ data_t = open('./eva-data.csv','w')
 g_file = './cumulative_eva_graph.png'
 ```
 
-Now we need to rename our files on the file system using Git:
+Next, we need to rename the files on the file system using Git:
 
 ```bash
 git mv data.json eva-data.json
@@ -414,7 +418,8 @@ git commit -m "Implement informative file names"
 
 ## Interacting with a remote Git server
 
-Git is distributed version control system and lets us synchronise work between multiple copies of the same repository - which may not be on your machine (**'remote repositories'**).
+Git is distributed version control system and lets us synchronise work between multiple copies of the same repository - 
+which may not be on your machine (hence ara called **remote repositories**).
 So far, we have used a **local repository** on our machine and,
 even though we have been incrementally saving our work in a way that is recoverable,
 if we lost our machine then we would lose all our code along with it,
@@ -480,7 +485,7 @@ Let's push our **local repository** to [GitHub](https://github.com) and share it
    you should now see the two files `my-code-v2.py` and `eva-data.json` visible in the GitHub repository,
    matching what you have locally on your machine.
 
-If you were wondering about what those commands did...
+If you were wondering about what those commands did, here is the explanation.
 
 ```bash
 git remote add origin git@github.com/<YOUR_GITHUB_HANDLE>/spacewalks.git
@@ -500,7 +505,7 @@ git branch -M main
 
 `git branch` is a command used to manage branches.
 We'll discuss branches later on in the course.
-This command ensures the branch we are working on is called "main".
+We saw this command during setup and earlier in this episode - it ensures the branch we are working on is called "main".
 This will be the default branch of the project for everyone working on it.
 
 ```bash
@@ -515,8 +520,8 @@ so that in future `git push` will default to sending to `origin main`.
 ### Summary
 
 We have created a new software project and used version control system Git to track changes to it. 
-We also looked back at our work, compared different versions, and even recovered past states.
-Finally, we published our software to a remote server, where it is both secure and shareable.
+We can now look back at our work, compare different code versions, and even recover past states.
+We have also published our software to a remote repository located on GitHub, where it is both secure and shareable.
 
 These skills are critical to reproducible and sustainable science.
 Software *is* science, and being able to share the specific version of code used in a paper is required for reproducibility.
