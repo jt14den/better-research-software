@@ -82,7 +82,7 @@ users to "travel through time", and compare earlier versions of the files with t
 Think of a version control system like turning on 'Track Changes' on Microsoft Word/Google Docs,
 but for *any* files you want, and a lot more powerful and flexible.
 
-**Why use a version control system?**
+#### Why use a version control system?
 
 As scientists, our main motivation for using version control is **reproducibility**.
 By tracking and storing every change we make,
