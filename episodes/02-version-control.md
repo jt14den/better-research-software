@@ -7,7 +7,7 @@ exercises: 30
 :::::::::::::::::::::::::::::::::::::: questions
 
 - What is a version control system?
-- How can a version control system improve my software project?
+- Why is version control essential to building good software
 - What does a standard version control workflow look like?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
