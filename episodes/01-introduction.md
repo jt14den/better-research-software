@@ -177,7 +177,8 @@ This is a (non-exhaustive) list of things that could be fixed/improved with our 
 
 ::::::
 
-
+As you have seen from the previous exercise - there are a few things that can be improved with this software project.
+We will try to make this research software project a "bit better" for future use.
 
 Let's check your setup now to make sure you are ready for the rest of this course.
 
@@ -248,10 +249,6 @@ The expected out put of each command is:
 :::
 
 ::::::
-
-You may have noticed a few things that are not "quite right" with this software project. 
-And if you have not - do not worry, we will point them out throughout the course, fix them and try to make this 
-research software project a "bit better" for the future (re)use.
 
 ## Further reading
 
