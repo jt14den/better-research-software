@@ -159,7 +159,7 @@ Here are some questions to help you assess the code:
 This is a (non-exhaustive) list of things that could be fixed/improved with our code and data:
 
 - data file `data.json` could have a more descriptive file name
-- `my code v2.py` Python script should not contain blank spaces as it may cause problems when running from a command line
+- the filename of the `my code v2.py` Python script should not contain blank spaces as it may cause problems when running from a command line
 - import statements should be grouped at the top
 - fixing the loop to 374 data entries is not reusable on other data files and would likely break if the data file changed
 - should use more descriptive and meaningful variable names, and not e.g. `w`
