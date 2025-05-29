@@ -170,8 +170,9 @@ This is a (non-exhaustive) list of things that could be fixed/improved with our 
 - it is not clear what software dependencies the code has
 - there are installation instructions or instructions on how to run the code
 - code structure could be improved - no functions and everything in one monolithic piece of code
-- unused variable `fieldnames` (meant to be used when saving data to CSV file) polluting anc confusing the code reader; spaces in column names
-- the code does not specify the encoding when reading the data in 
+- unused variable `fieldnames` (meant to be used when saving data to CSV file) polluting and confusing the person reading the code; spaces in column names
+- the code does not specify the encoding when reading the data in - and we are also not sure what encoging the data was saved in originally
+- are we confident the data analysis and plot that is produced as a result are correct
 
 :::
 
