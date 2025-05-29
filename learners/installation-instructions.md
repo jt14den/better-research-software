@@ -379,5 +379,4 @@ from GitHub.
 The archive contains [NASA's open data on spacewalks](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/data_preview)
 (i.e. extravehicular activities - EVAs) undertaken by astronauts and cosmonauts from 1965 to 2013 and a Python script to analyse and plot this data.
 
-
 Save the `spacewalks.zip` archive to your home directory and extract it - you should get a directory called `spacewalks`.
