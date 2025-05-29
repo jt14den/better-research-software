@@ -1,6 +1,10 @@
 ---
 title: Better start with a software project
+<<<<<<< HEAD
 teaching: 30
+=======
+teaching: 60
+>>>>>>> cbaf38f (Make the narrative more smooth)
 exercises: 30
 ---
 
