@@ -35,6 +35,7 @@ That is, enabling others to run our code and obtain the same results we did.
 :::::::::::::::::::::: callout
 
 ## Why should I care about reproducibility?
+
 Scientific transparency and rigor are key factors in research. 
 Scientific methodology and results need to be published openly and replicated and confirmed by several independent parties.
 However, research papers often lack the full details required for independent reproduction or replication. 
@@ -59,7 +60,8 @@ This course aims to teach some of these practices and tools pertaining to the us
 
 ::::::::::::::::::::::::::::::
 
-## Practices for Building Better Research Software
+## Practices for building better research software
+
 The practices we will cover for building better research software fall into three areas.
 
 ### 1. Things you can do with your own computing environment to enhance the software
@@ -90,6 +92,165 @@ Write your reflections in the shared collaborative document.
 
 ::::::::::::::::::
 
+## Our research software project
+
+You are going to follow a fairly typical experience of a new researcher (e.g. a PhD student or a postdoc) joining a research group.
+You were emailed some spacewalks data and analysis code bundled in the `spacewalks.zip` archive, written by another group 
+member who worked on similar things but has since left. You need to be able to install and run this code on your 
+machine, check you can understand it and then adapt it to your own project.
+
+As part of the [setup for this course](./installation-instructions.html#spacewalks), you may have downloaded or been emailed the `spacewalks.zip` archive. 
+If not, you can [download it](./installation-instructions.html#spacewalks) now.
+Save the `spacewalks.zip` archive to your home directory and extract it - you should get a directory called `spacewalks`.
+
+The first thing you may want to do is inspect the content of the code and data you received. We will use VS Code for browsing, 
+inspecting, modifying files and running our code.
+
+VS Code is a very handy tool for software development and is used by many researchers worldwide. 
+It "understands" the syntax of many different file types - for example Python, JSON, CSV, etc. - 
+either natively or via extensions that can be installed. To open our directory `spacewalks` in VS Code – go to **File -> Open Folder** and find `spacewalks`.
+
+You may notice that the software project contains:
+
+1. A JSON file called `data.json` - a snippet of which is shown below - with data on extra-vehicular activities 
+(EVAs, i.e. spacewalks) undertaken by astronauts and cosmonauts from 1965 to 2013 (data provided by NASA via its [Open Data Portal](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/about_data)).
+
+   ![JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose)](episodes/fig/astronaut-data-json-snippet.png){alt='JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose'}
+2. A Python script called `my code v2.py` containing some analysis code.
+
+   ![A first few lines of a Python script](episodes/fig/astronaut-analysis-bad-code-screenshot.png){alt='A first few lines of a Python script used as example code for the episode'}
+
+   The code in the Python script does some common research tasks:
+
+  * Reads in the data from the JSON file
+  * Changes the data from one data format to another and saves to a file in the new format (CSV)
+  * Performs some calculations to generate summary statistics about the data
+  * Makes a plot to visualise the data
+
+:::::: challenge 
+
+### Read and understand data and code
+
+Individually inspect the code and try and see if you can understand what the code is doing and how it is organised. 
+
+In the shared document, write down anything that you think is not "quite right", not clear, is missing, or could be done better.
+
+::: hint
+
+Here are some questions to help you assess the code:
+
+- If these files were emailed to you, or sent on a chat platform, or handed to you on a memory stick, how easy would it be to find them again in 6 months, or 3 years?
+- If you asked your collaborator to give you the files again later on, how would you describe them? Do they have a clear name?
+- If more data was added to the data set later, could you explain exactly which data you used in the original analysis?
+- If the person who gave you the files left your institution, how would you get access to the files again?
+- Once you have the files, can you understand the code? Does it make sense to you?
+- Do you need to log into anything to use this? Does it require purchase or subscription to a service, platform or tool?
+- Is it clear what kind of input data it can read and what kind of output data is produced? Will you be able to create the input files and read the output files with the tools your community generally uses?
+- If you wanted to use this tool as part of a larger data processing pipeline, does it allow you to link it with other tools in standard ways such as an API or command-line interface?
+- Can you run the code on your platform/operating system (is there documentation that covers installation instructions)? What programs or libraries do you need to install to make it work (and which versions)? Are these commonly used tools in your field?
+- Do you have explicit permission to use your collaborators code in your own research and do they expect credit of some form (paper authorship, citation or acknowledgement)? Are you allowed to edit, publish or share the files with others?
+- Is the language used familiar to you and people in your research field? Can you read the variable names in the code and the column names in the data file and understand what they mean without extra metadata?
+- Is the code written in a way that allows you to easily modify or extend it? Can you easily see what parameters to change to make it calculate a different statistic, or run on a different input file?
+
+:::
+
+::: solution
+
+This is a (non-exhaustive) list of things that could be fixed/improved with our code and data:
+
+- data file `data.json` could have a more descriptive file name
+- the filename of the `my code v2.py` Python script should not contain blank spaces as it may cause problems when running from a command line
+- import statements should be grouped at the top
+- fixing the loop to 374 data entries is not reusable on other data files and would likely break if the data file changed
+- should use more descriptive and meaningful variable names, and not e.g. `w`
+- uses commenting and uncommenting code to direct the flow of execution / type of analysis being done
+- running the code twice causes the program to fail as a previous result file will exist and the script will refuse to overwrite it
+- there is no licence information to say how the code can be reused (which then means it cannot be reused at all)
+- the code lacks comments, documentation and explanations
+- it is not clear what software dependencies the code has
+- there are installation instructions or instructions on how to run the code
+- code structure could be improved - no functions and everything in one monolithic piece of code
+- unused variable `fieldnames` (meant to be used when saving data to CSV file) polluting and confusing the person reading the code; spaces in column names
+- the code does not specify the encoding when reading the data in - and we are also not sure what encoging the data was saved in originally
+- are we confident the data analysis and plot that is produced as a result are correct
+
+:::
+
+::::::
+
+As you have seen from the previous exercise - there are a few things that can be improved with this software project.
+We will try to make this research software project a "bit better" for future use.
+
+Let's check your setup now to make sure you are ready for the rest of this course.
+
+::::::  challenge
+
+### Check your setup
+
+Open a command line terminal and look at the prompt.
+Compare what you see in the terminal with your neighbour, does it look the same or different?
+What information is it telling you and why might this be useful?
+What other information might you want?
+
+Run the following commands in a terminal to check you have installed the tools listed in the Setup page.
+Compare the output with your neighbour and see if you can see any differences.
+
+Checking the command line terminal:
+
+1. `$ date`
+2. `$ echo $SHELL`
+3. `$ pwd`
+4. `$ whoami`
+
+Checking Python:
+
+5. `$ python --version`
+6. `$ python3 --version`
+7. `$ which python`
+8. `$ which python3`
+
+Checking Git and GitHub:
+
+9. `$ git --help`
+10. `$ git config --list`
+11. `$ ssh -T git@github.com`
+
+Checking VS Code:
+
+12. `$ code`
+13. `$ code --list-extensions`
+
+::: hint
+
+The prompt is the `$` character and any text that comes before it, that is shown on every new line before you type in
+commands.
+Type each of the commands one at a time and press enter.
+They should give you a result by printing some text in the terminal.
+
+:::
+
+::: solution
+
+The expected out put of each command is:
+
+1. Today's date
+2. `bash` or `zsh` - this tells you what shell language you are using. In this course we show examples in Bash.
+3. Your "present working directory" or the folder where your shell is running
+4. Your username
+5. In this course we are using Python 3. If `python --version` gives you Python 2.x you may have two versions of Python installed on your computer and need to be careful which one you are using.
+6. Use this command to be certain you are using Python version 3, not 2, if you have both installed.
+7. The file path to where the Python version you are calling is installed.
+8. If you have more than one version these should be different paths, if both 5. and 6. gave the same result then 7. and 8. should match as well.
+9. The help message explaining how to use the `git` command.
+10. You should have `user.name`, `user.email` and `core.editor` set in your Git configuration. Check that the editor listed is one you know how to use.
+11. This checks if you have set up your connection to GitHub correctly. If is says `permission denied` you may need to look at the instructions for setting up SSH keys again on the Setup page.
+12. This should open VSCode in your current working directory. macOS users may need to first open VS Code and [add it to the PATH](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line).
+13. You should have the extensions GitLens, Git Graph, Python, JSON and Excel Viewer installed to use in this course.
+
+:::
+
+::::::
+
 ## Further reading
 
 We recommend the following resources for some additional reading on reproducible research:
@@ -100,8 +261,9 @@ We recommend the following resources for some additional reading on reproducible
 * [FORCE11's FAIR 4 Research Software (FAIR4RS) Working Group][fair4rs-working-group]
 * ["Good Enough Practices in Scientific Computing" course][good-enough-practices]
 * [Reproducibility for Everyone's (R4E) resources][repro4everyone], community-led education initiative to increase adoption of open research practices at scale
-* [Training materials on different aspects of research software engineering][intersect-rse-training] (including open source, reproducibility, research software testing, engineering, design, continuous integration, collaboration, version control, packaging,  etc.), compiled by the [INTERSECT project](https://intersect-training.org/) 
+* [Training materials on different aspects of research software engineering][intersect-rse-training] (including open source, reproducibility, research software testing, engineering, design, continuous integration, collaboration, version control, packaging,  etc.), compiled by the [INTERSECT project](https://intersect-training.org/)
 * [Curated resources][forrt-resources] by the [Framework for Open and Reproducible Research Training](https://forrt.org/) (FORRT)
 
 ## Acknowledgements and references
+
 The content of this course borrows from or references [various work](learners/reference.md#litref).
