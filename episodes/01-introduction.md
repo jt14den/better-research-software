@@ -92,33 +92,25 @@ Write your reflections in the shared collaborative document.
 
 ::::::::::::::::::
 
-## Further reading
+## Our research software project
 
-We recommend the following resources for some additional reading on reproducible research:
+You are going to follow a fairly typical experience of a new researcher (e.g. a PhD student or a postdoc) joining a research group.
+You were emailed some spacewalks data and analysis code bundled in the `spacewalks.zip` archive, written by another group 
+member who worked on similar things but has since left. You need to be able to install and run this code on your 
+machine, check you can understand it and then adapt it to your own project.
 
-* [The Turing Way's "Guide for Reproducible Research"][ttw-guide-reproducible-research]
-* [A Beginner's Guide to Conducting Reproducible Research][beginner-guide-reproducible-research], Jesse M. Alston, Jessica A. Rick, Bulletin of The Ecological Society of America 102 (2) (2021), https://doi.org/10.1002/bes2.1801
-* ["Ten reproducible research things" tutorial][10-reproducible-research-things]
-* [FORCE11's FAIR 4 Research Software (FAIR4RS) Working Group][fair4rs-working-group]
-* ["Good Enough Practices in Scientific Computing" course][good-enough-practices]
-* [Reproducibility for Everyone's (R4E) resources][repro4everyone], community-led education initiative to increase adoption of open research practices at scale
-* [Training materials on different aspects of research software engineering][intersect-rse-training] (including open source, reproducibility, research software testing, engineering, design, continuous integration, collaboration, version control, packaging,  etc.), compiled by the [INTERSECT project](https://intersect-training.org/) 
-* [Curated resources][forrt-resources] by the [Framework for Open and Reproducible Research Training](https://forrt.org/) (FORRT)
+As part of the [setup for this course](./installation-instructions.html#spacewalks), you may have downloaded or been emailed the `spacewalks.zip` archive. 
+If not, you can [download it](./installation-instructions.html#spacewalks) now.
+Save the `spacewalks.zip` archive to your home directory and extract it - you should get a directory called `spacewalks`.
 
-## Research software project
+The first thing you may want to do is inspect the content of the code and data you received. We will use VS Code for browsing, 
+inspecting, modifying files and running our code.
 
-We are going to follow a fairly typical experience of a new researcher (e.g. a PhD student or a postdoc) joining a research group.
-They were emailed some spacewalks data and analysis code bundled in `spacewalks.zip` archive, written by another group 
-member who worked on similar things but has since left.
-They need to be able to install and run this code on their machine, check they can understand it and then adapt it to their own project.
+VS Code is a very handy tool for software development and is used by many researchers worldwide. 
+It "understands" the syntax of many different file types - for example Python, JSON, CSV, etc. - 
+either natively or via extensions that can be installed. To open our directory `spacewalks` in VS Code – go to **File -> Open Folder** and find `spacewalks`.
 
-As part of the setup for this course, you may have been emailed the `spacewalks.zip` archive (if not - 
-you can [download it](./installation-instructions.html#spacewalks)) containing the software project the new research team member was given.
-You will play they role of this new researcher throughout the course.
-
-The first thing you may want to do is unzip this archive and inspect its content in VS Code. VS Code is a very handy tool 
-for software development - it "understands" the syntax of many different file types - for example Python, JSON, CSV, etc. - 
-either natively or via extensions that can be installed. You may notice that the software project contains:
+You may notice that the software project contains:
 
 1. A JSON file called `data.json` - a snippet of which is shown below - with data on extra-vehicular activities 
 (EVAs, i.e. spacewalks) undertaken by astronauts and cosmonauts from 1965 to 2013 (data provided by NASA via its [Open Data Portal](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/about_data)).
@@ -134,6 +126,58 @@ either natively or via extensions that can be installed. You may notice that the
   * Changes the data from one data format to another and saves to a file in the new format (CSV)
   * Performs some calculations to generate summary statistics about the data
   * Makes a plot to visualise the data
+
+:::::: challenge 
+
+### Read and understand data and code
+
+Individually inspect the code and try and see if you can understand what the code is doing and how it is organised. 
+
+In the shared document, write down anything that you think is not "quite right", not clear, is missing, or could be done better.
+
+::: hint
+
+Here are some questions to help you assess the code:
+
+- If these files were emailed to you, or sent on a chat platform, or handed to you on a memory stick, how easy would it be to find them again in 6 months, or 3 years?
+- If you asked your collaborator to give you the files again later on, how would you describe them? Do they have a clear name?
+- If more data was added to the data set later, could you explain exactly which data you used in the original analysis?
+- If the person who gave you the files left your institution, how would you get access to the files again?
+- Once you have the files, can you understand the code? Does it make sense to you?
+- Do you need to log into anything to use this? Does it require purchase or subscription to a service, platform or tool?
+- Is it clear what kind of input data it can read and what kind of output data is produced? Will you be able to create the input files and read the output files with the tools your community generally uses?
+- If you wanted to use this tool as part of a larger data processing pipeline, does it allow you to link it with other tools in standard ways such as an API or command-line interface?
+- Can you run the code on your platform/operating system (is there documentation that covers installation instructions)? What programs or libraries do you need to install to make it work (and which versions)? Are these commonly used tools in your field?
+- Do you have explicit permission to use your collaborators code in your own research and do they expect credit of some form (paper authorship, citation or acknowledgement)? Are you allowed to edit, publish or share the files with others?
+- Is the language used familiar to you and people in your research field? Can you read the variable names in the code and the column names in the data file and understand what they mean without extra metadata?
+- Is the code written in a way that allows you to easily modify or extend it? Can you easily see what parameters to change to make it calculate a different statistic, or run on a different input file?
+
+:::
+
+::: solution
+
+This is a (non-exhaustive) list of things that could be fixed/improved with our code and data:
+
+- data file `data.json` could have a more descriptive file name
+- `my code v2.py` Python script should not contain blank spaces as it may cause problems when running from a command line
+- import statements should be grouped at the top
+- fixing the loop to 374 data entries is not reusable on other data files and would likely break if the data file changed
+- should use more descriptive and meaningful variable names, and not e.g. `w`
+- uses commenting and uncommenting code to direct the flow of execution / type of analysis being done
+- running the code twice causes the program to fail as a previous result file will exist and the script will refuse to overwrite it
+- there is no licence information to say how the code can be reused (which then means it cannot be reused at all)
+- the code lacks comments, documentation and explanations
+- it is not clear what software dependencies the code has
+- there are installation instructions or instructions on how to run the code
+- code structure could be improved - no functions and everything in one monolithic piece of code
+- unused variable `fieldnames` (meant to be used when saving data to CSV file) polluting anc confusing the code reader; spaces in column names
+- the code does not specify the encoding when reading the data in 
+
+:::
+
+::::::
+
+
 
 Let's check your setup now to make sure you are ready for the rest of this course.
 
@@ -208,6 +252,19 @@ The expected out put of each command is:
 You may have noticed a few things that are not "quite right" with this software project. 
 And if you have not - do not worry, we will point them out throughout the course, fix them and try to make this 
 research software project a "bit better" for the future (re)use.
+
+## Further reading
+
+We recommend the following resources for some additional reading on reproducible research:
+
+* [The Turing Way's "Guide for Reproducible Research"][ttw-guide-reproducible-research]
+* [A Beginner's Guide to Conducting Reproducible Research][beginner-guide-reproducible-research], Jesse M. Alston, Jessica A. Rick, Bulletin of The Ecological Society of America 102 (2) (2021), https://doi.org/10.1002/bes2.1801
+* ["Ten reproducible research things" tutorial][10-reproducible-research-things]
+* [FORCE11's FAIR 4 Research Software (FAIR4RS) Working Group][fair4rs-working-group]
+* ["Good Enough Practices in Scientific Computing" course][good-enough-practices]
+* [Reproducibility for Everyone's (R4E) resources][repro4everyone], community-led education initiative to increase adoption of open research practices at scale
+* [Training materials on different aspects of research software engineering][intersect-rse-training] (including open source, reproducibility, research software testing, engineering, design, continuous integration, collaboration, version control, packaging,  etc.), compiled by the [INTERSECT project](https://intersect-training.org/)
+* [Curated resources][forrt-resources] by the [Framework for Open and Reproducible Research Training](https://forrt.org/) (FORRT)
 
 ## Acknowledgements and references
 
