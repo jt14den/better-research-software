@@ -98,6 +98,20 @@ Virtual environments also enable you to always use
 the latest available version without specifying it explicitly.
 They also enable you to use a specific older version of a package for your project, should you need to.
 
+:::::::::::::::::::::: callout
+
+## Truly reproducible environments are difficult to attain
+
+Creating and managing isolated environments for each of your software projects and sharing descriptions of those environments alongside the relevant code is a great way to make your software and analyses much more reproducible.
+However, "true" computational reproducibility is very difficult to achieve.
+For example, the tools we will use in this lesson only track the dependencies of our software, remaining unanware of other aspects of the software's environment such as the operating system and hardware of the system it is running on.
+These properties of the environment can influence the running of the software and the results it produces and should be accounted for if a workflow is to be truly reproducible.
+
+Although there is more that we can do to maximise the reproducibility of our software/workflows, the steps described in this episode are an excellent place to start.
+We should not let the difficulty of attaining "perfect" reproducibility prevent us from implementing "good enough" practices that make our lives easier and are _much_ better than doing nothing.
+
+::::::::::::::::::::::::::::::
+
 ## Managing virtual environments
 
 There are several command line tools used for managing Python virtual environments - we will use `venv`,
@@ -362,6 +376,17 @@ To recreate a virtual environment from `requirements.txt`, from the project root
 (venv_spacewalks) $ python3 -m pip install -r requirements.txt
 ```
 
+:::::::::::::::::::::: callout
+
+### Another challenge in (long-term) reproducibility
+
+For people (including your future self) to be able to reproduce software environments described in this way, the listed dependencies need to remain available to download and possible to install on the user's system.
+These are reasonably safe assumptions for widely-used, actively maintained tools on commonly-used operating systems in the short- to medium-term.
+However, it becomes less likely that we will be able to recreate such environments as system architectures evolve over time and maintainers stop supporting older versions of software.
+To achieve this kind of long-term reproducibility, you will need to explore options to provide the actual environment -- with dependencies already included -- alongside your software e.g. via a [containerised environment](https://carpentries-incubator.github.io/docker-introduction/).
+
+::::::::::::::::::::::::::::::
+
 As your project grows - you may need to update your environment for a variety of reasons, e.g.:
 
 - one of your project's dependencies has just released a new version (dependency version number update),
@@ -373,6 +398,20 @@ What you need to do in this case (apart from installing the new and removing the
 from your virtual environment) is update the contents of the `requirements.txt` file accordingly
 by re-issuing `pip freeze` command and propagate the updated `requirements.txt` file to your collaborators
 via your code sharing platform.
+
+:::::::::::::::::::::: callout
+
+### Environment management can be troublesome
+
+Software environment management is a difficult thing to get right, which is one reason why [the Python community has come up with so many different ways of doing it over the years](https://xkcd.com/1987). 
+(That webcomic is several years old at the time of writing and the Python environment management ecosystem has only become _more_ complicated since.)
+Unfortunately, even if you try to follow good practices and keep your environments isolated it is possible -- perhaps even likely -- that you will face difficulties with installing and updating dependencies on your projects in the coming years.
+Such issues are particularly likely to appear when you upgrade your computer hardware, operating system, and/or interpreter/compiler.
+As before, this is not a reason to avoid managing your sofware envrionments altogether -- or to avoid upgrading your hardware, operating system, etc! 
+If you have descriptions of your environments it will always be easier to reproduce them and keep working with your software than if you need to start from scratch.
+Furthermore, your expertise will develop as you get more practice with managing your software environments, which will equip you well to troubleshoot problems if and when they arise.
+
+::::::::::::::::::::::::::::::
 
 ## Running the code and reproducing results
 
