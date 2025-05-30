@@ -137,42 +137,49 @@ In the shared document, write down anything that you think is not "quite right",
 
 ::: hint
 
-Here are some questions to help you assess the code:
+Below are some suggested questions to help you assess the code.
+These are not the only criteria on which you could evaluate the code and you may find other aspects to comment on.
 
 - If these files were emailed to you, or sent on a chat platform, or handed to you on a memory stick, how easy would it be to find them again in 6 months, or 3 years?
-- If you asked your collaborator to give you the files again later on, how would you describe them? Do they have a clear name?
-- If more data was added to the data set later, could you explain exactly which data you used in the original analysis?
-- If the person who gave you the files left your institution, how would you get access to the files again?
-- Once you have the files, can you understand the code? Does it make sense to you?
-- Do you need to log into anything to use this? Does it require purchase or subscription to a service, platform or tool?
-- Is it clear what kind of input data it can read and what kind of output data is produced? Will you be able to create the input files and read the output files with the tools your community generally uses?
-- If you wanted to use this tool as part of a larger data processing pipeline, does it allow you to link it with other tools in standard ways such as an API or command-line interface?
-- Can you run the code on your platform/operating system (is there documentation that covers installation instructions)? What programs or libraries do you need to install to make it work (and which versions)? Are these commonly used tools in your field?
-- Do you have explicit permission to use your collaborators code in your own research and do they expect credit of some form (paper authorship, citation or acknowledgement)? Are you allowed to edit, publish or share the files with others?
-- Is the language used familiar to you and people in your research field? Can you read the variable names in the code and the column names in the data file and understand what they mean without extra metadata?
-- Is the code written in a way that allows you to easily modify or extend it? Can you easily see what parameters to change to make it calculate a different statistic, or run on a different input file?
+- Can you understand the code? Does it make sense to you?
+- Could you run the code on your platform/operating system (is there documentation that covers installation instructions)? What programs or libraries do you need to install to make it work (and which versions)? Are these commonly used tools in your field?
+- Are you allowed to use the code in your own research? If you did, would your collaborators expect credit in some form (paper authorship, citation or acknowledgement)? Are you allowed to edit the files? Publish them? Share them with others?
+- Is the code written in a way that allows you to easily modify or extend it? How easy would it be to change its parameters to calculate a different statistic, or run on a different input file?
 
 :::
 
 ::: solution
 
+### Solution
+
 This is a (non-exhaustive) list of things that could be fixed/improved with our code and data:
+
+#### file and variable naming
 
 - data file `data.json` could have a more descriptive file name
 - the filename of the `my code v2.py` Python script should not contain blank spaces as it may cause problems when running from a command line
-- import statements should be grouped at the top
-- fixing the loop to 374 data entries is not reusable on other data files and would likely break if the data file changed
 - should use more descriptive and meaningful variable names, and not e.g. `w`
+
+#### code organisation and style
+
+- import statements should be grouped at the top
 - uses commenting and uncommenting code to direct the flow of execution / type of analysis being done
-- running the code twice causes the program to fail as a previous result file will exist and the script will refuse to overwrite it
-- there is no licence information to say how the code can be reused (which then means it cannot be reused at all)
 - the code lacks comments, documentation and explanations
-- it is not clear what software dependencies the code has
-- there are installation instructions or instructions on how to run the code
 - code structure could be improved - no functions and everything in one monolithic piece of code
 - unused variable `fieldnames` (meant to be used when saving data to CSV file) polluting and confusing the person reading the code; spaces in column names
+
+#### code content and correctness
+
+- fixing the loop to 374 data entries is not reusable on other data files and would likely break if the data file changed
+- running the code twice causes the program to fail as a previous result file will exist and the script will refuse to overwrite it
 - the code does not specify the encoding when reading the data in - and we are also not sure what encoging the data was saved in originally
-- are we confident the data analysis and plot that is produced as a result are correct
+- how can we be confident the data analysis and plot that is produced as a result are correct?
+
+#### documentation
+
+- there is no licence information to say how the code can be reused (which then means it cannot be reused at all)
+- it is not clear what software dependencies the code has
+- there are installation instructions or instructions on how to run the code
 
 :::
 
