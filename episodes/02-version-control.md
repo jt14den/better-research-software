@@ -255,6 +255,19 @@ Generally, the message should complete the sentence "If applied, this commit wil
 If you want to go into more detail, add a blank line between the summary line and your additional notes.
 Use this additional space to explain why you made changes and/or what their impact will be.
 
+::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
+### Choose how you teach version control steps from here
+
+At this point in the lesson, you may choose to demonstrate how the same steps of staging and committing changes can also be achieved with the VS Code graphical interface.
+
+![The Source Control interface to Git in VSCode](fig/vscode-source-control.png){alt="Screenshot of VSCode with the SOURCE CONTROL interface open in the left hand pane of the window. The interface shows one modified file staged for commit, an empty text input box where a commit meesage can be entered, and a green button labeled 'Commit & Push'"}
+
+Depending on your relative levels of comfort working with that graphical interface and the command line interface to Git, you can choose how you want to demonstrate the remaining steps in this episode and when we use Git again elsewhere.
+The lesson will continue to present version control steps with the command line interface only.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 If we run `git status` now, we see:
 
 ```bash
