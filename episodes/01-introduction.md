@@ -13,11 +13,9 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-After completing this episode, participants should be able to:
-
-- Understand the concept of open and reproducible research
-- Understand why these principles are of value in the research community 
-- Setup their machine with software and data used to teach this course
+- Understand the principles of open and reproducible research and why they are of value in the research community
+- Understand how the concept of reproducibility translates into practices for building better research software
+- Setup machine with software and data used to teach this course
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -154,25 +152,27 @@ These are not the only criteria on which you could evaluate the code and you may
 
 This is a (non-exhaustive) list of things that could be fixed/improved with our code and data:
 
-#### file and variable naming
+#### File and variable naming
 
-- data file `data.json` could have a more descriptive file name
-- the filename of the `my code v2.py` Python script should not contain blank spaces as it may cause problems when running from a command line
-- should use more descriptive and meaningful variable names, and not e.g. `w`
+- data (`data.json`) and Python script (`my code v2.py`) files could have more descriptive names
+- Python script (`my code v2.py`) should not contain blank spaces as it may cause problems when running the code from command line
+- variables (e.g. `w`) should have more descriptive and meaningful names
+- version control is embedded in file name - there are better ways of keeping track of changes to code and its different versions
 
-#### code organisation and style
+#### Code organisation and style
 
 - import statements should be grouped at the top
-- uses commenting and uncommenting code to direct the flow of execution / type of analysis being done
+- commenting and uncommenting code should not be used to direct the flow of execution / type of analysis being done
 - the code lacks comments, documentation and explanations
-- code structure could be improved - no functions and everything in one monolithic piece of code
-- unused variable `fieldnames` (meant to be used when saving data to CSV file) polluting and confusing the person reading the code; spaces in column names
+- code structure could be improved to be more modular and not one monolithic piece of code - e.g. use functions for reusable units of functionality
+- unused variables (e.g. `fieldnames` meant to be used when saving data to CSV file) are polluting the code and confusing the person reading the code
+- spaces should not be used in column names as it can lead to error when reading the data in
 
-#### code content and correctness
+#### Code content and correctness
 
 - fixing the loop to 374 data entries is not reusable on other data files and would likely break if the data file changed
-- running the code twice causes the program to fail as a previous result file will exist and the script will refuse to overwrite it
-- the code does not specify the encoding when reading the data in - and we are also not sure what encoging the data was saved in originally
+- running the code twice causes the program to fail as the result file from the previous run will exist (which the code does not check for) and the script will refuse to overwrite it
+- the code does not specify the encoding when reading the data in, and we are also not sure what encoding the data was saved in originally
 - how can we be confident the data analysis and plot that is produced as a result are correct?
 
 #### documentation
@@ -185,7 +185,7 @@ This is a (non-exhaustive) list of things that could be fixed/improved with our 
 
 ::::::
 
-As you have seen from the previous exercise - there are a few things that can be improved with this software project.
+As you have seen from the previous exercise - there are quite a few things that can be improved with this code.
 We will try to make this research software project a "bit better" for future use.
 
 Let's check your setup now to make sure you are ready for the rest of this course.
@@ -194,13 +194,8 @@ Let's check your setup now to make sure you are ready for the rest of this cours
 
 ### Check your setup
 
-Open a command line terminal and look at the prompt.
-Compare what you see in the terminal with your neighbour, does it look the same or different?
-What information is it telling you and why might this be useful?
-What other information might you want?
-
-Run the following commands in a terminal to check you have installed the tools listed in the Setup page.
-Compare the output with your neighbour and see if you can see any differences.
+From a command line terminal on your operating system or within VS Code run the following commands to check you have 
+installed all the tools listed in [the Setup page](./installation-instructions.html) and that are functioning correctly.
 
 Checking the command line terminal:
 
@@ -226,15 +221,6 @@ Checking VS Code:
 
 12. `$ code`
 13. `$ code --list-extensions`
-
-::: hint
-
-The prompt is the `$` character and any text that comes before it, that is shown on every new line before you type in
-commands.
-Type each of the commands one at a time and press enter.
-They should give you a result by printing some text in the terminal.
-
-:::
 
 ::: solution
 
