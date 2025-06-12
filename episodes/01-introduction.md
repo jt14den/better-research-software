@@ -56,7 +56,7 @@ It offers many benefits to those who practice it:
 However, reproducible research often requires that researchers implement new practices and learn new tools.
 This course aims to teach some of these practices and tools pertaining to the use of software to conduct reproducible research.
 
-[The extra page on Reproducible Research](./learners/reproducible-research-discussion.md) provides a more in-depth discussion of this topic.
+Review [the Reproducible Research Discussion](./learners/reproducible-research-discussion.md) for a more in-depth discussion of this topic.
 
 ::::::::::::::::::::::::::::::
 
@@ -77,7 +77,7 @@ The practices we will cover for building better research software fall into thre
 ### 3. Things you can do to make the software easier for other people to use
 
 * Using version control and collaboration platforms like [GitHub](https://github.com), [GitLab](https://gitlab.com), and [CodeBerg](https://codeberg.org/) makes it easier to share code and work on it together.
-* Fostering a community around your software and promoting collaboration helps to grow a use base for your software and contributes to its long-term sustainability. 
+* Fostering a community around your software and promoting collaboration helps to grow a user base for your software and contributes to its long-term sustainability. 
 * Providing clear and comprehensive documentation, including code comments, API specifications, setup guides, and usage instructions, ensures your software is easy to understand, use, and extend (by you and others).
 * Accompanying your software with clear information about its licensing terms and how it should be cited ensures that others can reuse and adapt your code with confidence and that you receive credit when they do so.
 
@@ -177,9 +177,10 @@ This is a (non-exhaustive) list of things that could be fixed/improved with our 
 
 #### documentation
 
+- there is no README documentation to orient the user
 - there is no licence information to say how the code can be reused (which then means it cannot be reused at all)
 - it is not clear what software dependencies the code has
-- there are installation instructions or instructions on how to run the code
+- there are no installation instructions or instructions on how to run the code
 
 :::
 
