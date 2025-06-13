@@ -22,13 +22,14 @@ exercises: 30
 
 In this episode, we will set up our new research software project using some good practices from the start. 
 This will lay the foundation for long-term sustainability of our code, collaboration, and reproducibility. 
+
 This starts with following naming conventions for files, employing version control, and (in the next episode) 
 setting up a virtual development environment with software dependencies to ensure the project can be more easily and 
 reliably run, shared and maintained. Next (over the rest of the course) - adding tests, setting up automation (e.g. continuous integration), 
 documenting software and including metadata such as licensing, authorship and citation will ensure the results our software 
-produces can be trusted and others build upon it with confidence.
+produces can be trusted and others can build upon it with confidence.
 
-We start by creating a new software project from our existing code,
+Let's begin by creating a new software project from our existing code,
 and start tracking changes to it with version control.
 
 ::: instructor
@@ -38,7 +39,7 @@ https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tre
 
 :::
 
-## From a script to a project 
+## From script to software project 
 
 In the previous episode you have unzipped `spacewalks.zip` into a directory `spacewalks` in your home directory.
 If you have not opened the software directory in VS Code already – go to **File -> Open Folder** and find `spacewalks`.

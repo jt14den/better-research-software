@@ -61,11 +61,11 @@ contact: 'a.nenadic@software.ac.uk' # FIXME
 episodes: 
 #- writing-content.md
 - 01-introduction.md
-- 02-version-control.md
+- 02-better-start-version-control.md
 - 03-reproducible-dev-environment.md
 - 04-code-readability.md
 - 05-code-structure.md
-- 06-code-correctness-testing.md
+- 06-code-correctness.md
 - 07-software-documentation.md
 - 08-open-collaboration.md
 - 09-wrap-up.md

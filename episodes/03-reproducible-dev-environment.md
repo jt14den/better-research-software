@@ -13,14 +13,9 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-After completing this episode, participants should be able to:
-
 - Set up a Python virtual coding environment for a software project using `venv` and `pip`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-So far we have created a local Git repository to track changes in our software project and pushed it to GitHub
-to enable others to see and contribute to it.
 
 ::: instructor
 
@@ -29,27 +24,15 @@ https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tre
 
 :::
 
-We now want to start developing the code further.
-If we have a look at our script, we may notice a few `import` lines like the following:
+So far we have created a local Git repository to track changes in our software project and pushed it to GitHub
+to enable others to see and contribute to it. We now want to start developing the code further.
 
-```python
-import json
-```
+## Software dependencies 
 
-```python
-import csv
-```
-
-```python
-import datetime as dt
-```
-
-```python
-import matplotlib.pyplot as plt
-```
-This means that our code requires several **external libraries**
-(also called third-party packages or dependencies) -
-`json`, `csv`, `datetime` and `matplotlib`.
+If we have a look at our script, we may notice a few `import` lines such as: `import json`, `import csv`, 
+`import datetime as dt` and `import matplotlib.pyplot as plt` throughout the code.
+This means that our code depends on or requires several **external libraries**
+(also called third-party packages or **dependencies**) to function - namely `json`, `csv`, `datetime` and `matplotlib`.
 
 Python applications often use external libraries that do not come as part of the standard Python distribution.
 This means that you will have to use a **package manager** tool to install them on your system.
@@ -125,7 +108,7 @@ it interacts and obtains the packages from the central repository called
 
 So, we will use `venv` and `pip` in combination to help us create and share our virtual development environments.
 
-## Creating virtual environments
+### Creating virtual environments
 
 Creating a virtual environment with `venv` is done by executing the following command:
 
@@ -311,7 +294,7 @@ zope.interface  7.0.1
 To uninstall a package installed in the virtual environment do: `python3 -m pip uninstall <package-name>`.
 You can also supply a list of packages to uninstall at the same time.
 
-## Sharing virtual environments
+### Sharing virtual environments
 
 You are collaborating on a project with a team so, naturally,
 you will want to share your environment with your collaborators
@@ -413,7 +396,7 @@ Software environment management is a difficult thing to get right, which is one 
 (That webcomic is several years old at the time of writing and the Python environment management ecosystem has only become _more_ complicated since.)
 Unfortunately, even if you try to follow good practices and keep your environments isolated it is possible -- perhaps even likely -- that you will face difficulties with installing and updating dependencies on your projects in the coming years.
 Such issues are particularly likely to appear when you upgrade your computer hardware, operating system, and/or interpreter/compiler.
-As before, this is not a reason to avoid managing your sofware envrionments altogether -- or to avoid upgrading your hardware, operating system, etc! 
+As before, this is not a reason to avoid managing your software environments altogether -- or to avoid upgrading your hardware, operating system, etc! 
 If you have descriptions of your environments it will always be easier to reproduce them and keep working with your software than if you need to start from scratch.
 Furthermore, your expertise will develop as you get more practice with managing your software environments, which will equip you well to troubleshoot problems if and when they arise.
 
@@ -482,8 +465,7 @@ Also check the [full reference set](learners/reference.md#litref) for the course
 :::::: keypoints
 - Virtual environments keep Python versions and dependencies required by different projects separate.
 - A Python virtual environment is itself a directory structure.
-- You can use `venv` to create and manage Python virtual environments, and `pip` to install and manage Python
-external (third-party) libraries.
-- By convention, you can save and export your Python virtual environment in a `requirements.txt` in your project's root
+- You can use `venv` to create and manage Python virtual environments, and `pip` to install and manage external dependencies your code relies on.
+- By convention, you can save and export your Python virtual environment in `requirements.txt` file in your project's root
 directory, which can then be shared with collaborators/users and used to replicate your virtual environment elsewhere.
 ::::::
