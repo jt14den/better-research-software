@@ -13,8 +13,8 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Understand the principles of open and reproducible research and why they are of value in the research community
-- Understand how the concept of reproducibility translates into practices for building better research software
+- Describe the principles of open and reproducible research and why they are of value in the research community
+- Explain how the concept of reproducibility translates into practices for building better research software
 - Setup machine with software and data used to teach this course
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
