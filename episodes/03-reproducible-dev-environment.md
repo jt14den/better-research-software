@@ -341,6 +341,12 @@ Note that you only need to share the small `requirements.txt` file with your col
 We need to tell Git to ignore that directory, so it is not tracked and shared - we do this by creating a file
 `.gitignore` in the root directory of our project and adding a line `venv_spacewalks` to it.
 
+```bash
+(venv_spacewalks) $ echo "venv_spacewalks/" >> .gitignore
+(venv_spacewalks) $ git add .gitignore
+(venv_spacewalks) $ git commit -m "ignoring venv folder"
+```
+
 Let's now put `requirements.txt` under version control and share it along with our code.
 
 ```bash

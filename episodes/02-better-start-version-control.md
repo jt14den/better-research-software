@@ -433,7 +433,7 @@ git commit -m "Implement informative file names"
 ## Interacting with a remote Git server
 
 Git is distributed version control system and lets us synchronise work between multiple copies of the same repository - 
-which may not be on your machine (hence ara called **remote repositories**).
+which may not be on your machine (called **remote repositories**).
 So far, we have used a **local repository** on our machine and,
 even though we have been incrementally saving our work in a way that is recoverable,
 if we lost our machine then we would lose all our code along with it,
@@ -496,7 +496,7 @@ Let's push our **local repository** to [GitHub](https://github.com) and share it
   ![*Copy the commands to sync the local and remote repositories*](fig/ep03_fig04-copy_commands.jpg){ alt-text="Copying the commands to sync the local and remote repositories" .image-with-shadow }
 
 5. If you refresh your browser window,
-   you should now see the two files `my-code-v2.py` and `eva-data.json` visible in the GitHub repository,
+   you should now see the two files `eva_data_analysis.py` and `eva-data.json` visible in the GitHub repository,
    matching what you have locally on your machine.
 
 If you were wondering about what those commands did, here is the explanation.
@@ -566,7 +566,7 @@ Also check the [full reference set](learners/reference.md#litref) for the course
 - Using version control aids reproducibility since the exact state of the software that produced an output can be recovered
 - A commit represents the smallest unit of change to a project
 - Commit messages describe what each commit contains and should be descriptive
-- Logs can be used to overview the history of a project
+- GitHub is a hosting service for sharing and collaborating on software
 - Using version control is one of the first steps to creating a software project from a bunch of scripts - by investing 
 in these practices early, researchers can create software that supports their work more effectively and enables others to build upon it with confidence.
 
