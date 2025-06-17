@@ -99,7 +99,7 @@
           <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             More <i data-feather="chevron-down"></i>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><hr><li><a class="dropdown-item" href="test-suite-exercise.html">Implementing a test suite</a></li><li><a class="dropdown-item" href="ci-for-testing.html">Continuous Integration for automated testing</a></li><li><a class="dropdown-item" href="licensing.html">Software licensing</a></li><li><a class="dropdown-item" href="ethical-environmental-considerations.html">Ethical &amp; environmental considerations around research software</a></li><li><a class="dropdown-item" href="installation-instructions.html">Installation Instructions</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><hr><li><a class="dropdown-item" href="test-suite-exercise.html">Implementing a test suite</a></li><li><a class="dropdown-item" href="ci-for-testing.html">Continuous Integration for automated testing</a></li><li><a class="dropdown-item" href="licensing.html">Software licensing</a></li><li><a class="dropdown-item" href="ethical-environmental-considerations.html">Ethical &amp; environmental considerations around research software</a></li><li><a class="dropdown-item" href="installation-instructions.html">Installation instructions</a></li><li><a class="dropdown-item" href="reproducible-research-discussion.html">Reproducible Research Discussion</a></li>
           </ul></li>
       </ul></div>
     <!--
@@ -216,12 +216,8 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#jargon-busting">Jargon busting</a></li>
-<li><a href="#what-is-reproducible-research">What is reproducible research?</a></li>
-<li><a href="#why-do-reproducible-research">Why do reproducible research?</a></li>
-<li><a href="#software-in-research-and-research-software">Software in research and research software</a></li>
-<li><a href="#software-and-data-used-in-this-course">Software and data used in this course</a></li>
-<li><a href="#checking-your-setup">Checking your setup</a></li>
+        <ul><li><a href="#practices-for-building-better-research-software">Practices for building better research software</a></li>
+<li><a href="#our-research-software-project">Our research software project</a></li>
 <li><a href="#further-reading">Further reading</a></li>
 <li><a href="#acknowledgements-and-references">Acknowledgements and references</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -233,7 +229,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02-fair-research-software.html">2. FAIR research software</a>
+        <a href="02-better-start-version-control.html">2. Better start with a software project</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -242,7 +238,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-tools-practices.html">3. Tools and good practices for research software</a>
+        <a href="03-reproducible-dev-environment.html">3. Reproducible software environments</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -251,7 +247,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04-version-control.html">4. Version control</a>
+        <a href="04-code-readability.html">4. Code readability</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -260,7 +256,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-reproducible-dev-environment.html">5. Reproducible software environments</a>
+        <a href="05-code-structure.html">5. Code structure</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -269,7 +265,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="06-code-readability.html">6. Code readability</a>
+        <a href="06-code-correctness.html">6. Code correctness</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -278,7 +274,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-code-structure.html">7. Code structure</a>
+        <a href="07-software-documentation.html">7. Software documentation</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -287,7 +283,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="08-code-correctness-testing.html">8. Code correctness &amp; testing</a>
+        <a href="08-open-collaboration.html">8. Open software management &amp; collaboration</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -296,25 +292,7 @@
 <div class="accordion accordion-flush" id="accordionFlush10">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading10">
-        <a href="09-software-documentation.html">9. Software documentation</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush11">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading11">
-        <a href="10-open-collaboration.html">10. Open software management &amp; collaboration</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush12">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading12">
-        <a href="11-wrap-up.html">11. Wrap-up</a>
+        <a href="09-wrap-up.html">9. Wrap-up</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -342,7 +320,7 @@
                       <li>
                         <a href="../instructor/images.html">Extract All Images</a>
                       </li>
-                      <hr><li><a class="dropdown-item" href="test-suite-exercise.html">Implementing a test suite</a></li><li><a class="dropdown-item" href="ci-for-testing.html">Continuous Integration for automated testing</a></li><li><a class="dropdown-item" href="licensing.html">Software licensing</a></li><li><a class="dropdown-item" href="ethical-environmental-considerations.html">Ethical &amp; environmental considerations around research software</a></li><li><a class="dropdown-item" href="installation-instructions.html">Installation Instructions</a></li>
+                      <hr><li><a class="dropdown-item" href="test-suite-exercise.html">Implementing a test suite</a></li><li><a class="dropdown-item" href="ci-for-testing.html">Continuous Integration for automated testing</a></li><li><a class="dropdown-item" href="licensing.html">Software licensing</a></li><li><a class="dropdown-item" href="ethical-environmental-considerations.html">Ethical &amp; environmental considerations around research software</a></li><li><a class="dropdown-item" href="installation-instructions.html">Installation instructions</a></li><li><a class="dropdown-item" href="reproducible-research-discussion.html">Reproducible Research Discussion</a></li>
                     </ul></div>
                 </div>
               </div>
@@ -363,7 +341,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/02-fair-research-software.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/02-better-start-version-control.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -371,20 +349,20 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Home
         </a>
-        <a class="chapter-link float-end" href="../instructor/02-fair-research-software.html" rel="next">
-          Next: FAIR research...
+        <a class="chapter-link float-end" href="../instructor/02-better-start-version-control.html" rel="next">
+          Next: Better start with a...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Course introduction</h1>
-        <p>Last updated on 2025-05-22 |
+        <p>Last updated on 2025-06-17 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/01-introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
 
 
-        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
+        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -409,175 +387,44 @@ software used to support such research?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<p>After completing this episode, participants should be able to:</p>
-<ul><li>Understand the concept of open and reproducible research</li>
-<li>Understand why these principles are of value in the research
-community</li>
-<li>Setup their machine with software and data used to teach this
-course</li>
+<ul><li>Describe the principles of open and reproducible research and why
+they are of value in the research community</li>
+<li>Explain how the concept of reproducibility translates into practices
+for building better research software</li>
+<li>Setup machine with software and data used to teach this course</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="jargon-busting">Jargon busting<a class="anchor" aria-label="anchor" href="#jargon-busting"></a></h2>
-<hr class="half-width"><p>Before we start with the course, below we cover the terminology and
-explain terms, phrases, and concepts associated with software
-development in reproducible research that we will use in this
-course.</p>
-<ul><li>
-<strong>Reproducibility</strong> - the ability to be reproduced or
-copied; the extent to which consistent results are obtained when an
-experiment is repeated (definition from <a href="https://languages.oup.com/google-dictionary-en/" class="external-link">Google’s English
-dictionary is provided by Oxford Languages</a>)</li>
-<li>
-<strong>Computational reproducibility</strong> - obtaining
-consistent results using the same input data, computational methods
-(code), and conditions of analysis; work that can be independently
-recreated from the same data and the same code (<a href="https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions" class="external-link">definition</a>
-by the <a href="https://book.the-turing-way.org/reproducible-research/reproducible-research" class="external-link">Turing
-Way’s “Guide to Reproducible Research”</a>)</li>
-<li>
-<strong>Reproducible research</strong> - the idea that scientific
-results should be documented in such a way that their deduction is fully
-transparent (<a href="https://en.wikipedia.org/wiki/Reproducibility" class="external-link">definition</a> from
-Wikipedia)</li>
-<li>
-<strong>Open research</strong> - research that is openly accessible
-by others; concerned with making research more transparent, more
-collaborative, more wide-reaching, and more efficient (<a href="https://en.wikipedia.org/wiki/Open_research" class="external-link">definition</a> from
-Wikipedia)</li>
-<li>
-<strong>FAIR</strong> - an acronym that stands for Findable,
-Accessible, Interoperable, and Reusable</li>
-<li>
-<strong>Sustainable software development</strong> - software
-development practice that takes into account longevity and
-maintainability of code (e.g. beyond the lifetime of the project),
-environmental impact, societal responsibility and ethics in our software
-practices.</li>
-</ul><div id="computational-reproducibility" class="callout">
+<p>Software is <a href="https://www.software.ac.uk/blog/quick-and-dirty-analysis-software-being-used-research-python-matlab-and-r" class="external-link">fundamental
+to modern research</a> - some of it would even be impossible without
+software. From short, thrown-together temporary scripts written to help
+with day-to-day research tasks, through an abundance of complex data
+analysis spreadsheets, to the hundreds of software engineers and
+millions of lines of code behind international efforts such as the Large
+Hadron Collider, there are few areas of research where software does not
+have a fundamental role.</p>
+<p>This course teaches good practices and reproducible working methods
+that are agnostic of a programming language (although we will use Python
+code in our examples). It aims to provide researchers with the tools and
+knowledge to feel confident when writing <strong>good quality and
+sustainable software</strong> to support their research. Although the
+discussion will often focus on software developed in the context of
+research, most of the good practices introduced here are beneficial to
+software development more generally.</p>
+<p>The lesson is particularly focused on one aspect of good (scientific)
+software development practice: improving software to enhance
+reproducibility. That is, enabling others to run our code and obtain the
+same results we did.</p>
+<div id="why-should-i-care-about-reproducibility" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="computational-reproducibility" class="callout-inner">
-<h3 class="callout-title">Computational reproducibility</h3>
+<div id="why-should-i-care-about-reproducibility" class="callout-inner">
+<h3 class="callout-title">Why should I care about reproducibility?</h3>
 <div class="callout-content">
-<p>In this course, we use the term “reproducibility” as a synonym for
-“computational reproducibility”.</p>
-</div>
-</div>
-</div>
-<div id="motivation" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="motivation" class="callout-inner">
-<h3 class="callout-title">Motivation</h3>
-<div class="callout-content">
-<p>Think about the questions below. Your instructors may ask you to
-share your answers in a shared notes document and/or discuss them with
-other participants.</p>
-<ul><li>What motivated you to attend this course? Did you come by choice or
-were you advised to attend?</li>
-<li>What do you hope to learn or change in your current research
-software practice? Describe how your knowledge, work or attitude may be
-different afterwards.</li>
-</ul></div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="what-is-reproducible-research">What is reproducible research?<a class="anchor" aria-label="anchor" href="#what-is-reproducible-research"></a></h2>
-<hr class="half-width"><p><a href="https://book.the-turing-way.org/reproducible-research/reproducible-research" class="external-link">The
-Turing Way’s “Guide to Reproducible Research”</a> provides an <a href="https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions" class="external-link">excellent
-overview of definitions of “reproducibility” and “replicability”</a>
-found in literature, and their different aspects and levels.</p>
-<p>In this course, we adopt the Turing Way’s definitions:</p>
-<ul><li>
-<strong>Reproducible research</strong>: a result is reproducible
-when the same analysis steps performed on the same data consistently
-produce the same answer.
-<ul><li>For example, two different people drop a pen 10 times each and every
-time it falls to the floor. Or, we run the same code multiple times on
-different machines and each time it produces the same result.</li>
-</ul></li>
-<li>
-<strong>Replicable research</strong>: a result is replicable when
-the same analysis performed on different data produces qualitatively
-similar answers.
-<ul><li>For example, instead of a pen, we drop a pencil, and it also falls
-to the floor. Or, we collect two different datasets as part of two
-different studies and run the same code over these datasets with the
-same result each time.</li>
-</ul></li>
-<li>
-<strong>Robust research</strong>: a result is robust when the same
-data is subjected to different analysis workflows to answer the same
-research question and a qualitatively similar or identical answer is
-produced.
-<ul><li>For example, I lend you my pen and you drop it out the window, and
-it still falls to the floor. Or we run the same analysis implemented in
-both Python and R over the same data and it produces the same
-result.</li>
-</ul></li>
-<li>
-<strong>Generalisable research</strong>: combining replicable and
-robust findings allow us to form generalisable results that are broadly
-applicable to different types of data or contexts.
-<ul><li>For example, everything we drop - falls, therefore gravity
-exists.</li>
-</ul></li>
-</ul><figure><img src="https://raw.githubusercontent.com/the-turing-way/the-turing-way/refs/heads/main/book/website/figures/reproducible-definition-grid.svg" alt="Four cartoon images depicting two researchers at two machines which take in data and output the same landscape image in 4 different ways. These visually describe the four scenarios listed above." class="figure mx-auto d-block"><div class="figcaption"><em>The Turing Way project illustration of
-aspects of reproducible research by Scriberia, used under a CC-BY 4.0
-licence, <a href="https://doi.org/10.5281/zenodo.3332807" class="external-link">DOI:
-10.5281/zenodo.3332807</a></em></div>
-</figure><p>In this course we mainly address the aspect of reproducibility -
-i.e. enabling others to run our code to obtain the same results.</p>
-<p>We can also further differentiate between:</p>
-<ul><li>
-<strong>Computational reproducibility</strong>: when detailed
-information is provided about code, software, hardware and
-implementation details.</li>
-<li>
-<strong>Empirical reproducibility</strong>: when detailed
-information is provided about non-computational empirical scientific
-experiments and observations. In practice, this is enabled by making the
-data and details of how it was collected freely available.</li>
-<li>
-<strong>Statistical reproducibility</strong>: when detailed
-information is provided, for example, about the choice of statistical
-tests, model parameters, and threshold values. This mostly relates to
-pre-registration of study design to prevent p-value hacking and other
-manipulations.</li>
-</ul><p>In this course, we are concerned with computational reproducibility,
-i.e. when the application of computer science and software engineering
-is used to aid solving research problems.</p>
-<div id="what-do-the-terms-open-and-reproducible-research-mean-to-you" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="what-do-the-terms-open-and-reproducible-research-mean-to-you" class="callout-inner">
-<h3 class="callout-title">What do the terms open and reproducible
-research mean to you?</h3>
-<div class="callout-content">
-<p>Think about the questions below. Your instructors may ask you to
-share your answers in a shared notes document and/or discuss them with
-other participants.</p>
-<ul><li>How would you define the words “open” and “reproducible” in the
-context of research?</li>
-<li>Who might benefit from your work being open and reproducible?
-<em>Think about both groups and individuals.</em>
-</li>
-<li>Have you wished that someone else’s work was more open or accessible
-to you? What did you do in that instance? Why do you think the author
-didn’t make their work more open or accessible?</li>
-<li>Have you ever gone back to an old project and struggled to
-understand what you did or why? How did that feel? Were you able to find
-the information you needed?</li>
-</ul></div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="why-do-reproducible-research">Why do reproducible research?<a class="anchor" aria-label="anchor" href="#why-do-reproducible-research"></a></h2>
-<hr class="half-width"><p>Scientific transparency and rigor are key factors in research.
+<p>Scientific transparency and rigor are key factors in research.
 Scientific methodology and results need to be published openly and
 replicated and confirmed by several independent parties. However,
 research papers often lack the full details required for independent
@@ -616,95 +463,236 @@ reproducibility crisis.</li>
 implement new practices and learn new tools. This course aims to teach
 some of these practices and tools pertaining to the use of software to
 conduct reproducible research.</p>
-</section><section><h2 class="section-heading" id="software-in-research-and-research-software">Software in research and research software<a class="anchor" aria-label="anchor" href="#software-in-research-and-research-software"></a></h2>
-<hr class="half-width"><p>Software is <a href="https://www.software.ac.uk/blog/quick-and-dirty-analysis-software-being-used-research-python-matlab-and-r" class="external-link">fundamental
-to modern research</a> - some of it would even be impossible without
-software. From short, thrown-together temporary scripts written to help
-with day-to-day research tasks, through an abundance of complex data
-analysis spreadsheets, to the hundreds of software engineers and
-millions of lines of code behind international efforts such as the Large
-Hadron Collider, there are few areas of research where software does not
-have a fundamental role.</p>
-<p>However, it is important to note that not all software that is used
-in research is “research software”. We define “research software” as
-software or code that is used to generate, process or analyse results of
-a research for publication. For example, software used to guide a
-telescope is not considered “research software”. On the other hand,
-formulas or macros in spreadsheets used to analyse data are considered
-“research code” as they are a form of computer programming that allow
-one to create, calculate, and change data sets in a number of different
-ways.</p>
-<figure><img src="https://raw.githubusercontent.com/esciencecenter-digital-skills/research-software-support/611da359cbe1d04ecf056545ee07f977ae536273/modules/researchsoftware/media/definition.png" alt="Quote: Research Software includes source code files, algorithms, scripts, computational workflows and executables that were created during the research process or for a research purpose. Software components (e.g., operating systems, libraries, dependencies, packages, scripts, etc.) that are used for research but were not created during or with a clear research intent should be considered software in research and not Research Software." class="figure mx-auto d-block"><div class="figcaption"><em>Definition of “research software” from the
-FAIR4RS working group, image by the Netherlands eScience Center licensed
-under CC-BY 4.0</em></div>
-</figure><p>In the <a href="https://www.software.ac.uk/blog/quick-and-dirty-analysis-software-being-used-research-python-matlab-and-r" class="external-link">software
-survey conducted by the Software Sustainability Institute in 2014</a>,
-92% of researchers indicated they used some kind of software to aid or
-conduct their research. This was not limited to researchers from <a href="https://en.wikipedia.org/wiki/Computational_science" class="external-link">computational
-science</a> (aka scientific computing), the “hard” sciences or to those
-involved in “traditional” uses of computing infrastructure such as
-running simulations or developing computational methods. The <strong>use
-of research software is ubiquitous and fairly even across all
-disciplines</strong>.</p>
-<p>Research software is increasingly being developed - researchers do
-not just use “off the shelf” software and the majority of researchers
-develop their own. In order to be able to produce quality software that
-outputs correct and verifiable results and that can be reused over time
-- researchers require training.</p>
-<p>This course teaches good practises and reproducible working methods
-that are agnostic of a programming language (although we will use Python
-code in our examples) and aims to provide researchers with the tools and
-knowledge to feel confident when writing <strong>good quality and
-sustainable software</strong> to support their research. Some aspects of
-such software are described as <strong>FAIR</strong> (Findable,
-Accessible, Interoperable, Reusable) - in the rest of the course, we
-will explore FAIR and various other practices for good quality research
-software, why it is important to use these practices and what tools can
-help us along this journey.</p>
-</section><section><h2 class="section-heading" id="software-and-data-used-in-this-course">Software and data used in this course<a class="anchor" aria-label="anchor" href="#software-and-data-used-in-this-course"></a></h2>
-<hr class="half-width"><p>We are going to follow a fairly typical experience of a new PhD or
-postdoc joining a research group. They were emailed some data and
-analysis code bundled in <code>spacewalks.zip</code> archive and written
-by another group member who worked on similar things but has since left
-the group. They need to be able to install and run this code on their
-machine, check they can understand it and then adapt it to their own
-project.</p>
-<p>As part of the <a href="./installation-instructions.html#astronaut-data-and-analysis-code">setup
-for this course</a>, you should have downloaded the
-<code>spacewalks.zip</code> archive containing the software project the
-new research team member was given. Let’s unzip this archive and inspect
-its content in VS Code. The software project contains:</p>
-<ol style="list-style-type: decimal"><li>a JSON file (<code>data.json</code>) - a snippet of which is shown
-below - with data on extra-vehicular activities (EVAs or spacewalks)
-undertaken by astronauts and cosmonauts from 1965 to 2013 (data provided
-by NASA via its <a href="https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/about_data" class="external-link">Open
-Data Portal</a>) <img src="../fig/astronaut-data-json-snippet.png" alt="JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose" class="figure"></li>
-<li>a Python script (<code>my code v2.py</code>) containing some
-analysis. <img src="../fig/astronaut-analysis-bad-code-screenshot.png" alt="A first few lines of a Python script used as example code for the episode" class="figure"></li>
-</ol><p>The code in the Python script does some common research tasks:</p>
-<ul><li>Read in the data from the JSON file</li>
-<li>Change the data from one data format to another and save to a file
+<p>Review <a href=".././learners/reproducible-research-discussion.html">the
+Reproducible Research Discussion</a> for a more in-depth discussion of
+this topic.</p>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="practices-for-building-better-research-software">Practices for building better research software<a class="anchor" aria-label="anchor" href="#practices-for-building-better-research-software"></a></h2>
+<hr class="half-width"><p>The practices we will cover for building better research software
+fall into three areas.</p>
+<div class="section level3">
+<h3 id="things-you-can-do-with-your-own-computing-environment-to-enhance-the-software">1. Things you can do with your own computing environment to enhance
+the software<a class="anchor" aria-label="anchor" href="#things-you-can-do-with-your-own-computing-environment-to-enhance-the-software"></a></h3>
+<ul><li>Using virtual development environments ensures your software can be
+developed and run consistently across different systems, making it
+easier for you and others to run, reuse, and extend your code.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="things-you-can-do-to-improve-the-source-code-of-the-software-itself">2. Things you can do to improve the source code of the software
+itself<a class="anchor" aria-label="anchor" href="#things-you-can-do-to-improve-the-source-code-of-the-software-itself"></a></h3>
+<ul><li>Organising and structuring your code keeps your software clean,
+modular, and reusable, enhancing its readability, extensibility, and
+reusability.</li>
+<li>Following coding conventions and guides for your programming
+language ensures that others find it easy to read your code, reuse or
+extend it in their own examples and applications.</li>
+<li>Testing can save time spent on debugging and ensures that your code
+is correct and does what it is set out to do, giving you and others
+confidence in your code and the results it produces.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="things-you-can-do-to-make-the-software-easier-for-other-people-to-use">3. Things you can do to make the software easier for other people to
+use<a class="anchor" aria-label="anchor" href="#things-you-can-do-to-make-the-software-easier-for-other-people-to-use"></a></h3>
+<ul><li>Using version control and collaboration platforms like <a href="https://github.com" class="external-link">GitHub</a>, <a href="https://gitlab.com" class="external-link">GitLab</a>, and <a href="https://codeberg.org/" class="external-link">CodeBerg</a> makes it easier to share code
+and work on it together.</li>
+<li>Fostering a community around your software and promoting
+collaboration helps to grow a user base for your software and
+contributes to its long-term sustainability.</li>
+<li>Providing clear and comprehensive documentation, including code
+comments, API specifications, setup guides, and usage instructions,
+ensures your software is easy to understand, use, and extend (by you and
+others).</li>
+<li>Accompanying your software with clear information about its
+licensing terms and how it should be cited ensures that others can reuse
+and adapt your code with confidence and that you receive credit when
+they do so.</li>
+</ul><div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Individually,</p>
+<ul><li>reflect on what practices (and tools) you are already using in your
+software development workflow,</li>
+<li>list at least 3 new practices or tools that you would like to start
+employing or using.</li>
+</ul><p>Write your reflections in the shared collaborative document.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="our-research-software-project">Our research software project<a class="anchor" aria-label="anchor" href="#our-research-software-project"></a></h2>
+<hr class="half-width"><p>You are going to follow a fairly typical experience of a new
+researcher (e.g. a PhD student or a postdoc) joining a research group.
+You were emailed some spacewalks data and analysis code bundled in the
+<code>spacewalks.zip</code> archive, written by another group member who
+worked on similar things but has since left. You need to be able to
+install and run this code on your machine, check you can understand it
+and then adapt it to your own project.</p>
+<p>As part of the <a href="./installation-instructions.html#spacewalks">setup for this
+course</a>, you may have downloaded or been emailed the
+<code>spacewalks.zip</code> archive. If not, you can <a href="./installation-instructions.html#spacewalks">download it</a> now.
+Save the <code>spacewalks.zip</code> archive to your home directory and
+extract it - you should get a directory called
+<code>spacewalks</code>.</p>
+<p>The first thing you may want to do is inspect the content of the code
+and data you received. We will use VS Code for browsing, inspecting,
+modifying files and running our code.</p>
+<p>VS Code is a very handy tool for software development and is used by
+many researchers worldwide. It “understands” the syntax of many
+different file types - for example Python, JSON, CSV, etc. - either
+natively or via extensions that can be installed. To open our directory
+<code>spacewalks</code> in VS Code – go to <strong>File -&gt; Open
+Folder</strong> and find <code>spacewalks</code>.</p>
+<p>You may notice that the software project contains:</p>
+<ol style="list-style-type: decimal"><li>
+<p>A JSON file called <code>data.json</code> - a snippet of which is
+shown below - with data on extra-vehicular activities (EVAs,
+i.e. spacewalks) undertaken by astronauts and cosmonauts from 1965 to
+2013 (data provided by NASA via its <a href="https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/about_data" class="external-link">Open
+Data Portal</a>).</p>
+<figure><img src="../fig/astronaut-data-json-snippet.png" alt="JSON data file snippet showing EVA/spacewalk data including EVA id, country, crew members, vehicle type, date of the spacewalk, duration, and purpose" class="figure mx-auto d-block"><div class="figcaption">JSON data file snippet showing EVA/spacewalk
+data including EVA id, country, crew members, vehicle type, date of the
+spacewalk, duration, and purpose)</div>
+</figure></li>
+<li>
+<p>A Python script called <code>my code v2.py</code> containing some
+analysis code.</p>
+<figure><img src="../fig/astronaut-analysis-bad-code-screenshot.png" alt="A first few lines of a Python script used as example code for the episode" class="figure mx-auto d-block"><div class="figcaption">A first few lines of a Python script</div>
+</figure><p>The code in the Python script does some common research
+tasks:</p>
+</li>
+</ol><ul><li>Reads in the data from the JSON file</li>
+<li>Changes the data from one data format to another and saves to a file
 in the new format (CSV)</li>
-<li>Perform some calculations to generate summary statistics about the
+<li>Performs some calculations to generate summary statistics about the
 data</li>
-<li>Make a plot to visualise the data</li>
-</ul></section><section><h2 class="section-heading" id="checking-your-setup">Checking your setup<a class="anchor" aria-label="anchor" href="#checking-your-setup"></a></h2>
-<hr class="half-width"><p>Let’s check your setup now to make sure you are ready for the rest of
-this course.</p>
-<div id="checking-your-setup-1" class="callout challenge">
+<li>Makes a plot to visualise the data</li>
+</ul><div id="read-and-understand-data-and-code" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="checking-your-setup-1" class="callout-inner">
-<h3 class="callout-title">Checking your setup</h3>
+<div id="read-and-understand-data-and-code" class="callout-inner">
+<h3 class="callout-title">Read and understand data and code</h3>
 <div class="callout-content">
-<p>Open a command line terminal and look at the prompt. Compare what you
-see in the terminal with your neighbour, does it look the same or
-different? What information is it telling you and why might this be
-useful? What other information might you want?</p>
-<p>Run the following commands in a terminal to check you have installed
-the tools listed in the Setup page. Compare the output with your
-neighbour and see if you can see any differences.</p>
+<p>Individually inspect the code and try and see if you can understand
+what the code is doing and how it is organised.</p>
+<p>In the shared document, write down anything that you think is not
+“quite right”, not clear, is missing, or could be done better.</p>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div class="accordion-body">
+<p>Below are some suggested questions to help you assess the code. These
+are not the only criteria on which you could evaluate the code and you
+may find other aspects to comment on.</p>
+<ul><li>If these files were emailed to you, or sent on a chat platform, or
+handed to you on a memory stick, how easy would it be to find them again
+in 6 months, or 3 years?</li>
+<li>Can you understand the code? Does it make sense to you?</li>
+<li>Could you run the code on your platform/operating system (is there
+documentation that covers installation instructions)? What programs or
+libraries do you need to install to make it work (and which versions)?
+Are these commonly used tools in your field?</li>
+<li>Are you allowed to use the code in your own research? If you did,
+would your collaborators expect credit in some form (paper authorship,
+citation or acknowledgement)? Are you allowed to edit the files? Publish
+them? Share them with others?</li>
+<li>Is the code written in a way that allows you to easily modify or
+extend it? How easy would it be to change its parameters to calculate a
+different statistic, or run on a different input file?</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>This is a (non-exhaustive) list of things that could be
+fixed/improved with our code and data:</p>
+<div class="section level4">
+<h4 id="file-and-variable-naming">File and variable naming<a class="anchor" aria-label="anchor" href="#file-and-variable-naming"></a></h4>
+<ul><li>data (<code>data.json</code>) and Python script
+(<code>my code v2.py</code>) files could have more descriptive
+names</li>
+<li>Python script (<code>my code v2.py</code>) should not contain blank
+spaces as it may cause problems when running the code from command
+line</li>
+<li>variables (e.g. <code>w</code>) should have more descriptive and
+meaningful names</li>
+<li>version control is embedded in file name - there are better ways of
+keeping track of changes to code and its different versions</li>
+</ul></div>
+<div class="section level4">
+<h4 id="code-organisation-and-style">Code organisation and style<a class="anchor" aria-label="anchor" href="#code-organisation-and-style"></a></h4>
+<ul><li>import statements should be grouped at the top</li>
+<li>commenting and uncommenting code should not be used to direct the
+flow of execution / type of analysis being done</li>
+<li>the code lacks comments, documentation and explanations</li>
+<li>code structure could be improved to be more modular and not one
+monolithic piece of code - e.g. use functions for reusable units of
+functionality</li>
+<li>unused variables (e.g. <code>fieldnames</code> meant to be used when
+saving data to CSV file) are polluting the code and confusing the person
+reading the code</li>
+<li>spaces should not be used in column names as it can lead to error
+when reading the data in</li>
+</ul></div>
+<div class="section level4">
+<h4 id="code-content-and-correctness">Code content and correctness<a class="anchor" aria-label="anchor" href="#code-content-and-correctness"></a></h4>
+<ul><li>fixing the loop to 374 data entries is not reusable on other data
+files and would likely break if the data file changed</li>
+<li>running the code twice causes the program to fail as the result file
+from the previous run will exist (which the code does not check for) and
+the script will refuse to overwrite it</li>
+<li>the code does not specify the encoding when reading the data in, and
+we are also not sure what encoding the data was saved in originally</li>
+<li>how can we be confident the data analysis and plot that is produced
+as a result are correct?</li>
+</ul></div>
+<div class="section level4">
+<h4 id="documentation">documentation<a class="anchor" aria-label="anchor" href="#documentation"></a></h4>
+<ul><li>there is no README documentation to orient the user</li>
+<li>there is no licence information to say how the code can be reused
+(which then means it cannot be reused at all)</li>
+<li>it is not clear what software dependencies the code has</li>
+<li>there are no installation instructions or instructions on how to run
+the code</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+<p>As you have seen from the previous exercise - there are quite a few
+things that can be improved with this code. We will try to make this
+research software project a “bit better” for future use.</p>
+<p>Let’s check your setup now to make sure you are ready for the rest of
+this course.</p>
+<div id="check-your-setup" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="check-your-setup" class="callout-inner">
+<h3 class="callout-title">Check your setup</h3>
+<div class="callout-content">
+<p>From a command line terminal on your operating system or within VS
+Code run the following commands to check you have installed all the
+tools listed in <a href="./installation-instructions.html">the Setup
+page</a> and that are functioning correctly.</p>
 <p>Checking the command line terminal:</p>
 <ol style="list-style-type: decimal"><li><code>$ date</code></li>
 <li><code>$ echo $SHELL</code></li>
@@ -725,27 +713,12 @@ neighbour and see if you can see any differences.</p>
 </ol></div>
 </div>
 </div>
-<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
-  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
-<div class="accordion-body">
-<p>The prompt is the <code>$</code> character and any text that comes
-before it, that is shown on every new line before you type in commands.
-Type each of the commands one at a time and press enter. They should
-give you a result by printing some text in the terminal.</p>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The expected out put of each command is:</p>
 <ol style="list-style-type: decimal"><li>Today’s date</li>
@@ -783,18 +756,9 @@ Excel Viewer installed to use in this course.</li>
 </div>
 </div>
 </div>
-<p>You may have noticed that our researcher has received the software
-project they are meant to be working on as a Zip archive via email. This
-is not very good practice for several reasons - email does not track
-changes, does not allow for multiple people to work on the same file,
-code reviews or issue tracking, attachments can be mistakenly sent with
-outdated versions and may have storage and scalability limitations. In
-the rest of the course, we will learn some better practices for
-developing, sharing, tracking changes and collaborating on a software
-project.</p>
 </section><section><h2 class="section-heading" id="further-reading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a></h2>
 <hr class="half-width"><p>We recommend the following resources for some additional reading on
-the topic of this episode:</p>
+reproducible research:</p>
 <ul><li><a href="https://book.the-turing-way.org/reproducible-research/reproducible-research" class="external-link">The
 Turing Way’s “Guide for Reproducible Research”</a></li>
 <li>
@@ -833,7 +797,7 @@ any links that you are not going to use.
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/02-fair-research-software.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/02-better-start-version-control.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -841,8 +805,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Home
         </a>
-        <a class="chapter-link float-end" href="../instructor/02-fair-research-software.html" rel="next">
-          Next: FAIR research...
+        <a class="chapter-link float-end" href="../instructor/02-better-start-version-control.html" rel="next">
+          Next: Better start with a...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -888,8 +852,8 @@ any links that you are not going to use.
   "url": "https://softwaresaved.github.io/fair-research-software/instructor/01-introduction.html",
   "identifier": "https://softwaresaved.github.io/fair-research-software/instructor/01-introduction.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2025-05-22",
-  "datePublished": "2025-06-10"
+  "dateModified": "2025-06-17",
+  "datePublished": "2025-06-17"
 }
 
   </script><script>
