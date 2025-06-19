@@ -351,7 +351,7 @@ we can use it to make our files and code a bit easier to understand.
 
 We may want to:
 
-1. Give our input data file and script more meaningful names. For example, we do not need to keep version history in filenames 
+1. Give our input data file and script more meaningful names, e.g `eva_data_analysis.py` and `eva-data.json`. This change also uses removes version tracking from the filename itself as we are using git for version control
 any more as Git will keep track of that for us.
 2. Choose informative file names for our output data file (e.g. `eva-data.csv`) and plot (`cumulative_eva_graph.png`).
 3. Update the python script with these changes
