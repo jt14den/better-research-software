@@ -344,8 +344,6 @@ Changes to be committed:
 ```
 
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
 ### Rename our data and output files
 
 Now that we know how to rename files in Git,
