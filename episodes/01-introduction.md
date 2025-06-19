@@ -249,6 +249,7 @@ The expected out put of each command is:
 
 We recommend the following resources for some additional reading on reproducible research:
 
+* [Reproducible research through reusable code][nesc-ttw-guide-reproducible-research] is a one day course by the [Netherlands eScience Center][nesc] which discusses similar themes to this course, but in a shorter format.
 * [The Turing Way's "Guide for Reproducible Research"][ttw-guide-reproducible-research]
 * [A Beginner's Guide to Conducting Reproducible Research][beginner-guide-reproducible-research], Jesse M. Alston, Jessica A. Rick, Bulletin of The Ecological Society of America 102 (2) (2021), https://doi.org/10.1002/bes2.1801
 * ["Ten reproducible research things" tutorial][10-reproducible-research-things]
