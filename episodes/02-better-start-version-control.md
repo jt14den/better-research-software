@@ -322,7 +322,7 @@ It is a bit inconvenient and can cause problems if you forget,
 so best practise is to avoid spaces in filenames.
 The simplest fix is to replace the spaces with underscores `_` instead.
 
-To reanme the files using git you n use the `git mv`:
+To rename the files using git you can use the `git mv`:
 
 ```bash
 $ git mv my\ code\ v2.py my_code_v2.py
