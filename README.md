@@ -48,8 +48,11 @@ Current Maintainers of this lesson are:
 * [Toby Hodges](https://github.com/tobyhodges)
 
 ## Citation
+Gibson, S., Goel, A., Jaffa, S., Kopec-Harding, K., Nenadic, A., & Sauze, C. (2025). Software practices for open and reproducible research (beta-May-2025). Zenodo. https://doi.org/10.5281/zenodo.15490720
 
-*Aleksandra Nenadic, Kamilla Kopec-Harding et al. (2024). carpentries-incubator/astronaut-data-analysis-fair: alpha-July-2024 (alpha-July-2024). Zenodo. https://doi.org/10.5281/zenodo.12698943*
+Also see the related citation for the helper software project we use in this course:
+
+Aleksandra Nenadic, Kamilla Kopec-Harding et al. (2024). carpentries-incubator/astronaut-data-analysis-fair: alpha-July-2024 (alpha-July-2024). Zenodo. https://doi.org/10.5281/zenodo.12698943
 
 Information on how to cite this work is also available in [CITATION.cff](CITATION.cff).
 
