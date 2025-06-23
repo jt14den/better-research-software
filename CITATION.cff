@@ -36,8 +36,8 @@ authors:
     orcid: 'https://orcid.org/0000-0002-7040-548X'
 identifiers:
   - type: url
-    value: 'https://zenodo.org/records/12666089'
-    description: Zenodo DOI record for alpha-July-2024 release
+    value: 'https://doi.org/10.5281/zenodo.12666088'
+    description: Zenodo DOI record for most recent lesson release
 repository-code: >-
   https://github.com/carpentries-incubator/fair-research-software/tree/main
 url: >-
@@ -52,5 +52,5 @@ keywords:
   - good practices
   - Carpentries Incubator
 license: CC-BY-4.0
-version: alpha-July-2024
-date-released: '2024-07-09'
+version: beta-May-2025
+date-released: '2025-05-22'
