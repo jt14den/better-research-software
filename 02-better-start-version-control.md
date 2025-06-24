@@ -322,13 +322,15 @@ It is a bit inconvenient and can cause problems if you forget,
 so best practise is to avoid spaces in filenames.
 The simplest fix is to replace the spaces with underscores `_` instead.
 
-You can use the `mv` command to rename files:
+To rename the files using git you can use the `git mv` command:
 
 ```bash
-$ mv my\ code\ v2.py my_code_v2.py
+$ git mv my\ code\ v2.py my_code_v2.py
 ```
 
 If you run `git status` again, you'll see Git has noticed the change in the filename.
+Note, `git mv` handles the name change directly, instead of seeing a deleted file and a new file as would be the case if we'd used `mv` and then `git add`.
+It also stages the changes to be commited.
 
 ```bash
 $ git status
@@ -336,59 +338,11 @@ $ git status
 
 ```output
 On branch main
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	deleted:    my code v2.py
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	my_code_v2.py
-
-no changes added to commit (use "git add" and/or "git commit -a")
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	renamed:    my code v2.py -> my_code_v2.py
 ```
 
-:::  challenge
-
-### Add and commit the changed file
-
-Using the Git commands demonstrated so far, save the change you just made to the Python script.
-
-Remember, commit messages should be descriptive and complete the sentence "If applied, this commit will...".
-You can also use `git status` to check the status of your project at any time.
-
-:::  solution
-
-### Solution
-
-To save the changes to the renamed Python file, use the following Git commands:
-
-```bash
-$ git add my\ code\ v2.py my_code_v2.py
-$ git status
-$ git commit -m "Replace spaces in Python filename with underscores"
-```
-
-### Advanced solution
-
-We initially renamed the Python file using the `mv` command, and we than had to `git add` *both* `my_code_v2.py`
-and `my\ code\ v2.py`.
-Alternatively, we could have used Git's own `mv` command:
-
-```bash
-$ git mv my\ code\ v2.py my_code_v2.py
-$ git status
-```
-
-`git mv <old> <new>` command is the equivalent of running `mv <old> <new>` immediately followed by `git add <new>`,
-so the changes have been staged automatically. We just need to commit them.
-
-There is another small advantage to using `git mv` over the `mv` command: with `mv` only, Git thinks one file has been 
-deleted and a new one created, when you use `git mv`, Git "understands" that it is the same file but with a new name.
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Rename our data and output files
 
@@ -397,9 +351,21 @@ we can use it to make our files and code a bit easier to understand.
 
 We may want to:
 
-1. Give our input data file and script more meaningful names. For example, we do not need to keep version history in filenames 
-any more as Git will keep track of that for us, so our script can be renamed to `eva_data_analysis.py` and data file to `eva-data.json`.
+1. Give our script and input data file more meaningful names, e.g `eva_data_analysis.py` and `eva-data.json`. This change also uses removes version tracking from the script name as we are using git for version control
+any more as Git will keep track of that for us.
 2. Choose informative file names for our output data file (e.g. `eva-data.csv`) and plot (`cumulative_eva_graph.png`).
+3. Update the python script with these changes
+
+:::::::::::::::::::::::::::: challenge
+
+#### Update the filenames in the repo
+
+Try to make these changes yourself.
+1. Give our python script and data files informative names `eva_data_analysis.py` and `eva-data.json`, respectively.
+2. Update the filenames used in the script - input json data and output data (to `eva-data.csv` to match the new input data name) and plot(`cumulative_eva_graph.png`).
+3. Stage and commit these changes in the git repository.
+
+:::::::::::::: solution
 
 Firstly, let's update the file names in our Python script from VS Code:
 
@@ -429,6 +395,12 @@ Finally, we can commit our changes:
 ```bash
 git commit -m "Implement informative file names"
 ```
+
+:::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::
+
+
 
 ## Interacting with a remote Git server
 
