@@ -25,11 +25,9 @@ After completing this episode, participants should be able to:
 In this episode, we will introduce the concept of readable code and consider how it can help create reusable 
 scientific software and empower collaboration between researchers.
 
-When someone writes code, they do so based on requirements that are likely to change in the future.
-Requirements change because software interacts with the real world, which is dynamic.
-When these requirements change, the developer (who is not necessarily the same person who wrote the original code) 
-must implement the new requirements.
-They do this by reading the original code to understand the different abstractions, and identify what needs to change.
+While all developers hope their code will be stable long term, software often has to change due to changes in the real world.
+As requirements change, so must the relevant code.
+When code needs to be changed, the developer that created it or a more likely a different developer needs to understand the previous code to implement the new requirments.
 Readable code facilitates the reading and understanding of the abstraction phases and, as a result, facilitates the 
 evolution of the codebase.
 Readable code saves future developers' time and effort.
@@ -39,7 +37,7 @@ year, will I be able to understand what I have done and why?"
 Or even better: "If a new person who just joined the project reads my software, will they be able to understand 
 what I have written here?"
 
-We will now learn about a few software best practices we can follow to help create more readable code. 
+In this episode, we will learn a few specific software best practices we can follow to help create more readable code. 
 
 ::: callout
 
@@ -66,7 +64,7 @@ https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tre
 Let's have a look our code again - the first thing we may notice is that our script currently places import statements 
 throughout the code.
 Conventionally, all import statements are placed at the top of the script so that dependent libraries
-are clearly visible and not buried inside the code (even though there are standard ways of describing dependencies -
+are clearly visible and not buried inside the code (there are also standard ways of describing dependencies -
 e.g. using `requirements.txt` file).
 This will help readability (accessibility) and reusability of our code.
 
@@ -206,89 +204,92 @@ g_earth = 9.81
 
 Let's apply this to `eva_data_analysis.py`.
 
-a. Edit the code as follows to use descriptive variable names:
+a. Edit the code as follows to use descriptive (and consistent) variable names:
 
-    - Change data_f to input_file
-    - Change data_t to output_file
-    - Change g_file to graph_file
-    
+    - Change `data_f` to `input_file`
+    - Change `data_t` to `output_file`
+    - Change `g_file` to `graph_file`
+
+    *Be sure to change all the occurances of eac variable name.*
 b. What other variable names in our code would benefit from renaming? 
 c. Commit your changes to your repository. Remember to use an informative commit message.
 
 
 ::: solution
 
-Updated code:
-```python
-import json
-import csv
-import datetime as dt
-import matplotlib.pyplot as plt
+a.
+    Updated code:
+    ```python
+    import json
+    import csv
+    import datetime as dt
+    import matplotlib.pyplot as plt
 
-# https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
-graph_file = './cumulative_eva_graph.png'
+    # https://data.nasa.gov/resource/eva.json (with modifications)
+    input_file = open('./eva-data.json', 'r')
+    output_file = open('./eva-data.csv', 'w')
+    graph_file = './cumulative_eva_graph.png'
 
 
-fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
+    fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
 
-data=[]
+    data=[]
 
-for i in range(374):
-    line=input_file.readline()
-    print(line)
-    data.append(json.loads(line[1:-1]))
-#data.pop(0)
-## Comment out this bit if you don't want the spreadsheet
+    for i in range(374):
+        line=input_file.readline()
+        print(line)
+        data.append(json.loads(line[1:-1]))
+    #data.pop(0)
+    ## Comment out this bit if you don't want the spreadsheet
 
-w=csv.writer(output_file)
+    w=csv.writer(output_file)
 
-time = []
-date =[]
+    time = []
+    date =[]
 
-j=0
-for i in data:
-    print(data[j])
-    # and this bit
-    w.writerow(data[j].values())
-    if 'duration' in data[j].keys():
-        tt=data[j]['duration']
-        if tt == '':
-            pass
-        else:
-            t=dt.datetime.strptime(tt,'%H:%M')
-            ttt = dt.timedelta(hours=t.hour, minutes=t.minute, seconds=t.second).total_seconds()/(60*60)
-            print(t,ttt)
-            time.append(ttt)
-            if 'date' in data[j].keys():
-                date.append(dt.datetime.strptime(data[j]['date'][0:10], '%Y-%m-%d'))
-                #date.append(data[j]['date'][0:10])
-
+    j=0
+    for i in data:
+        print(data[j])
+        # and this bit
+        w.writerow(data[j].values())
+        if 'duration' in data[j].keys():
+            tt=data[j]['duration']
+            if tt == '':
+                pass
             else:
-                time.pop(0)
-    j+=1
+                t=dt.datetime.strptime(tt,'%H:%M')
+                ttt = dt.timedelta(hours=t.hour, minutes=t.minute, seconds=t.second).total_seconds()/(60*60)
+                print(t,ttt)
+                time.append(ttt)
+                if 'date' in data[j].keys():
+                    date.append(dt.datetime.strptime(data[j]['date'][0:10], '%Y-%m-%d'))
+                    #date.append(data[j]['date'][0:10])
 
-t=[0]
-for i in time:
-    t.append(t[-1]+i)
+                else:
+                    time.pop(0)
+        j+=1
 
-date,time = zip(*sorted(zip(date, time)))
+    t=[0]
+    for i in time:
+        t.append(t[-1]+i)
 
-plt.plot(date,t[1:], 'ko-')
-plt.xlabel('Year')
-plt.ylabel('Total time spent in space to date (hours)')
-plt.tight_layout()
-plt.savefig(graph_file)
-plt.show()
-```
-We should also rename variables `w`, `t`, `ttt` to be more descriptive.
+    date,time = zip(*sorted(zip(date, time)))
 
-Commit changes:
-```bash
-(venv_spacewalks) $ git add eva_data_analysis.py
-(venv_spacewalks) $ git commit -m "Use descriptive variable names"
-```
+    plt.plot(date,t[1:], 'ko-')
+    plt.xlabel('Year')
+    plt.ylabel('Total time spent in space to date (hours)')
+    plt.tight_layout()
+    plt.savefig(graph_file)
+    plt.show()
+    ```
+b. 
+    Variables `w`, `t`, `ttt` could also be renamed to be more descriptive. Though, we won't do so now.
+c. 
+    Commit changes:
+    ```bash
+    (venv_spacewalks) $ git add eva_data_analysis.py
+    (venv_spacewalks) $ git commit -m "Use descriptive variable names"
+    ```
 
 :::
 ::::::
@@ -302,7 +303,7 @@ to store data in our case.
 By choosing custom code over standard and well-tested libraries, we are making our code less readable and understandable
 and more error-prone.
 
-The main functionality of our code can be rewritten as follows using the `Pandas` library to load and manipulate the 
+The main functionality of our code can be rewritten as follows using the `pandas` library to load and manipulate the 
 data in data frames.
 
 First, we need to install this dependency into our virtual environment (which should be active at this point).
@@ -310,6 +311,8 @@ First, we need to install this dependency into our virtual environment (which sh
 ```bash
 (venv_spacewalks) $ python -m pip install pandas
 ```
+
+Then we will edit the code to use pandas. For the sake of time in the workshop, we will give you the updated code.
 The code should now look like:
 
 ```python
@@ -339,7 +342,7 @@ plt.show()
 
 ```
 
-We should replace the existing code in our Python script `eva_data_analysis.py` with the above code and commit the
+Once we have replaced the  code in our Python script `eva_data_analysis.py` with the above code, we need to commit the
 changes. Remember to use an informative commit message.
 
 ```bash
@@ -355,6 +358,8 @@ Make sure to capture the changes to your virtual development environment too.
 (venv_spacewalks) $ git commit -m "Added Pandas library."
 (venv_spacewalks) $ git push origin main
 ```
+
+Note, in practice we may have wanted to commit the code and the environment changes together since they are linked changes.
 
 ## Use comments to explain functionality
 
