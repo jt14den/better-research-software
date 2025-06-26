@@ -68,7 +68,7 @@ The practices we will cover for building better research software fall into thre
 
 ### 2. Things you can do to improve the source code of the software itself
 
-* Organising and structuring your code keeps your software clean, modular, and reusable, enhancing its readability, extensibility, and reusability.
+* Organising and structuring your code and project directory keeps your software clean, modular, and reusable, enhancing its readability, extensibility, and reusability.
 * Following coding conventions and guides for your programming language ensures that others find it easy to read your code, reuse or extend it in their own examples and applications.
 * Testing can save time spent on debugging and ensures that your code is correct and does what it is set out to do, giving you and others confidence in your code and the results it produces.
 
@@ -175,7 +175,7 @@ This is a (non-exhaustive) list of things that could be fixed/improved with our 
 - the code does not specify the encoding when reading the data in, and we are also not sure what encoding the data was saved in originally
 - how can we be confident the data analysis and plot that is produced as a result are correct?
 
-#### documentation
+#### Documentation
 
 - there is no README documentation to orient the user
 - there is no licence information to say how the code can be reused (which then means it cannot be reused at all)
@@ -249,6 +249,7 @@ The expected out put of each command is:
 
 We recommend the following resources for some additional reading on reproducible research:
 
+* [Reproducible research through reusable code][nesc-ttw-guide-reproducible-research] is a one day course by the [Netherlands eScience Center][nesc] which discusses similar themes to this course, but in a shorter format.
 * [The Turing Way's "Guide for Reproducible Research"][ttw-guide-reproducible-research]
 * [A Beginner's Guide to Conducting Reproducible Research][beginner-guide-reproducible-research], Jesse M. Alston, Jessica A. Rick, Bulletin of The Ecological Society of America 102 (2) (2021), https://doi.org/10.1002/bes2.1801
 * ["Ten reproducible research things" tutorial][10-reproducible-research-things]

@@ -42,6 +42,8 @@ Current maintainers of this lesson are:
 
 Gibson, S., Goel, A., Jaffa, S., Kopec-Harding, K., Nenadic, A., & Sauze, C. (2025). Software practices for open and reproducible research (beta-May-2025). Zenodo. https://doi.org/10.5281/zenodo.15490720
 
+Information on how to cite this work is also available in [CITATION.cff](CITATION.cff).
+
 ## Contact
 
 Please get in touch with [Aleksandra Nenadic](a.nenadic@software.ac.uk) with any questions about this lesson.

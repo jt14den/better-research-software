@@ -136,3 +136,5 @@ any links that you are not going to use.
 [codemeta]: https://codemeta.github.io/
 [docker]: https://www.docker.com/
 [bitbucket]: https://bitbucket.org/
+[nesc-ttw-guide-reproducible-research]: https://carpentries-incubator.github.io/reproducible-research-through-reusable-code-in-1-day
+[nesc]: https://www.esciencecenter.nl

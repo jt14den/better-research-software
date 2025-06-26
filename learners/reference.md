@@ -9,6 +9,8 @@ Please check our [jargon busting](episodes/00-introduction.html#jargon-busting) 
 ## Reference and further reading {#litref}
 The content of this course borrows from or references the following work, which we also recommend for further reading.
 
+- [Reproducible research through reusable code][nesc-ttw-guide-reproducible-research] is a one day course by the [Netherlands eScience Center][nesc] which discusses similar themes to this course, but in a shorter format.
+
 - [A Beginner's Guide to Conducting Reproducible Research][beginner-guide-reproducible-research], 
 Jesse M. Alston, Jessica A. Rick, Bulletin of The Ecological Society of America 102 (2) (2021), https://doi.org/10.1002/bes2.1801
 
