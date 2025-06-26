@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/699755985.svg)](https://zenodo.org/doi/10.5281/zenodo.12666088)
+[![DOI](https://zenodo.org/badge/12666088.svg)](https://zenodo.org/doi/10.5281/zenodo.12666088)
 
 # Building Better Research Software
 
