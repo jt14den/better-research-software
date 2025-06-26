@@ -57,7 +57,7 @@ $ source venv_spacewalks/Scripts/activate # Windows
 ::: instructor
 
 At this point, the code in your local software project's directory should be as in:
-https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/04-code-readability.
+https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability.
 
 :::
 
