@@ -45,7 +45,7 @@ In the previous episode you have unzipped `spacewalks.zip` into a directory `spa
 If you have not opened the software directory in VS Code already – go to **File -> Open Folder** and find `spacewalks`.
 
 We also need access to a command line terminal to type various commands. In VS Code start a new terminal 
-via **Terminal -> New Terminal** (Windows users need to make sure the new terminal is "GitBash"; not "PowerShell" nor "cdm"). 
+via **Terminal -> New Terminal** (Windows users need to make sure the new terminal is "GitBash"; not "PowerShell" or "cmd"). 
 Alternatively, you can work with a shell terminal directly (and not within VS Code), if you so prefer.
 
 If you are not already inside this directory, from your command line terminal you can navigate to it and list its 
@@ -55,18 +55,27 @@ contents with:
 cd ~/spacewalks
 ls -la
 total 272
-drwx------@  4 mbassan2  staff     128 28 May 20:06 .
-drwxr-x---+ 66 mbassan2  staff    2112 28 May 20:07 ..
--rw-rw-r--@  1 mbassan2  staff  132981  4 Apr 10:48 data.json
--rw-rw-r--@  1 mbassan2  staff    1518  4 Apr 10:48 my code v2.py
+drwx------@   5 mbassan2  staff     160 26 Jun 11:35 .
+drwx------@ 489 mbassan2  staff   15648 26 Jun 11:41 ..
+drwxrwxr-x@   4 mbassan2  staff     128  4 Apr 10:48 astronaut-data-analysis-old
+-rw-rw-r--@   1 mbassan2  staff  132981  4 Apr 10:48 data.json
+-rw-rw-r--@   1 mbassan2  staff    1518  4 Apr 10:48 my code v2.py
 ```
 
 Over the rest of the course, we will transform a collection of these files into a well-structured software project that 
 follows established good practices in research software engineering.
 
+The first thing you may notice that our software project contains folder `astronout-data-analysis-old` which presumably tries to keep track
+of older versions of the code. There is a better way to do that using version control tool, such as Git, and we can delete 
+this folder so it does not cause confusion:
+
+```bash
+rm -r astronaut-data-analysis-old
+```
+
 ## Version control
 
-Before we start making changes to our code, let's make sure we can keep a history of what changes we have done since 
+Before we do any further changes to our software, we want to make sure we can keep a history of what changes we have done since 
 we inherited the code from our colleague.
 
 We can track changes with version control. Later on, we will store those changes on a remote server too --
