@@ -44,7 +44,7 @@ $ source venv_spacewalks/Scripts/activate # Windows
 :::::: instructor
 
 At this point, the code in your local software project's directory should be as in:
-https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/07-code-structure.
+https://github.com/carpentries-incubator/bbrs-software-project/tree/05-code-structure.
 
 ::::::
 
@@ -624,6 +624,22 @@ Remember to commit your latest changes:
 (venv_spacewalks) $ git add eva_data_analysis.py data results
 (venv_spacewalks) $ git commit -m "Update project's directory structure"
 ```
+
+
+### Summary
+
+A good code and software directory structure helps keep a project organised, making it easier to navigate, understand, 
+and maintain. It promotes clear separation of concerns, so related files and components are grouped logically, 
+which simplifies development and reduces the chance of errors. A well-structured project also supports collaboration, 
+as new contributors can more easily find what they need, and it enables smoother scaling, testing, and deployment as the codebase grows.
+
+::: callout
+
+At this point, the code in your local software project's directory should be as in:
+https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correcteness.
+
+:::
+
 
 ## Further reading
 
