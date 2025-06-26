@@ -20,8 +20,7 @@ exercises: 0
 ::: instructor
 
 At this point, the code in your local software project's directory should be as in:
-https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/05-reproducible-environment.
-
+https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment
 :::
 
 So far we have created a local Git repository to track changes in our software project and pushed it to GitHub
@@ -449,9 +448,26 @@ data_f = open('./eva-data.json', 'r', encoding='ascii')
 data_t = open('./eva-data.csv','w', encoding='utf-8')
 ```
 
-Now we have the code running in a virtual environment,
-in the next episode we will inspect it in more detail,
-to see if we can understand and improve it.
+### Summary
+
+We have our code running in its own virtual environment. 
+
+Virtual development environments provide significant benefits for software development by allowing developers to isolate 
+project dependencies and configurations, preventing conflicts between projects.
+They support reproducibility, making it easy to recreate the same setup across different machines or for other
+team members, which helps with collaboration and consistency.
+They allow us to share or deploy our environment setup easily, often as a single configuration file.
+They promote "cleaner" way of working and avoid polluting the global system environment with project-specific tools and packages.
+
+In the next episode we will inspect our software in more detail and see how we can improve it further.
+
+
+::: callout
+
+At this point, the code in your local software project's directory should be as in:
+https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability.
+
+:::
 
 ## Further reading
 

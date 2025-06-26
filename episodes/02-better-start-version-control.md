@@ -517,6 +517,13 @@ Before we start making changes to the code, we have to set up a development envi
 for our project to ensure this metadata about our project is recorded and shared with anyone wishing to download, run or extend our 
 software (and this includes ourselves on a different machine or operating system).
 
+::: callout
+
+At this point, the code in your local software project's directory should be as in:
+https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment.
+
+:::
+
 
 ## Further reading
 

@@ -57,7 +57,7 @@ $ source venv_spacewalks/Scripts/activate # Windows
 ::: instructor
 
 At this point, the code in your local software project's directory should be as in:
-https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/06-code-readability.
+https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/04-code-readability.
 
 :::
 
@@ -777,6 +777,18 @@ Do not forget to commit any uncommitted changes you may have and then push your 
 (venv_spacewalks) $ git push origin main
 ```
 
+### Summary
+Good code readability brings many benefits to software development. It makes code easier to understand, maintain, and 
+debug, not just for the original author but also for collaborators and future developers. Readable code reduces the 
+risk of errors, speeds up onboarding of new team members, and simplifies code reviews. It also supports long-term 
+sustainability, as clear code is more adaptable to change and easier to extend or refactor over time.
+
+::: callout
+
+At this point, the code in your local software project's directory should be as in:
+https://github.com/carpentries-incubator/bbrs-software-project/tree/05-code-structure.
+
+:::
 
 ## Further reading
 
