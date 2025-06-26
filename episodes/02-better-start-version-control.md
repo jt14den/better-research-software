@@ -330,7 +330,7 @@ $ git mv my\ code\ v2.py my_code_v2.py
 
 If you run `git status` again, you'll see Git has noticed the change in the filename.
 Note, `git mv` handles the name change directly, instead of seeing a deleted file and a new file as would be the case if we'd used `mv` and then `git add`.
-It also stages the changes to be commited.
+It also stages the changes to be committed.
 
 ```bash
 $ git status
@@ -343,7 +343,6 @@ Changes to be committed:
 	renamed:    my code v2.py -> my_code_v2.py
 ```
 
-
 ### Rename our data and output files
 
 Now that we know how to rename files in Git,
@@ -354,7 +353,7 @@ We may want to:
 1. Give our script and input data file more meaningful names, e.g `eva_data_analysis.py` and `eva-data.json`. This change also uses removes version tracking from the script name as we are using git for version control
 any more as Git will keep track of that for us.
 2. Choose informative file names for our output data file (e.g. `eva-data.csv`) and plot (`cumulative_eva_graph.png`).
-3. Update the python script with these changes
+3. Update the Python script with these changes
 
 :::::::::::::::::::::::::::: challenge
 
@@ -399,7 +398,6 @@ git commit -m "Implement informative file names"
 :::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::
-
 
 
 ## Interacting with a remote Git server
