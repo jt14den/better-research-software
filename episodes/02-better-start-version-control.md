@@ -343,7 +343,6 @@ Changes to be committed:
 	renamed:    my code v2.py -> my_code_v2.py
 ```
 
-
 ### Rename our data and output files
 
 Now that we know how to rename files in Git,
@@ -399,7 +398,6 @@ git commit -m "Implement informative file names"
 :::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::
-
 
 
 ## Interacting with a remote Git server

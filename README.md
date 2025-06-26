@@ -30,17 +30,37 @@ To learn more about how this lesson site is built and how you can edit the pages
 
 ## Author(s)
 
+<<<<<<< issue-209-readme
 The list of authors of the course is available in [CITATION.cff](CITATION.cff).
+=======
+* [Sarah Gibson](https://github.com/sgibson91)
+* [Aman Goel](https://github.com/amangoel185)
+* [Sarah Jaffa](https://github.com/SJaffa)
+* [Kamilla Kopec-Harding](https://github.com/kkh451)
+* [Aleksandra Nenadic](https://github.com/anenadic)
+* [Colin Sauze](https://github.com/colinsauze)
+* [Toby Hodges](https://github.com/tobyhodges)
+* [Sarah Stevens](https://github.com/sstevens2)
+>>>>>>> dev
 
 ## Maintainer(s)
 
 Current maintainers of this lesson are:
 
 * [Aleksandra Nenadic](https://github.com/anenadic)
+* [Aman Goel](https://github.com/amangoel185)
+* [Toby Hodges](https://github.com/tobyhodges)
 
 ## Citation
-
 Gibson, S., Goel, A., Jaffa, S., Kopec-Harding, K., Nenadic, A., & Sauze, C. (2025). Software practices for open and reproducible research (beta-May-2025). Zenodo. https://doi.org/10.5281/zenodo.15490720
+
+Also see the related citation for the helper software project we use in this course:
+
+<<<<<<< issue-209-readme
+Gibson, S., Goel, A., Jaffa, S., Kopec-Harding, K., Nenadic, A., & Sauze, C. (2025). Software practices for open and reproducible research (beta-May-2025). Zenodo. https://doi.org/10.5281/zenodo.15490720
+=======
+Aleksandra Nenadic, Kamilla Kopec-Harding et al. (2024). carpentries-incubator/astronaut-data-analysis-fair: alpha-July-2024 (alpha-July-2024). Zenodo. https://doi.org/10.5281/zenodo.12698943
+>>>>>>> dev
 
 Information on how to cite this work is also available in [CITATION.cff](CITATION.cff).
 
