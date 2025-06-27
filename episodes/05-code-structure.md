@@ -95,7 +95,7 @@ def read_json_to_dataframe(input_file):
     Clean the data by removing any incomplete rows and sort by date
 
     Args:
-        input_file_ (str): The path to the JSON file.
+        input_file (str): The path to the JSON file.
 
     Returns:
          eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
@@ -308,7 +308,7 @@ def read_json_to_dataframe(input_file):
     Clean the data by removing any incomplete rows and sort by date
 
     Args:
-        input_file_ (str): The path to the JSON file.
+        input_file (str): The path to the JSON file.
 
     Returns:
          eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
