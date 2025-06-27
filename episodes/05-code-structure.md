@@ -487,6 +487,8 @@ project_name/
 Refactor your software project so that input data is stored in `data/` directory and results (the graph and CSV 
 data files) saved in `results/` directory. 
 
+**Remove current result files `eva-data.csv` and `cumulative_eva_graph.png` from the project root (if they exist) as they will be recreated by re-running the code.**
+
 **Remember to create the `results/` directory or your code will fail.**
 
 ::: solution
