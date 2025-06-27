@@ -28,7 +28,7 @@ including breaking our code into small, reusable functions that perform one spec
 We are going to explore a bit more how using common code structures can improve readability, accessibility and 
 reusability of our code, and will expand these practices on our (research or code) projects as a whole.
 
-::: callout
+::: spoiler
 
 ### Activate your virtual environment
 If it is not already active, make sure to activate your virtual environment from the root of
@@ -41,7 +41,9 @@ $ source venv_spacewalks/Scripts/activate # Windows
 ```
 :::
 
-:::::: instructor
+:::::: spoiler
+
+### Code state
 
 At this point, the code in your local software project's directory should be as in:
 https://github.com/carpentries-incubator/bbrs-software-project/tree/05-code-structure.
@@ -484,9 +486,20 @@ project_name/
 
 Refactor your software project so that input data is stored in `data/` directory and results (the graph and CSV 
 data files) saved in `results/` directory. 
-Remember to create the `results/` directory or your code will fail.
+
+**Remember to create the `results/` directory or your code will fail.**
 
 ::: solution
+
+Create `data/` folder and move the data file into it. Create an empty `results` folder too.
+
+```bash
+mkdir data
+mv eva-data.json data/
+mkdir results
+```
+
+Updated code:
 
 ```python
 import matplotlib.pyplot as plt
@@ -613,6 +626,13 @@ if __name__ == "__main__":
     main(input_file, output_file, graph_file)
 
 ```
+
+You can now run the code as:
+
+```bash
+python3 eva_data_analysis.py
+```
+
 :::
 
 ::::::
@@ -625,20 +645,21 @@ Remember to commit your latest changes:
 (venv_spacewalks) $ git commit -m "Update project's directory structure"
 ```
 
-
-### Summary
+## Summary
 
 A good code and software directory structure helps keep a project organised, making it easier to navigate, understand, 
 and maintain. It promotes clear separation of concerns, so related files and components are grouped logically, 
 which simplifies development and reduces the chance of errors. A well-structured project also supports collaboration, 
 as new contributors can more easily find what they need, and it enables smoother scaling, testing, and deployment as the codebase grows.
 
-::: callout
+:::::: spoiler
+
+### Code state
 
 At this point, the code in your local software project's directory should be as in:
 https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correcteness.
 
-:::
+::::::
 
 
 ## Further reading

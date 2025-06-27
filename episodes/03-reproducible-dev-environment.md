@@ -17,14 +17,17 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::: instructor
+So far we have created a local Git repository to track changes in our software project and pushed it to GitHub
+to enable others to see and contribute to it. We now want to start developing the code further.
+
+:::::: spoiler
+
+### Code state
 
 At this point, the code in your local software project's directory should be as in:
 https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment
-:::
 
-So far we have created a local Git repository to track changes in our software project and pushed it to GitHub
-to enable others to see and contribute to it. We now want to start developing the code further.
+::::::
 
 ## Software dependencies 
 
@@ -448,7 +451,7 @@ data_f = open('./eva-data.json', 'r', encoding='ascii')
 data_t = open('./eva-data.csv','w', encoding='utf-8')
 ```
 
-### Summary
+## Summary
 
 We have our code running in its own virtual environment. 
 
@@ -462,12 +465,14 @@ They promote "cleaner" way of working and avoid polluting the global system envi
 In the next episode we will inspect our software in more detail and see how we can improve it further.
 
 
-::: callout
+:::::: spoiler
+
+### Code state
 
 At this point, the code in your local software project's directory should be as in:
 https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability.
 
-:::
+::::::
 
 ## Further reading
 

@@ -41,7 +41,7 @@ what I have written here?"
 
 We will now learn about a few software best practices we can follow to help create more readable code. 
 
-::: callout
+::: spoiler
 
 ### Activate your virtual environment
 If it is not already active, make sure to activate your virtual environment from the root of
@@ -54,7 +54,9 @@ $ source venv_spacewalks/Scripts/activate # Windows
 ```
 :::
 
-::: instructor
+:::::: spoiler
+
+### Code state
 
 At this point, the code in your local software project's directory should be as in:
 https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability.
@@ -288,6 +290,97 @@ Commit changes:
 ```bash
 (venv_spacewalks) $ git add eva_data_analysis.py
 (venv_spacewalks) $ git commit -m "Use descriptive variable names"
+```
+
+:::
+::::::
+
+
+## Remove unused variables and imports
+
+Unused variables or import statements can cause confusion about what the code is doing, making it harder to 
+read and easier to introduce mistakes. Such things may seem harmless as they do not cause immediate syntax errors - but 
+they can potentially lead to subtle program logic errors, unexpected behavior, wrong results and issues later on - 
+making them especially tricky to detect and fix. Over time, this makes the codebase more fragile and harder to maintain and extend.
+
+:::::: challenge
+
+### Remove an unused variable
+
+Find and remove an unused variable in our code.
+
+::: solution
+
+Variable `fieldnames` (containing column names for CSV data file) is defined but never used in the code - it should be deleted. 
+
+Updated code:
+
+```python
+import json
+import csv
+import datetime as dt
+import matplotlib.pyplot as plt
+
+# https://data.nasa.gov/resource/eva.json (with modifications)
+input_file = open('./eva-data.json', 'r')
+output_file = open('./eva-data.csv', 'w')
+graph_file = './cumulative_eva_graph.png'
+
+
+data=[]
+
+for i in range(374):
+    line=input_file.readline()
+    print(line)
+    data.append(json.loads(line[1:-1]))
+#data.pop(0)
+## Comment out this bit if you don't want the spreadsheet
+
+w=csv.writer(output_file)
+
+time = []
+date =[]
+
+j=0
+for i in data:
+    print(data[j])
+    # and this bit
+    w.writerow(data[j].values())
+    if 'duration' in data[j].keys():
+        tt=data[j]['duration']
+        if tt == '':
+            pass
+        else:
+            t=dt.datetime.strptime(tt,'%H:%M')
+            ttt = dt.timedelta(hours=t.hour, minutes=t.minute, seconds=t.second).total_seconds()/(60*60)
+            print(t,ttt)
+            time.append(ttt)
+            if 'date' in data[j].keys():
+                date.append(dt.datetime.strptime(data[j]['date'][0:10], '%Y-%m-%d'))
+                #date.append(data[j]['date'][0:10])
+
+            else:
+                time.pop(0)
+    j+=1
+
+t=[0]
+for i in time:
+    t.append(t[-1]+i)
+
+date,time = zip(*sorted(zip(date, time)))
+
+plt.plot(date,t[1:], 'ko-')
+plt.xlabel('Year')
+plt.ylabel('Total time spent in space to date (hours)')
+plt.tight_layout()
+plt.savefig(graph_file)
+plt.show()
+```
+
+Commit changes:
+```bash
+(venv_spacewalks) $ git add eva_data_analysis.py
+(venv_spacewalks) $ git commit -m "Remove unused variable fieldname"
 ```
 
 :::
@@ -777,14 +870,16 @@ Do not forget to commit any uncommitted changes you may have and then push your 
 (venv_spacewalks) $ git push origin main
 ```
 
-### Summary
+## Summary
 
 Good code readability brings many benefits to software development. It makes code easier to understand, maintain, and 
 debug, not just for the original author but also for collaborators and future developers. Readable code reduces the 
 risk of errors, speeds up onboarding of new team members, and simplifies code reviews. It also supports long-term 
 sustainability, as clear code is more adaptable to change and easier to extend or refactor over time.
 
-::: callout
+:::::: spoiler
+
+### Code state
 
 At this point, the code in your local software project's directory should be as in:
 https://github.com/carpentries-incubator/bbrs-software-project/tree/05-code-structure.

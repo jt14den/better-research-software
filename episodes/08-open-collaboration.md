@@ -32,7 +32,7 @@ Adding a [license](../learners/licensing.md) and other metadata to our code (cov
 sharing the code publicly.
 There are several other important steps to consider which we will cover here.
 
-::: callout
+::: spoiler
 
 ### Activate your virtual environment
 If it is not already active, make sure to activate your virtual environment from the root of
@@ -45,10 +45,15 @@ $ source venv_spacewalks/Scripts/activate # Windows
 ```
 :::
 
-::: instructor
+:::::: spoiler
+
+### Code state
+
 At this point, the code in your local software project's directory should be as in:
-https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/10-open-collaboration
-:::
+https://github.com/carpentries-incubator/bbrs-software-project/tree/08-open-collaboration
+
+::::::
+
 
 ## Sharing code to encourage collaboration
 
@@ -506,6 +511,23 @@ Do not forget to commit any uncommitted changes you may have and then push your 
 (venv_spacewalks) $ git commit -m "Your commit message"
 (venv_spacewalks) $ git push origin main
 ```
+
+## Summary
+
+This episode emphasizes the importance of collaboration in creating sustainable research software. 
+It covers practices like using open version control repositories (e.g., GitHub), inviting contributions through issue 
+templates, PR and code review processes, and establishing clear governance, licensing, and codes of conduct. 
+The episode also highlights the ethos of open collaboration so that anyone can contribute and benefit from the project, 
+reinforcing transparency, inclusivity, and community-driven development.
+
+:::::: spoiler
+
+### Code state
+
+At this point, the code in your local software project's directory should be as in:
+https://github.com/carpentries-incubator/bbrs-software-project/tree/final
+
+::::::
 
 ## Further reading
 
