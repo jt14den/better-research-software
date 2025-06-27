@@ -282,7 +282,7 @@ plt.tight_layout()
 plt.savefig(graph_file)
 plt.show()
 ```
-We should also rename variables `w`, `t`, `ttt` to be more descriptive.
+We should also rename variables `w`, `t`, `tt` and `ttt` to be more descriptive.
 
 Commit changes:
 ```bash
