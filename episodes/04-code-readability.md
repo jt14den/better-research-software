@@ -79,8 +79,8 @@ import datetime as dt
 import matplotlib.pyplot as plt
 
 # https://data.nasa.gov/resource/eva.json (with modifications)
-data_f = open('./eva-data.json', 'r')
-data_t = open('./eva-data.csv','w')
+data_f = open('./eva-data.json', 'r', encoding='ascii')
+data_t = open('./eva-data.csv','w', encoding='utf-8')
 g_file = './cumulative_eva_graph.png' 
 
 
@@ -226,8 +226,8 @@ import datetime as dt
 import matplotlib.pyplot as plt
 
 # https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 
@@ -317,8 +317,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Data source: https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 eva_df = pd.read_json(input_file, convert_dates=['date'])
@@ -437,8 +437,8 @@ import pandas as pd
 
 
 # https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 print("--START--")
@@ -541,8 +541,8 @@ def write_dataframe_to_csv(df, output_file):
 
 print("--START--")
 
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 # Read the data from JSON file
@@ -744,8 +744,8 @@ def write_dataframe_to_csv(df, output_file):
 
 print("--START--")
 
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 # Read the data from JSON file
