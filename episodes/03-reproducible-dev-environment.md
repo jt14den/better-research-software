@@ -448,6 +448,7 @@ We can easily fix this by explicitly telling Python what encoding to use when re
 data_f = open('./eva-data.json', 'r', encoding='ascii')
 data_t = open('./eva-data.csv','w', encoding='utf-8')
 ```
+Do not foget to commit any files that have been changed.
 
 Now we have the code running in a virtual environment,
 in the next episode we will inspect it in more detail,
