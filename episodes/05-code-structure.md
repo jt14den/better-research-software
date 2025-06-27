@@ -413,7 +413,7 @@ if __name__ == "__main__":
 We can now run our script from the command line passing the JSON input data file and CSV output data file as:
 
 ```bash
-(venv_spacewalks) $ python eva_data_analysis.py eva-data.json eva-data.csv
+(venv_spacewalks) $ python3 eva_data_analysis.py eva-data.json eva-data.csv
 ```
 
 Remember to commit our changes.
