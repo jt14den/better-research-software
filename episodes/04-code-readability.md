@@ -308,7 +308,7 @@ data in data frames.
 First, we need to install this dependency into our virtual environment (which should be active at this point).
 
 ```bash
-(venv_spacewalks) $ python -m pip install pandas
+(venv_spacewalks) $ python3 -m pip install pandas
 ```
 The code should now look like:
 
@@ -350,7 +350,7 @@ changes. Remember to use an informative commit message.
 Make sure to capture the changes to your virtual development environment too.
 
 ```bash
-(venv_spacewalks) $ python -m pip freeze > requirements.txt
+(venv_spacewalks) $ python3 -m pip freeze > requirements.txt
 (venv_spacewalks) $ git add requirements.txt
 (venv_spacewalks) $ git commit -m "Added Pandas library."
 (venv_spacewalks) $ git push origin main
