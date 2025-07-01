@@ -95,7 +95,7 @@ def read_json_to_dataframe(input_file):
     Clean the data by removing any incomplete rows and sort by date
 
     Args:
-        input_file_ (str): The path to the JSON file.
+        input_file (str): The path to the JSON file.
 
     Returns:
          eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
@@ -308,7 +308,7 @@ def read_json_to_dataframe(input_file):
     Clean the data by removing any incomplete rows and sort by date
 
     Args:
-        input_file_ (str): The path to the JSON file.
+        input_file (str): The path to the JSON file.
 
     Returns:
          eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
@@ -413,7 +413,7 @@ if __name__ == "__main__":
 We can now run our script from the command line passing the JSON input data file and CSV output data file as:
 
 ```bash
-(venv_spacewalks) $ python eva_data_analysis.py eva-data.json eva-data.csv
+(venv_spacewalks) $ python3 eva_data_analysis.py eva-data.json eva-data.csv
 ```
 
 Remember to commit our changes.

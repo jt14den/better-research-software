@@ -79,8 +79,8 @@ import datetime as dt
 import matplotlib.pyplot as plt
 
 # https://data.nasa.gov/resource/eva.json (with modifications)
-data_f = open('./eva-data.json', 'r')
-data_t = open('./eva-data.csv','w')
+data_f = open('./eva-data.json', 'r', encoding='ascii')
+data_t = open('./eva-data.csv','w', encoding='utf-8')
 g_file = './cumulative_eva_graph.png' 
 
 
@@ -226,8 +226,8 @@ import datetime as dt
 import matplotlib.pyplot as plt
 
 # https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 
@@ -282,7 +282,7 @@ plt.tight_layout()
 plt.savefig(graph_file)
 plt.show()
 ```
-We should also rename variables `w`, `t`, `ttt` to be more descriptive.
+We should also rename variables `w`, `t`, `tt` and `ttt` to be more descriptive.
 
 Commit changes:
 ```bash
@@ -308,7 +308,7 @@ data in data frames.
 First, we need to install this dependency into our virtual environment (which should be active at this point).
 
 ```bash
-(venv_spacewalks) $ python -m pip install pandas
+(venv_spacewalks) $ python3 -m pip install pandas
 ```
 The code should now look like:
 
@@ -317,8 +317,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Data source: https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 eva_df = pd.read_json(input_file, convert_dates=['date'])
@@ -350,7 +350,7 @@ changes. Remember to use an informative commit message.
 Make sure to capture the changes to your virtual development environment too.
 
 ```bash
-(venv_spacewalks) $ python -m pip freeze > requirements.txt
+(venv_spacewalks) $ python3 -m pip freeze > requirements.txt
 (venv_spacewalks) $ git add requirements.txt
 (venv_spacewalks) $ git commit -m "Added Pandas library."
 (venv_spacewalks) $ git push origin main
@@ -437,8 +437,8 @@ import pandas as pd
 
 
 # https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 print("--START--")
@@ -541,8 +541,8 @@ def write_dataframe_to_csv(df, output_file):
 
 print("--START--")
 
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 # Read the data from JSON file
@@ -649,7 +649,7 @@ def read_json_to_dataframe(input_file):
     Clean the data by removing any incomplete rows and sort by date
 
     Args:
-        input_file_ (str): The path to the JSON file.
+        input_file (str): The path to the JSON file.
 
     Returns:
          eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
@@ -709,7 +709,7 @@ def read_json_to_dataframe(input_file):
     Clean the data by removing any incomplete rows and sort by date
 
     Args:
-        input_file_ (str): The path to the JSON file.
+        input_file (str): The path to the JSON file.
 
     Returns:
          eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
@@ -744,8 +744,8 @@ def write_dataframe_to_csv(df, output_file):
 
 print("--START--")
 
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 # Read the data from JSON file
