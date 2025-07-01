@@ -22,7 +22,8 @@ After completing this episode, participants should be able to:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-The good development practices taught in this lesson will help you build better research software.
+The good development practices taught in this lesson will help you build better research software (which can be found in 
+the [final branch](https://github.com/carpentries-incubator/bbrs-software-project/tree/final) of the software project repository).
 Some may require time and perseverance to implement and embed in your routine. 
 Others are small changes you can start practicing today.
 

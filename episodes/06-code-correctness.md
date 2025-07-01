@@ -167,7 +167,6 @@ project in a command line terminal.
 This will open an interactive Python terminal for you, which may look like this:
 
 ```python
-(venv_spacewalks) mbassan2@C-U-LOSXQ677L astronaut-data-analysis % python3
 Python 3.11.7 (main, Dec  4 2023, 18:10:11) [Clang 15.0.0 (clang-1500.1.0.2.5)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 
