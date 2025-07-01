@@ -416,7 +416,7 @@
         
 <section id="aio-01-introduction"><p>Content from <a href="01-introduction.html">Course introduction</a></p>
 <hr>
-<p>Last updated on 2025-06-24 |
+<p>Last updated on 2025-07-01 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/01-introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
@@ -670,7 +670,7 @@ what the code is doing and how it is organised.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Below are some suggested questions to help you assess the code. These
 are not the only criteria on which you could evaluate the code and you
@@ -701,7 +701,7 @@ different statistic, or run on a different input file?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>This is a (non-exhaustive) list of things that could be
 fixed/improved with our code and data:</p>
@@ -755,7 +755,7 @@ as a result are correct?</li>
 </ul>
 </div>
 <div class="section level4">
-<h4 id="documentation">documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
+<h4 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
 </h4>
 <ul>
 <li>there is no README documentation to orient the user</li>
@@ -819,7 +819,7 @@ page</a> and that are functioning correctly.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The expected out put of each command is:</p>
 <ol style="list-style-type: decimal">
@@ -909,7 +909,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-better-start-version-control"><p>Content from <a href="02-better-start-version-control.html">Better start with a software project</a></p>
 <hr>
-<p>Last updated on 2025-06-24 |
+<p>Last updated on 2025-07-01 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/02-better-start-version-control.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 60 minutes</p>
@@ -986,7 +986,7 @@ have not opened the software directory in VS Code already – go to
 <p>We also need access to a command line terminal to type various
 commands. In VS Code start a new terminal via <strong>Terminal -&gt; New
 Terminal</strong> (Windows users need to make sure the new terminal is
-“GitBash”; not “PowerShell” nor “cdm”). Alternatively, you can work with
+“GitBash”; not “PowerShell” or “cmd”). Alternatively, you can work with
 a shell terminal directly (and not within VS Code), if you so
 prefer.</p>
 <p>If you are not already inside this directory, from your command line
@@ -997,20 +997,31 @@ terminal you can navigate to it and list its contents with:</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">cd</span> ~/spacewalks</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-la</span></span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ex">total</span> 272</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="ex">drwx------@</span>  4 mbassan2  staff     128 28 May 20:06 .</span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="ex">drwxr-x---+</span> 66 mbassan2  staff    2112 28 May 20:07 ..</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="ex">-rw-rw-r--@</span>  1 mbassan2  staff  132981  4 Apr 10:48 data.json</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="ex">-rw-rw-r--@</span>  1 mbassan2  staff    1518  4 Apr 10:48 my code v2.py</span></code></pre>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="ex">drwx------@</span>   5 mbassan2  staff     160 26 Jun 11:35 .</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="ex">drwx------@</span> 489 mbassan2  staff   15648 26 Jun 11:41 ..</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="ex">drwxrwxr-x@</span>   4 mbassan2  staff     128  4 Apr 10:48 astronaut-data-analysis-old</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="ex">-rw-rw-r--@</span>   1 mbassan2  staff  132981  4 Apr 10:48 data.json</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="ex">-rw-rw-r--@</span>   1 mbassan2  staff    1518  4 Apr 10:48 my code v2.py</span></code></pre>
 </div>
 <p>Over the rest of the course, we will transform a collection of these
 files into a well-structured software project that follows established
 good practices in research software engineering.</p>
+<p>The first thing you may notice that our software project contains
+folder <code>astronout-data-analysis-old</code> which presumably tries
+to keep track of older versions of the code. There is a better way to do
+that using version control tool, such as Git, and we can delete this
+folder so it does not cause confusion:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-r</span> astronaut-data-analysis-old</span></code></pre>
+</div>
 </section><section><h2 class="section-heading" id="version-control">Version control<a class="anchor" aria-label="anchor" href="#version-control"></a>
 </h2>
 <hr class="half-width">
-<p>Before we start making changes to our code, let’s make sure we can
-keep a history of what changes we have done since we inherited the code
-from our colleague.</p>
+<p>Before we do any further changes to our software, we want to make
+sure we can keep a history of what changes we have done since we
+inherited the code from our colleague.</p>
 <p>We can track changes with version control. Later on, we will store
 those changes on a remote server too – both for safe-keeping and to make
 them easier to share with others. In later episodes, we will also see
@@ -1156,26 +1167,26 @@ help.</a></p>
 <code>main</code>, but older ones still use <code>master</code> as their
 main branch. They work the same, but we want to keep things consistent
 for clarity.</p>
-<div class="codewrapper sourceCode" id="cb2">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> init.defaultBranch main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> init.defaultBranch main</span></code></pre>
 </div>
 <p>At this point, we should be located in our <code>spacewalks</code>
 directory. We want to tell Git to make <code>spacewalks</code> a
 repository – a directory where Git can track changes to our files. We do
 that with:</p>
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> git init</span></code></pre>
-</div>
-<p>We can check everything is set up correctly by asking Git to tell us
-the status of our project:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">$</span> git init</span></code></pre>
+</div>
+<p>We can check everything is set up correctly by asking Git to tell us
+the status of our project:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1203,17 +1214,17 @@ cannot share (for example, medical records).</p>
 <h3 id="add-files-into-repository">Add files into repository<a class="anchor" aria-label="anchor" href="#add-files-into-repository"></a>
 </h3>
 <p>We can tell Git to track a file using <code>git add</code>:</p>
-<div class="codewrapper sourceCode" id="cb6">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">$</span> git add my<span class="dt">\ </span>code<span class="dt">\ </span>v2.py</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="ex">$</span> git add data.json</span></code></pre>
-</div>
-<p>and then check the right thing happened:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">$</span> git add my<span class="dt">\ </span>code<span class="dt">\ </span>v2.py</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="ex">$</span> git add data.json</span></code></pre>
+</div>
+<p>and then check the right thing happened:</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1233,10 +1244,10 @@ Changes to be committed:
 how your tracked files have changed at a stage in time. To create a
 commit that records we added two new files, we need to run one more
 command:</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Add the initial spacewalks data and code"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Add the initial spacewalks data and code"</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1283,10 +1294,10 @@ version control steps with the command line interface only.</p>
 </div>
 </div>
 <p>If we run <code>git status</code> now, we see:</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1309,10 +1320,10 @@ earlier. This both stops our folders being cluttered with old versions,
 and <em>also</em> stops us accidentally deleting them!</p>
 <p>You can see the hidden Git directory using the <code>-a</code> flag
 to show all files and folders:</p>
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-a</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-a</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1343,20 +1354,20 @@ filenames. The simplest fix is to replace the spaces with underscores
 <code>_</code> instead.</p>
 <p>To rename the files using git you can use the <code>git mv</code>
 command:</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="ex">$</span> git mv my<span class="dt">\ </span>code<span class="dt">\ </span>v2.py my_code_v2.py</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">$</span> git mv my<span class="dt">\ </span>code<span class="dt">\ </span>v2.py my_code_v2.py</span></code></pre>
 </div>
 <p>If you run <code>git status</code> again, you’ll see Git has noticed
 the change in the filename. Note, <code>git mv</code> handles the name
 change directly, instead of seeing a deleted file and a new file as
 would be the case if we’d used <code>mv</code> and then
-<code>git add</code>. It also stages the changes to be commited.</p>
-<div class="codewrapper sourceCode" id="cb16">
+<code>git add</code>. It also stages the changes to be committed.</p>
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1377,12 +1388,17 @@ our files and code a bit easier to understand.</p>
 <li>Give our script and input data file more meaningful names, e.g
 <code>eva_data_analysis.py</code> and <code>eva-data.json</code>. This
 change also uses removes version tracking from the script name as we are
-using git for version control any more as Git will keep track of that
+using Git for version control any more as Git will keep track of that
 for us.</li>
 <li>Choose informative file names for our output data file
 (e.g. <code>eva-data.csv</code>) and plot
 (<code>cumulative_eva_graph.png</code>).</li>
-<li>Update the python script with these changes</li>
+<li>Use relative paths (e.g. <code>./eva-data.json</code>) instead of
+absolute paths
+(e.g. <code>home/sarah/Projects/ssi-ukrn-fair-course/data.csv</code>) to
+the files (which were hardcoded to the path on our colleagues machine
+and would not work on ours).</li>
+<li>Update the Python script with these changes.</li>
 </ol>
 <div id="update-the-filenames-in-the-repo" class="callout challenge">
 <div class="callout-square">
@@ -1391,13 +1407,16 @@ for us.</li>
 <div id="update-the-filenames-in-the-repo" class="callout-inner">
 <h3 class="callout-title">Update the filenames in the repo</h3>
 <div class="callout-content">
-<p>Try to make these changes yourself. 1. Give our python script and
-data files informative names <code>eva_data_analysis.py</code> and
-<code>eva-data.json</code>, respectively. 2. Update the filenames used
-in the script - input json data and output data (to
-<code>eva-data.csv</code> to match the new input data name) and
-plot(<code>cumulative_eva_graph.png</code>). 3. Stage and commit these
-changes in the git repository.</p>
+<p>Try to make these changes yourself.</p>
+<ol style="list-style-type: decimal">
+<li>Give our Python script and input data file informative names -
+<code>eva_data_analysis.py</code> and <code>eva-data.json</code>,
+respectively.</li>
+<li>Update other file names and paths used in the script - output CSV
+data (<code>eva-data.csv</code> to match the new input data name) and
+plot(<code>cumulative_eva_graph.png</code>).</li>
+<li>Stage and commit these changes in the Git repository.</li>
+</ol>
 </div>
 </div>
 </div>
@@ -1410,21 +1429,21 @@ changes in the git repository.</p>
 <div class="accordion-body">
 <p>Firstly, let’s update the file names in our Python script from VS
 Code:</p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>data_f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a>data_t <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>,<span class="st">'w'</span>)</span>
-<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a>g_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>data_f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>data_t <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>,<span class="st">'w'</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>g_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span></span></code></pre>
 </div>
 <p>Next, we need to rename the files on the file system using Git:</p>
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="fu">git</span> mv data.json eva-data.json</span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="fu">git</span> mv my_code_v2.py eva_data_analysis.py</span>
-<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a><span class="fu">git</span> add eva_data_analysis.py</span>
-<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="fu">git</span> mv data.json eva-data.json</span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="fu">git</span> mv my_code_v2.py eva_data_analysis.py</span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a><span class="fu">git</span> add eva_data_analysis.py</span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1436,10 +1455,10 @@ Changes to be committed:
 	renamed:    my_code_v2.py -&gt; eva_data_analysis.py</code></pre>
 </div>
 <p>Finally, we can commit our changes:</p>
-<div class="codewrapper sourceCode" id="cb21">
+<div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Implement informative file names"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Implement informative file names"</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -1503,12 +1522,12 @@ how to do that for different scenarios. Change the toggle on the right
 side from “HTTPS” to “SSH”, then look at the heading “…or push an
 existing repository from the command line”. You should see instructions
 that look like this:</p>
-<div class="codewrapper sourceCode" id="cb22">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com/<span class="op">&lt;</span>YOUR_GITHUB_HANDLE<span class="op">&gt;</span>/spacewalks.git</span>
-<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
-<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com/<span class="op">&lt;</span>YOUR_GITHUB_HANDLE<span class="op">&gt;</span>/spacewalks.git</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
 </div>
 <p><strong>It is very important you make sure you switch from “HTTPS” to
 “SSH”.</strong> In the setup, we configured our GitHub account and our
@@ -1529,10 +1548,10 @@ machine.</li>
 </ol>
 <p>If you were wondering about what those commands did, here is the
 explanation.</p>
-<div class="codewrapper sourceCode" id="cb23">
+<div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com/<span class="op">&lt;</span>YOUR_GITHUB_HANDLE<span class="op">&gt;</span>/spacewalks.git</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com/<span class="op">&lt;</span>YOUR_GITHUB_HANDLE<span class="op">&gt;</span>/spacewalks.git</span></code></pre>
 </div>
 <p>This command tells Git to create a <code>remote</code> called
 “origin” and link it to the URL of your GitHub repository. A
@@ -1543,20 +1562,20 @@ the remote repository. It could be called anything, but “origin” is a
 common convention for Git since it shows which is considered the “source
 of truth”. This is particularly useful when many people are
 collaborating on the same repository.</p>
-<div class="codewrapper sourceCode" id="cb24">
+<div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span></code></pre>
 </div>
 <p><code>git branch</code> is a command used to manage branches. We’ll
 discuss branches later on in the course. We saw this command during
 setup and earlier in this episode - it ensures the branch we are working
 on is called “main”. This will be the default branch of the project for
 everyone working on it.</p>
-<div class="codewrapper sourceCode" id="cb25">
+<div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
 </div>
 <p>The <code>git push</code> command is used to update a remote
 repository with changes from your local repository. This command tells
@@ -1637,7 +1656,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-03-reproducible-dev-environment"><p>Content from <a href="03-reproducible-dev-environment.html">Reproducible software environments</a></p>
 <hr>
-<p>Last updated on 2025-06-17 |
+<p>Last updated on 2025-07-01 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/03-reproducible-dev-environment.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -1678,7 +1697,7 @@ using <code>venv</code> and <code>pip</code>.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/05-reproducible-environment" class="external-link uri">https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/05-reproducible-environment</a>.</p>
@@ -2183,6 +2202,7 @@ to make our code’s requirements explicit!</p>
 use when reading and writing our files:</p>
 <pre><code><span><span class="va">data_f</span> <span class="op">=</span> <span class="fu">open</span><span class="op">(</span><span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span><span class="op">)</span></span>
 <span><span class="va">data_t</span> <span class="op">=</span> <span class="fu">open</span><span class="op">(</span><span class="st">'./eva-data.csv'</span>,<span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span><span class="op">)</span></span></code></pre>
+<p>Do not foget to commit any files that have been changed.</p>
 <p>Now we have the code running in a virtual environment, in the next
 episode we will inspect it in more detail, to see if we can understand
 and improve it.</p>
@@ -2225,7 +2245,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-04-code-readability"><p>Content from <a href="04-code-readability.html">Code readability</a></p>
 <hr>
-<p>Last updated on 2025-06-17 |
+<p>Last updated on 2025-07-01 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/04-code-readability.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 90 minutes</p>
@@ -2310,7 +2330,7 @@ environment from the root of the software project directory:</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/06-code-readability" class="external-link uri">https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/06-code-readability</a>.</p>
@@ -2338,8 +2358,8 @@ help readability (accessibility) and reusability of our code.</p>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a></span>
 <span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="co"># https://data.nasa.gov/resource/eva.json (with modifications)</span></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>data_f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>data_t <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>,<span class="st">'w'</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>data_f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>data_t <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>,<span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
 <span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>g_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span> </span>
 <span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
 <span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a></span>
@@ -2478,7 +2498,7 @@ suggest a new name for this variable.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><span class="math display">\[ 9.81 m/s^2 \]</span> is the <a href="https://en.wikipedia.org/wiki/Gravity_of_Earth" class="external-link">gravitational
 force exerted by the Earth</a>. It is often referred to as “little g” to
@@ -2524,7 +2544,7 @@ informative commit message.</p></li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Updated code:</p>
 <div class="codewrapper sourceCode" id="cb6">
@@ -2536,8 +2556,8 @@ informative commit message.</p></li>
 <span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a></span>
 <span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="co"># https://data.nasa.gov/resource/eva.json (with modifications)</span></span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
 <span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>graph_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span></span>
 <span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a></span>
 <span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a></span>
@@ -2593,7 +2613,7 @@ informative commit message.</p></li>
 <span id="cb6-61"><a href="#cb6-61" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
 <p>We should also rename variables <code>w</code>, <code>t</code>,
-<code>ttt</code> to be more descriptive.</p>
+<code>tt</code> and <code>ttt</code> to be more descriptive.</p>
 <p>Commit changes:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2622,7 +2642,7 @@ environment (which should be active at this point).</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python <span class="at">-m</span> pip install pandas</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python3 <span class="at">-m</span> pip install pandas</span></code></pre>
 </div>
 <p>The code should now look like:</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -2632,8 +2652,8 @@ environment (which should be active at this point).</p>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="co"># Data source: https://data.nasa.gov/resource/eva.json (with modifications)</span></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
 <span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>graph_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span></span>
 <span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a></span>
 <span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>eva_df <span class="op">=</span> pd.read_json(input_file, convert_dates<span class="op">=</span>[<span class="st">'date'</span>])</span>
@@ -2666,7 +2686,7 @@ environment too.</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python <span class="at">-m</span> pip freeze <span class="op">&gt;</span> requirements.txt</span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python3 <span class="at">-m</span> pip freeze <span class="op">&gt;</span> requirements.txt</span>
 <span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git add requirements.txt</span>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Added Pandas library."</span></span>
 <span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git push origin main</span></code></pre>
@@ -2767,7 +2787,7 @@ informative commit message.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Some good comments may look like the example below.</p>
 <div class="codewrapper sourceCode" id="cb15">
@@ -2779,8 +2799,8 @@ informative commit message.</li>
 <span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a></span>
 <span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a></span>
 <span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="co"># https://data.nasa.gov/resource/eva.json (with modifications)</span></span>
-<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span>)</span>
+<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
 <span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a>graph_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span></span>
 <span id="cb15-10"><a href="#cb15-10" tabindex="-1"></a></span>
 <span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--START--"</span>)</span>
@@ -2899,8 +2919,8 @@ following.</p>
 <span id="cb17-23"><a href="#cb17-23" tabindex="-1"></a></span>
 <span id="cb17-24"><a href="#cb17-24" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--START--"</span>)</span>
 <span id="cb17-25"><a href="#cb17-25" tabindex="-1"></a></span>
-<span id="cb17-26"><a href="#cb17-26" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb17-27"><a href="#cb17-27" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>)</span>
+<span id="cb17-26"><a href="#cb17-26" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span>)</span>
+<span id="cb17-27"><a href="#cb17-27" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
 <span id="cb17-28"><a href="#cb17-28" tabindex="-1"></a>graph_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span></span>
 <span id="cb17-29"><a href="#cb17-29" tabindex="-1"></a></span>
 <span id="cb17-30"><a href="#cb17-30" tabindex="-1"></a><span class="co"># Read the data from JSON file</span></span>
@@ -3021,7 +3041,7 @@ docstring may look like:</p>
 <span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a><span class="co">    Clean the data by removing any incomplete rows and sort by date</span></span>
 <span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a></span>
 <span id="cb20-6"><a href="#cb20-6" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb20-7"><a href="#cb20-7" tabindex="-1"></a><span class="co">        input_file_ (str): The path to the JSON file.</span></span>
+<span id="cb20-7"><a href="#cb20-7" tabindex="-1"></a><span class="co">        input_file (str): The path to the JSON file.</span></span>
 <span id="cb20-8"><a href="#cb20-8" tabindex="-1"></a></span>
 <span id="cb20-9"><a href="#cb20-9" tabindex="-1"></a><span class="co">    Returns:</span></span>
 <span id="cb20-10"><a href="#cb20-10" tabindex="-1"></a><span class="co">         eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure</span></span>
@@ -3052,7 +3072,7 @@ docstring may look like:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Our <code>write_dataframe_to_csv</code> function fully described by a
 docstring may look like:</p>
@@ -3093,7 +3113,7 @@ docstring may look like:</p>
 <span id="cb22-9"><a href="#cb22-9" tabindex="-1"></a><span class="co">    Clean the data by removing any incomplete rows and sort by date</span></span>
 <span id="cb22-10"><a href="#cb22-10" tabindex="-1"></a></span>
 <span id="cb22-11"><a href="#cb22-11" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb22-12"><a href="#cb22-12" tabindex="-1"></a><span class="co">        input_file_ (str): The path to the JSON file.</span></span>
+<span id="cb22-12"><a href="#cb22-12" tabindex="-1"></a><span class="co">        input_file (str): The path to the JSON file.</span></span>
 <span id="cb22-13"><a href="#cb22-13" tabindex="-1"></a></span>
 <span id="cb22-14"><a href="#cb22-14" tabindex="-1"></a><span class="co">    Returns:</span></span>
 <span id="cb22-15"><a href="#cb22-15" tabindex="-1"></a><span class="co">         eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure</span></span>
@@ -3128,8 +3148,8 @@ docstring may look like:</p>
 <span id="cb22-44"><a href="#cb22-44" tabindex="-1"></a></span>
 <span id="cb22-45"><a href="#cb22-45" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--START--"</span>)</span>
 <span id="cb22-46"><a href="#cb22-46" tabindex="-1"></a></span>
-<span id="cb22-47"><a href="#cb22-47" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb22-48"><a href="#cb22-48" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>)</span>
+<span id="cb22-47"><a href="#cb22-47" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span>)</span>
+<span id="cb22-48"><a href="#cb22-48" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
 <span id="cb22-49"><a href="#cb22-49" tabindex="-1"></a>graph_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span></span>
 <span id="cb22-50"><a href="#cb22-50" tabindex="-1"></a></span>
 <span id="cb22-51"><a href="#cb22-51" tabindex="-1"></a><span class="co"># Read the data from JSON file</span></span>
@@ -3212,7 +3232,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-05-code-structure"><p>Content from <a href="05-code-structure.html">Code structure</a></p>
 <hr>
-<p>Last updated on 2025-06-17 |
+<p>Last updated on 2025-07-01 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/05-code-structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 90 minutes</p>
@@ -3287,7 +3307,7 @@ environment from the root of the software project directory:</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/07-code-structure" class="external-link uri">https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/07-code-structure</a>.</p>
@@ -3354,7 +3374,7 @@ following.</p>
 <span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">    Clean the data by removing any incomplete rows and sort by date</span></span>
 <span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a></span>
 <span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">        input_file_ (str): The path to the JSON file.</span></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">        input_file (str): The path to the JSON file.</span></span>
 <span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a></span>
 <span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">    Returns:</span></span>
 <span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co">         eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure</span></span>
@@ -3581,7 +3601,7 @@ list - remember to import this library first.</p>
 <span id="cb9-22"><a href="#cb9-22" tabindex="-1"></a><span class="co">    Clean the data by removing any incomplete rows and sort by date</span></span>
 <span id="cb9-23"><a href="#cb9-23" tabindex="-1"></a></span>
 <span id="cb9-24"><a href="#cb9-24" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb9-25"><a href="#cb9-25" tabindex="-1"></a><span class="co">        input_file_ (str): The path to the JSON file.</span></span>
+<span id="cb9-25"><a href="#cb9-25" tabindex="-1"></a><span class="co">        input_file (str): The path to the JSON file.</span></span>
 <span id="cb9-26"><a href="#cb9-26" tabindex="-1"></a></span>
 <span id="cb9-27"><a href="#cb9-27" tabindex="-1"></a><span class="co">    Returns:</span></span>
 <span id="cb9-28"><a href="#cb9-28" tabindex="-1"></a><span class="co">         eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure</span></span>
@@ -3686,7 +3706,7 @@ input data file and CSV output data file as:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python eva_data_analysis.py eva-data.json eva-data.csv</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python3 eva_data_analysis.py eva-data.json eva-data.csv</span></code></pre>
 </div>
 <p>Remember to commit our changes.</p>
 <div class="codewrapper sourceCode" id="cb11">
@@ -3803,7 +3823,7 @@ saved in <code>results/</code> directory. Remember to create the
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7787,8 +7807,8 @@ any links that you are not going to use.
   "url": "https://softwaresaved.github.io/fair-research-software/instructor/aio.html",
   "identifier": "https://softwaresaved.github.io/fair-research-software/instructor/aio.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2025-06-24",
-  "datePublished": "2025-06-24"
+  "dateModified": "2025-07-01",
+  "datePublished": "2025-07-01"
 }
 
   </script><script>

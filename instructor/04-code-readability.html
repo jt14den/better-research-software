@@ -359,7 +359,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Code readability</h1>
-        <p>Last updated on 2025-06-17 |
+        <p>Last updated on 2025-07-01 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/04-code-readability.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -447,7 +447,7 @@ environment from the root of the software project directory:</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/06-code-readability" class="external-link uri">https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/06-code-readability</a>.</p>
@@ -473,8 +473,8 @@ help readability (accessibility) and reusability of our code.</p>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a></span>
 <span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="co"># https://data.nasa.gov/resource/eva.json (with modifications)</span></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>data_f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>data_t <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>,<span class="st">'w'</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>data_f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>data_t <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>,<span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
 <span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>g_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span> </span>
 <span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
 <span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a></span>
@@ -607,7 +607,7 @@ suggest a new name for this variable.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><span class="math display">\[ 9.81 m/s^2 \]</span> is the <a href="https://en.wikipedia.org/wiki/Gravity_of_Earth" class="external-link">gravitational
 force exerted by the Earth</a>. It is often referred to as “little g” to
@@ -649,7 +649,7 @@ informative commit message.</p></li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Updated code:</p>
 <div class="codewrapper sourceCode" id="cb6">
@@ -661,8 +661,8 @@ informative commit message.</p></li>
 <span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a></span>
 <span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="co"># https://data.nasa.gov/resource/eva.json (with modifications)</span></span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
 <span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>graph_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span></span>
 <span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a></span>
 <span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a></span>
@@ -718,7 +718,7 @@ informative commit message.</p></li>
 <span id="cb6-61"><a href="#cb6-61" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
 <p>We should also rename variables <code>w</code>, <code>t</code>,
-<code>ttt</code> to be more descriptive.</p>
+<code>tt</code> and <code>ttt</code> to be more descriptive.</p>
 <p>Commit changes:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -745,7 +745,7 @@ environment (which should be active at this point).</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python <span class="at">-m</span> pip install pandas</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python3 <span class="at">-m</span> pip install pandas</span></code></pre>
 </div>
 <p>The code should now look like:</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -755,8 +755,8 @@ environment (which should be active at this point).</p>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="co"># Data source: https://data.nasa.gov/resource/eva.json (with modifications)</span></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
 <span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>graph_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span></span>
 <span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a></span>
 <span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>eva_df <span class="op">=</span> pd.read_json(input_file, convert_dates<span class="op">=</span>[<span class="st">'date'</span>])</span>
@@ -789,7 +789,7 @@ environment too.</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python <span class="at">-m</span> pip freeze <span class="op">&gt;</span> requirements.txt</span>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python3 <span class="at">-m</span> pip freeze <span class="op">&gt;</span> requirements.txt</span>
 <span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git add requirements.txt</span>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Added Pandas library."</span></span>
 <span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git push origin main</span></code></pre>
@@ -880,7 +880,7 @@ informative commit message.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Some good comments may look like the example below.</p>
 <div class="codewrapper sourceCode" id="cb15">
@@ -892,8 +892,8 @@ informative commit message.</li>
 <span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a></span>
 <span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a></span>
 <span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="co"># https://data.nasa.gov/resource/eva.json (with modifications)</span></span>
-<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span>)</span>
+<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
 <span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a>graph_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span></span>
 <span id="cb15-10"><a href="#cb15-10" tabindex="-1"></a></span>
 <span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--START--"</span>)</span>
@@ -1008,8 +1008,8 @@ following.</p>
 <span id="cb17-23"><a href="#cb17-23" tabindex="-1"></a></span>
 <span id="cb17-24"><a href="#cb17-24" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--START--"</span>)</span>
 <span id="cb17-25"><a href="#cb17-25" tabindex="-1"></a></span>
-<span id="cb17-26"><a href="#cb17-26" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb17-27"><a href="#cb17-27" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>)</span>
+<span id="cb17-26"><a href="#cb17-26" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span>)</span>
+<span id="cb17-27"><a href="#cb17-27" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
 <span id="cb17-28"><a href="#cb17-28" tabindex="-1"></a>graph_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span></span>
 <span id="cb17-29"><a href="#cb17-29" tabindex="-1"></a></span>
 <span id="cb17-30"><a href="#cb17-30" tabindex="-1"></a><span class="co"># Read the data from JSON file</span></span>
@@ -1124,7 +1124,7 @@ docstring may look like:</p>
 <span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a><span class="co">    Clean the data by removing any incomplete rows and sort by date</span></span>
 <span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a></span>
 <span id="cb20-6"><a href="#cb20-6" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb20-7"><a href="#cb20-7" tabindex="-1"></a><span class="co">        input_file_ (str): The path to the JSON file.</span></span>
+<span id="cb20-7"><a href="#cb20-7" tabindex="-1"></a><span class="co">        input_file (str): The path to the JSON file.</span></span>
 <span id="cb20-8"><a href="#cb20-8" tabindex="-1"></a></span>
 <span id="cb20-9"><a href="#cb20-9" tabindex="-1"></a><span class="co">    Returns:</span></span>
 <span id="cb20-10"><a href="#cb20-10" tabindex="-1"></a><span class="co">         eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure</span></span>
@@ -1155,7 +1155,7 @@ docstring may look like:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Our <code>write_dataframe_to_csv</code> function fully described by a
 docstring may look like:</p>
@@ -1196,7 +1196,7 @@ docstring may look like:</p>
 <span id="cb22-9"><a href="#cb22-9" tabindex="-1"></a><span class="co">    Clean the data by removing any incomplete rows and sort by date</span></span>
 <span id="cb22-10"><a href="#cb22-10" tabindex="-1"></a></span>
 <span id="cb22-11"><a href="#cb22-11" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb22-12"><a href="#cb22-12" tabindex="-1"></a><span class="co">        input_file_ (str): The path to the JSON file.</span></span>
+<span id="cb22-12"><a href="#cb22-12" tabindex="-1"></a><span class="co">        input_file (str): The path to the JSON file.</span></span>
 <span id="cb22-13"><a href="#cb22-13" tabindex="-1"></a></span>
 <span id="cb22-14"><a href="#cb22-14" tabindex="-1"></a><span class="co">    Returns:</span></span>
 <span id="cb22-15"><a href="#cb22-15" tabindex="-1"></a><span class="co">         eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure</span></span>
@@ -1231,8 +1231,8 @@ docstring may look like:</p>
 <span id="cb22-44"><a href="#cb22-44" tabindex="-1"></a></span>
 <span id="cb22-45"><a href="#cb22-45" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--START--"</span>)</span>
 <span id="cb22-46"><a href="#cb22-46" tabindex="-1"></a></span>
-<span id="cb22-47"><a href="#cb22-47" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>)</span>
-<span id="cb22-48"><a href="#cb22-48" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>)</span>
+<span id="cb22-47"><a href="#cb22-47" tabindex="-1"></a>input_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span>)</span>
+<span id="cb22-48"><a href="#cb22-48" tabindex="-1"></a>output_file <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>, <span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
 <span id="cb22-49"><a href="#cb22-49" tabindex="-1"></a>graph_file <span class="op">=</span> <span class="st">'./cumulative_eva_graph.png'</span></span>
 <span id="cb22-50"><a href="#cb22-50" tabindex="-1"></a></span>
 <span id="cb22-51"><a href="#cb22-51" tabindex="-1"></a><span class="co"># Read the data from JSON file</span></span>
@@ -1365,8 +1365,8 @@ any links that you are not going to use.
   "url": "https://softwaresaved.github.io/fair-research-software/instructor/04-code-readability.html",
   "identifier": "https://softwaresaved.github.io/fair-research-software/instructor/04-code-readability.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2025-06-17",
-  "datePublished": "2025-06-24"
+  "dateModified": "2025-07-01",
+  "datePublished": "2025-07-01"
 }
 
   </script><script>
