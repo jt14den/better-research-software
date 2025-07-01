@@ -444,12 +444,24 @@ The fact that different systems have different defaults,
 which can change or even break your code's behaviour,
 shows why it is so important to make our code's requirements explicit!
 
-We can easily fix this by explicitly telling Python what encoding to use when reading and writing our files:
+We can fix this by explicitly telling Python what encoding to use when reading and writing our files 
+(and you should do this even if you have not had the encoding error when running the code - it is good practice 
+and otherwise it may catch you the next time you run the code on a different platform):
 
-```
+```python
+...
 data_f = open('./eva-data.json', 'r', encoding='ascii')
 data_t = open('./eva-data.csv','w', encoding='utf-8')
+...
 ```
+Remember to commit these latest changes.
+
+```bash
+(venv_spacewalks) $ git add eva_data_analysis.py
+(venv_spacewalks) $ git commit -m "Specify data encoding"
+(venv_spacewalks) $ git push origin main
+```
+
 
 ## Summary
 
