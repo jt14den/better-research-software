@@ -319,7 +319,7 @@ On Windows, if VS Code does not automatically recognise Git Bash as a command li
 installing VS Code extension "Start git-bash" should help (to view available and installed extensions,
 go to `View > Extensions` from the top-level menu).
 
-![*Git Bash extension for VS Code on Window*](fig/vscode-gitbash-extension.png){alt="Git Bash extension for VS Code on Windows" .image-with-shadow }
+![*Git Bash extension for VS Code on Windows*](fig/vscode-gitbash-extension.png){alt="Git Bash extension for VS Code on Windows" .image-with-shadow }
 
 To check the command line integration and that VS Code knows about different command line terminal(s) installed
 on your system select "Terminal -> New Terminal" from the top level menu.
