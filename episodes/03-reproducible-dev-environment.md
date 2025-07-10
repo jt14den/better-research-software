@@ -469,7 +469,7 @@ We have our code running in its own virtual environment.
 
 Virtual development environments provide significant benefits for software development by allowing developers to isolate 
 project dependencies and configurations, preventing conflicts between projects.
-They support reproducibility, making it easy to recreate the same setup across different machines or for other
+They support reproducibility, making it much easier to recreate the same setup across different machines or for other
 team members, which helps with collaboration and consistency.
 They allow us to share or deploy our environment setup easily, often as a single configuration file.
 They promote "cleaner" way of working and avoid polluting the global system environment with project-specific tools and packages.
