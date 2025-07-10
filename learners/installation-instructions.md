@@ -319,7 +319,7 @@ On Windows, if VS Code does not automatically recognise Git Bash as a command li
 installing VS Code extension "Start git-bash" should help (to view available and installed extensions,
 go to `View > Extensions` from the top-level menu).
 
-![*Git Bash extension for VS Code on Window*](fig/vscode-gitbash-extension.png){ alt-text="Git Bash extension for VS Code on Windows" .image-with-shadow }
+![*Git Bash extension for VS Code on Windows*](fig/vscode-gitbash-extension.png){alt="Git Bash extension for VS Code on Windows" .image-with-shadow }
 
 To check the command line integration and that VS Code knows about different command line terminal(s) installed
 on your system select "Terminal -> New Terminal" from the top level menu.
@@ -343,7 +343,7 @@ to make your Git experience in VS Code better:
 - GitLense - Git Supercharged (adds a few nice additions to Git support in VS Code)
 - Git Graph (provides nice graphs and visualisations of a Git repository in VS Code)
 
-![*GitLens and Git Graph extensions for VS Code*](fig/vscode-git-extensions.png){ alt-text="GitLens and Git Graph extensions for VS Code" .image-with-shadow }
+![*GitLens and Git Graph extensions for VS Code*](fig/vscode-git-extensions.png){alt="GitLens and Git Graph extensions for VS Code" .image-with-shadow }
 
 ### Python integration in VS Code
 
@@ -357,7 +357,7 @@ Python 3 you installed.
 You should also install the Python extension for VS Code by Microsoft (from `View > Extensions` top-level menu)
 to make your Python experience in VS Code better.
 
-![*Python extension for VS Code by Microsoft*](fig/vscode-python-extension.png){ alt-text="Python extension for VS Code by Microsoft" .image-with-shadow }
+![*Python extension for VS Code by Microsoft*](fig/vscode-python-extension.png){alt="Python extension for VS Code by Microsoft" .image-with-shadow }
 
 
 ### VS Code extensions for viewing data
@@ -367,7 +367,7 @@ You should install the following extensions for viewing and editing data in VS C
 - Excel Viewer - custom editor and previewer for CSV files and Excel spreadsheets
 - JSON - custom editor and previewer for JSON files
 
-![*CSV and JSON data editor and viewer extensions for VS Code*](fig/vscode-data-viewer-extensions.png){ alt-text="CSV and JSON data editor and viewer extensions for VS Code" .image-with-shadow }
+![*CSV and JSON data editor and viewer extensions for VS Code*](fig/vscode-data-viewer-extensions.png){alt="CSV and JSON data editor and viewer extensions for VS Code" .image-with-shadow }
 
 
 ## Spacewalks data and analysis code {id="spacewalks"}
