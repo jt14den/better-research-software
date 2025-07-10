@@ -211,6 +211,27 @@ This is not a handicap, but rather helpful, since scientific code can have vast 
 Git to track and store (GBs ot TBs of space telescope data) or require sensitive information we cannot share
 (for example, medical records).
 
+Before we commit his inital version, we should try to run it. This is often the first thing you might do upon recieving someone's code.
+
+```bash
+$ python3 my\ code\ v2.py
+```
+
+You will get an error that looks something like the following:
+
+```output
+Traceback (most recent call last):
+  File "/Users/USERNAME/Downloads/spacewalks/my code v2.py", line 2, in <module>
+    data_f = open('/home/sarah/Projects/ssi-ukrn-fair-course/data.json', 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sarah/Projects/ssi-ukrn-fair-course/data.json'
+```
+
+We get this error because the paths to the data files have been hard coded as absoulte paths for the original developer's machine.
+Hard-coding paths is not very reproducible, as it means the paths need to be changed whenever the code is run on a new computer.
+Instead, we will soon change the code to use the relative paths within the project structure and eventually we will change the code to take in arguments from the command line when it is run.
+When we commit the files, we will note that the code is broken in our commit message.
+This is a best practice if you decide to commit broken code.
+
 ### Add files into repository
 
 We can tell Git to track a file using `git add`:
@@ -242,7 +263,9 @@ A commit is a snapshot of how your tracked files have changed at a stage in time
 To create a commit that records we added two new files, we need to run one more command:
 
 ```bash
-$ git commit -m "Add the initial spacewalks data and code"
+$ git commit -m "Add the initial spacewalks data and code
+
+BREAKING CHANGE: Path to data is hard coded and needs to be fixed"
 ```
 
 ```output
