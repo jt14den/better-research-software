@@ -52,7 +52,7 @@ This course assumes the prior knowledge of and does not focus on teaching:
 
 # Acknowledgements
 
-This course was originally developed by the [UK's Software Sustainability Institute][ssi] and funded by the [UK Reproducibility Network (UKRN)](https://www.ukrn.org/).
+This course was originally developed by the [UK's Software Sustainability Institute][ssi] and funded by the [UK Reproducibility Network (UKRN)][ukrn].
 See [CITATION.cff](./CITATION.cff) for the full list of authors. 
 
 [ssi]: https:/www.software.ac.uk
