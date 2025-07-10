@@ -57,7 +57,7 @@ https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-corr
 
 ## Why use software testing?
 
-Adopting software testing as part of our research workflow helps us to produce **better software** and conduct **better research**:
+Including testing in our research workflow helps us to produce **better software** and conduct **better research**:
 
 - Software testing can help us be more productive as it helps us to identify and fix problems with our code early and
   quickly and allows us to demonstrate to ourselves and others that our
