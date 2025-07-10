@@ -32,13 +32,6 @@ produces can be trusted and others can build upon it with confidence.
 Let's begin by creating a new software project from our existing code,
 and start tracking changes to it with version control.
 
-::: instructor
-
-At this point, the downloaded code to start working with in this episode should be as in:
-https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/04-version-control.
-
-:::
-
 ## From script to software project 
 
 In the previous episode you have unzipped `spacewalks.zip` into a directory `spacewalks` in your home directory.
@@ -512,7 +505,8 @@ This command tells Git to update the "main" branch on the "origin" remote.
 The `-u` flag (short for `--set-upstream`) sets the 'tracking reference' for the current branch,
 so that in future `git push` will default to sending to `origin main`.
 
-### Summary
+
+## Summary
 
 We have created a new software project and used version control system Git to track changes to it. 
 We can now look back at our work, compare different code versions, and even recover past states.
@@ -527,6 +521,15 @@ and even for other people to pick up our work.
 Before we start making changes to the code, we have to set up a development environment with software dependencies 
 for our project to ensure this metadata about our project is recorded and shared with anyone wishing to download, run or extend our 
 software (and this includes ourselves on a different machine or operating system).
+
+:::::: spoiler
+
+### Code state
+
+At this point, the code in your local software project's directory should be as in:
+https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment.
+
+:::
 
 
 ## Further reading
