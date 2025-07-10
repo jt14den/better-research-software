@@ -190,6 +190,19 @@ by checking the path using the command `which`:
 (venv_spacewalks) $ which python3
 ```
 
+:::::::::::::::::::::::::::::::::::::::::: caution
+
+#### Environment Variables
+Some learners encounter problems at this stage, where system-level packages are still used by Python instead of the versions installed into the virtual environment.
+Previous participants solved the problem by unsetting the `PYTHONPATH` and `PYTHONSTARTUP` environment variables before creating the virtual environment for the project:
+
+```bash
+$ unset PYTHONPATH PYTHONSTARTUP
+$ python3 -m venv ./venv_spacewalks
+```
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 When you’re done working on your project, you can exit the environment with:
 
 ```bash
