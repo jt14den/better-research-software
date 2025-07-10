@@ -875,7 +875,7 @@ Do not forget to commit any uncommitted changes you may have and then push your 
 Good code readability brings many benefits to software development. It makes code easier to understand, maintain, and 
 debug. This benefits collaborators and future developers as well as the original author. Readable code reduces the 
 risk of errors, speeds up onboarding of new team members, and simplifies code reviews. It also supports long-term 
-sustainability, as clear code is more adaptable to change and easier to extend or refactor over time.
+sustainability, as clear code is more adaptable and easier to extend or refactor over time.
 
 :::::: spoiler
 
