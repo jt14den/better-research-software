@@ -211,7 +211,7 @@ This is not a handicap, but rather helpful, since scientific code can have vast 
 Git to track and store (GBs ot TBs of space telescope data) or require sensitive information we cannot share
 (for example, medical records).
 
-Before we commit his inital version, we should try to run it. This is often the first thing you might do upon recieving someone's code.
+Before we commit this inital version, we should try to run it. This is often the first thing you might do upon recieving someone's code.
 
 ```bash
 $ python3 my\ code\ v2.py
