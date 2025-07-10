@@ -649,7 +649,7 @@ Remember to commit your latest changes:
 
 ## Summary
 
-A good code and software directory structure helps keep a project organised, making it easier to navigate, understand, 
+A good directory structure helps keep a project organised, making it easier to navigate, understand, 
 and maintain. It promotes clear separation of concerns, so related files and components are grouped logically, 
 which simplifies development and reduces the chance of errors. A well-structured project also supports collaboration, 
 as new contributors can more easily find what they need, and it enables smoother scaling, testing, and deployment as the codebase grows.
