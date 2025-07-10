@@ -69,10 +69,8 @@ Including testing in our research workflow helps us to produce **better software
   capture the expected behaviour of our code and can be used alongside documentation to help other developers
   quickly make sense of our code. In addition, a well tested codebase allows developers to experiment with new
   features safe in the knowledge that tests will reveal if their changes have broken any existing functionality.
-- Software testing underpins the **FAIR process** by giving us the
-  confidence to engage in open research practices - if we are not sure that our code works as intended and produces accurate
-  results, we are unlikely to feel confident about sharing our code with
-  others. Software testing brings piece of mind by providing a
+- By demonstrating that our code works as expected and produces accurate results, software testing can give us the confidence to share our code with others.
+  Software testing brings peace of mind by providing a
   step-by-step approach that we can apply to verify that our code is
   correct.
 
