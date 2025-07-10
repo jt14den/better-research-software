@@ -472,7 +472,7 @@ project dependencies and configurations, preventing conflicts between projects.
 They support reproducibility, making it much easier to recreate the same setup across different machines or for other
 team members, which helps with collaboration and consistency.
 They allow us to share or deploy our environment setup easily, often as a single configuration file.
-They promote "cleaner" way of working and avoid polluting the global system environment with project-specific tools and packages.
+They promote a "cleaner" way of working and avoid polluting the global system environment with project-specific tools and packages.
 
 In the next episode we will inspect our software in more detail and see how we can improve it further.
 
