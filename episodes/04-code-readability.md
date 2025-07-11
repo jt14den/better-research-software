@@ -323,8 +323,8 @@ import datetime as dt
 import matplotlib.pyplot as plt
 
 # https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 
