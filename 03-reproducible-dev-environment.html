@@ -238,6 +238,7 @@
 <li><a href="#what-are-virtual-software-environments">What are virtual software environments?</a></li>
 <li><a href="#managing-virtual-environments">Managing virtual environments</a></li>
 <li><a href="#running-the-code-and-reproducing-results">Running the code and reproducing results</a></li>
+<li><a href="#summary">Summary</a></li>
 <li><a href="#further-reading">Further reading</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -357,7 +358,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reproducible software environments</h1>
-        <p>Last updated on 2025-07-01 |
+        <p>Last updated on 2025-07-11 |
 
         <a href="https://github.com/softwaresaved/fair-research-software/edit/main/episodes/03-reproducible-dev-environment.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -394,10 +395,25 @@ using <code>venv</code> and <code>pip</code>.</li>
 </div>
 </div>
 </div>
-
 <p>So far we have created a local Git repository to track changes in our
 software project and pushed it to GitHub to enable others to see and
 contribute to it. We now want to start developing the code further.</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Code state
+  </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>At this point, the code in your local software project’s directory
+should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment</a></p>
+</div>
+</div>
+</div>
+</div>
 <section><h2 class="section-heading" id="software-dependencies">Software dependencies<a class="anchor" aria-label="anchor" href="#software-dependencies"></a></h2>
 <hr class="half-width"><p>If we have a look at our script, we may notice a few
 <code>import</code> lines such as: <code>import json</code>,
@@ -873,14 +889,57 @@ automatically converts <code>\u0092</code> into the shorter
 <p>The fact that different systems have different defaults, which can
 change or even break your code’s behaviour, shows why it is so important
 to make our code’s requirements explicit!</p>
-<p>We can easily fix this by explicitly telling Python what encoding to
-use when reading and writing our files:</p>
-<pre><code><span><span class="va">data_f</span> <span class="op">=</span> <span class="fu">open</span><span class="op">(</span><span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span><span class="op">)</span></span>
-<span><span class="va">data_t</span> <span class="op">=</span> <span class="fu">open</span><span class="op">(</span><span class="st">'./eva-data.csv'</span>,<span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span><span class="op">)</span></span></code></pre>
+<p>We can fix this by explicitly telling Python what encoding to use
+when reading and writing our files (and you should do this even if you
+have not had the encoding error when running the code - it is good
+practice and otherwise it may catch you the next time you run the code
+on a different platform):</p>
+<div class="codewrapper sourceCode" id="cb24">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>...</span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>data_f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.json'</span>, <span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'ascii'</span>)</span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>data_t <span class="op">=</span> <span class="bu">open</span>(<span class="st">'./eva-data.csv'</span>,<span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a>...</span></code></pre>
+</div>
+<p>Remember to commit these latest changes.</p>
+<div class="codewrapper sourceCode" id="cb25">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git add eva_data_analysis.py</span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Specify data encoding"</span></span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git push origin main</span></code></pre>
+</div>
 <p>Do not foget to commit any files that have been changed.</p>
-<p>Now we have the code running in a virtual environment, in the next
-episode we will inspect it in more detail, to see if we can understand
-and improve it.</p>
+</section><section><h2 class="section-heading" id="summary">Summary<a class="anchor" aria-label="anchor" href="#summary"></a></h2>
+<hr class="half-width"><p>We have our code running in its own virtual environment.</p>
+<p>Virtual development environments provide significant benefits for
+software development by allowing developers to isolate project
+dependencies and configurations, preventing conflicts between projects.
+They support reproducibility, making it much easier to recreate the same
+setup across different machines or for other team members, which helps
+with collaboration and consistency. They allow us to share or deploy our
+environment setup easily, often as a single configuration file. They
+promote a “cleaner” way of working and avoid polluting the global system
+environment with project-specific tools and packages.</p>
+<p>In the next episode we will inspect our software in more detail and
+see how we can improve it further.</p>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Code state
+  </h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div class="accordion-body">
+<p>At this point, the code in your local software project’s directory
+should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability</a>.</p>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="further-reading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a></h2>
 <hr class="half-width"><p>We recommend the following resources for some additional reading on
 the topic of this episode:</p>
@@ -970,8 +1029,8 @@ any links that you are not going to use.
   "url": "https://softwaresaved.github.io/fair-research-software/03-reproducible-dev-environment.html",
   "identifier": "https://softwaresaved.github.io/fair-research-software/03-reproducible-dev-environment.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2025-07-01",
-  "datePublished": "2025-07-08"
+  "dateModified": "2025-07-11",
+  "datePublished": "2025-07-11"
 }
 
   </script><script>
