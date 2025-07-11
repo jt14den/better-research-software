@@ -373,7 +373,7 @@ You should install the following extensions for viewing and editing data in VS C
 ## Spacewalks data and analysis code {id="spacewalks"}
 
 As part of the course, you may receive the `spacewalks.zip` archive from your instructors via email, which contains data and code to be used for 
-examples and exercises throughout the course. Alternatively, you can download the [`spacewalks.zip` archive](https://github.com/carpentries-incubator/fair-research-software/raw/refs/heads/main/learners/spacewalks.zip)
+examples and exercises throughout the course. Alternatively, you can download the [`spacewalks.zip` archive](https://github.com/carpentries-incubator/better-reseach-software/raw/refs/heads/main/learners/spacewalks.zip)
 from GitHub.
 
 The archive contains [NASA's open data on spacewalks](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/data_preview)
