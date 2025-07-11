@@ -15,13 +15,13 @@ The course can be delivered over 2 full or 4 half days.
 
 The accompanying [slides](https://docs.google.com/presentation/d/1KahaD7EGxJWXaCDKWAG6Wva4a9zo9Lp-qFyyofgM0vw/edit?usp=sharing) to aid with course delivery are also available.
 
-Launch this lesson on myBinder! 👉 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/carpentries-incubator/fair-research-software/HEAD?urlpath=rstudio)
+Launch this lesson on myBinder! 👉 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/carpentries-incubator/better-research-software/HEAD?urlpath=rstudio)
 
 ## Contributing
 
 Please see the [CONTRIBUTING.md](CONTRIBUTING.md) for contributing guidelines and details on how to get involved with this project.
 
-Also see the current list of [issues](https://github.com/softwaresaved/fair-research-software/issues)
+Also see the current list of [issues](https://github.com/softwaresaved/better-research-software/issues)
 for ideas for contributing to this training curriculum. Look for the tag ![good_first_issue](https://img.shields.io/badge/-good%20first%20issue-gold.svg).
 This indicates that the issue does not require in-depth knowledge of the project
 and lesson infrastructure,
