@@ -27,7 +27,7 @@ life_cycle: 'beta'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/softwaresaved/better-research-software'
+source: 'https://github.com/carpentries-incubator/better-research-software'
 
 # Default branch of your lesson
 branch: 'main'
