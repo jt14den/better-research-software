@@ -210,7 +210,7 @@ a. Edit the code as follows to use descriptive (and consistent) variable names:
     - Change `data_t` to `output_file`
     - Change `g_file` to `graph_file`
 
-    *Be sure to change all the occurances of eac variable name.*
+    *Be sure to change all the occurrences of each variable name.*
 b. What other variable names in our code would benefit from renaming? 
 c. Commit your changes to your repository. Remember to use an informative commit message.
 
