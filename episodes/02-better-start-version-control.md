@@ -32,20 +32,13 @@ produces can be trusted and others can build upon it with confidence.
 Let's begin by creating a new software project from our existing code,
 and start tracking changes to it with version control.
 
-::: instructor
-
-At this point, the downloaded code to start working with in this episode should be as in:
-https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/04-version-control.
-
-:::
-
 ## From script to software project 
 
 In the previous episode you have unzipped `spacewalks.zip` into a directory `spacewalks` in your home directory.
 If you have not opened the software directory in VS Code already – go to **File -> Open Folder** and find `spacewalks`.
 
 We also need access to a command line terminal to type various commands. In VS Code start a new terminal 
-via **Terminal -> New Terminal** (Windows users need to make sure the new terminal is "GitBash"; not "PowerShell" nor "cdm"). 
+via **Terminal -> New Terminal** (Windows users need to make sure the new terminal is "GitBash"; not "PowerShell" or "cmd"). 
 Alternatively, you can work with a shell terminal directly (and not within VS Code), if you so prefer.
 
 If you are not already inside this directory, from your command line terminal you can navigate to it and list its 
@@ -55,18 +48,27 @@ contents with:
 cd ~/spacewalks
 ls -la
 total 272
-drwx------@  4 mbassan2  staff     128 28 May 20:06 .
-drwxr-x---+ 66 mbassan2  staff    2112 28 May 20:07 ..
--rw-rw-r--@  1 mbassan2  staff  132981  4 Apr 10:48 data.json
--rw-rw-r--@  1 mbassan2  staff    1518  4 Apr 10:48 my code v2.py
+drwx------@   5 mbassan2  staff     160 26 Jun 11:35 .
+drwx------@ 489 mbassan2  staff   15648 26 Jun 11:41 ..
+drwxrwxr-x@   4 mbassan2  staff     128  4 Apr 10:48 astronaut-data-analysis-old
+-rw-rw-r--@   1 mbassan2  staff  132981  4 Apr 10:48 data.json
+-rw-rw-r--@   1 mbassan2  staff    1518  4 Apr 10:48 my code v2.py
 ```
 
 Over the rest of the course, we will transform a collection of these files into a well-structured software project that 
 follows established good practices in research software engineering.
 
+The first thing you may notice that our software project contains folder `astronout-data-analysis-old` which presumably tries to keep track
+of older versions of the code. There is a better way to do that using version control tool, such as Git, and we can delete 
+this folder so it does not cause confusion:
+
+```bash
+rm -r astronaut-data-analysis-old
+```
+
 ## Version control
 
-Before we start making changes to our code, let's make sure we can keep a history of what changes we have done since 
+Before we do any further changes to our software, we want to make sure we can keep a history of what changes we have done since 
 we inherited the code from our colleague.
 
 We can track changes with version control. Later on, we will store those changes on a remote server too --
@@ -120,7 +122,7 @@ Git stores files in **repositories** - directories where changes to the files ca
 The diagram below shows the different parts of a Git repository,
 and the most common commands used to work with one.
 
-![Software development lifecycle with Git](episodes/fig/ep03_fig05-git-lifecycle.svg){alt='Software development lifecycle with Git showing Git commands and flow of data between components of a Git system, including working directory, staging area, local and remote repository'}
+![Software development lifecycle with Git](fig/ep02_fig05-git-lifecycle.svg){alt='Software development lifecycle with Git showing Git commands and flow of data between components of a Git system, including working directory, staging area, local and remote repository'}
 
 - **Working directory** - a local directory (including any subdirectories) where your project files live,
   and where you are currently working.
@@ -202,6 +204,27 @@ This is not a handicap, but rather helpful, since scientific code can have vast 
 Git to track and store (GBs ot TBs of space telescope data) or require sensitive information we cannot share
 (for example, medical records).
 
+Before we commit this inital version, we should try to run it. This is often the first thing you might do upon recieving someone's code.
+
+```bash
+$ python3 my\ code\ v2.py
+```
+
+You will get an error that looks something like the following:
+
+```output
+Traceback (most recent call last):
+  File "/Users/USERNAME/Downloads/spacewalks/my code v2.py", line 2, in <module>
+    data_f = open('/home/sarah/Projects/ssi-ukrn-fair-course/data.json', 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sarah/Projects/ssi-ukrn-fair-course/data.json'
+```
+
+We get this error because the paths to the data files have been hard coded as absoulte paths for the original developer's machine.
+Hard-coding paths is not very reproducible, as it means the paths need to be changed whenever the code is run on a new computer.
+Instead, we will soon change the code to use the relative paths within the project structure and eventually we will change the code to take in arguments from the command line when it is run.
+When we commit the files, we will note that the code is broken in our commit message.
+This is a best practice if you decide to commit broken code.
+
 ### Add files into repository
 
 We can tell Git to track a file using `git add`:
@@ -233,7 +256,9 @@ A commit is a snapshot of how your tracked files have changed at a stage in time
 To create a commit that records we added two new files, we need to run one more command:
 
 ```bash
-$ git commit -m "Add the initial spacewalks data and code"
+$ git commit -m "Add the initial spacewalks data and code
+
+BREAKING CHANGE: Path to data is hard coded and needs to be fixed"
 ```
 
 ```output
@@ -330,7 +355,7 @@ $ git mv my\ code\ v2.py my_code_v2.py
 
 If you run `git status` again, you'll see Git has noticed the change in the filename.
 Note, `git mv` handles the name change directly, instead of seeing a deleted file and a new file as would be the case if we'd used `mv` and then `git add`.
-It also stages the changes to be commited.
+It also stages the changes to be committed.
 
 ```bash
 $ git status
@@ -343,7 +368,6 @@ Changes to be committed:
 	renamed:    my code v2.py -> my_code_v2.py
 ```
 
-
 ### Rename our data and output files
 
 Now that we know how to rename files in Git,
@@ -351,19 +375,21 @@ we can use it to make our files and code a bit easier to understand.
 
 We may want to:
 
-1. Give our script and input data file more meaningful names, e.g `eva_data_analysis.py` and `eva-data.json`. This change also uses removes version tracking from the script name as we are using git for version control
+1. Give our script and input data file more meaningful names, e.g `eva_data_analysis.py` and `eva-data.json`. This change also uses removes version tracking from the script name as we are using Git for version control
 any more as Git will keep track of that for us.
 2. Choose informative file names for our output data file (e.g. `eva-data.csv`) and plot (`cumulative_eva_graph.png`).
-3. Update the python script with these changes
+3. Use relative paths (e.g. `./eva-data.json`) instead of absolute paths (e.g. `home/sarah/Projects/ssi-ukrn-fair-course/data.csv`) to the files (which were hardcoded to the path on our colleagues machine and would not work on ours).
+4. Update the Python script with these changes.
 
 :::::::::::::::::::::::::::: challenge
 
 #### Update the filenames in the repo
 
 Try to make these changes yourself.
-1. Give our python script and data files informative names `eva_data_analysis.py` and `eva-data.json`, respectively.
-2. Update the filenames used in the script - input json data and output data (to `eva-data.csv` to match the new input data name) and plot(`cumulative_eva_graph.png`).
-3. Stage and commit these changes in the git repository.
+
+1. Give our Python script and input data file informative names - `eva_data_analysis.py` and `eva-data.json`, respectively.
+2. Update other file names and paths used in the script - output CSV data (`eva-data.csv` to match the new input data name) and plot(`cumulative_eva_graph.png`).
+3. Stage and commit these changes in the Git repository.
 
 :::::::::::::: solution
 
@@ -401,7 +427,6 @@ git commit -m "Implement informative file names"
 ::::::::::::::::::::::::::::::::::::::
 
 
-
 ## Interacting with a remote Git server
 
 Git is distributed version control system and lets us synchronise work between multiple copies of the same repository - 
@@ -413,7 +438,7 @@ if we lost our machine then we would lose all our code along with it,
 Fortunately, we can easily upload our **local repository**, with all our code and the history of our development,
 to a remote server so that it can be backed-up and recovered in future.
 
-![Git - distributed version control system, image from W3Docs (freely available)](episodes/fig/git-distributed.png){alt='2 Git repositories belonging to 2 different developers linked to a central repository and one another showing two way flow of information in each link'}
+![Git - distributed version control system, image from W3Docs (freely available)](fig/git-distributed.png){alt='2 Git repositories belonging to 2 different developers linked to a central repository and one another showing two way flow of information in each link'}
 
 [GitHub][github] is an online software development platform that can act as a central remote server.
 It uses Git, and provides facilities for storing, tracking, and collaborating on software projects.
@@ -430,20 +455,20 @@ Let's push our **local repository** to [GitHub](https://github.com) and share it
    there is a menu labelled "+" with a dropdown.
    Click the dropdown and select "New repository" from the options:
 
-   ![*Creating a new GitHub repository*](fig/ep03_fig01-create_new_repo.jpg){ alt-text="Selecting the 'New repository' option from GitHub's dropdown menu" .image-with-shadow }
+   ![*Creating a new GitHub repository*](fig/ep02_fig01-create_new_repo.png){alt="Selecting the 'New repository' option from GitHub's dropdown menu" .image-with-shadow }
 
 3. You will be presented with some options to fill in or select while creating your repository.
    In the "Repository Name" field, type "spacewalks".
    This is the name of your project and matches the name of your local folder.
 
-   ![*Naming the GitHub repository*](fig/ep03_fig02-repository_name.png){ alt-text="Setting the name of the repository on GitHub" .image-with-shadow }
+   ![*Naming the GitHub repository*](fig/ep02_fig02-repository_name.png){alt="Setting the name of the repository on GitHub" .image-with-shadow }
 
    Ensure the visibility of the repository is "Public" and leave all other options blank.
    Since this repository will be connected to a local repository,
    it needs to be empty which is why we chose not to initialise with a README or add a license or `.gitignore` file.
    Click "Create repository" at the bottom of the page:
 
-   ![*Complete GitHub repository creation*](fig/ep03_fig03-create_repository.jpg){ alt-text="Completing the creation of the GitHub repository" .image-with-shadow }
+   ![*Complete GitHub repository creation*](fig/ep02_fig03-create_repository.png){alt="Completing the creation of the GitHub repository" .image-with-shadow }
 
 4. Now we have a  **remote repository** on GitHub's servers,
    you need to send it the files and history from your **local repository**.
@@ -465,7 +490,7 @@ Let's push our **local repository** to [GitHub](https://github.com) and share it
    You can copy these commands using the button that looks like two overlapping squares to the right-hand side of the commands.
    Paste them into your terminal and run them.
 
-  ![*Copy the commands to sync the local and remote repositories*](fig/ep03_fig04-copy_commands.jpg){ alt-text="Copying the commands to sync the local and remote repositories" .image-with-shadow }
+  ![*Copy the commands to sync the local and remote repositories*](fig/ep02_fig04-copy_commands.png){alt="Copying the commands to sync the local and remote repositories" .image-with-shadow }
 
 5. If you refresh your browser window,
    you should now see the two files `eva_data_analysis.py` and `eva-data.json` visible in the GitHub repository,
@@ -503,7 +528,8 @@ This command tells Git to update the "main" branch on the "origin" remote.
 The `-u` flag (short for `--set-upstream`) sets the 'tracking reference' for the current branch,
 so that in future `git push` will default to sending to `origin main`.
 
-### Summary
+
+## Summary
 
 We have created a new software project and used version control system Git to track changes to it. 
 We can now look back at our work, compare different code versions, and even recover past states.
@@ -518,6 +544,15 @@ and even for other people to pick up our work.
 Before we start making changes to the code, we have to set up a development environment with software dependencies 
 for our project to ensure this metadata about our project is recorded and shared with anyone wishing to download, run or extend our 
 software (and this includes ourselves on a different machine or operating system).
+
+:::::: spoiler
+
+### Code state
+
+At this point, the code in your local software project's directory should be as in:
+https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment.
+
+:::
 
 
 ## Further reading

@@ -30,7 +30,7 @@ The purpose of software documentation is to communicate other important informat
 about our software (its purpose, dependencies, how to install and run it, etc.) to the people who need it – 
 both users and developers.   
 
-::: callout
+::: spoiler
 
 ### Activate your virtual environment
 If it is not already active, make sure to activate your virtual environment from the root of
@@ -43,12 +43,15 @@ the software project directory:
 ```
 :::
 
-:::::: instructor
+:::::: spoiler
+
+### Code state
 
 At this point, the code in your local software project's directory should be as in:
-https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/09-code-documentation.
+https://github.com/carpentries-incubator/bbrs-software-project/tree/07-software-documentation.
 
 ::::::
+
 
 ## Why document our software?
 
@@ -874,8 +877,6 @@ How does the content and language of our example tutorial differ from our exampl
 :::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::
 
-
-
 Do not forget to commit any uncommitted changes you may have and then push your work to GitHub.
 
 ```bash
@@ -883,6 +884,24 @@ Do not forget to commit any uncommitted changes you may have and then push your 
 (venv_spacewalks) $ git commit -m "Your commit message"
 (venv_spacewalks) $ git push origin main
 ```
+
+## Summary
+
+In this episode we have highlighted the importance of software project documentation (e.g. README, license, and citation files) 
+in making research code understandable, reusable, and reproducible. 
+
+We have also explored tools and formats for delivering tutorials, how-to guides, and reference materials - 
+like Markdown files, Wikis, and static site generators (e.g. MkDocs) - and highlighted the Diátaxis framework for 
+structuring documentation effectively.
+
+:::::: spoiler
+
+### Code state
+
+At this point, the code in your local software project's directory should be as in:
+https://github.com/carpentries-incubator/bbrs-software-project/tree/08-open-collaboration
+
+::::::
 
 ## Further reading
 

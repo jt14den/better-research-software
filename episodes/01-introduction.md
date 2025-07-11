@@ -175,7 +175,7 @@ This is a (non-exhaustive) list of things that could be fixed/improved with our 
 - the code does not specify the encoding when reading the data in, and we are also not sure what encoding the data was saved in originally
 - how can we be confident the data analysis and plot that is produced as a result are correct?
 
-#### documentation
+#### Documentation
 
 - there is no README documentation to orient the user
 - there is no licence information to say how the code can be reused (which then means it cannot be reused at all)

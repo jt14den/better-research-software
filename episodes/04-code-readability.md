@@ -39,7 +39,7 @@ what I have written here?"
 
 In this episode, we will learn a few specific software best practices we can follow to help create more readable code. 
 
-::: callout
+::: spoiler
 
 ### Activate your virtual environment
 If it is not already active, make sure to activate your virtual environment from the root of
@@ -52,10 +52,12 @@ $ source venv_spacewalks/Scripts/activate # Windows
 ```
 :::
 
-::: instructor
+:::::: spoiler
+
+### Code state
 
 At this point, the code in your local software project's directory should be as in:
-https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/06-code-readability.
+https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability.
 
 :::
 
@@ -77,8 +79,8 @@ import datetime as dt
 import matplotlib.pyplot as plt
 
 # https://data.nasa.gov/resource/eva.json (with modifications)
-data_f = open('./eva-data.json', 'r')
-data_t = open('./eva-data.csv','w')
+data_f = open('./eva-data.json', 'r', encoding='ascii')
+data_t = open('./eva-data.csv','w', encoding='utf-8')
 g_file = './cumulative_eva_graph.png' 
 
 
@@ -224,29 +226,29 @@ a.
     import csv
     import datetime as dt
     import matplotlib.pyplot as plt
-
+    
     # https://data.nasa.gov/resource/eva.json (with modifications)
-    input_file = open('./eva-data.json', 'r')
-    output_file = open('./eva-data.csv', 'w')
+    input_file = open('./eva-data.json', 'r', encoding='ascii')
+    output_file = open('./eva-data.csv', 'w', encoding='utf-8')
     graph_file = './cumulative_eva_graph.png'
-
-
+    
+    
     fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
-
+    
     data=[]
-
+    
     for i in range(374):
         line=input_file.readline()
         print(line)
         data.append(json.loads(line[1:-1]))
     #data.pop(0)
     ## Comment out this bit if you don't want the spreadsheet
-
+    
     w=csv.writer(output_file)
-
+    
     time = []
     date =[]
-
+    
     j=0
     for i in data:
         print(data[j])
@@ -264,17 +266,17 @@ a.
                 if 'date' in data[j].keys():
                     date.append(dt.datetime.strptime(data[j]['date'][0:10], '%Y-%m-%d'))
                     #date.append(data[j]['date'][0:10])
-
+    
                 else:
                     time.pop(0)
         j+=1
-
+    
     t=[0]
     for i in time:
         t.append(t[-1]+i)
-
+    
     date,time = zip(*sorted(zip(date, time)))
-
+    
     plt.plot(date,t[1:], 'ko-')
     plt.xlabel('Year')
     plt.ylabel('Total time spent in space to date (hours)')
@@ -294,6 +296,97 @@ c.
 :::
 ::::::
 
+
+## Remove unused variables and imports
+
+Unused variables or import statements can cause confusion about what the code is doing, making it harder to 
+read and easier to introduce mistakes. Such things may seem harmless as they do not cause immediate syntax errors - but 
+they can potentially lead to subtle program logic errors, unexpected behavior, wrong results and issues later on - 
+making them especially tricky to detect and fix. Over time, this makes the codebase more fragile and harder to maintain and extend.
+
+:::::: challenge
+
+### Remove an unused variable
+
+Find and remove an unused variable in our code.
+
+::: solution
+
+Variable `fieldnames` (containing column names for CSV data file) is defined but never used in the code - it should be deleted. 
+
+Updated code:
+
+```python
+import json
+import csv
+import datetime as dt
+import matplotlib.pyplot as plt
+
+# https://data.nasa.gov/resource/eva.json (with modifications)
+input_file = open('./eva-data.json', 'r')
+output_file = open('./eva-data.csv', 'w')
+graph_file = './cumulative_eva_graph.png'
+
+
+data=[]
+
+for i in range(374):
+    line=input_file.readline()
+    print(line)
+    data.append(json.loads(line[1:-1]))
+#data.pop(0)
+## Comment out this bit if you don't want the spreadsheet
+
+w=csv.writer(output_file)
+
+time = []
+date =[]
+
+j=0
+for i in data:
+    print(data[j])
+    # and this bit
+    w.writerow(data[j].values())
+    if 'duration' in data[j].keys():
+        tt=data[j]['duration']
+        if tt == '':
+            pass
+        else:
+            t=dt.datetime.strptime(tt,'%H:%M')
+            ttt = dt.timedelta(hours=t.hour, minutes=t.minute, seconds=t.second).total_seconds()/(60*60)
+            print(t,ttt)
+            time.append(ttt)
+            if 'date' in data[j].keys():
+                date.append(dt.datetime.strptime(data[j]['date'][0:10], '%Y-%m-%d'))
+                #date.append(data[j]['date'][0:10])
+
+            else:
+                time.pop(0)
+    j+=1
+
+t=[0]
+for i in time:
+    t.append(t[-1]+i)
+
+date,time = zip(*sorted(zip(date, time)))
+
+plt.plot(date,t[1:], 'ko-')
+plt.xlabel('Year')
+plt.ylabel('Total time spent in space to date (hours)')
+plt.tight_layout()
+plt.savefig(graph_file)
+plt.show()
+```
+
+Commit changes:
+```bash
+(venv_spacewalks) $ git add eva_data_analysis.py
+(venv_spacewalks) $ git commit -m "Remove unused variable fieldname"
+```
+
+:::
+::::::
+
 ## Use standard libraries
 
 Our script currently reads the data line-by-line from the JSON data file and uses custom code to manipulate
@@ -309,7 +402,7 @@ data in data frames.
 First, we need to install this dependency into our virtual environment (which should be active at this point).
 
 ```bash
-(venv_spacewalks) $ python -m pip install pandas
+(venv_spacewalks) $ python3 -m pip install pandas
 ```
 
 Then we will edit the code to use pandas. For the sake of time in the workshop, we will give you the updated code.
@@ -320,8 +413,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Data source: https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 eva_df = pd.read_json(input_file, convert_dates=['date'])
@@ -353,7 +446,7 @@ changes. Remember to use an informative commit message.
 Make sure to capture the changes to your virtual development environment too.
 
 ```bash
-(venv_spacewalks) $ python -m pip freeze > requirements.txt
+(venv_spacewalks) $ python3 -m pip freeze > requirements.txt
 (venv_spacewalks) $ git add requirements.txt
 (venv_spacewalks) $ git commit -m "Added Pandas library."
 (venv_spacewalks) $ git push origin main
@@ -442,8 +535,8 @@ import pandas as pd
 
 
 # https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 print("--START--")
@@ -546,8 +639,8 @@ def write_dataframe_to_csv(df, output_file):
 
 print("--START--")
 
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 # Read the data from JSON file
@@ -654,7 +747,7 @@ def read_json_to_dataframe(input_file):
     Clean the data by removing any incomplete rows and sort by date
 
     Args:
-        input_file_ (str): The path to the JSON file.
+        input_file (str): The path to the JSON file.
 
     Returns:
          eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
@@ -714,7 +807,7 @@ def read_json_to_dataframe(input_file):
     Clean the data by removing any incomplete rows and sort by date
 
     Args:
-        input_file_ (str): The path to the JSON file.
+        input_file (str): The path to the JSON file.
 
     Returns:
          eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
@@ -749,8 +842,8 @@ def write_dataframe_to_csv(df, output_file):
 
 print("--START--")
 
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
+input_file = open('./eva-data.json', 'r', encoding='ascii')
+output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
 # Read the data from JSON file
@@ -782,6 +875,21 @@ Do not forget to commit any uncommitted changes you may have and then push your 
 (venv_spacewalks) $ git push origin main
 ```
 
+## Summary
+
+Good code readability brings many benefits to software development. It makes code easier to understand, maintain, and 
+debug. This benefits collaborators and future developers as well as the original author. Readable code reduces the 
+risk of errors, speeds up onboarding of new team members, and simplifies code reviews. It also supports long-term 
+sustainability, as clear code is more adaptable and easier to extend or refactor over time.
+
+:::::: spoiler
+
+### Code state
+
+At this point, the code in your local software project's directory should be as in:
+https://github.com/carpentries-incubator/bbrs-software-project/tree/05-code-structure.
+
+:::
 
 ## Further reading
 

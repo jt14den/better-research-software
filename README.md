@@ -1,20 +1,21 @@
-[![DOI](https://zenodo.org/badge/699755985.svg)](https://zenodo.org/doi/10.5281/zenodo.12666088)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12666088.svg)](https://zenodo.org/doi/10.5281/zenodo.12666088)
+
 
 # Building Better Research Software
 
 This short course is teaching tools and practices for producing and sharing quality, 
 sustainable and [FAIR (Findable, Accessible, Interoperable and Reusable) research software](https://www.nature.com/articles/s41597-022-01710-x)
 to support open and reproducible research. 
+
+The lesson uses the [the example software project that **does not** follow good research software practices](https://github.com/carpentries-incubator/bbrs-software-project)
+which gradually gets improved over the course of this lesson following the good software practices we teach. 
+The better code the lesson finishes with can be found at [the "final" branch of the software project repository](https://github.com/carpentries-incubator/bbrs-software-project/tree/main/tree/final).
+
 The course can be delivered over 2 full or 4 half days.
-
-The course is visible at: https://carpentries-incubator.github.io/fair-research-software/ and uses [the Markdown lesson template][workbench-markdown-template] from the [The Carpentries Workbench lesson infrastructure][sandpaper-documentation].
-
-The course uses the [software repository with code that does not follow good research software practices](https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-good) 
-and gradually improves it over the course of the lesson. Finally, the improved code that the course finishes with is in the [astronaut-data-analysis-fair repository](https://github.com/carpentries-incubator/astronaut-data-analysis-fair).
 
 The accompanying [slides](https://docs.google.com/presentation/d/1KahaD7EGxJWXaCDKWAG6Wva4a9zo9Lp-qFyyofgM0vw/edit?usp=sharing) to aid with course delivery are also available.
 
-Launch this lesson on mybinder! 👉 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/carpentries-incubator/fair-research-software/HEAD?urlpath=rstudio)
+Launch this lesson on myBinder! 👉 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/carpentries-incubator/fair-research-software/HEAD?urlpath=rstudio)
 
 ## Contributing
 
@@ -30,18 +31,11 @@ To learn more about how this lesson site is built and how you can edit the pages
 
 ## Author(s)
 
-* [Sarah Gibson](https://github.com/sgibson91)
-* [Aman Goel](https://github.com/amangoel185)
-* [Sarah Jaffa](https://github.com/SJaffa)
-* [Kamilla Kopec-Harding](https://github.com/kkh451)
-* [Aleksandra Nenadic](https://github.com/anenadic)
-* [Colin Sauze](https://github.com/colinsauze)
-* [Toby Hodges](https://github.com/tobyhodges)
-* [Sarah Stevens](https://github.com/sstevens2)
+The list of authors of the course is available in [CITATION.cff](CITATION.cff).
 
 ## Maintainer(s)
 
-Current Maintainers of this lesson are:
+Current maintainers of this lesson are:
 
 * [Aleksandra Nenadic](https://github.com/anenadic)
 * [Aman Goel](https://github.com/amangoel185)
@@ -49,10 +43,6 @@ Current Maintainers of this lesson are:
 
 ## Citation
 Gibson, S., Goel, A., Jaffa, S., Kopec-Harding, K., Nenadic, A., & Sauze, C. (2025). Software practices for open and reproducible research (beta-May-2025). Zenodo. https://doi.org/10.5281/zenodo.15490720
-
-Also see the related citation for the helper software project we use in this course:
-
-Aleksandra Nenadic, Kamilla Kopec-Harding et al. (2024). carpentries-incubator/astronaut-data-analysis-fair: alpha-July-2024 (alpha-July-2024). Zenodo. https://doi.org/10.5281/zenodo.12698943
 
 Information on how to cite this work is also available in [CITATION.cff](CITATION.cff).
 
