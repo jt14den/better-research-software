@@ -192,7 +192,8 @@ by checking the path using the command `which`:
 
 :::::::::::::::::::::::::::::::::::::::::: caution
 
-#### Environment Variables
+### Environment Variables
+
 Some learners encounter problems at this stage, where system-level packages are still used by Python instead of the versions installed into the virtual environment.
 Previous participants solved the problem by unsetting the `PYTHONPATH` and `PYTHONSTARTUP` environment variables before creating the virtual environment for the project:
 
