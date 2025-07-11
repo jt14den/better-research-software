@@ -49,3 +49,12 @@ This course assumes the prior knowledge of and does not focus on teaching:
 - Python code syntax or skills (even though Python is used in code examples) 
 - the basic Git workflow
 - how to navigate file systems, manipulate files and invoke Python scripts and tools from a command line terminal/shell.
+
+## Acknowledgements
+
+This course was originally developed by the [UK's Software Sustainability Institute][ssi] and funded by the [UK Reproducibility Network (UKRN)][ukrn].
+See [CITATION.cff][citation] for the full list of authors. 
+
+[ssi]: https:/www.software.ac.uk
+[ukrn]: https://www.ukrn.org/
+[citation]: https://github.com/carpentries-incubator/fair-research-software/blob/main/CITATION.cff
