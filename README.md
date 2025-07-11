@@ -9,7 +9,7 @@ to support open and reproducible research.
 
 The lesson uses the [the example software project that **does not** follow good research software practices](https://github.com/carpentries-incubator/bbrs-software-project)
 which gradually gets improved over the course of this lesson following the good software practices we teach. 
-The better code the lesson finishes with can be found at [the "final" branch of the software project repository](https://github.com/carpentries-incubator/bbrs-software-project/tree/main/tree/final).
+The better code the lesson finishes with can be found at [the "final" branch of the software project repository](https://github.com/carpentries-incubator/bbrs-software-project/tree/final).
 
 The course can be delivered over 2 full or 4 half days.
 
