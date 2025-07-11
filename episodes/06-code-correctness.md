@@ -1,5 +1,5 @@
 ---
-title: "Code correctness & testing"
+title: "Code correctness"
 teaching: 60
 exercises: 30
 ---
@@ -33,7 +33,7 @@ test its functionality and improve it further.
 The goal of software testing is to check that the actual results
 produced by a piece of code meet our expectations, i.e. are correct.
 
-::: callout
+::: spoiler
 
 ### Activate your virtual environment
 If it is not already active, make sure to activate your virtual environment from the root of
@@ -46,17 +46,18 @@ $ source venv_spacewalks/Scripts/activate # Windows
 ```
 :::
 
-:::::: instructor
+:::::: spoiler
+
+### Code state
 
 At this point, the code in your local software project's directory should be as in:
-https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/08-code-correctness.
+https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correcteness.
 
 ::::::
 
 ## Why use software testing?
 
-Adopting software testing as part of our research workflow helps us to
-conduct **better research** and produce **FAIR software**:
+Including testing in our research workflow helps us to produce **better software** and conduct **better research**:
 
 - Software testing can help us be more productive as it helps us to identify and fix problems with our code early and
   quickly and allows us to demonstrate to ourselves and others that our
@@ -68,10 +69,8 @@ conduct **better research** and produce **FAIR software**:
   capture the expected behaviour of our code and can be used alongside documentation to help other developers
   quickly make sense of our code. In addition, a well tested codebase allows developers to experiment with new
   features safe in the knowledge that tests will reveal if their changes have broken any existing functionality.
-- Software testing underpins the FAIR process by giving us the
-  confidence to engage in open research practices - if we are not sure that our code works as intended and produces accurate
-  results, we are unlikely to feel confident about sharing our code with
-  others. Software testing brings piece of mind by providing a
+- By demonstrating that our code works as expected and produces accurate results, software testing can give us the confidence to share our code with others.
+  Software testing brings peace of mind by providing a
   step-by-step approach that we can apply to verify that our code is
   correct.
 
@@ -129,11 +128,9 @@ Fill in the blanks in the sentences below:
 
 ## Informal testing
 
-How should we test our code? 
-One approach is to copy/paste the code or a function into a Python terminal (different from a command line terminal), 
-which allows you to interact with the Python interpreter more directly.  
-From the Python terminal we can then run one function or a piece of code at a time and check that they behave as 
-expected. 
+How should we test our code? One approach is to copy/paste the code or a function into a Python terminal - *different from a command line terminal* - 
+which allows you to interact with the Python interpreter more directly. From the Python terminal we can then run one 
+function or a piece of code at a time and check that they behave as expected. 
 As input to our code/function we are testing, we typically use some input values for which we know what the correct 
 return value should be.
 
@@ -168,7 +165,6 @@ project in a command line terminal.
 This will open an interactive Python terminal for you, which may look like this:
 
 ```python
-(venv_spacewalks) mbassan2@C-U-LOSXQ677L astronaut-data-analysis % python3
 Python 3.11.7 (main, Dec  4 2023, 18:10:11) [Clang 15.0.0 (clang-1500.1.0.2.5)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 
@@ -344,9 +340,11 @@ def text_to_duration(duration):
     ...
 ```
 
-You may notice that our conversion code is wrong - the minutes component should have been divided by 60 and not 6.
-We were able to spot this tiny bug **only by testing our code** (note that just by looking at the result graph there 
-is not way to spot incorrect results).
+You may notice that we have introduced a bug in one of the earlier episodes when we refactored the code - the minutes component should have been divided by 60 and not 6.
+
+This is quite *critical* - our code was running (seemingly) OK (i.e. it did not fail) and was producing the graph which we 
+could not tell was wrong just by looking at it as this was a subtle bug.
+We were only able to uncover this bug **by properly testing our code**.
 
 Let's fix the problematic line and rerun out tests. 
 
@@ -387,6 +385,7 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError
 ```
+Our test is failing again - what is wrong now?
 
 On computer systems, representation of irrational numbers is typically not exact as they do not have an exact binary 
 representation.
@@ -428,7 +427,7 @@ Let’s make sure that our tests are ready to work with `pytest`.
     that start with "test_".
     Our test file already meets these requirements, so there is nothing
     to do here. However, our script does contain lines to run each of
-    our test functions. These are no-longer required as pytest will run
+    our test functions. These are no-longer required as `pytest` will run
     our tests so we can remove them:
 
     ``` python
@@ -504,7 +503,13 @@ function with expected values.
 Similarly, writing inline comments for our tests that complete the sentence "Test that ..." helps us to understand 
 what each test is doing and why it is needed.
 
-Before running out tests with `pytest`, let's reintroduce our old bug in function `text_to_duration` that affects 
+We can now run our tests with `pytest` from our project's root directory (not from the `tests` directory):
+
+``` bash
+(venv_spacewalks) $ python3 -m pytest 
+```
+
+Let's now reintroduce our old bug in function `text_to_duration` that affects 
 the durations with a non-zero minute component like "10:20" but not those that are whole hours, e.g. "10:00":
 
 ```python
@@ -513,7 +518,7 @@ the durations with a non-zero minute component like "10:20" but not those that a
     ...
 ```
 
-Finally, let's run our tests with `pytest` from our project's root directory (and not `tests` directory):
+Let's re-run our tests with `pytest` from our project's root directory (not from the `tests` directory):
 
 ``` bash
 (venv_spacewalks) $ python3 -m pytest 
@@ -816,7 +821,7 @@ Let's run out tests:
 ### Parameterising tests
 
 Looking at out new test functions, we may notice that they do not follow the 
-[“Don't Repeat Yourself principle”][dry-principle] which prevents software - including testing code - 
+[“Don't Repeat Yourself (DRY) principle”][dry-principle] which prevents software - including testing code - 
 from becoming repetitive and too long. 
 In our test code, a small block of code is repeated twice with different input values:
 
@@ -1014,6 +1019,17 @@ know if we break any existing functionality.
 In other words, software testing supports the FAIR software principles by making our code more **accessible** and
 **reusable**.
 
+
+:::::: spoiler
+
+### Code state
+
+At this point, the code in your local software project's directory should be as in:
+https://github.com/carpentries-incubator/bbrs-software-project/tree/07-software-documentation.
+
+::::::
+
+
 ## Further reading
 
 We recommend the following resources for some additional reading on the
@@ -1026,7 +1042,7 @@ topic of this episode:
 -   [The Python Testing and Continuous
     Integration][incubator-python-testing] lesson on The Carpentries
     Incubator by François Michonneau
--   [Test Driven Development][[york-tdd-blog] (University of York
+-   [Test Driven Development][york-tdd-blog] (University of York
     Research Coding Club Blog Post) by Peter Hill and Stephen Biggs-Fox
 -   [Automated testing - Preventing yourself and others from breaking
     your functioning code][coderefinery-testing] Coderefinery lesson

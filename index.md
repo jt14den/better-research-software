@@ -7,7 +7,7 @@ sustainable and [FAIR (Findable, Accessible, Interoperable and Reusable) researc
 to support **open and reproducible research**. 
 The course can be delivered over 2 full or 4 half days.
 
-## Target Audience
+## Target audience
 
 - Post-graduate students, early career researchers or junior Research Software Engineers (RSEs) who are starting their research or software projects, 
 have foundational knowledge of Python, version control and using software tools from command line shell, and want to develop 
@@ -32,7 +32,7 @@ gaining necessary prerequisite skills.
 Please also make sure you have [all the required software](../index.html#setup) installed before attending this course.
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Learning Objectives
+## Learning objectives
 
 After attending this training, you **will be able** to:
 
@@ -49,3 +49,12 @@ This course assumes the prior knowledge of and does not focus on teaching:
 - Python code syntax or skills (even though Python is used in code examples) 
 - the basic Git workflow
 - how to navigate file systems, manipulate files and invoke Python scripts and tools from a command line terminal/shell.
+
+## Acknowledgements
+
+This course was originally developed by the [UK's Software Sustainability Institute][ssi] and funded by the [UK Reproducibility Network (UKRN)][ukrn].
+See [CITATION.cff][citation] for the full list of authors. 
+
+[ssi]: https:/www.software.ac.uk
+[ukrn]: https://www.ukrn.org/
+[citation]: https://github.com/carpentries-incubator/fair-research-software/blob/main/CITATION.cff
