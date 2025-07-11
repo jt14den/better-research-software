@@ -308,7 +308,7 @@ making them especially tricky to detect and fix. Over time, this makes the codeb
 
 ### Remove an unused variable
 
-Find and remove an unused variable in our code.
+Find and remove an unused variable in our code. Then, commit the updated code to the git repo.
 
 ::: solution
 
@@ -467,12 +467,17 @@ Typically, it comes after the code statement and finishes when the line ends and
 is useful when you want to explain the code line in short. 
 Inline comments in Python should be separated by at least two spaces from the statement; they start with a # followed
 by a single space, and have no end delimiter.
+- A **single-line comment** or **prologue comment** is a comment that comes the line before a block of code to explain it.
 - A **multi-line** or **block comment** can span multiple lines and has a start and end sequence.
 To comment out a block of code in Python, you can either add a # at the beginning of each line of the block or 
 surround the entire block with three single (`'''`) or double quotes (`"""`).
 
 ``` python
 x = 5  # In Python, inline comments begin with the `#` symbol and a single space.
+
+# this is a single-line comment
+y = x + 10
+z = y*2 + x
 
 '''
 This is a multiline
@@ -674,7 +679,7 @@ similarly structured files and process them in the same way.
 ## Use docstrings to document functions
 
 Now that we have written some functions, it is time to document them so that we can quickly recall 
-(and others looking at our code in the future can understand) what the functions doe without having to read
+(and others looking at our code in the future can understand) what the functions do without having to read
 the code.
 
 *Docstrings* are a specific type of documentation that are provided within functions and [Python classes][python-classes].
@@ -775,8 +780,8 @@ Write a docstring for the function `write_dataframe_to_csv` we introduced earlie
 Our `write_dataframe_to_csv` function fully described by a docstring may look like:
 ```python
 def write_dataframe_to_csv(df, output_file):
-"""
-Write the dataframe to a CSV file.
+    """
+    Write the dataframe to a CSV file.
 
     Args:
         df (pd.DataFrame): The input dataframe.
