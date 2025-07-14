@@ -37,7 +37,7 @@ To assist with troubleshooting during the workshop, we have compiled a list of c
 
 - learners sometimes forget to activate the virtual environment - instructors should remind the learners about this at the start of each episode and also check for this during episodes, e.g. each time a new command line terminal window is started 
 - adding a Python installation to the beginning of the environment variable PATH, causes it to override Python from the virtual environment - always check for this with `which python3` and `python3 --version`.
-- some learners have other environment variables set that can influence the Python enterpreter and modules being loaded and used - e.g. PYTHONHOME (changes the location of the standard Python libraries), PYTHONPATH (augments the default search path for Python module files) or PYTHONSTARTUP (points to a Python script that is run before starting Python interactive mode for various enhancements like preloading modules, setting colors, etc.). Make sure they are unset before activating the environment, e.g. with:
+- some learners have other environment variables set that can influence the Python interpreter and modules being loaded and used - e.g. `PYTHONHOME` (changes the location of the standard Python libraries), `PYTHONPATH` (augments the default search path for Python module files) or `PYTHONSTARTUP` (points to a Python script that is run before starting Python interactive mode for various enhancements like preloading modules, setting colors, etc.). Make sure they are unset before activating the environment, e.g. with:
 
 ```bash
 $ unset PYTHONHOME PYTHONPATH PYTHONSTARTUP
