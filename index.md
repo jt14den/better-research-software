@@ -57,5 +57,5 @@ See [CITATION.cff][citation] for the full list of authors.
 
 [ssi]: https:/www.software.ac.uk
 [ukrn]: https://www.ukrn.org/
-[citation]: https://github.com/carpentries-incubator/better-reseach-software/blob/main/CITATION.cff
+[citation]: https://github.com/carpentries-incubator/better-research-software/blob/main/CITATION.cff
 
