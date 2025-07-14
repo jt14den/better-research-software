@@ -21,7 +21,7 @@ Launch this lesson on myBinder! 👉 [![Binder](https://mybinder.org/badge_logo.
 
 Please see the [CONTRIBUTING.md](CONTRIBUTING.md) for contributing guidelines and details on how to get involved with this project.
 
-Also see the current list of [issues](https://github.com/carpentries-incubator/better-reseach-software/issues)
+Also see the current list of [issues](https://github.com/carpentries-incubator/better-research-software/issues)
 
 for ideas for contributing to this training curriculum. Look for the tag ![good_first_issue](https://img.shields.io/badge/-good%20first%20issue-gold.svg).
 This indicates that the issue does not require in-depth knowledge of the project
