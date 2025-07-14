@@ -31,11 +31,11 @@ https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproduci
 
 ::: instructor
 
-Some learners may encounter various issues when creating and managing virtual development environments or configuring the Python interpreter, depending on their specific system setup.
+Some learners may encounter various issues when creating and managing virtual development environments or configuring the Python interpreter path, depending on their specific system setup.
 
-To assist with troubleshooting during the workshop, we have compiled a list of common issues that instructors have observed in the past.
+To assist with troubleshooting during workshops, we have compiled a list of common issues that instructors have observed in the past.
 
-- learners sometimes forget to activate the virtual environment - instructors should remind the learners about this at the start of each episode and also check for this during episodes, e.g. each time a new command line terminal window is started 
+- learners sometimes forget to activate the virtual environment - instructors should remind the learners about this at the start of each episode and also check for this during episodes, e.g. each time a new command line terminal window is started. 
 - adding a Python installation to the beginning of the environment variable PATH, causes it to override Python from the virtual environment - always check for this with `which python3` and `python3 --version`.
 - some learners have other environment variables set that can influence the Python interpreter and modules being loaded and used - e.g. `PYTHONHOME` (changes the location of the standard Python libraries), `PYTHONPATH` (augments the default search path for Python module files) or `PYTHONSTARTUP` (points to a Python script that is run before starting Python interactive mode for various enhancements like preloading modules, setting colors, etc.). Make sure they are unset before activating the environment, e.g. with:
 
@@ -214,10 +214,10 @@ by checking the path using the command `which`:
 ### Environment Variables
 
 Some learners encounter problems at this stage, where system-level packages are still used by Python instead of the versions installed into the virtual environment.
-Previous participants solved the problem by unsetting the `PYTHONPATH` and `PYTHONSTARTUP` environment variables before creating the virtual environment for the project:
+Previous participants solved the problem by unsetting the `PYTHONHOME`, `PYTHONPATH` and `PYTHONSTARTUP` environment variables before creating the virtual environment for the project:
 
 ```bash
-$ unset PYTHONPATH PYTHONSTARTUP
+$ unset PYTHONHOME PYTHONPATH PYTHONSTARTUP
 $ python3 -m venv ./venv_spacewalks
 ```
 
