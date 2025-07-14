@@ -449,7 +449,45 @@ and when we use Git again elsewhere. The lesson will continue to present
 version control steps with the command line interface only.</p>
 <hr>
 <br></section><section id="03-reproducible-dev-environment"><h2 class="section-heading"><a href="03-reproducible-dev-environment.html">Reproducible software environments</a></h2>
-<hr class="half-width"></section><section id="04-code-readability"><h2 class="section-heading"><a href="04-code-readability.html">Code readability</a></h2>
+<hr class="half-width">
+<h3 id="03-reproducible-dev-environment-headingInstructor1">
+<a href="03-reproducible-dev-environment.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#03-reproducible-dev-environment-headingInstructor1"></a>
+</h3>
+<p>Some learners may encounter various issues when creating and managing
+virtual development environments or configuring the Python interpreter,
+depending on their specific system setup.</p>
+<p>To assist with troubleshooting during the workshop, we have compiled
+a list of common issues that instructors have observed in the past.</p>
+<ul>
+<li>learners sometimes forget to activate the virtual environment -
+instructors should remind the learners about this at the start of each
+episode and also check for this during episodes, e.g. each time a new
+command line terminal window is started</li>
+<li>adding a Python installation to the beginning of the environment
+variable PATH, causes it to override Python from the virtual environment
+- always check for this with <code>which python3</code> and
+<code>python3 --version</code>.</li>
+<li>some learners have other environment variables set that can
+influence the Python interpreter and modules being loaded and used -
+e.g. <code>PYTHONHOME</code> (changes the location of the standard
+Python libraries), <code>PYTHONPATH</code> (augments the default search
+path for Python module files) or <code>PYTHONSTARTUP</code> (points to a
+Python script that is run before starting Python interactive mode for
+various enhancements like preloading modules, setting colors, etc.).
+Make sure they are unset before activating the environment,
+e.g. with:</li>
+</ul>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> unset PYTHONHOME PYTHONPATH PYTHONSTARTUP</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">-m</span> venv ./venv_spacewalks</span></code></pre>
+</div>
+<p>If you run into problems not mentioned here, please open an <a href="https://github.com/carpentries-incubator/better-research-software/issues/" class="external-link">issue
+in the lesson repository</a> so we can track them and update the lesson
+material accordingly.</p>
+<hr>
+<br></section><section id="04-code-readability"><h2 class="section-heading"><a href="04-code-readability.html">Code readability</a></h2>
 <hr class="half-width"></section><section id="05-code-structure"><h2 class="section-heading"><a href="05-code-structure.html">Code structure</a></h2>
 <hr class="half-width"></section><section id="06-code-correctness"><h2 class="section-heading"><a href="06-code-correctness.html">Code correctness</a></h2>
 <hr class="half-width"></section><section id="07-software-documentation"><h2 class="section-heading"><a href="07-software-documentation.html">Software documentation</a></h2>
@@ -513,8 +551,8 @@ on different license types).</p>
   "url": "https://carpentries-incubator.github.io/better-research-software/instructor/instructor-notes.html",
   "identifier": "https://carpentries-incubator.github.io/better-research-software/instructor/instructor-notes.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2025-07-11",
-  "datePublished": "2025-07-11"
+  "dateModified": "2025-07-14",
+  "datePublished": "2025-07-14"
 }
 
   </script><script>
