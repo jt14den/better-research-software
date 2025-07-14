@@ -44,7 +44,7 @@ $ unset PYTHONHOME PYTHONPATH PYTHONSTARTUP
 $ python3 -m venv ./venv_spacewalks
 ```
 
-If you run into problems not mentioned here, please contribute by adding them to the [issue in the lesson repository](https://github.com/carpentries-incubator/better-research-software/issues/204) where we are tracking them.
+If you run into problems not mentioned here, please open an [issue in the lesson repository](https://github.com/carpentries-incubator/better-research-software/issues/) so we can track them and update the lesson material accordingly.
 
 :::
 
