@@ -67,7 +67,7 @@ Let's have a look our code again - the first thing we may notice is that our scr
 throughout the code.
 Conventionally, all import statements are placed at the top of the script so that dependent libraries
 are clearly visible and not buried inside the code (there are also standard ways of describing dependencies -
-e.g. using `requirements.txt` file).
+e.g. using a `requirements.txt` file).
 This will help readability (accessibility) and reusability of our code.
 
 Our code after the modification should look like the following.
