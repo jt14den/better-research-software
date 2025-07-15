@@ -452,7 +452,7 @@ Make sure to capture the changes to your virtual development environment too.
 (venv_spacewalks) $ git push origin main
 ```
 
-Note, in practice we may have wanted to commit the code and the environment changes together since they are linked changes.
+Note, in practice we may have wanted to commit the code and the environment changes together since they are related.
 
 ## Use comments to explain functionality
 
