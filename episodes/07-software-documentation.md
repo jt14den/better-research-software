@@ -916,7 +916,6 @@ We recommend the following resources for some additional reading on the topic of
   
 Also check the [full reference set](learners/reference.md#litref) for the course.
 
-
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Documentation allows users to run and understand software without having to work things out for themselves 

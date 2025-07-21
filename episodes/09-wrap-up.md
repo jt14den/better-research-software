@@ -27,7 +27,7 @@ The [final branch](https://github.com/carpentries-incubator/bbrs-software-projec
 Some may require time and perseverance to implement and embed in your routine. 
 Others are small changes you can start practicing today.
 
-![Image by CCNULL, used under a CC-BY 2.0 licence](episodes/fig/plant-a-tree.jpg){alt="Chinese proverb 'The best time to plant a tree was 20 years ago. The second best time is now'"}
+![Image by CCNULL, used under a CC-BY 2.0 licence](fig/plant-a-tree.jpg){alt="Chinese proverb 'The best time to plant a tree was 20 years ago. The second best time is now'"}
 
 ## FAIR Research Software
 One framework that can help you evaluate the alignment of a piece of research software with best practices in reproducibility are the _FAIR Principles for Research Software_.
@@ -160,15 +160,15 @@ These principles can help us explore and reflect on our own work and guide us on
 
 ### Helping your team
 
-![Helping your team, image from RSECon2024, used under CC BY 4.0](episodes/fig/help-the-team.png){alt="Three 'help your team' principles: write FAIR, secure and maintainable code"}
+![Helping your team, image from RSECon2024, used under CC BY 4.0](fig/help-the-team.png){alt="Three 'help your team' principles: write FAIR, secure and maintainable code"}
 
 ### Helping you peers
 
-![Helping your peers, image from RSECon2024, used under CC BY 4.0](episodes/fig/help-the-peers.png){alt="Three 'help your peers' principles: make your work reproducible, inclusive and credit everyone involved in it"}
+![Helping your peers, image from RSECon2024, used under CC BY 4.0](fig/help-the-peers.png){alt="Three 'help your peers' principles: make your work reproducible, inclusive and credit everyone involved in it"}
 
 ### Helping the world
 
-![Helping the world, image from RSECon2024, used under CC BY 4.0](episodes/fig/help-the-world.png){alt="Three 'help the world principles': when developing research software be responsible, open and global, and humanist"}
+![Helping the world, image from RSECon2024, used under CC BY 4.0](fig/help-the-world.png){alt="Three 'help the world principles': when developing research software be responsible, open and global, and humanist"}
 
 ## Further reading
 

@@ -334,7 +334,7 @@ by clicking the "+" drop-down menu button next to the command line terminal indi
 You can also change the default command line terminal from the same drop down menu by using the option
 "Select Default Profile" (so it will use that one next time you open a terminal window).
 
-![*Terminal window in VS Code*](episodes/fig/vscode-terminal.png){alt="Screenshot of the terminal pane in VS Code highlighting the current terminal type and dropdown  
+![*Terminal window in VS Code*](fig/vscode-terminal.png){alt="Screenshot of the terminal pane in VS Code highlighting the current terminal type and dropdown  
 menu to open a new terminal with 'Select Default Profile' option highlighted in the menu"}
 
 ### VS Code extensions for Git
