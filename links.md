@@ -60,7 +60,6 @@ any links that you are not going to use.
 [fair-rs-evaluator]: https://openebench.bsc.es/observatory/Evaluation
 [fair-rs-test]: https://github.com/marioa/fair-test?tab=readme-ov-file
 [figshare]: https://figshare.com/
-[figshare]: https://figshare.com/
 [forrt-resources]: https://forrt.org/resources/
 [free-software]: https://www.gnu.org/philosophy/free-sw.en.html
 
