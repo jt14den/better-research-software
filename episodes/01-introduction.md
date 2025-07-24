@@ -54,7 +54,7 @@ It offers many benefits to those who practice it:
 However, reproducible research often requires that researchers implement new practices and learn new tools.
 This course aims to teach some of these practices and tools pertaining to the use of software to conduct reproducible research.
 
-Review [the Reproducible Research Discussion](./learners/reproducible-research-discussion.md) for a more in-depth discussion of this topic.
+Review [the Reproducible Research Discussion](./reproducible-research-discussion.md) for a more in-depth discussion of this topic.
 
 ::::::::::::::::::::::::::::::
 
