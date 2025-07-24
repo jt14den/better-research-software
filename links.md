@@ -95,7 +95,6 @@ any links that you are not going to use.
 
 [mkdocs-deploy]: https://www.mkdocs.org/user-guide/deploying-your-docs/
 [mkdocs-org]: https://www.mkdocs.org/
-[mk-docs-deploy]: https://www.mkdocs.org/user-guide/deploying-your-docs/
 
 [nesc]: https://www.esciencecenter.nl
 [nesc-rs-support-courses]: https://esciencecenter-digital-skills.github.io/software-support-essentials/
