@@ -2,15 +2,14 @@
 title: Installation instructions
 ---
 
-To go through the course material on your own or at a workshop,
-you will need the following software installed and working correctly on your system:
+To go through the course material on your own or at a workshop, you will need the following software installed and working correctly on your system:
 
-- [Command line terminal (shell)](#command-line-terminal) (such as **Bash**, **Zsh** or **Git Bash**)
+- [Command line terminal (shell)](#command-line-tool) (such as **Bash**, **Zsh** or **Git Bash**)  
 - [Git version control tool](#git-version-control-tool)
-- [GitHub account](#github-account)
 - [Python 3](#python-3-distribution)
 - [Visual Studio Code (VS Code)](#visual-studio-code) integrated development environment (IDE)
-- [Spacewalks data and analysis code](#spacewalks) which we will be used for exercises in the course
+
+You will also need to [create a GitHub account](#github-account) if you do not have one already, make sure that you are able to log into it, and download the [Spacewalks data and analysis code](#spacewalks) which we will be used for exercises in the course.
 
 
 ## Command line terminal
