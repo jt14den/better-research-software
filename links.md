@@ -9,13 +9,17 @@ any links that you are not going to use.
 [5-fair-software-recommendations]: https://fair-software.eu/
 [9-rs-principles]: https://rsecon24.society-rse.org/about/research-software-development-principles/
 [9-rs-principles-keynote]: https://rsecon24.society-rse.org/about/research-software-development-principles/#neil-chue-hong-rse23-keynote
+
 [ai-pair-programmers]: https://www.codium.ai/glossary/pair-programming/#:~:text=Ethics%20in%20AI%20Pair%20Programming
 [art-of-readme]: https://github.com/hackergrrl/art-of-readme#bonus-the-readme-checklist
 [automated-assessment-fairrs]: https://zenodo.org/records/11096498
 [awesome-rs-registries]: https://github.com/NLeSC/awesome-research-software-registries
+
+
 [beginner-guide-reproducible-research]: https://esajournals.onlinelibrary.wiley.com/doi/10.1002/bes2.1801
 [biotools]: https://biotools.us/
 [bitbucket]: https://bitbucket.org/
+
 [carpentries-incubator]: https://carpentries-incubator.org/
 [carpentries-lab]: https://carpentries-lab.org/
 [carpentries-website]: https://carpentries.org/
@@ -34,16 +38,18 @@ any links that you are not going to use.
 [computational-science]: https://en.wikipedia.org/wiki/Computational_science
 [coursera-inline-comments]: https://www.coursera.org/tutorials/python-comment#inline-commenting-in-python
 [cran]: https://cran.r-project.org/web/packages/
+
 [dc]: https://datacarpentry.org/
 [dc-lessons]: https://datacarpentry.org/lessons
 [design-notes-template]: https://codimd.carpentries.org/HPwUE3FnTeSQJ9-_5EfU7Q?view#
 [docker]: https://www.docker.com/
 [dry-principle]: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 [ds-testing]: https://ubc-dsci.github.io/reproducible-and-trustworthy-workflows-for-data-science/materials/lectures/06-intro-to-testing-code.html
+
 [eser-testing]: https://imperialcollegelondon.github.io/grad_school_software_engineering_course/l2-02-testing_writing_unit_tests/index.html
 [ethics-ucl]: https://www.ucl.ac.uk/research-ethics/sites/research_ethics/files/research_using_apps_guidance_1.2.docx
 [ethics-software]: https://medium.com/@zoyajahidshaikh/ethical-considerations-in-software-development-e1e4ebad2670
-[guardian-code-readability]: https://www.theguardian.com/info/2019/jan/29/code-readability-matters
+
 [fair4rs-working-group]: https://force11.org/groups/fair-4-research-software-fair4rs-working-group/
 [fair-cookbook]: https://faircookbook.elixir-europe.org/content/home.html
 [fair-cookbook-zenodo]: https://faircookbook.elixir-europe.org/content/recipes/findability/zenodo-deposition.html
@@ -57,6 +63,7 @@ any links that you are not going to use.
 [figshare]: https://figshare.com/
 [forrt-resources]: https://forrt.org/resources/
 [free-software]: https://www.gnu.org/philosophy/free-sw.en.html
+
 [github]: https://github.com/
 [gitlab]: https://about.gitlab.com/
 [git-commit-avoid]: https://wiki.openstack.org/wiki/GitCommitMessages#Things_to_avoid_when_creating_commits
@@ -74,24 +81,33 @@ any links that you are not going to use.
 [google-oxford-dict]: https://languages.oup.com/google-dictionary-en/
 [grch-documenting]: https://goodresearch.dev/docs
 [grch-testing]: https://goodresearch.dev/testing.html
+[guardian-code-readability]: https://www.theguardian.com/info/2019/jan/29/code-readability-matters
+
 [howfairis]: https://github.com/fair-software/howfairis/
 [how-git-works]: https://www.pluralsight.com/courses/how-git-works
+
 [incubator-python-testing]: https://carpentries-incubator.github.io/python-testing/
 [intersect-rse-training]: https://intersect-training.org/training-links/
+
 [jose]: jose.theoj.org/
+
 [lc]: https://librarycarpentry.org/
 [lc-lessons]: https://librarycarpentry.org/lessons
+
 [mkdocs-deploy]: https://www.mkdocs.org/user-guide/deploying-your-docs/
 [mkdocs-org]: https://www.mkdocs.org/
 [mk-docs-deploy]: https://www.mkdocs.org/user-guide/deploying-your-docs/
+
 [nesc]: https://www.esciencecenter.nl
 [nesc-rs-support-courses]: https://esciencecenter-digital-skills.github.io/software-support-essentials/
 [nesc-rs-support-course-fair]: https://esciencecenter-digital-skills.github.io/software-support-essentials/fairsoftware
 [nesc-ttw-guide-reproducible-research]: https://carpentries-incubator.github.io/reproducible-research-through-reusable-code-in-1-day
 [numpy-docstring]: https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard
+
 [osd]: https://opensource.org
 [osd-definition]: https://opensource.org/osd/
 [opensource-licence-guide]: https://opensource.guide/legal/#which-open-source-license-is-appropriate-for-my-project
+
 [pandas-apply-docs]: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.apply.html
 [pandas-org]: https://pandas.pydata.org/
 [pep8-comments]: https://peps.python.org/pep-0008/#comments
@@ -104,6 +120,7 @@ any links that you are not going to use.
 [python-irsd-automated-testing]: https://carpentries-incubator.github.io/python-intermediate-development/21-automatically-testing-software/index.html
 [python-irsd-reuse-and-release]: https://carpentries-incubator.github.io/python-intermediate-development/42-software-reuse/index.html
 [python-novice-defensive]: https://swcarpentry.github.io/python-novice-inflammation/10-defensive.html
+
 [realpython-mkdocs]: https://realpython.com/python-project-documentation-with-mkdocs/
 [real-python-ides]: https://realpython.com/python-ides-code-editors-guide/
 [replication-crisis-errington]: https://elifesciences.org/articles/71601
@@ -111,6 +128,7 @@ any links that you are not going to use.
 [reproducibility-crisis]: https://en.wikipedia.org/wiki/Replication_crisis
 [repro4everyone]: https://www.repro4everyone.org/
 [rsmd-g1]: https://fair-impact.github.io/RSMD-guidelines/1.General/
+
 [software-heritage]: https://www.softwareheritage.org/
 [ssi-blog-docs]: https://www.software.ac.uk/blog/what-are-best-practices-research-software-documentation
 [ssi-blog-python-check]: https://www.software.ac.uk/blog/using-python-double-check-your-work
@@ -122,6 +140,7 @@ any links that you are not going to use.
 [swc-git-lesson-track]: https://swcarpentry.github.io/git-novice/04-changes.html
 [swc-lessons]: https://software-carpentry.org/lessons/
 [swhid]: https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html
+
 [the-good-docs-project]: https://www.thegooddocsproject.dev/
 [top-10-fair-things-per-domain]: https://librarycarpentry.org/Top-10-FAIR/
 [ttw-guide-reproducible-research]: https://book.the-turing-way.org/reproducible-research/reproducible-research
@@ -130,9 +149,12 @@ any links that you are not going to use.
 [ttw-illustrations]: https://doi.org/10.5281/zenodo.3332807
 [ttw-reproducibility-def]: https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions
 [turing-way-citation]: https://book.the-turing-way.org/communication/citable/citable-cff.html
+
 [wiki-open-research-def]: https://en.wikipedia.org/wiki/Open_research
 [wiki-reproducibility-def]: https://en.wikipedia.org/wiki/Reproducibility
 [write-the-docs]: https://www.writethedocs.org/[diataxis-framework]: https://diataxis.fr/
+
 [york-tdd-blog]: https://researchcodingclub.github.io/2019-11-13-test-driven-development/
+
 [zenodo]: https://zenodo.org/
 [zenodo-org]: https://zenodo.org/
