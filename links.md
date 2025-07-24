@@ -155,4 +155,3 @@ any links that you are not going to use.
 [york-tdd-blog]: https://researchcodingclub.github.io/2019-11-13-test-driven-development/
 
 [zenodo]: https://zenodo.org/
-[zenodo-org]: https://zenodo.org/
