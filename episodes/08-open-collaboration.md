@@ -142,7 +142,7 @@ If you click on the DOI image in the Details section of the Zenodo page then you
 obtaining a link to the DOI badge in various formats including Markdown.
 Here is the badge for this repository and the corresponding Markdown: 
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11869450.svg)](https://doi.org/10.5281/zenodo.11869450)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11869450.svg)](https://doi.org/10.5281/zenodo.11869450){alt='styled button linking to the Zenodo entry for this lesson'}
 
 ```text
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11869450.svg)](https://doi.org/10.5281/zenodo.11869450)
