@@ -182,7 +182,7 @@ Go online and find out which constant 9.81 relates to and suggest a new name for
 
 Hint: the units are *metres per second squared*!
 
-``` python
+```python
 var = 9.81
 ```
 
@@ -193,7 +193,7 @@ $$ 9.81 m/s^2 $$ is the [gravitational force exerted by the Earth](https://en.wi
 It is often referred to as "little g" to distinguish it from "big G" which is the [Gravitational Constant](https://en.wikipedia.org/wiki/Gravitational_constant).
 A more descriptive name for this variable therefore might be:
 
-``` python
+```python
 g_earth = 9.81
 ```
 :::
@@ -472,7 +472,7 @@ by a single space, and have no end delimiter.
 To comment out a block of code in Python, you can either add a # at the beginning of each line of the block or 
 surround the entire block with three single (`'''`) or double quotes (`"""`).
 
-``` python
+```python
 x = 5  # In Python, inline comments begin with the `#` symbol and a single space.
 
 # this is a single-line comment
@@ -499,7 +499,7 @@ when code changes.
 
 ### Examples of unhelpful comments
 
-``` python
+```python
 statetax = 1.0625  # Assigns the float 1.0625 to the variable 'statetax'
 citytax = 1.01  # Assigns the float 1.01 to the variable 'citytax'
 specialtax = 1.01  # Assigns the float 1.01 to the variable 'specialtax'
@@ -509,7 +509,7 @@ The comments in this code simply tell us what the code does, which is easy enoug
 
 ### Examples of helpful comments
 
-``` python
+```python
 statetax = 1.0625  # State sales tax rate is 6.25% through Jan. 1
 citytax = 1.01  # City sales tax rate is 1% through Jan. 1
 specialtax = 1.01  # Special sales tax rate is 1% through Jan. 1
@@ -533,7 +533,7 @@ b. Commit your changes to your repository. Remember to use an informative commit
 
 Some good comments may look like the example below.
 
-``` python
+```python
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -618,7 +618,7 @@ contain the complexity of each of these two steps. We will continue to work on s
 
 After the initial refactoring, our code may look something like the following.
 
-``` python
+```python
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -698,7 +698,7 @@ This text is also indented to the same level as the code defined beneath it, whi
 
 ### Example of a single-line docstring
 
-``` python
+```python
 def add(x, y):
     """Add two numbers together"""
     return x + y
@@ -706,7 +706,7 @@ def add(x, y):
 
 ### Example of a multi-line docstring
 
-``` python
+```python
 def divide(x, y):
     """
     Divide number x by number y.
@@ -800,7 +800,7 @@ def write_dataframe_to_csv(df, output_file):
 
 Finally, our code may look something like the following:
 
-``` python
+```python
 
 import matplotlib.pyplot as plt
 import pandas as pd

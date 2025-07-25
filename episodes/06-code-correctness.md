@@ -185,7 +185,7 @@ So, we have invoked our function with the value "10:00" and it returned the floa
 
 We can then further explore the behaviour of our function by running:
 
-``` python
+```python
 >>> text_to_duration("00:00")
 0.0
 ```
@@ -249,7 +249,7 @@ In VS Code, create a new Python file `test_code.py` in the root of our project d
 Like before in the Python terminal, we need to import `text_to_duration` into our test script. 
 Then, we add our first test function:
 
-``` python
+```python
 
 from eva_data_analysis import text_to_duration
 
@@ -284,7 +284,7 @@ However, if the statement is `False`, `assert` raises an `AssertError`.
 
 Let's rewrite our test with an `assert` statement:
 
-``` python
+```python
 
 from eva_data_analysis import text_to_duration
 
@@ -301,7 +301,7 @@ correctly and returning the expected value of 10.
 Let's add another test to check what happens when duration is not an integer number and if our function can handle 
 durations with a non-zero minute component, and rerun our test code.
 
-``` python
+```python
 from eva_data_analysis import text_to_duration
 
 def test_text_to_duration_float():
@@ -393,7 +393,7 @@ For this reason, we cannot use a simple double equals sign (`==`) to compare the
 Instead, we check that our floating point numbers are equal within a very small tolerance (e.g. 1e-5).
 Hence, our code should look like: 
 
-``` python
+```python
 ...
 def test_text_to_duration_float():
     assert abs(text_to_duration("10:20") - 10.33333333) < 1e-5
@@ -430,7 +430,7 @@ Let’s make sure that our tests are ready to work with `pytest`.
     our test functions. These are no-longer required as `pytest` will run
     our tests so we can remove them:
 
-    ``` python
+    ```python
     # Delete these 2 lines
     test_text_to_duration_float()
     test_text_to_duration_integer()
@@ -458,7 +458,7 @@ Before we re-run our tests using `pytest`, let's update our second test
 to use `pytest`'s function `approx()` which is specifically intended for
 comparing floating point numbers within a tolerance.
 
-``` python
+```python
 import pytest
 from eva_data_analysis import text_to_duration
 
@@ -473,7 +473,7 @@ def test_text_to_duration_integer():
 Let's also add some inline comments to clarify what each test is doing
 and expand our syntax to highlight the logic behind our approach:
 
-``` python
+```python
 import pytest
 from eva_data_analysis import text_to_duration
 
@@ -674,7 +674,7 @@ to our data containing the number of astronauts participating in any given space
 How do we know that it works as intended and that it will not break the rest of our code?
 For this, we need to write a test suite with a comprehensive coverage of the new code.
  
-``` python
+```python
 import matplotlib.pyplot as plt
 import pandas as pd
 import sys
@@ -775,7 +775,7 @@ def test_MYFUNCTION (): # FIXME
 
 We can add the following test functions to out test suite.
 
-``` python
+```python
 import pytest
 from eva_data_analysis import (
     text_to_duration,
@@ -825,7 +825,7 @@ Looking at out new test functions, we may notice that they do not follow the
 from becoming repetitive and too long. 
 In our test code, a small block of code is repeated twice with different input values:
 
-``` python
+```python
 def test_calculate_crew_size():
     """
     Test that calculate_crew_size returns expected ground truth values
@@ -844,7 +844,7 @@ To avoid such repetitions in our test code, we use **test parameterisation**.
 This allows us to apply our test function to a list of input/expected output pairs without the need for repetition. 
 To parameterise the `test_calculate_crew_size` function, we can rewrite is as follows:
 
-``` python
+```python
 @pytest.mark.parametrize("input_value, expected_result", [
     ("Valentina Tereshkova;", 1),
     ("Judith Resnik; Sally Ride;", 2),
