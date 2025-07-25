@@ -485,11 +485,11 @@ project_name/
 :::::: challenge
 
 Refactor your software project so that input data is stored in `data/` directory and results (the graph and CSV 
-data files) saved in `results/` directory. 
+data files) saved in `results/` directory off the project root. 
 
-**Remove current result files `eva-data.csv` and `cumulative_eva_graph.png` from the project root (if they exist) as they will be recreated by re-running the code.**
+Remove current result files `eva-data.csv` and `cumulative_eva_graph.png` from the project root (if they exist) as they will be recreated by re-running the code.
 
-**Remember to create the `results/` directory or your code will fail.**
+Remember to create the `results/` empty directory before running the code or your code will fail.
 
 ::: solution
 
@@ -659,7 +659,7 @@ as new contributors can more easily find what they need, and it enables smoother
 ### Code state
 
 At this point, the code in your local software project's directory should be as in:
-https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correcteness.
+https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correctness.
 
 ::::::
 

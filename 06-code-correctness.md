@@ -51,7 +51,7 @@ $ source venv_spacewalks/Scripts/activate # Windows
 ### Code state
 
 At this point, the code in your local software project's directory should be as in:
-https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correcteness.
+https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correctenss.
 
 ::::::
 
