@@ -22,7 +22,7 @@ on code correctness](../episodes/06-code-correctness.md) and with [the starter c
 
 A member of our research team shares the following code with us to add to our existing codebase:
 
-``` python
+```python
 def summarise_categorical(df, varname):
     """
     Tabulate the distribution of a categorical variable
@@ -65,7 +65,7 @@ def summarise_categorical(df, varname):
 This looks like a useful tool for creating summary statistics tables, so let's integrate this into our 
 `eva_data_analysis.py`code and then write a minimal test suite to check that this code is behaving as expected.
 
-``` python
+```python
 ...
 def main(input_file, output_file, graph_file):
     print("--START--")
@@ -97,7 +97,7 @@ function `assert_frame_equal` that we can use to compare two dataframes.
 First, check that the function behaves as expected with typical input
 values. Fill in the gaps in the skeleton test below:
 
-``` python
+```python
 import pandas.testing as pdt
 
 def test_summarise_categorical_typical():
@@ -122,7 +122,7 @@ def test_summarise_categorical_typical():
 ```
 
 ::: solution
-``` python
+```python
 import pandas.testing as pdt
 
 def test_summarise_categorical():
@@ -157,7 +157,7 @@ one or more missing values (pd.NA)? (write a new test).
 
 Fill in the gaps in the skeleton test below:
 
-``` python
+```python
 import pandas.testing as pdt
 
 def test_summarise_categorical_missvals():
@@ -180,7 +180,7 @@ def test_summarise_categorical_missvals():
 ```
 
 ::: solution
-``` python
+```python
 import pandas.testing as pdt
 
 def test_summarise_categorical_missvals():
@@ -215,7 +215,7 @@ not exist in the data frame.
 Hint: lookup `pytest.raises` in the pytest documentation.
 
 ::: solution
-``` python
+```python
 
 def test_summarise_categorical_invalid():
     """
