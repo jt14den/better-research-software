@@ -38,12 +38,13 @@ any links that you are not going to use.
 [coursera-inline-comments]: https://www.coursera.org/tutorials/python-comment#inline-commenting-in-python
 [cran]: https://cran.r-project.org/web/packages/
 
+[diataxis-framework]: https://diataxis.fr/
 [dc]: https://datacarpentry.org/
 [dc-lessons]: https://datacarpentry.org/lessons
 [design-notes-template]: https://codimd.carpentries.org/HPwUE3FnTeSQJ9-_5EfU7Q?view#
 [docker]: https://www.docker.com/
 [dry-principle]: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
-[ds-testing]: https://ubc-dsci.github.io/reproducible-and-trustworthy-workflows-for-data-science/materials/lectures/06-intro-to-testing-code.html
+[ds-testing]: https://ubc-dsci.github.io/reproducible-and-trustworthy-workflows-for-data-science/lectures/140-intro-to-testing-code.html
 
 [eser-testing]: https://imperialcollegelondon.github.io/grad_school_software_engineering_course/l2-02-testing_writing_unit_tests/index.html
 [ethics-ucl]: https://www.ucl.ac.uk/research-ethics/sites/research_ethics/files/research_using_apps_guidance_1.2.docx
@@ -149,7 +150,7 @@ any links that you are not going to use.
 
 [wiki-open-research-def]: https://en.wikipedia.org/wiki/Open_research
 [wiki-reproducibility-def]: https://en.wikipedia.org/wiki/Reproducibility
-[write-the-docs]: https://www.writethedocs.org/[diataxis-framework]: https://diataxis.fr/
+[write-the-docs]: https://www.writethedocs.org/
 
 [york-tdd-blog]: https://researchcodingclub.github.io/2019-11-13-test-driven-development/
 
