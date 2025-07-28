@@ -286,9 +286,6 @@ code as a list - remember to import this library first.
 Our modified code will now look as follows.
 
 ```python
-import json
-import csv
-import datetime as dt
 import matplotlib.pyplot as plt
 import pandas as pd
 import sys
