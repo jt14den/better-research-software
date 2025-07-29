@@ -4,7 +4,7 @@ title: Installation instructions
 
 To go through the course material on your own or at a workshop, you will need the following software installed and working correctly on your system:
 
-- [Command line terminal (shell)](#command-line-tool) (such as **Bash**, **Zsh** or **Git Bash**)  
+- [Command line terminal (shell)](#command-line-terminal) (such as **Bash**, **Zsh** or **Git Bash**)  
 - [Git version control tool](#git-version-control-tool)
 - [Python 3](#python-3-distribution)
 - [Visual Studio Code (VS Code)](#visual-studio-code) integrated development environment (IDE)
@@ -332,7 +332,7 @@ by clicking the "+" drop-down menu button next to the command line terminal indi
 You can also change the default command line terminal from the same drop down menu by using the option
 "Select Default Profile" (so it will use that one next time you open a terminal window).
 
-![*Terminal window in VS Code*](episodes/fig/vscode-terminal.png){alt='Terminal window in VS Code with "Select Default Profile" option highlighted'}
+![*Terminal window in VS Code*](fig/vscode-terminal.png){alt='Terminal window in VS Code with "Select Default Profile" option highlighted'}
 
 ### VS Code extensions for Git
 
@@ -369,7 +369,7 @@ You should install the following extensions for viewing and editing data in VS C
 ![*CSV and JSON data editor and viewer extensions for VS Code*](fig/vscode-data-viewer-extensions.png){alt="CSV and JSON data editor and viewer extensions for VS Code" .image-with-shadow }
 
 
-## Spacewalks data and analysis code {id="spacewalks"}
+## Spacewalks data and analysis code {#spacewalks}
 
 As part of the course, you may receive the `spacewalks.zip` archive from your instructors via email, which contains data and code to be used for 
 examples and exercises throughout the course. Alternatively, you can download the [`spacewalks.zip` archive](https://github.com/carpentries-incubator/better-research-software/raw/refs/heads/main/learners/spacewalks.zip) from GitHub.
