@@ -246,7 +246,7 @@
         <ul><li><a href="#place-import-statements-at-the-top">Place <code>import</code> statements at the top</a></li>
 <li><a href="#use-meaningful-variable-names">Use meaningful variable names</a></li>
 <li><a href="#remove-unused-variables-and-imports">Remove unused variables and imports</a></li>
-<li><a href="#use-standard-libraries">Use standard libraries</a></li>
+<li><a href="#use-third-party-libraries-where-possible">Use third-party libraries where possible</a></li>
 <li><a href="#use-comments-to-explain-functionality">Use comments to explain functionality</a></li>
 <li><a href="#separate-units-of-functionality">Separate units of functionality</a></li>
 <li><a href="#use-docstrings-to-document-functions">Use docstrings to document functions</a></li>
@@ -361,7 +361,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Code readability</h1>
-        <p>Last updated on 2025-07-25 |
+        <p>Last updated on 2025-07-29 |
 
         <a href="https://github.com/carpentries-incubator/better-research-software/edit/main/episodes/04-code-readability.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -807,12 +807,12 @@ deleted.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="use-standard-libraries">Use standard libraries<a class="anchor" aria-label="anchor" href="#use-standard-libraries"></a></h2>
+</section><section><h2 class="section-heading" id="use-third-party-libraries-where-possible">Use third-party libraries where possible<a class="anchor" aria-label="anchor" href="#use-third-party-libraries-where-possible"></a></h2>
 <hr class="half-width"><p>Our script currently reads the data line-by-line from the JSON data
 file and uses custom code to manipulate the data. Variables of interest
 are stored in lists but there are more suitable data structures
 (e.g. data frames) to store data in our case. By choosing custom code
-over standard and well-tested libraries, we are making our code less
+over popular and well-tested libraries, we are making our code less
 readable and understandable and more error-prone.</p>
 <p>The main functionality of our code can be rewritten as follows using
 the <code>pandas</code> library to load and manipulate the data in data
@@ -1474,7 +1474,7 @@ any links that you are not going to use.
   "url": "https://carpentries-incubator.github.io/better-research-software/04-code-readability.html",
   "identifier": "https://carpentries-incubator.github.io/better-research-software/04-code-readability.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2025-07-25",
+  "dateModified": "2025-07-29",
   "datePublished": "2025-07-29"
 }
 
