@@ -286,9 +286,6 @@ code as a list - remember to import this library first.
 Our modified code will now look as follows.
 
 ```python
-import json
-import csv
-import datetime as dt
 import matplotlib.pyplot as plt
 import pandas as pd
 import sys
@@ -457,6 +454,7 @@ Common categories include:
    - Use tags/releases to mark specific versions of results (a version submitted to a journal, dissertation version, poster version, etc.)
    so as to avoid using version numbers in file names and proliferation of different files.
 
+Below is an example diagram of a project structure that follows these practices:
 
 ```output
 project_name/
