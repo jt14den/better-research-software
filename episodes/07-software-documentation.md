@@ -7,8 +7,8 @@ exercises: 30
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - How should we document our code?
-- Why are documentation and repository metadata important and how they support FAIR software?
-- What are the minimum elements of documentation needed to support FAIR software?
+- Why are documentation and repository metadata important?
+- What are the minimum elements of documentation needed?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -58,13 +58,13 @@ https://github.com/carpentries-incubator/bbrs-software-project/tree/07-software-
 Software documentation is often perceived as a thankless and time-consuming task with few tangible benefits and 
 is often neglected in research projects. 
 However, like software testing, documenting our software can help us and others
-conduct **better research** and produce **FAIR software**:
+conduct **better research** and produce [**FAIR software**][fair-principles-research-software]:
 
 - Good documentation captures important methodological details ready for when we come to publish our research 
 - Good documentation can help us return to a project seamlessly after time away 
 - Documentation can facilitate collaborations by helping us onboard new project members quickly and more easily
 - Good documentation can save us time by answering frequently asked questions (FAQs) about our code for us
-- Software documentation supports the FAIR research software principles by improving the re-usability of our code. 
+- Software documentation supports the [FAIR research software principles][fair-principles-research-software] by improving the re-usability of our code. 
   - Good documentation can make our software more understandable and reusable by others, and can bring us some citations
     and credit
   - How-to guides and tutorials ensure that users can install our software independently and make use of its basic features
@@ -135,7 +135,7 @@ Think about the question below. Your instructors may ask you to share your answe
 discuss them with other participants.
 
 Here are some of the major sections you might find in a typical README. 
-Which are **essential** to support the FAIR principles? Which are optional?
+Which are **essential** to support the FAIR [software][fair-principles-research-software] and [data][fair-data-principles] principles? Which are optional?
 
 + Purpose of the code
 + Audience (who the code is intended for)
