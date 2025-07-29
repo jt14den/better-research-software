@@ -387,13 +387,13 @@ Commit changes:
 :::
 ::::::
 
-## Use standard libraries
+## Use third-party libraries where possible
 
 Our script currently reads the data line-by-line from the JSON data file and uses custom code to manipulate
 the data.
 Variables of interest are stored in lists but there are more suitable data structures (e.g. data frames)
 to store data in our case.
-By choosing custom code over standard and well-tested libraries, we are making our code less readable and understandable
+By choosing custom code over popular and well-tested libraries, we are making our code less readable and understandable
 and more error-prone.
 
 The main functionality of our code can be rewritten as follows using the `pandas` library to load and manipulate the 
