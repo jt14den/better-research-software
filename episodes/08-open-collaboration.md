@@ -7,9 +7,9 @@ exercises: 30
 ::::::::::::::::::::::::::::::::::::: objectives
 After completing this episode, participants should be able to:
 
-- Understand how to archive code to Zenodo and create a digital object identifier (DOI) for a software project (and include that info in CITATION.cff).
-- Understand how to track issues with code in GitHub.
-- Understand how to use Git branches for working on code in parallel and how to merge code back using pull requests.
+- Archive code to Zenodo and create a digital object identifier (DOI) for a software project (and include that info in CITATION.cff).
+- Track issues with code in GitHub.
+- Use Git branches to work on code in parallel and merge code back using pull requests.
 - Apply issue tracking, branching and pull requests together to fix bugs while allowing other developers to work on the same code.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
