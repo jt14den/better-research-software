@@ -370,8 +370,7 @@ You should install the following extensions for viewing and editing data in VS C
 - Excel Viewer - custom editor and previewer for CSV files and Excel spreadsheets
 - JSON - custom editor and previewer for JSON files
 
-![*CSV and JSON data editor and viewer extensions for VS Code*](fig/vscode-data-viewer-extensions.png){alt="Screenshot of Extension Marketplace View in VS Code showing the CSV and JSON data editor and viewer 
-extensions among the installed extensions on the left with the JSON extension selected and details of this extension showing in the pane on the right with buttons to uninstall and disable it" .image-with-shadow }
+![*CSV and JSON data editor and viewer extensions for VS Code*](fig/vscode-data-viewer-extensions.png){alt="Screenshot of Extension Marketplace View in VS Code showing the CSV and JSON data editor and viewer extensions among the installed extensions on the left with the JSON extension selected and details of this extension showing in the pane on the right with buttons to uninstall and disable it" .image-with-shadow }
 
 
 ## Spacewalks data and analysis code {id="spacewalks"}
