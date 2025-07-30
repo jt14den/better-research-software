@@ -147,6 +147,18 @@ Here is the badge for this repository and the corresponding Markdown:
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11869450.svg)](https://doi.org/10.5281/zenodo.11869450)
 ```
 
+:::  challenge
+
+### Archive your repository to Zenodo (Sandbox)
+
+Note: for this exercise, as demonstrated earlier, you should use the [Sandbox Zenodo](https://sandbox.zenodo.org/) (a version of Zenodo for testing and playing with before minting a real DOI).
+For real software releases, you should use Zenodo.
+
+- Create an account on Zenodo Sandbox that is linked to your GitHub account.
+- Use Zenodo Sandbox to create a release for your repository and obtain a DOI for it.
+- Get the link to the DOI badge for your repository and add a link to this image to your README file in Markdown format. Check that this is the DOI for the latest version and not the DOI for a specific version, if not you will be updating this every time you make a release.
+
+:::::::::::::::::::::::::::::::::::::::::::::::
 
 ::: spoiler
 
