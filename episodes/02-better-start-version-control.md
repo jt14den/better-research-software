@@ -214,7 +214,7 @@ You will get an error that looks something like the following:
 
 ```output
 Traceback (most recent call last):
-  File "/Users/USERNAME/Downloads/astronaut-analysis/my code v2.py", line 2, in <module>
+  File "/Users/USERNAME/Downloads/spacewalks/my code v2.py", line 2, in <module>
     data_f = open('/home/sarah/Projects/astronaut-analysis/data.json', 'r')
 FileNotFoundError: [Errno 2] No such file or directory: '/home/sarah/Projects/astronaut-analysis/data.json'
 ```
