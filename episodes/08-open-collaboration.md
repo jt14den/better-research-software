@@ -148,7 +148,7 @@ Here is the badge for this repository and the corresponding Markdown:
 ```
 
 
-::: callout
+::: spoiler
 
 ## Problems with GitHub and Zenodo integration
 
