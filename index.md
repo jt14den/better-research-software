@@ -24,7 +24,7 @@ Foundational knowledge of the following is **required** to be able to understand
 
 Attending a [Software Carpentry][swc-lessons] workshop or a similar course will help you gain the skills and experience needed.
 
-Please also make sure you have [all the required software](../index.html#setup) installed before attending this course.
+Please also make sure you have [all the required software](./index.md#setup) installed before attending this course.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
