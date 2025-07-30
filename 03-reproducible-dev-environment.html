@@ -358,7 +358,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reproducible software environments</h1>
-        <p>Last updated on 2025-07-14 |
+        <p>Last updated on 2025-07-30 |
 
         <a href="https://github.com/carpentries-incubator/better-research-software/edit/main/episodes/03-reproducible-dev-environment.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -403,7 +403,7 @@ contribute to it. We now want to start developing the code further.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Code state </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment</a></p>
@@ -453,8 +453,10 @@ can use different Python versions and different versions of the same
 third party dependency by different projects on your machine
 independently from one another.</p>
 <p>We can visualise the use of virtual environments for different Python
-projects on the same machine as follows: <img src="fig/ep05_virtual-env.png" alt="Diagram to depict different Python environments containing different packages on the same machine" class="figure"></p>
-<p>Another big motivator for using virtual environments is that they
+projects on the same machine as follows:</p>
+<figure><img src="fig/virtual-env.png" alt="A single system might contain multiple virtual environments, each containing a different version of Python and the set of third-party libraries it needs (dependencies) e.g. NumPy, Pandas or Matplotlib. Each environment contains its own complete copy of the required version of each dependency." class="figure mx-auto d-block"><div class="figcaption">Diagram to depict different Python environments
+containing different packages on the same machine</div>
+</figure><p>Another big motivator for using virtual environments is that they
 make sharing your code with others much easier - as we will see shortly
 you can record your virtual environment in a special file and share it
 with your collaborators who can then recreate the same development
@@ -886,14 +888,18 @@ environment:</p>
 </div>
 <p>You should get a pop up window with a graph. However, some (but not
 all) Windows users will not. You might instead see an error like:</p>
-<pre><code>Traceback (most recent call last):
-  File "C:\Users\Toaster\Desktop\spacewalks\eva_data_analysis.py", line 30, in &lt;module&gt;
-    w.writerow(data[j].values())
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
-    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-UnicodeEncodeError: 'charmap' codec can't encode character '\x92' in position 101: character maps to &lt;undefined&gt;
-(spacewalks) (spacewalks)</code></pre>
+<div class="codewrapper sourceCode" id="cb25">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="ex">Traceback</span> <span class="er">(</span><span class="ex">most</span> recent call last<span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>  <span class="ex">File</span> <span class="st">"C:\Users\Toaster\Desktop\spacewalks\eva_data_analysis.py"</span>, line 30, in <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>    <span class="ex">w.writerow</span><span class="er">(</span><span class="va">data</span><span class="op">[</span>j<span class="op">]</span><span class="fu">.values()</span><span class="kw">)</span></span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a>  <span class="ex">File</span> <span class="st">"C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py"</span>, line 19, in encode</span>
+<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a>    <span class="cf">return</span> <span class="ex">codecs.charmap_encode</span><span class="er">(</span><span class="ex">input,self.errors,encoding_table</span><span class="kw">)</span><span class="ex">[0]</span></span>
+<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a>           <span class="ex">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span></span>
+<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a><span class="ex">UnicodeEncodeError:</span> <span class="st">'charmap'</span> codec can<span class="st">'t encode character '</span><span class="dt">\x</span>92<span class="st">' in position 101: character maps to &lt;undefined&gt;</span></span>
+<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a><span class="st">(spacewalks) (spacewalks)</span></span></code></pre>
+</div>
 <p>This is not what we were expecting! The problem is <em>character
 encoding</em>. ‘Standard’ Latin characters are encoded using ASCII, but
 the expanded Unicode character set covers many more. In this case, the
@@ -949,10 +955,10 @@ see how we can improve it further.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Code state </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
-should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability</a>.</p>
+should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability</a></p>
 </div>
 </div>
 </div>
@@ -1046,7 +1052,7 @@ any links that you are not going to use.
   "url": "https://carpentries-incubator.github.io/better-research-software/03-reproducible-dev-environment.html",
   "identifier": "https://carpentries-incubator.github.io/better-research-software/03-reproducible-dev-environment.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2025-07-14",
+  "dateModified": "2025-07-30",
   "datePublished": "2025-07-30"
 }
 

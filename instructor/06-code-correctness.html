@@ -361,7 +361,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Code correctness</h1>
-        <p>Last updated on 2025-07-25 |
+        <p>Last updated on 2025-07-30 |
 
         <a href="https://github.com/carpentries-incubator/better-research-software/edit/main/episodes/06-code-correctness.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -421,7 +421,7 @@ a piece of code meet our expectations, i.e. are correct.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Activate your virtual environment </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>If it is not already active, make sure to activate your virtual
 environment from the root of the software project directory:</p>
@@ -441,10 +441,10 @@ environment from the root of the software project directory:</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Code state </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
-should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correctenss" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correctenss</a>.</p>
+should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correcteness" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correcteness</a></p>
 </div>
 </div>
 </div>
@@ -517,7 +517,7 @@ working together correctly.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul><li>End-to-end tests compare the actual output of a program to the
 expected output to demonstrate correctness.</li>
@@ -631,7 +631,7 @@ verify that a piece of code is behaving as expected?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>It can be tempting to test our code informally because this
 approach:</p>
@@ -674,15 +674,14 @@ first test function:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="im">from</span> eva_data_analysis <span class="im">import</span> text_to_duration</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="kw">def</span> test_text_to_duration_integer():</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>    input_value <span class="op">=</span> <span class="st">"10:00"</span></span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    test_result <span class="op">=</span> text_to_duration(<span class="st">"10:00"</span>) <span class="op">==</span> <span class="dv">10</span></span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"text_to_duration('10:00') == 10? </span><span class="sc">{</span>test_result<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>test_text_to_duration_integer()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="im">from</span> eva_data_analysis <span class="im">import</span> text_to_duration</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="kw">def</span> test_text_to_duration_integer():</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>    input_value <span class="op">=</span> <span class="st">"10:00"</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>    test_result <span class="op">=</span> text_to_duration(<span class="st">"10:00"</span>) <span class="op">==</span> <span class="dv">10</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"text_to_duration('10:00') == 10? </span><span class="sc">{</span>test_result<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>test_text_to_duration_integer()</span></code></pre>
 </div>
 <p>We can run this code from the command line terminal as:</p>
 <div class="codewrapper sourceCode" id="cb8">
@@ -1099,7 +1098,7 @@ mean?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: lower-alpha"><li>9 tests were detected in the test suite</li>
 <li>s - stands for “skipped”,</li>
@@ -1216,21 +1215,25 @@ from our colleague’s new code and write some tests for it.</p>
 <p>Implement unit tests for the <code>calculate_crew_size</code>
 function. Cover typical cases and edge cases.</p>
 <p>Hint - use the following template when writing tests:</p>
-<pre><code>def test_MYFUNCTION (): # FIXME
-    """
-    Test that ...   #FIXME
-    """
-
-    # Typical value 1
-    actual_result =  _______________ #FIXME
-    expected_result = ______________ #FIXME
-    assert actual_result == expected_result
-
-    # Typical value 2
-    actual_result =  _______________ #FIXME
-    expected_result = ______________ #FIXME
-    assert actual_result == expected_result
-    </code></pre>
+<div class="codewrapper sourceCode" id="cb29">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="kw">def</span> test_MYFUNCTION (): <span class="co"># </span><span class="al">FIXME</span></span>
+<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a><span class="co">    Test that ...   #FIXME</span></span>
+<span id="cb29-4"><a href="#cb29-4" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb29-5"><a href="#cb29-5" tabindex="-1"></a>    </span>
+<span id="cb29-6"><a href="#cb29-6" tabindex="-1"></a>    <span class="co"># Typical value 1</span></span>
+<span id="cb29-7"><a href="#cb29-7" tabindex="-1"></a>    actual_result <span class="op">=</span>  _______________ <span class="co">#FIXME</span></span>
+<span id="cb29-8"><a href="#cb29-8" tabindex="-1"></a>    expected_result <span class="op">=</span> ______________ <span class="co">#FIXME</span></span>
+<span id="cb29-9"><a href="#cb29-9" tabindex="-1"></a>    <span class="cf">assert</span> actual_result <span class="op">==</span> expected_result</span>
+<span id="cb29-10"><a href="#cb29-10" tabindex="-1"></a>    </span>
+<span id="cb29-11"><a href="#cb29-11" tabindex="-1"></a>    <span class="co"># Typical value 2</span></span>
+<span id="cb29-12"><a href="#cb29-12" tabindex="-1"></a>    actual_result <span class="op">=</span>  _______________ <span class="co">#FIXME</span></span>
+<span id="cb29-13"><a href="#cb29-13" tabindex="-1"></a>    expected_result <span class="op">=</span> ______________ <span class="co">#FIXME</span></span>
+<span id="cb29-14"><a href="#cb29-14" tabindex="-1"></a>    <span class="cf">assert</span> actual_result <span class="op">==</span> expected_result</span>
+<span id="cb29-15"><a href="#cb29-15" tabindex="-1"></a>    </span></code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -1239,7 +1242,7 @@ function. Cover typical cases and edge cases.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>We can add the following test functions to out test suite.</p>
 <div class="codewrapper sourceCode" id="cb30">
@@ -1465,7 +1468,7 @@ test suite?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <ol style="list-style-type: lower-alpha"><li>You can find this information on the “Files” tab of the HTML report
 saved in the <code>htmlcov/index.html</code> file. The proportion of the
@@ -1527,7 +1530,7 @@ testing supports the FAIR software principles by making our code more
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
   <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Code state </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/07-software-documentation" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/07-software-documentation</a>.</p>
@@ -1647,7 +1650,7 @@ any links that you are not going to use.
   "url": "https://carpentries-incubator.github.io/better-research-software/instructor/06-code-correctness.html",
   "identifier": "https://carpentries-incubator.github.io/better-research-software/instructor/06-code-correctness.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2025-07-25",
+  "dateModified": "2025-07-30",
   "datePublished": "2025-07-30"
 }
 
