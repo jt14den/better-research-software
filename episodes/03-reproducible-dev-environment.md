@@ -91,7 +91,7 @@ dependency by different projects on your machine independently from one another.
 
 We can visualise the use of virtual environments for different Python projects on the same machine as follows:
 
-![Diagram to depict different Python environments containing different packages on the same machine](fig/virtual-env.png){alt='Diagram to depict different Python environments containing different packages on the same machine'}
+![Diagram to depict different Python environments containing different packages on the same machine](fig/virtual-env.png){alt='A single system might contain multiple virtual environments, each containing a different version of Python and the set of third-party libraries it needs (dependencies) e.g. NumPy, Pandas or Matplotlib. Each environment contains its own complete copy of the required version of each dependency.'}
 
 Another big motivator for using virtual environments is that they make sharing your code with others much easier -
 as we will see shortly you can record your virtual environment in a special file and share it with your collaborators
