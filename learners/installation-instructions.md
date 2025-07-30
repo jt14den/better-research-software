@@ -2,15 +2,14 @@
 title: Installation instructions
 ---
 
-To go through the course material on your own or at a workshop,
-you will need the following software installed and working correctly on your system:
+To go through the course material on your own or at a workshop, you will need the following software installed and working correctly on your system:
 
-- [Command line terminal (shell)](#command-line-terminal) (such as **Bash**, **Zsh** or **Git Bash**)
+- [Command line terminal (shell)](#command-line-terminal) (such as **Bash**, **Zsh** or **Git Bash**)  
 - [Git version control tool](#git-version-control-tool)
-- [GitHub account](#github-account)
 - [Python 3](#python-3-distribution)
 - [Visual Studio Code (VS Code)](#visual-studio-code) integrated development environment (IDE)
-- [Spacewalks data and analysis code](#spacewalks) which we will be used for exercises in the course
+
+You will also need to [create a GitHub account](#github-account) if you do not have one already, make sure that you are able to log into it, and download the [Spacewalks data and analysis code](#spacewalks) which we will be used for exercises in the course.
 
 
 ## Command line terminal
@@ -334,8 +333,7 @@ by clicking the "+" drop-down menu button next to the command line terminal indi
 You can also change the default command line terminal from the same drop down menu by using the option
 "Select Default Profile" (so it will use that one next time you open a terminal window).
 
-![*Terminal window in VS Code*](fig/vscode-terminal.png){alt="Screenshot of the terminal pane in VS Code highlighting the current terminal type and dropdown  
-menu to open a new terminal with 'Select Default Profile' option highlighted in the menu"}
+![*Terminal window in VS Code*](fig/vscode-terminal.png){alt="Screenshot of the terminal pane in VS Code highlighting the current terminal type and dropdown menu to open a new terminal with 'Select Default Profile' option highlighted in the menu"}
 
 ### VS Code extensions for Git
 
@@ -373,7 +371,7 @@ You should install the following extensions for viewing and editing data in VS C
 ![*CSV and JSON data editor and viewer extensions for VS Code*](fig/vscode-data-viewer-extensions.png){alt="Screenshot of Extension Marketplace View in VS Code showing the CSV and JSON data editor and viewer extensions among the installed extensions on the left with the JSON extension selected and details of this extension showing in the pane on the right with buttons to uninstall and disable it" .image-with-shadow }
 
 
-## Spacewalks data and analysis code {id="spacewalks"}
+## Spacewalks data and analysis code {#spacewalks}
 
 As part of the course, you may receive the `spacewalks.zip` archive from your instructors via email, which contains data and code to be used for 
 examples and exercises throughout the course. Alternatively, you can download the [`spacewalks.zip` archive](https://github.com/carpentries-incubator/better-research-software/raw/refs/heads/main/learners/spacewalks.zip) from GitHub.

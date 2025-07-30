@@ -160,7 +160,7 @@ Go online and find out which constant 9.81 relates to and suggest a new name for
 
 Hint: the units are *metres per second squared*!
 
-``` python
+```python
 var = 9.81
 ```
 
