@@ -64,7 +64,7 @@ closer to the gold standard of fully reproducible research.
 
 #### Accessible
 
-- Make sure people can obtain get a copy your software using standard communication protocols (e.g. HTTP(S), (S)FTP, etc.)
+- Make sure people can obtain get a copy of your software using standard communication protocols (e.g. HTTP(S), (S)FTP, etc.)
 - The code and its description (metadata) has to be available even when the software is no longer actively developed (this includes earlier versions of the software)
 
 #### Interoperable
