@@ -10,7 +10,7 @@ The course can be delivered over 2 full or 4 half days.
 - Post-graduate students, early career researchers or junior Research Software Engineers (RSEs) who are starting their research or software projects, have foundational knowledge of Python, version control and using software tools from command line shell, and want to develop software to support their research using established best practices
 - Researchers or scientists who had foundational software training before but wish to refresh, reinforce or improve their skills and practices in the wider context of FAIR research and sharing and writing software for open and reproducible research 
 
-Check out a few example [learner profiles](./profiles.html), to see if this course is a right fit for you.
+Check out a few example [learner profiles](./profiles/learner-profiles.md), to see if this course is a right fit for you.
 
 ::::::::::::::::::::::::::::::::::::::::::  prereq
 
@@ -24,7 +24,7 @@ Foundational knowledge of the following is **required** to be able to understand
 
 Attending a [Software Carpentry][swc-lessons] workshop or a similar course will help you gain the skills and experience needed.
 
-Please also make sure you have [all the required software](../index.html#setup) installed before attending this course.
+Please also make sure you have [all the required software](./index.md#setup) installed before attending this course.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
