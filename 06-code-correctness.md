@@ -17,14 +17,12 @@ exercises: 30
 
 After completing this episode, participants should be able to:
 
-- Explain why code testing is important and how this supports FAIR software.
+- Explain why code testing is important and how this improves software quality.
 - Describe the different types of software tests (unit tests, integration tests, regression tests).
 - Implement unit tests to verify that function behave as expected using the Python testing framework `pytest`.
 - Interpret the output from `pytest` to identify which functions are not behaving as expected.
-- Write tests using typical values, edge cases and invalid inputs to ensure that the code can handle extreme 
-values and invalid inputs appropriately.
-- Evaluate code coverage to identify how much of the codebase is being tested and identify areas that need further 
-tests.
+- Write tests using typical values, edge cases and invalid inputs to ensure that the code can handle extreme values and invalid inputs appropriately.
+- Evaluate code coverage to identify how much of the codebase is being tested and identify areas that need further tests.
 
 :::
 
@@ -1009,7 +1007,7 @@ engage in open research practices.
 Tests also document the intended behaviour of our code for other developers and mean that we can
 experiment with changes to our code knowing that our tests will let us
 know if we break any existing functionality. 
-In other words, software testing supports the FAIR software principles by making our code more **accessible** and
+In other words, software testing supports the [FAIR software principles][fair-principles-research-software] by making our code more **accessible** and
 **reusable**.
 
 :::::: spoiler
