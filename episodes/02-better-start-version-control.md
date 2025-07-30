@@ -437,7 +437,7 @@ if we lost our machine then we would lose all our code along with it,
 Fortunately, we can easily upload our **local repository**, with all our code and the history of our development,
 to a remote server so that it can be backed-up and recovered in future.
 
-![Git - distributed version control system, image from W3Docs (freely available)](fig/git-distributed.png){alt='Diagram of 2 Git repositories belonging to 2 different developers linked to a central repository and one another. It shows a two way flow of information in each of the 3 links between the repositories.'}
+![Git - distributed version control system, image from W3Docs (freely available)](fig/git-distributed.png){alt='Two developers can use Git in combination with a remote repository, usually accessed via the internet. By pushing and pulling changes to and from the remote repository, they are each able to synchronise their local copy of the project with the changes the other developer has committed.'}
 
 [GitHub][github] is an online software development platform that can act as a central remote server.
 It uses Git, and provides facilities for storing, tracking, and collaborating on software projects.
