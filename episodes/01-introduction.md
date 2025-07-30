@@ -115,7 +115,7 @@ You may notice that the software project contains:
    ![JSON data file snippet showing EVA/spacewalk data including EVA ID, country, crew members, vehicle type, date of the spacewalk, duration, and purpose](fig/astronaut-data-json-snippet.png){alt='JSON data file snippet showing EVA/spacewalk data including EVA ID, country, crew members, vehicle type, date of the spacewalk, duration, and purpose'}
 2. A Python script called `my code v2.py` containing some analysis code.
 
-   ![A first few lines of a Python script](fig/astronaut-analysis-bad-code-screenshot.png){alt='A first few lines of a Python script used as example code for the episode'}
+   ![The first few lines of a Python script](fig/astronaut-analysis-bad-code-screenshot.png){alt='The first few lines of a Python script used as example code for the episode'}
 
    The code in the Python script does some common research tasks:
 
