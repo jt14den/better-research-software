@@ -214,9 +214,9 @@ You will get an error that looks something like the following:
 
 ```output
 Traceback (most recent call last):
-  File "/Users/USERNAME/Downloads/spacewalks/my code v2.py", line 2, in <module>
-    data_f = open('/home/sarah/Projects/better-software-course/data.json', 'r')
-FileNotFoundError: [Errno 2] No such file or directory: '/home/sarah/Projects/better-software-course/data.json'
+  File "/Users/USERNAME/Downloads/astronaut-analysis/my code v2.py", line 2, in <module>
+    data_f = open('/home/sarah/Projects/astronaut-analysis/data.json', 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sarah/Projects/astronaut-analysis/data.json'
 ```
 
 We get this error because the paths to the data files have been hard coded as absoulte paths for the original developer's machine.
@@ -378,7 +378,7 @@ We may want to:
 1. Give our script and input data file more meaningful names, e.g `eva_data_analysis.py` and `eva-data.json`. This change also uses removes version tracking from the script name as we are using Git for version control
 any more as Git will keep track of that for us.
 2. Choose informative file names for our output data file (e.g. `eva-data.csv`) and plot (`cumulative_eva_graph.png`).
-3. Use relative paths (e.g. `./eva-data.json`) instead of absolute paths (e.g. `home/sarah/Projects/better-software-course/data.csv`) to the files (which were hardcoded to the path on our colleagues machine and would not work on ours).
+3. Use relative paths (e.g. `./eva-data.json`) instead of absolute paths (e.g. `home/sarah/Projects/astronaut-analysis/data.csv`) to the files (which were hardcoded to the path on our colleagues machine and would not work on ours).
 4. Update the Python script with these changes.
 
 :::::::::::::::::::::::::::: challenge
