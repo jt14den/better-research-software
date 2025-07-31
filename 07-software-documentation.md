@@ -85,7 +85,7 @@ There are many different types of software-level documentation.
 
 Software-level technical documentation encompasses:
 
-- Tutorials - lessons that guide learners through a series of exercises to build proficiency as using the code  
+- Tutorials - lessons that guide learners through a series of exercises to build proficiency using the code  
 - How-To Guides - step by step instructions on how to accomplish specific goals using the code.
 - Reference - a lookup manual to help users find relevant information about the software e.g. functions and their parameters.
 - Explanation - conceptual discussion of the code to help users understand implementation decisions 
@@ -177,6 +177,10 @@ Let's create a simple README for our repository - from VS Code or command line t
 Markdown format) or `README.txt` (in plain text format).
 
 We can start by adding a one-liner that explains the purpose of our code and who it is for.
+
+::::::::::: instructor
+You may want to share the following README excerpts directly in chat or the shared notes document with learners to copy-paste.
+::::::::::::::::::::::
 
 ``` code
 # Spacewalks
@@ -640,7 +644,7 @@ within the project repository. To deploy our documentation:
 ```
 
 2. Once we are on the main branch and all our changes are up to date, run the following command from the command line 
-termindal to deploy our documentation to GitHub.
+terminal to deploy our documentation to GitHub.
 
 ```bash
 # Important: 
