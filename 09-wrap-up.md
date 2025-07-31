@@ -38,7 +38,7 @@ The practices taught here fall within this framework and it can be a good place 
 
 FAIR stands for Findable, Accessible, Interoperable, and Reusable and comprises a set of principles designed to
 increase the visibility and usefulness of your research to others.
-The FAIR data principles, first published [in 2016][fair-data-principles], are widely known and applied today.
+The [FAIR data principles][fair-data-principles], first published in 2016, are widely known and applied today.
 Similar [FAIR principles for software][fair-principles-research-software] have now been defined too. In general, they mean:
 
 - **Findable** - software and its associated metadata must be easy to discover by humans and machines.
@@ -64,7 +64,7 @@ closer to the gold standard of fully reproducible research.
 
 #### Accessible
 
-- Make sure people can obtain get a copy your software using standard communication protocols (e.g. HTTP(S), (S)FTP, etc.)
+- Make sure people can obtain get a copy of your software using standard communication protocols (e.g. HTTP(S), (S)FTP, etc.)
 - The code and its description (metadata) has to be available even when the software is no longer actively developed (this includes earlier versions of the software)
 
 #### Interoperable
