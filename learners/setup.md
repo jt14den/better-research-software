@@ -2,6 +2,8 @@
 title: Setup
 ---
 
+## Software Setup
+
 To go through the course material on your own or at a workshop, you will need the following software installed and working correctly on your system:
 
 - [Command line terminal (shell)](installation-instructions.html#command-line-tool) (such as **Bash**, **Zsh** or **Git Bash**)  
