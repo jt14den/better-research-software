@@ -551,6 +551,7 @@ Here's a brief explanation of them:
 These tabs help manage collaboration, development, and maintenance of the project.
 We will cover some of them in more detail as part of this course.
 You may not see all of these tabs depending on your access level to the repository and the configuration settings. 
+
 ### Keeping track of issues and planned work in GitHub
 
 The one tab that we want to start using early on is **Issues**. 
