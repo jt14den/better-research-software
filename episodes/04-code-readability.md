@@ -39,6 +39,15 @@ what I have written here?"
 
 In this episode, we will learn a few specific software best practices we can follow to help create more readable code. 
 
+:::::: spoiler
+
+### Code state
+
+At this point, the code in your local software project's directory should be as in:
+<https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability>
+
+:::
+
 ::: spoiler
 
 ### Activate your virtual environment
@@ -51,15 +60,6 @@ $ source venv_spacewalks/bin/activate # Mac or Linux
 $ source venv_spacewalks/Scripts/activate # Windows
 (venv_spacewalks) $
 ```
-
-:::
-
-:::::: spoiler
-
-### Code state
-
-At this point, the code in your local software project's directory should be as in:
-<https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability>
 
 :::
 
