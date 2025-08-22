@@ -228,6 +228,7 @@
         <ul><li><a href="#from-script-to-software-project">From script to software project</a></li>
 <li><a href="#version-control">Version control</a></li>
 <li><a href="#interacting-with-a-remote-git-server">Interacting with a remote Git server</a></li>
+<li><a href="#software-project-in-github">Software project in GitHub</a></li>
 <li><a href="#summary">Summary</a></li>
 <li><a href="#further-reading">Further reading</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -357,7 +358,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Better start with a software project</h1>
-        <p>Last updated on 2025-07-30 |
+        <p>Last updated on 2025-08-22 |
 
         <a href="https://github.com/carpentries-incubator/better-research-software/edit/main/episodes/02-better-start-version-control.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -840,7 +841,7 @@ plot(<code>cumulative_eva_graph.png</code>).</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Firstly, let’s update the file names in our Python script from VS
 Code:</p>
@@ -991,6 +992,79 @@ Git to update the “main” branch on the “origin” remote. The
 ‘tracking reference’ for the current branch, so that in future
 <code>git push</code> will default to sending to
 <code>origin main</code>.</p>
+</section><section><h2 class="section-heading" id="software-project-in-github">Software project in GitHub<a class="anchor" aria-label="anchor" href="#software-project-in-github"></a></h2>
+<hr class="half-width"><p>We now have our software project in GitHub and have linked it to our
+local working copy. We are ready to start more work on software
+development and publishing and backing up that work on GitHub. Let’s
+briefly explore the GitHub interface to our project.</p>
+<figure><img src="fig/github-project-main-tabs.png" class="image-with-shadow figure mx-auto d-block" alt="Home page of a GitHub repository showing all the top-level tabs, including Code, Issues, Pull requests, Actions, projects, Wiki, Insights and Settings"><div class="figcaption"><em>GitHub repository interface</em></div>
+</figure><p>In a GitHub software project, the tabs you see at the top of a
+repository page help organise different aspects of the project. Here’s a
+brief explanation of them:</p>
+<ul><li>
+<strong>Code</strong> - shows the source code, folders, and files in
+the repository. This is where the main development work is done.</li>
+<li>
+<strong>Issues</strong> - used to track bugs, tasks, feature
+requests, or any work that needs to be done.</li>
+<li>
+<strong>Pull requests</strong> - where contributors submit changes
+to the code. These are reviewed and discussed before being merged.</li>
+<li>
+<strong>Actions</strong> - automated workflows (like tests or
+deployments) that run on the project using GitHub Actions.</li>
+<li>
+<strong>Projects</strong> - offers a Kanban-style board to manage
+tasks and plan work (e.g., using cards and columns).</li>
+<li>
+<strong>Wiki</strong> – lets you create structured documentation for
+your project.</li>
+<li>
+<strong>Security</strong> – helps identify, manage, and fix
+vulnerabilities in your code and dependencies.</li>
+<li>
+<strong>Insights</strong> – provides analytics on project activity,
+contributions, and community health.</li>
+<li>
+<strong>Settings</strong> - where you configure how the repository
+behaves and how others can interact with it.</li>
+</ul><p>These tabs help manage collaboration, development, and maintenance of
+the project. We will cover some of them in more detail as part of this
+course. You may not see all of these tabs depending on your access level
+to the repository and the configuration settings.</p>
+<div class="section level3">
+<h3 id="keeping-track-of-issues-and-planned-work-in-github">Keeping track of issues and planned work in GitHub<a class="anchor" aria-label="anchor" href="#keeping-track-of-issues-and-planned-work-in-github"></a></h3>
+<p>The one tab that we want to start using early on is
+<strong>Issues</strong>. This is where you report issues and bugs, track
+tasks, feature requests and what needs to be done and what problems
+exist, and capture general discussions related to the project.</p>
+<p>Each issue acts like a conversation thread, where contributors can
+describe a problem or idea, discuss it, attach code snippets or images,
+and reference commits or pull requests or mention other team members. It
+allows contributors to discuss and refine ideas before making changes,
+and helps prioritise work and organise releases. The Issues tab serves
+as the project’s task board and communication hub, making development
+more organised, transparent and inclusive.</p>
+<p>It is important to start listing things that need doing on the
+project early on so you do not forget about them. The Issues tab is a
+good place to create that list and keep it together with the code.</p>
+<p>In one of the the previous exercises, we have identified a number of
+things that could be improved with our software. Let’s add one of them
+as an issue now (we will continue to do this throughout the course -
+this is good practice).</p>
+<p>For example, we identified that variables (e.g. <code>w</code>,
+<code>t</code>, <code>tt</code>, <code>ttt</code>) should have more
+descriptive and meaningful names. To add this as an issue in GitHub, go
+to the <strong>Issues</strong> tab in your project’s GitHub page, and
+click the “New issue” green button. In the form that appears, we add a
+descriptive title for this new issue (e.g. “improve variable names”) and
+write more details about the issue (e.g. “rename variables
+<code>w</code>, <code>t</code>, <code>tt</code>, and <code>ttt</code> to
+be more descriptive”).</p>
+<figure><img src="fig/github-add-issue.png" class="image-with-shadow figure mx-auto d-block" alt="Form for adding an issue on a GitHub repository showing issue title and issue description fields"><div class="figcaption"><em>Adding an issue in GitHub</em></div>
+</figure><p>Later on in the course, we will learn how to comment, reference, add
+more details and close issues.</p>
+</div>
 </section><section><h2 class="section-heading" id="summary">Summary<a class="anchor" aria-label="anchor" href="#summary"></a></h2>
 <hr class="half-width"><p>We have created a new software project and used version control
 system Git to track changes to it. We can now look back at our work,
@@ -1014,7 +1088,7 @@ includes ourselves on a different machine or operating system).</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Code state </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment</a></p>
@@ -1123,7 +1197,7 @@ any links that you are not going to use.
   "url": "https://carpentries-incubator.github.io/better-research-software/02-better-start-version-control.html",
   "identifier": "https://carpentries-incubator.github.io/better-research-software/02-better-start-version-control.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2025-07-30",
+  "dateModified": "2025-08-22",
   "datePublished": "2025-08-22"
 }
 
