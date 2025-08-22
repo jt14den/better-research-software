@@ -561,7 +561,8 @@ It allows contributors to discuss and refine ideas before making changes, and he
 The Issues tab serves as the project’s task board and communication hub, making development more organised, transparent and inclusive.
 
 It is important to start listing things that need doing on the project early on so you do not forget about them. 
-The Issues tab is a good place to create that list.
+The Issues tab is a good place to create that list and keep it together with the code.
+
 In one of the the previous exercises, we have identified a number of things that could be improved with our software. 
 Let's add one of them as an issue now (we will continue to do this throughout the course - this is good practice).
 
