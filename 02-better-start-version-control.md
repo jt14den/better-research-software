@@ -527,6 +527,54 @@ This command tells Git to update the "main" branch on the "origin" remote.
 The `-u` flag (short for `--set-upstream`) sets the 'tracking reference' for the current branch,
 so that in future `git push` will default to sending to `origin main`.
 
+## Software project in GitHub
+
+We now have our software project in GitHub and have linked it to our local working copy.
+We are ready to start more work on software development and publishing and backing up that work on GitHub.
+Let's briefly explore the GitHub interface to our project.
+
+![*GitHub repository interface*](fig/github-project-main-tabs.png){alt="Home page of a GitHub repository showing all the top-level tabs, including Code, Issues, Pull requests, Actions, projects, Wiki, Insights and Settings" .image-with-shadow }
+
+In a GitHub software project, the tabs you see at the top of a repository page help organise different aspects of the project. 
+Here's a brief explanation of them:
+
+- **Code** - shows the source code, folders, and files in the repository. This is where the main development work is done.
+- **Issues** - used to track bugs, tasks, feature requests, or any work that needs to be done.
+- **Pull requests** - where contributors submit changes to the code. These are reviewed and discussed before being merged.
+- **Actions** - automated workflows (like tests or deployments) that run on the project using GitHub Actions.
+- **Projects** - offers a Kanban-style board to manage tasks and plan work (e.g., using cards and columns).
+- **Wiki** – lets you create structured documentation for your project.
+- **Security** – helps identify, manage, and fix vulnerabilities in your code and dependencies.
+- **Insights** – provides analytics on project activity, contributions, and community health.
+- **Settings** - where you configure how the repository behaves and how others can interact with it.
+
+These tabs help manage collaboration, development, and maintenance of the project.
+We will cover some of them in more detail as part of this course.
+You may not see all of these tabs depending on your access level to the repository and the configuration settings. 
+
+### Keeping track of issues and planned work in GitHub
+
+The one tab that we want to start using early on is **Issues**. 
+This is where you report issues and bugs, track tasks, feature requests and what needs to be done and what problems exist, and capture general discussions related to the project. 
+
+Each issue acts like a conversation thread, where contributors can describe a problem or idea, discuss it, attach code snippets or images, and reference commits or pull requests or mention other team members.
+It allows contributors to discuss and refine ideas before making changes, and helps prioritise work and organise releases.
+The Issues tab serves as the project’s task board and communication hub, making development more organised, transparent and inclusive.
+
+It is important to start listing things that need doing on the project early on so you do not forget about them. 
+The Issues tab is a good place to create that list and keep it together with the code.
+
+In one of the the previous exercises, we have identified a number of things that could be improved with our software. 
+Let's add one of them as an issue now (we will continue to do this throughout the course - this is good practice).
+
+For example, we identified that variables (e.g. `w`, `t`, `tt`, `ttt`) should have more descriptive and meaningful names.
+To add this as an issue in GitHub, go to the **Issues** tab in your project's GitHub page, and click the "New issue" green button.
+In the form that appears, we add a descriptive title for this new issue (e.g. "improve variable names") and write more details about the issue (e.g. "rename variables `w`, `t`, `tt`, and `ttt` to be more descriptive").
+
+![*Adding an issue in GitHub*](fig/github-add-issue.png){alt="Form for adding an issue on a GitHub repository showing issue title and issue description fields" .image-with-shadow }
+
+Later on in the course, we will learn how to comment, reference, add more details and close issues.
+
 ## Summary
 
 We have created a new software project and used version control system Git to track changes to it. 
