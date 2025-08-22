@@ -302,7 +302,7 @@ c.
 ::::::
 
 Now that we've updated all the variable names to be more descriptive, we can go and close the issue on GitHub we created earlier.
-To do so, we open our repositpry in GitHub, switch to the Issues tab, find the issue to "improve variable names" we created earlier.
+To do so, we open our repository in GitHub, switch to the Issues tab, find the issue to "improve variable names" we created earlier.
 There are more automated ways to close issues based on a commit/pull request that we will learn later, for now we will click the "Close issue" button at the bottom of the discussion.
 
 ## Remove unused variables and imports
