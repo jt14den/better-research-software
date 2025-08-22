@@ -567,7 +567,7 @@ Let's add one of them as an issue now (we will continue to do this throughout th
 
 For example, we identified that variables (e.g. `w`, `t`, `tt`, `ttt`) should have more descriptive and meaningful names.
 To add this as an issue in GitHub, go to the **Issues** tab in your project's GitHub page, and click the "New issue" green button.
-In the form that appears, we add a descriptive title for this new issue (e.g. "improve variable names") and write more details about the issue (e.g. "rename variables `w`, `t`, `tt`, and `ttt`).
+In the form that appears, we add a descriptive title for this new issue (e.g. "improve variable names") and write more details about the issue (e.g. "rename variables `w`, `t`, `tt`, and `ttt` to be more descriptive").
 
 ![*Adding an issue in GitHub*](fig/github-add-issue.png){alt="Form for adding an issue on a GitHub repository showing issue title and issue description fields" .image-with-shadow }
 
