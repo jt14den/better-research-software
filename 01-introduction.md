@@ -155,7 +155,7 @@ This is a (non-exhaustive) list of things that could be fixed/improved with our 
 
 - data (`data.json`) and Python script (`my code v2.py`) files could have more descriptive names
 - Python script (`my code v2.py`) should not contain blank spaces as it may cause problems when running the code from command line
-- variables (e.g. `w`) should have more descriptive and meaningful names
+- variables (e.g. `w`, `t`, `tt`, `ttt`) should have more descriptive and meaningful names
 - version control is embedded in file name - there are better ways of keeping track of changes to code and its different versions
 
 #### Code organisation and style
