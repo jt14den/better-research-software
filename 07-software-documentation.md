@@ -29,6 +29,15 @@ The purpose of software documentation is to communicate other important informat
 about our software (its purpose, dependencies, how to install and run it, etc.) to the people who need it – 
 both users and developers.
 
+:::::: spoiler
+
+### Code state
+
+At this point, the code in your local software project's directory should be as in:
+<https://github.com/carpentries-incubator/bbrs-software-project/tree/07-software-documentation>
+
+::::::
+
 ::: spoiler
 
 ### Activate your virtual environment
@@ -42,16 +51,6 @@ the software project directory:
 (venv_spacewalks) $
 ```
 :::
-
-:::::: spoiler
-
-### Code state
-
-At this point, the code in your local software project's directory should be as in:
-<https://github.com/carpentries-incubator/bbrs-software-project/tree/07-software-documentation>
-
-::::::
-
 
 ## Why document our software?
 

@@ -31,6 +31,15 @@ test its functionality and improve it further.
 The goal of software testing is to check that the actual results
 produced by a piece of code meet our expectations, i.e. are correct.
 
+:::::: spoiler
+
+### Code state
+
+At this point, the code in your local software project's directory should be as in:
+<https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correctness>
+
+::::::
+
 ::: spoiler
 
 ### Activate your virtual environment
@@ -45,15 +54,6 @@ $ source venv_spacewalks/Scripts/activate # Windows
 ```
 
 :::
-
-:::::: spoiler
-
-### Code state
-
-At this point, the code in your local software project's directory should be as in:
-<https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correctness>
-
-::::::
 
 ## Why use software testing?
 
