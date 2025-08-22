@@ -60,7 +60,7 @@ Since we added an open source license to our repository we probably want to make
 
 To make your repository public, if it is not public already:
 
-1. go to your repository on GitHub and click on the `Settings` link near the top right corner. 
+1. Go to your repository on GitHub and click on the `Settings` link near the top right corner. 
 2. Scroll down to the bottom of the page and the "Danger Zone" settings. 
 3. Click on "Change Visibility" and you should see a message saying "Change to public". 
 If it says "Change to private" then the repository is already public. 
