@@ -673,7 +673,7 @@ what the code is doing and how it is organised.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Below are some suggested questions to help you assess the code. These
 are not the only criteria on which you could evaluate the code and you
@@ -704,7 +704,7 @@ different statistic, or run on a different input file?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>This is a (non-exhaustive) list of things that could be
 fixed/improved with our code and data:</p>
@@ -823,7 +823,7 @@ page</a> and that are functioning correctly.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The expected out put of each command is:</p>
 <ol style="list-style-type: decimal">
@@ -1144,7 +1144,7 @@ any latest changes before you push your own.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Open up VS Code, and launch a <strong>Git Bash</strong> terminal.
 Call out how your prompt looks, and make sure that Windows users are not
@@ -1297,7 +1297,7 @@ made changes and/or what their impact will be.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
   <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Choose how you teach version control steps from here </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
 <div class="accordion-body">
 <p>At this point in the lesson, you may choose to demonstrate how the
 same steps of staging and committing changes can also be achieved with
@@ -1447,7 +1447,7 @@ plot(<code>cumulative_eva_graph.png</code>).</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Firstly, let’s update the file names in our Python script from VS
 Code:</p>
@@ -1631,7 +1631,7 @@ includes ourselves on a different machine or operating system).</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Code state </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment</a></p>
@@ -1734,7 +1734,7 @@ contribute to it. We now want to start developing the code further.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Code state </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment</a></p>
@@ -1747,7 +1747,7 @@ should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Some learners may encounter various issues when creating and managing
 virtual development environments or configuring the Python interpreter
@@ -2352,7 +2352,7 @@ see how we can improve it further.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Code state </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability</a></p>
@@ -4413,7 +4413,7 @@ a piece of code meet our expectations, i.e. are correct.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Activate your virtual environment </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>If it is not already active, make sure to activate your virtual
 environment from the root of the software project directory:</p>
@@ -4433,7 +4433,7 @@ environment from the root of the software project directory:</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Code state </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correctness" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/06-code-correctness</a></p>
@@ -4519,7 +4519,7 @@ working together correctly.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>End-to-end tests compare the actual output of a program to the
@@ -4641,7 +4641,7 @@ verify that a piece of code is behaving as expected?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>It can be tempting to test our code informally because this
 approach:</p>
@@ -5126,7 +5126,7 @@ mean?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: lower-alpha">
 <li>9 tests were detected in the test suite</li>
@@ -5278,7 +5278,7 @@ function. Cover typical cases and edge cases.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>We can add the following test functions to out test suite.</p>
 <div class="codewrapper sourceCode" id="cb30">
@@ -5517,7 +5517,7 @@ test suite?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <ol style="list-style-type: lower-alpha">
 <li>You can find this information on the “Files” tab of the HTML report
@@ -5589,7 +5589,7 @@ principles</a> by making our code more <strong>accessible</strong> and
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
   <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Code state </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/07-software-documentation" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/07-software-documentation</a>.</p>
@@ -6971,7 +6971,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-08-open-collaboration"><p>Content from <a href="08-open-collaboration.html">Open software management &amp; collaboration</a></p>
 <hr>
-<p>Last updated on 2025-07-30 |
+<p>Last updated on 2025-08-22 |
 
         <a href="https://github.com/carpentries-incubator/better-research-software/edit/main/episodes/08-open-collaboration.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 90 minutes</p>
@@ -7000,12 +7000,11 @@ files simultaneously?</li>
 <h3 class="card-title">Objectives</h3>
 <p>After completing this episode, participants should be able to:</p>
 <ul>
-<li>Understand how to archive code to Zenodo and create a digital object
-identifier (DOI) for a software project (and include that info in
-CITATION.cff).</li>
-<li>Understand how to track issues with code in GitHub.</li>
-<li>Understand how to use Git branches for working on code in parallel
-and how to merge code back using pull requests.</li>
+<li>Archive code to Zenodo and create a digital object identifier (DOI)
+for a software project (and include that info in CITATION.cff).</li>
+<li>Track issues with code in GitHub.</li>
+<li>Use Git branches to work on code in parallel and merge code back
+using pull requests.</li>
 <li>Apply issue tracking, branching and pull requests together to fix
 bugs while allowing other developers to work on the same code.</li>
 </ul>
@@ -7073,15 +7072,20 @@ should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software
 creator can see them. Since we added an open source license to our
 repository we probably want to make sure people can actually access
 it.</p>
-<p>To make your repository public, if it is not already, go to your
-repository on GitHub and click on the <code>Settings</code> link near
-the top right corner. Then scroll down to the bottom of the page and the
-“Danger Zone” settings. Click on “Change Visibility” and you should see
-a message saying “Change to public”. If it says “Change to private” then
-the repository is already public. You will then be asked to confirm that
-you indeed want to make the repository public and agree to the warning
-that the code will now be publicly visible. As a security measure, you
-will then have to put in your GitHub password.</p>
+<p>To make your repository public, if it is not public already:</p>
+<ol style="list-style-type: decimal">
+<li>Go to your repository on GitHub and click on the
+<code>Settings</code> link near the top right corner.</li>
+<li>Scroll down to the bottom of the page and the “Danger Zone”
+settings.</li>
+<li>Click on “Change Visibility” and you should see a message saying
+“Change to public”. If it says “Change to private” then the repository
+is already public.</li>
+<li>You will then be asked to confirm that you indeed want to make the
+repository public and agree to the warning that the code will now be
+publicly visible. As a security measure, you will then have to put in
+your GitHub password.</li>
+</ol>
 </div>
 <div class="section level3">
 <h3 id="transferring-to-an-organisation">Transferring to an organisation<a class="anchor" aria-label="anchor" href="#transferring-to-an-organisation"></a>
@@ -7107,7 +7111,7 @@ and can include code - which gives us a way to obtain a DOI for our
 software.</p>
 <p>Let us now look into how we can archive a GitHub repository to
 Zenodo. Note that, instead of using the real Zenodo website, we will
-practice with <a href="https://sandbox.zenodo.org/" class="external-link">Zenodo
+practice using <a href="https://sandbox.zenodo.org/" class="external-link">Zenodo
 Sandbox</a>.</p>
 <div id="zenodo-sandbox" class="callout">
 <div class="callout-square">
@@ -7131,6 +7135,23 @@ meant to exist forever).</p>
 </div>
 </div>
 </div>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+  Optional challenge: archive our GitHub repository to Zenodo
+  </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>You can choose to do the following as an exercise or by live coding
+based on what you think the learners would prefer. You can copy the
+detailed instructions below to give them it as an exercise.</p>
+</div>
+</div>
+</div>
+</div>
 <p>We can archive our GitHub repository to Zenodo (Sandbox) by doing the
 following:</p>
 <ol style="list-style-type: decimal">
@@ -7149,80 +7170,58 @@ Zenodo Sandbox knows about.</li>
 this was successful you will be told to refresh the page.</li>
 <li>The repository should now appear in the list of “Enabled”
 repositories at the top of the screen, but it does not yet have a DOI.
-To get one we have to make a “release” on GitHub. Click on the
+To get one we have to make a “release” on GitHub. To do so, click on the
 repository and then press the green button to create a release. This
-will take you to GitHub’s release page where you will be asked to give a
-title and description of the release. You will also have to create a
-“tag” for your release - a way of having a friendly name for the version
-of some code in Git instead of using a long hash code. Often we will
-create a sequential version number for each release of the software and
-have the tag name match this, for example v1.0 or just 1.0.</li>
+will take you to GitHub’s release page for your software repository
+where you will be asked to give a title and description of the release.
+You will also have to create a “tag” for your release - a way of having
+a friendly name for the version of some code in Git instead of using a
+long hash code. Often we will create a sequential version number for
+each release of the software and have the tag name match this, for
+example v1.0 or just 1.0.</li>
 <li>If we now refresh the Zenodo Sandbox page for this repository we
 will see that it has been assigned a DOI.</li>
 </ol>
 <p>The DOI does not just link to GitHub, Zenodo will have taken a copy
-(a snapshot) of our repository at the point where we tagged the release.
-This means that even if we delete it from GitHub or even if GitHub were
-ever to go away or remove it, there will still be a copy on Zenodo.
-Zenodo will allow people to download the entire repository (more
-accurately, its state at the time it was tagged for release) as a single
-<code>zip</code> file.</p>
+(a snapshot) of our repository at the point where we created the
+release. This means that even if we delete it from GitHub or even if
+GitHub were ever to go away or remove it, there will still be a copy of
+our software on Zenodo. Zenodo will allow people to download the entire
+repository (more accurately, its state at the time it was tagged for
+release) as a single <code>zip</code> file.</p>
 <p>Zenodo will have actually created two DOIs for you. One represents
-the latest version of the software and will always represent the latest
-if you make more releases. The other is specific to the release you made
-and will always point to that version. We can see both of these by
-clicking on the DOI link in the Zenodo page for the repository.</p>
+the latest version of the software and will always link to the latest
+(most recent) release if you make more releases. The other is specific
+to the release you made and will always point to that version. We can
+see both of these by clicking on the DOI link in the Zenodo page for the
+repository.</p>
 <p>One of the things which is displayed on this page is a badge image
 that you can copy the link for and add to the README file in your GitHub
 repository so that people can find the Zenodo version of the repository.
-If you click on the DOI image in the Details section of the Zenodo page
-then you will be shown instructions for obtaining a link to the DOI
+If you click on the DOI image in the “Details” section of the Zenodo
+page then you will be shown instructions for obtaining a link to the DOI
 badge in various formats including Markdown. Here is the badge for this
 repository and the corresponding Markdown:</p>
 <p><a href="https://doi.org/10.5281/zenodo.11869450" class="external-link"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.11869450.svg" alt="styled button linking to the Zenodo entry for this lesson" class="figure"></a></p>
 <pre class="text"><code>[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11869450.svg)](https://doi.org/10.5281/zenodo.11869450)</code></pre>
-<div id="archive-your-repository-to-zenodo-sandbox" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<span class="callout-header">Discussion</span>
-<div id="archive-your-repository-to-zenodo-sandbox" class="callout-inner">
-<h3 class="callout-title">Archive your repository to Zenodo
-(Sandbox)</h3>
-<div class="callout-content">
-<p>Note: for this exercise, as demonstrated earlier, you should use the
-<a href="https://sandbox.zenodo.org/" class="external-link">Sandbox Zenodo</a> (a version of
-Zenodo for testing and playing with before minting a real DOI). For real
-software releases, you should use Zenodo.</p>
-<ul>
-<li>Create an account on Zenodo Sandbox that is linked to your GitHub
-account.</li>
-<li>Use Zenodo Sandbox to create a release for your repository and
-obtain a DOI for it.</li>
-<li>Get the link to the DOI badge for your repository and add a link to
-this image to your README file in Markdown format. Check that this is
-the DOI for the latest version and not the DOI for a specific version,
-if not you will be updating this every time you make a release.</li>
-</ul>
-</div>
-</div>
-</div>
-<div id="problems-with-github-and-zenodo-integration" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="problems-with-github-and-zenodo-integration" class="callout-inner">
-<h3 class="callout-title">Problems with GitHub and Zenodo
-integration</h3>
-<div class="callout-content">
+<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+  <h3 class="accordion-header" id="headingSpoiler3">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Problems with GitHub and Zenodo integration
+  </h3>
+</button>
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div class="accordion-body">
 <p>The integration between GitHub and Zenodo does not interact well with
-some browser privacy features and extensions. Firefox can be
+some browsers’ privacy features and extensions. Firefox can be
 particularly problematic with this and might open new tabs to login to
 GitHub and then give an error saying:
-<code>Your browser did something unexpected.  Please try again. If the error continues, try disabling all browser extensions.</code>
+<code>Your browser did something unexpected. Please try again. If the error continues, try disabling all browser extensions.</code>
 If this happens try disabling the extra privacy features/extensions or
 using another browser such as Chrome.</p>
+</div>
 </div>
 </div>
 </div>
@@ -7235,13 +7234,31 @@ information in our citation file. Earlier we created a
 <code>CITATION.cff</code> file with information about how to cite our
 code. There are a few fields we can add now which are related to the
 DOI; one of these is the <code>version</code> file which covers the
-version number of the software. We can add a DOI to the file in the
-<code>identifiers</code> section with a type of <code>doi</code> and
-<code>value</code> of the Zenodo URL. Optionally we can also add a
-<code>date-released</code> field indicating the date we released this
-software. Here is an updated version of our <code>CITATION.cff</code>
-from the previous episode with a version number, DOI and release date
-added.</p>
+version number of the software.</p>
+<div id="accordionInstructor2" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
+  <h3 class="accordion-header" id="headingInstructor2">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+  Optional challenge: add a DOI and ORCID to the citation file
+  </h3>
+</button>
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
+<div class="accordion-body">
+<p>You can choose to do the following as an exercise or by live coding
+based on what you think the learners would prefer. You can copy the the
+detailed instructions below to give them it as an exercise.</p>
+</div>
+</div>
+</div>
+</div>
+<p>We can add a DOI to the file by creating an <code>identifiers</code>
+section that includes the variables of <code>doi</code> and
+<code>value</code> of the Zenodo URL as a bulleted entry. Optionally, we
+can also add a <code>date-released</code> field indicating the date we
+released this software as a new variable. Here is an updated version of
+our <code>CITATION.cff</code> from the previous episode with a version
+number, DOI and release date added.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -7274,23 +7291,6 @@ added.</p>
 <span id="cb3-27"><a href="#cb3-27" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">type</span><span class="kw">:</span><span class="at"> doi</span></span>
 <span id="cb3-28"><a href="#cb3-28" tabindex="-1"></a><span class="at">    </span><span class="fu">value</span><span class="kw">:</span><span class="at"> 10.5281/zenodo.1234</span></span>
 <span id="cb3-29"><a href="#cb3-29" tabindex="-1"></a><span class="fu">date-released</span><span class="kw">:</span><span class="at"> 2024-06-01</span></span></code></pre>
-</div>
-<div id="add-a-doi-to-your-citation-file" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<span class="callout-header">Discussion</span>
-<div id="add-a-doi-to-your-citation-file" class="callout-inner">
-<h3 class="callout-title">Add a DOI to your citation file</h3>
-<div class="callout-content">
-<p>Add the DOI you were allocated in the previous exercise to your
-<code>CITATION.cff</code> file and then commit and push the updated
-version to your GitHub repository. If you used the <code>commit</code>
-field in your <code>CITATION.cff</code> file before to point to a given
-version of the code - you can now remove it as using the DOI field is
-better for this job.</p>
-</div>
-</div>
 </div>
 <div id="going-further-with-publishing-code" class="callout">
 <div class="callout-square">
@@ -7335,13 +7335,13 @@ advanced users will also use issue trackers of public projects to report
 problems they are having (and sometimes this is misused by users seeking
 help using documented features of the program).</p>
 <p>The code from the testing chapter earlier has a bug with an extra
-bracket in eva_data_analysis.py (and if you have fixed that a missing
-import of summarise_categorical in the test). Let’s go ahead and create
-a new issue in our GitHub repository to describe this problem. We can
-find the issue tracker on the “Issues” tab in the top left of the GitHub
-page for the repository. Click on this and then click on the green “New
-Issue” button on the right hand side of the screen. We can then enter a
-title and description of our issue.</p>
+bracket in <code>eva_data_analysis.py</code> (and if you have fixed that
+a missing import of <code>summarise_categorical</code> in the test).
+Let’s go ahead and create a new issue in our GitHub repository to
+describe this problem. We can find the issue tracker on the “Issues” tab
+in the top left of the GitHub page for the repository. Click on this and
+then click on the green “New Issue” button on the right hand side of the
+screen. We can then enter a title and description of our issue.</p>
 <p>A good issue description should include:</p>
 <ul>
 <li>What the problem is, including any error messages that are
@@ -7354,13 +7354,14 @@ the operating system being used.</li>
 </ul>
 <p>After the issue is created it will be assigned a sequential ID
 number.</p>
-<div id="write-an-issue-to-describe-our-bug" class="callout discussion">
+<div id="create-an-issue-in-github-to-describe-our-bug" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="write-an-issue-to-describe-our-bug" class="callout-inner">
-<h3 class="callout-title">Write an issue to describe our bug</h3>
+<div id="create-an-issue-in-github-to-describe-our-bug" class="callout-inner">
+<h3 class="callout-title">Create an issue in GitHub to describe our
+bug</h3>
 <div class="callout-content">
 <p>Create a new issue in your repository’s issue tracker by doing the
 following:</p>
@@ -7381,9 +7382,11 @@ following:</p>
 <p>Once the issue is created, further discussion can take place with
 additional comments. These can include code snippets and file
 attachments such as screenshots or logfiles. We can also reference other
-issues by writing a # symbol and the number of the other issue. This is
-sometimes used to identify related issues or if an issue is a
-duplicate.</p>
+issues (by writing a <code>#</code> symbol and the number of the other
+issue) or mention other collaborators (by writing <code>@</code>
+followed by their GitHub username) to draw their attention to our
+comment. This is sometimes used to identify related issues or if an
+issue is a duplicate.</p>
 </div>
 <div class="section level3">
 <h3 id="closing-an-issue">Closing an issue<a class="anchor" aria-label="anchor" href="#closing-an-issue"></a>
@@ -7606,8 +7609,8 @@ the main branch there is no reason to keep it.</p>
 same repository it is a entirely new copy of the repository. Forks are
 commonly used by Github users who wish to work on a project that they
 are not a member of. Typically forking will copy the repository to our
-own namespace (e.g. github.com/username/reponame instead of
-github.com/projectname/reponame)</p>
+own namespace (e.g. <code>github.com/username/reponame</code> instead of
+<code>github.com/projectname/reponame</code>).</p>
 <p>To create a fork on github use the “Fork” button to the right of the
 repository name. After we create our fork we can make some changes and
 these could even be on the main branch inside our forked repository.
@@ -7623,22 +7626,22 @@ upstream project.</p>
 <div id="practice-pull-requests" class="callout-inner">
 <h3 class="callout-title">Practice pull requests</h3>
 <div class="callout-content">
-<p>Q: Work in pairs for this exercise. Share the GitHub link of your
+<p>Work in pairs for this exercise. Share the GitHub link of your
 repository with your partner. If you have set your repository to
-private, you will need to add them as a collaborator. Go to the settings
-page on your GitHub repository’s webpage, click on Collaborators from
-the left hand menu and then click the green “Add People” button and
-enter the GitHub username or email address of your partner. They will
-get an email and an alert within GitHub to accept your invitation to
-work on this repository, without doing this they won’t be able to access
-it.</p>
+private, you will need to add them as a collaborator. Go to the
+“Settings” page on your GitHub repository’s webpage, click on
+“Collaborators” from the left hand menu and then click the green “Add
+People” button and enter the GitHub username or email address of your
+partner. They will get an email and an alert within GitHub to accept
+your invitation to work on this repository, without doing this they
+won’t be able to access it.</p>
 <ul>
-<li>Now make a fork of your partners repository.</li>
+<li>Make a fork of your partners repository.</li>
 <li>Edit the <code>CITATION.cff</code> file and add your name to
 it.</li>
-<li>Commit these changes to your fork</li>
-<li>Create a pull request back to the original repository</li>
-<li>Your partner will now receive your pull request and can review</li>
+<li>Commit these changes to your fork.</li>
+<li>Create a pull request back to the original repository.</li>
+<li>Your partner will now receive your pull request and can review.</li>
 </ul>
 </div>
 </div>
@@ -7657,7 +7660,7 @@ push your work to GitHub.</p>
 </section><section><h2 class="section-heading" id="summary">Summary<a class="anchor" aria-label="anchor" href="#summary"></a>
 </h2>
 <hr class="half-width">
-<p>This episode emphasizes the importance of collaboration in creating
+<p>This episode emphasises the importance of collaboration in creating
 sustainable research software. It covers practices like using open
 version control repositories (e.g., GitHub), inviting contributions
 through issue templates, PR and code review processes, and establishing
@@ -7665,15 +7668,15 @@ clear governance, licensing, and codes of conduct. The episode also
 highlights the ethos of open collaboration so that anyone can contribute
 and benefit from the project, reinforcing transparency, inclusivity, and
 community-driven development.</p>
-<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
-  <h3 class="accordion-header" id="headingSpoiler3">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
+  <h3 class="accordion-header" id="headingSpoiler4">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   Code state
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
 <div class="accordion-body">
 <p>At this point, the code in your local software project’s directory
 should be as in: <a href="https://github.com/carpentries-incubator/bbrs-software-project/tree/final" class="external-link uri">https://github.com/carpentries-incubator/bbrs-software-project/tree/final</a></p>
