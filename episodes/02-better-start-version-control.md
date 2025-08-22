@@ -529,7 +529,7 @@ so that in future `git push` will default to sending to `origin main`.
 
 ## Software project in GitHub
 
-We now have our software project in GitHub and linked to our local working copy.
+We now have our software project in GitHub and have linked it to our local working copy.
 We are ready to start more work on software development and publishing and backing up that work on GitHub.
 Let's briefly explore the GitHub interface to our project.
 
