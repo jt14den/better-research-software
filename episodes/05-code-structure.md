@@ -28,6 +28,15 @@ including breaking our code into small, reusable functions that perform one spec
 We are going to explore a bit more how using common code structures can improve readability, accessibility and 
 reusability of our code, and will expand these practices on our (research or code) projects as a whole.
 
+:::::: spoiler
+
+### Code state
+
+At this point, the code in your local software project's directory should be as in:
+<https://github.com/carpentries-incubator/bbrs-software-project/tree/05-code-structure>
+
+::::::
+
 ::: spoiler
 
 ### Activate your virtual environment
@@ -42,15 +51,6 @@ $ source venv_spacewalks/Scripts/activate # Windows
 ```
 
 :::
-
-:::::: spoiler
-
-### Code state
-
-At this point, the code in your local software project's directory should be as in:
-<https://github.com/carpentries-incubator/bbrs-software-project/tree/05-code-structure>
-
-::::::
 
 ## Functions for modular and reusable code 
 

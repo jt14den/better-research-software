@@ -29,6 +29,15 @@ Additionally, open sharing encourages community contributions and can lead to be
 Adding a [license](../learners/licensing.md) and other metadata to our code (covered in the previous episode) are the first steps towards sharing the code publicly.
 There are several other important steps to consider which we will cover here.
 
+:::::: spoiler
+
+### Code state
+
+At this point, the code in your local software project's directory should be as in:
+<https://github.com/carpentries-incubator/bbrs-software-project/tree/08-open-collaboration>
+
+::::::
+
 ::: spoiler
 
 ### Activate your virtual environment
@@ -41,15 +50,6 @@ $ source venv_spacewalks/Scripts/activate # Windows
 (venv_spacewalks) $
 ```
 :::
-
-:::::: spoiler
-
-### Code state
-
-At this point, the code in your local software project's directory should be as in:
-<https://github.com/carpentries-incubator/bbrs-software-project/tree/08-open-collaboration>
-
-::::::
 
 ## Sharing code to encourage collaboration
 
