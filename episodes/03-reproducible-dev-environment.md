@@ -501,7 +501,7 @@ Remember to commit these latest changes.
 (venv_spacewalks) $ git push origin main
 ```
 
-Do not foget to commit any files that have been changed.
+Do not forget to commit any files that have been changed.
 
 ## Summary
 
