@@ -368,6 +368,10 @@ Changes to be committed:
 	renamed:    my code v2.py -> my_code_v2.py
 ```
 
+```bash
+$ git commit -m "removed spaces from filename"
+```
+
 ### Rename our data and output files
 
 Now that we know how to rename files in Git,
