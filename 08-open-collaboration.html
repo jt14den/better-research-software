@@ -679,7 +679,7 @@ features of the program).</p>
 <p>To practice making an issue, we will file a “feature request”, where
 we describe new functionality that may improve the codebase. Let’s go
 ahead and create a new issue in our GitHub repository for a feature
-request that creates a table of total eva/spacewalk time for each
+request to create a table of total EVA/spacewalk time for each
 astronaut. We can find the issue tracker on the “Issues” tab in the top
 left of the GitHub page for the repository. Click on this and then click
 on the green “New Issue” button on the right hand side of the screen. We
@@ -708,10 +708,10 @@ issue is a duplicate.</p>
 <h3 id="working-in-parallel-with-git-branches">Working in parallel with Git branches<a class="anchor" aria-label="anchor" href="#working-in-parallel-with-git-branches"></a></h3>
 <p>Next, we will learn how to suggest this change back to the
 repository. So far, we’ve been working on our own making changes in
-main. However, when we start to have collaborators, we may need to use
-the <a href="https://docs.github.com/en/get-started/using-github/github-flow" class="external-link">GitHub
-flow</a> or a similar workflow as these options will work better for
-multiple collaborators.</p>
+main. However, when we start to have collaborators, we may need to adopt
+a workflow such as <a href="https://docs.github.com/en/get-started/using-github/github-flow" class="external-link">GitHub
+flow</a> that facilitates simultaneous editing on the project and
+quality control on the changes made.</p>
 <p>Branching is a feature of Git that allows two or more parallel
 streams of work. Commits can be made to one branch without interfering
 with another. Branches are commonly used as a way for one developer to
@@ -776,8 +776,8 @@ versions of Git.</p>
 <p>Once we have switched to a branch any further commits that are made
 will go to that branch. When we run a <code>git commit</code> command we
 will see the name of the branch we are committing to in the output of
-<code>git commit</code>. Let’s edit add the following function to our
-code.</p>
+<code>git commit</code>. Let’s add the following function to our code to
+implement the requested feature.</p>
 <p>Copy and paste this function to add it to your code</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -816,36 +816,35 @@ we define the <code>graph_file</code> variable.</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>dur_by_astro_csv <span class="op">=</span> <span class="st">'results/duration_by_astronaut.csv'</span></span></code></pre>
 </div>
-<p>Now, lets test run our script, make sure we don’t get any errors.</p>
+<p>Now, let’s test run our script, to make sure we do not get any
+errors.</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python3 eva_data_analysis.py</span></code></pre>
 </div>
-<p>Now let’s add and commit the new version of the code to our
+<p>If we do:</p>
+<pre><code>venv_spacewalks) $ ls results</code></pre>
+<p>we can see the new result CSV file listed.</p>
+<p>Let’s add and commit the new version of the code to our
 <code>02-sum-by-astro-feat</code> branch. First we will check that we
 are on the right branch using either <code>git branch</code> or
 <code>git status</code>.</p>
-<p>In our previous issue, we closed the issue manually by clicking the
-“Close” button in the GitHub web interface. We can also use keywords
-such “fixes”, “fixed”, “close”, “closed” or “closes” followed by a #
-symbol and the issue number and it will automatically close the issue
-when the code is accepted(merged) into main. We will also add this to
-our commit message.</p>
 </div>
 </div>
 <div class="section level3">
 <h3 id="closing-an-issue">Closing an issue<a class="anchor" aria-label="anchor" href="#closing-an-issue"></a></h3>
 <p>Once an issue is solved then it can be closed. This can be done
-either by pressing the “Close” button in the GitHub web interface or by
-making a commit which includes the word “fixes”, “fixed”, “close”,
-“closed” or “closes” followed by a # symbol and the issue number.</p>
-<div class="codewrapper sourceCode" id="cb13">
+either by pressing the “Close” button in the GitHub web interface (as we
+did before) or by making a commit which includes the word “fixes”,
+“fixed”, “close”, “closed” or “closes” followed by a # symbol and the
+issue number in the commit message.</p>
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git branch</span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git add eva_data_analysis.py</span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"added duration by astronaut functionality, closes #2"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git branch</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git add eva_data_analysis.py</span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"added duration by astronaut functionality, closes #2"</span></span></code></pre>
 </div>
 <p>In the output of <code>git commit -m</code> the first part of the
 output line will show the name of the branch we just made the commit
@@ -858,26 +857,26 @@ to.</p>
 <p>If we now switch back to the <code>main</code> branch our new commit
 will no longer be there in the source file or the output of
 <code>git log</code>.</p>
-<div class="codewrapper sourceCode" id="cb15">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git switch main</span></code></pre>
-</div>
-<p>And if we go back to the <code>02-sum-by-astro-feat</code> branch it
-will re-appear.</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git switch 02-sum-by-astro-feat</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git switch main</span></code></pre>
+</div>
+<p>And if we go back to the <code>02-sum-by-astro-feat</code> branch it
+will re-appear.</p>
+<div class="codewrapper sourceCode" id="cb17">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git switch 02-sum-by-astro-feat</span></code></pre>
 </div>
 <p>If we want to push our changes to a remote such as GitHub we have to
 tell the <code>git push</code> command which branch to push to. If the
 branch doesn’t exist on the remote (as it currently won’t) then it will
 be created.</p>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git push origin 02-sum-by-astro-feat</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git push origin 02-sum-by-astro-feat</span></code></pre>
 </div>
 <p>If we now refresh the GitHub webpage for this repository we should
 see the <code>02-sum-by-astro-feat</code> branch has appeared in the
@@ -896,10 +895,10 @@ list of branches.</p>
 if we have made changes on another computer or via GitHub’s web based
 editor), then we can specify a branch on a <code>git pull</code>
 command.</p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="fu">git</span> pull origin 02-sum-by-astro-feat</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="fu">git</span> pull origin 02-sum-by-astro-feat</span></code></pre>
 </div>
 </div>
 </div>
@@ -916,22 +915,22 @@ command.</p>
 <div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
 <div class="accordion-body">
 <p>If we are working alone, when we have completed working on a branch
-(for example adding a feature or fixing a bug) then we might merge our
+(for example adding a feature or fixing a bug) then we can merge our
 branch back into the main one (or any other branch). This is done with
 the <code>git merge</code> command.</p>
 <p>This must be run on the <em>TARGET</em> branch of the merge, so we
 will have to use a <code>git switch</code> command to set this.</p>
-<div class="codewrapper sourceCode" id="cb19">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git switch main</span></code></pre>
-</div>
-<p>Now we are back on the main branch we can go ahead and merge the
-changes from the bugfix branch:</p>
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git merge 02-sum-by-astro-feat</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git switch main</span></code></pre>
+</div>
+<p>Now we are back on the main branch we can go ahead and merge the
+changes from the bugfix branch:</p>
+<div class="codewrapper sourceCode" id="cb21">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> git merge 02-sum-by-astro-feat</span></code></pre>
 </div>
 </div>
 </div>
@@ -940,18 +939,18 @@ changes from the bugfix branch:</p>
 </div>
 <div class="section level3">
 <h3 id="pull-requests">Pull requests<a class="anchor" aria-label="anchor" href="#pull-requests"></a></h3>
-<p>On larger projects, with collaborators, we might need to have a code
-review process before changes are merged, especially before they are
-merged onto the main branch that might be what is being released as the
-public version of the software. GitHub has a process for this that is
-called a <strong>pull request</strong>. Other Git services such as
-GitLab have different names for this; GitLab calls them <strong>merge
-requests</strong>. Pull requests are situations where one developer
-requests that another merges code from a branch (or “pull” it from
-another copy of the repository). The person receiving the request then
-has the chance to review the code, write comments suggesting changes or
-even change the code themselves before merging it. It is also very
-common for automated checks of code to be run on a pull request to
+<p>On larger projects, with collaborators, we might include a code
+review process before changes are merged. A quality control step like
+this is especially important if the main branch of the project is being
+released as the public version of the software. GitHub has a process for
+this that is called a <strong>Pull Request</strong>. Other Git services
+such as GitLab have different names for this; GitLab calls them
+<strong>merge requests</strong>. Pull requests are situations where one
+developer requests that another merges code from a branch (or “pull” it
+from another copy of the repository). The person receiving the request
+then has the chance to review the code, write comments suggesting
+changes or even change the code themselves before merging it. It is also
+very common for automated checks of code to be run on a pull request to
 ensure the code is of good quality and is passing automated tests.</p>
 <p>As a simple example of a pull request, we can now create a pull
 request for the changes we made on our <code>02-sum-by-astro-feat</code>
@@ -1031,6 +1030,9 @@ displayed.</li>
 the operating system being used.</li>
 <li>Versions of any dependent libraries.</li>
 <li>How to reproduce it.</li>
+<li>Optionally, description of the expected behaviour, e.g. if there is
+not an error message but the user thinks the result or behaviour is not
+correct.</li>
 </ul><ol start="2" style="list-style-type: decimal"><li>Create a pull request fix the code. You can try to create the code
 yourself or copy the test code below.
 <ul><li>Hint: Don’t forget to make a new branch from the <code>main</code>
@@ -1056,30 +1058,30 @@ computer and in GitHub.</li>
 </button>
 <div id="collapseSpoiler6" class="accordion-collapse collapse" aria-labelledby="headingSpoiler6" data-bs-parent="#accordionSpoiler6">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb21">
+<div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="kw">def</span> sum_duration_by_astronaut(df, output_csv):</span>
-<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a><span class="co">    Summarize the duration data by each astronaut and saves resulting table to a CSV file</span></span>
-<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a><span class="co">    Args: </span></span>
-<span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a><span class="co">        df (pd.DataFrame): The input dataframe to be summarized</span></span>
-<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a><span class="co">        output_csv (str): Path to save the output csv of the table generated</span></span>
-<span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a></span>
-<span id="cb21-9"><a href="#cb21-9" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb21-10"><a href="#cb21-10" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb21-11"><a href="#cb21-11" tabindex="-1"></a><span class="co">        sum_by_astro (pd.DataFrame): Data frame with a row for each astronaut and a summarized column </span></span>
-<span id="cb21-12"><a href="#cb21-12" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb21-13"><a href="#cb21-13" tabindex="-1"></a>    subset <span class="op">=</span> df.loc[:,[<span class="st">'crew'</span>, <span class="st">'duration'</span>]] <span class="co"># subset to work with only relevant columns</span></span>
-<span id="cb21-14"><a href="#cb21-14" tabindex="-1"></a>    subset.crew <span class="op">=</span> subset.crew.<span class="bu">str</span>.split(<span class="st">';'</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: [i <span class="cf">for</span> i <span class="kw">in</span> x <span class="cf">if</span> i.strip()]) <span class="co"># splitting the crew into individuals and removing blank string splits from ending ;</span></span>
-<span id="cb21-15"><a href="#cb21-15" tabindex="-1"></a>    subset <span class="op">=</span> subset.explode(<span class="st">'crew'</span>) <span class="co"># separating lists of crew into individual rows</span></span>
-<span id="cb21-16"><a href="#cb21-16" tabindex="-1"></a>    subset <span class="op">=</span> add_duration_hours_variable(subset) <span class="co"># need duration_hours for easier calcs</span></span>
-<span id="cb21-17"><a href="#cb21-17" tabindex="-1"></a>    subset <span class="op">=</span> subset.drop(<span class="st">'duration'</span>, axis<span class="op">=</span><span class="dv">1</span>) <span class="co"># dropping extra duration file as those don't calculate correctly</span></span>
-<span id="cb21-18"><a href="#cb21-18" tabindex="-1"></a>    subset <span class="op">=</span> subset.groupby(<span class="st">'crew'</span>).<span class="bu">sum</span>() </span>
-<span id="cb21-19"><a href="#cb21-19" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Saving to CSV file </span><span class="sc">{</span>output_csv<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb21-20"><a href="#cb21-20" tabindex="-1"></a>    subset.to_csv(output_csv) <span class="co"># writing new table to specified location</span></span>
-<span id="cb21-21"><a href="#cb21-21" tabindex="-1"></a>    <span class="cf">return</span> subset</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="kw">def</span> sum_duration_by_astronaut(df, output_csv):</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a><span class="co">    Summarize the duration data by each astronaut and saves resulting table to a CSV file</span></span>
+<span id="cb22-4"><a href="#cb22-4" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" tabindex="-1"></a><span class="co">    Args: </span></span>
+<span id="cb22-6"><a href="#cb22-6" tabindex="-1"></a><span class="co">        df (pd.DataFrame): The input dataframe to be summarized</span></span>
+<span id="cb22-7"><a href="#cb22-7" tabindex="-1"></a><span class="co">        output_csv (str): Path to save the output csv of the table generated</span></span>
+<span id="cb22-8"><a href="#cb22-8" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb22-10"><a href="#cb22-10" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb22-11"><a href="#cb22-11" tabindex="-1"></a><span class="co">        sum_by_astro (pd.DataFrame): Data frame with a row for each astronaut and a summarized column </span></span>
+<span id="cb22-12"><a href="#cb22-12" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb22-13"><a href="#cb22-13" tabindex="-1"></a>    subset <span class="op">=</span> df.loc[:,[<span class="st">'crew'</span>, <span class="st">'duration'</span>]] <span class="co"># subset to work with only relevant columns</span></span>
+<span id="cb22-14"><a href="#cb22-14" tabindex="-1"></a>    subset.crew <span class="op">=</span> subset.crew.<span class="bu">str</span>.split(<span class="st">';'</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: [i <span class="cf">for</span> i <span class="kw">in</span> x <span class="cf">if</span> i.strip()]) <span class="co"># splitting the crew into individuals and removing blank string splits from ending ;</span></span>
+<span id="cb22-15"><a href="#cb22-15" tabindex="-1"></a>    subset <span class="op">=</span> subset.explode(<span class="st">'crew'</span>) <span class="co"># separating lists of crew into individual rows</span></span>
+<span id="cb22-16"><a href="#cb22-16" tabindex="-1"></a>    subset <span class="op">=</span> add_duration_hours_variable(subset) <span class="co"># need duration_hours for easier calcs</span></span>
+<span id="cb22-17"><a href="#cb22-17" tabindex="-1"></a>    subset <span class="op">=</span> subset.drop(<span class="st">'duration'</span>, axis<span class="op">=</span><span class="dv">1</span>) <span class="co"># dropping extra duration file as those don't calculate correctly</span></span>
+<span id="cb22-18"><a href="#cb22-18" tabindex="-1"></a>    subset <span class="op">=</span> subset.groupby(<span class="st">'crew'</span>).<span class="bu">sum</span>() </span>
+<span id="cb22-19"><a href="#cb22-19" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Saving to CSV file </span><span class="sc">{</span>output_csv<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb22-20"><a href="#cb22-20" tabindex="-1"></a>    subset.to_csv(output_csv) <span class="co"># writing new table to specified location</span></span>
+<span id="cb22-21"><a href="#cb22-21" tabindex="-1"></a>    <span class="cf">return</span> subset</span></code></pre>
 </div>
 </div>
 </div>
