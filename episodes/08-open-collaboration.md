@@ -226,7 +226,7 @@ Sometimes advanced users will also use issue trackers of public projects to repo
 (and sometimes this is understandably misused by users seeking help using documented features of the program). 
 
 To practice making an issue, we will file a "feature request", where we describe new functionality that may improve the codebase.
-Let's go ahead and create a new issue in our GitHub repository for a feature request that creates a table of total eva/spacewalk time for each astronaut.
+Let's go ahead and create a new issue in our GitHub repository for a feature request to create a table of total EVA/spacewalk time for each astronaut.
 We can find the issue tracker on the "Issues" tab in the top left of the GitHub page for the repository. 
 Click on this and then click on the green "New Issue" button on the right hand side of the screen. 
 We can then enter a title and description of our issue.
@@ -252,7 +252,7 @@ This is sometimes used to identify related issues or if an issue is a duplicate.
 
 Next, we will learn how to suggest this change back to the repository.
 So far, we've been working on our own making changes in main.
-However, when we start to have collaborators, we may need to use the [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow) or a similar workflow as these options will work better for multiple collaborators.
+However, when we start to have collaborators, we may need to adopt a workflow such as [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow) that facilitates simultaneous editing on the project and quality control on the changes made.
 
 Branching is a feature of Git that allows two or more parallel streams of work. 
 Commits can be made to one branch without interfering with another. 
@@ -304,8 +304,8 @@ Note that `git switch` command is only available in more recent versions of Git.
 
 Once we have switched to a branch any further commits that are made will go to that branch. 
 When we run a `git commit` command we will see the name of the
-branch we are committing to in the output of `git commit`. 
-Let's edit add the following function to our code.
+branch we are committing to in the output of `git commit`.
+Let's add the following function to our code to implement the requested feature.
 
 Copy and paste this function to add it to your code
 
@@ -342,23 +342,24 @@ And we will add this line in our code to run if main, before or after we define 
 dur_by_astro_csv = 'results/duration_by_astronaut.csv'
 ```
 
-Now, lets test run our script, make sure we don't get any errors.
+Now, let's test run our script, to make sure we do not get any errors.
 ```bash
 (venv_spacewalks) $ python3 eva_data_analysis.py
 ```
 
-Now let's add and commit the new version of the code to our `02-sum-by-astro-feat` branch.
+If we do:
+```
+venv_spacewalks) $ ls results
+```
+we can see the new result CSV file listed.
+
+Let's add and commit the new version of the code to our `02-sum-by-astro-feat` branch.
 First we will check that we are on the right branch using either `git branch` or `git status`.
-
-In our previous issue, we closed the issue manually by clicking the "Close" button in the GitHub web interface.
-We can also use keywords such "fixes", "fixed", "close", "closed" or "closes" followed by a # symbol and the issue number and it will automatically close the issue when the code is accepted(merged) into main.
-We will also add this to our commit message.
-
 
 ### Closing an issue
 
 Once an issue is solved then it can be closed. 
-This can be done either by pressing the "Close" button in the GitHub web interface or by making a commit which includes the word "fixes", "fixed", "close", "closed" or "closes" followed by a # symbol and the issue number.
+This can be done either by pressing the "Close" button in the GitHub web interface (as we did before) or by making a commit which includes the word "fixes", "fixed", "close", "closed" or "closes" followed by a # symbol and the issue number in the commit message.
 
 ```bash
 (venv_spacewalks) $ git branch
@@ -410,8 +411,7 @@ git pull origin 02-sum-by-astro-feat
 
 #### Merging branches
 
-If we are working alone, when we have completed working on a branch (for example adding a feature or fixing a bug) then we might merge our branch back
-into the main one (or any other branch). 
+If we are working alone, when we have completed working on a branch (for example adding a feature or fixing a bug) then we can merge our branch back into the main one (or any other branch). 
 This is done with the `git merge` command.
 
 This must be run on the *TARGET* branch of the merge, so we will have to use a `git switch` command to set this. 
@@ -429,8 +429,9 @@ Now we are back on the main branch we can go ahead and merge the changes from th
 
 ### Pull requests
 
-On larger projects, with collaborators, we might need to have a code review process before changes are merged, especially before they are merged onto the main branch that might be what is being released as the public version of the software. 
-GitHub has a process for this that is called a **pull request**. 
+On larger projects, with collaborators, we might include a code review process before changes are merged. 
+A quality control step like this is especially important if the main branch of the project is being released as the public version of the software.
+GitHub has a process for this that is called a **Pull Request**. 
 Other Git services such as GitLab have different names for this; GitLab calls them **merge requests**.
 Pull requests are situations where one developer requests that another merges code from a branch (or "pull" it from another copy of the repository). 
 The person receiving the request then has the chance to review the code, write comments suggesting changes or even change the code themselves before merging it. 
@@ -488,10 +489,12 @@ We have a bug in our code!  If we look at the results in `results/duration_by_as
  - Any relevant information about the system running it, for example the operating system being used.
  - Versions of any dependent libraries.
  - How to reproduce it.
+ - (Optionally) description of the expected behaviour, e.g. if there is not an error message but the user thinks the result or behaviour is not correct.
+ 
+We might also reference the previous issue in the description, to provide even more context (e.g. "related to #N" where N is the number of the feature request issue).
 
-   We might also reference the previous issue in the description, to provide even more context (e.g. "related to #N" where N is the number of the feature request issue).
 2. Create a pull request fix the code. You can try to create the code yourself or copy the test code below.
-    - Hint: Don't forget to make a new branch from the `main` branch, not your `02-sum-by-astro-feat` branch.
+    - Hint: Do not forget to make a new branch from the `main` branch, not your `02-sum-by-astro-feat` branch.
 3. (optional) Have a partner review your pull request.
 3. Merge your pull request
 4. Switch your local computer back to the `main` branch and pull the latest changes from the remote/origin `main` branch.
