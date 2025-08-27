@@ -239,21 +239,6 @@ A feature request should include a short title, the key features of the new feat
 
 After the issue is created it will be assigned a sequential ID number.
 
-::::: callout
-
-#### What to include when making an issue on a bug
-
-A good issue description for a bug should include:
-
- - What the problem is, including any error messages that are displayed.
- - What version of the software it occurred with.
- - Any relevant information about the system running it, for example the operating system being used.
- - Versions of any dependent libraries.
- - How to reproduce it.
-
-
-:::::
-
 
 ### Discussing an issue
 
@@ -338,8 +323,6 @@ def sum_duration_by_astronaut(df, output_csv):
         sum_by_astro (pd.DataFrame): Data frame with a row for each astronaut and a summarized column 
     """
     subset = df.loc[:,['crew', 'duration']] # subset to work with only relevant columns
-    subset.crew = subset.crew.str.split(';').apply(lambda x: [i for i in x if i.strip()]) # splitting the crew into individuals and removing blank string splits from ending ;
-    subset = subset.explode('crew') # separating lists of crew into individual rows
     subset = add_duration_hours_variable(subset) # need duration_hours for easier calcs
     subset = subset.drop('duration', axis=1) # dropping extra duration file as those don't calculate correctly
     subset = subset.groupby('crew').sum() 
@@ -496,20 +479,50 @@ Using this we can request that the changes on our fork are incorporated by the u
 
 ### Practice with Issues and PRs (Pull Requests)
 
-1. Create an issue in GitHub to create a test for our new sum_duration_by_astronaut function
-2. Create a pull request to add tests for the code. You can try to create the code yourself or copy the test code below.
+We have a bug in our code!  If we look at the results in `results/duration_by_astronaut.csv`, the crew column has groups of crew and we wanted to calculate this per astronaut. 
+
+1. Create an issue in GitHub to report this bug. A good issue description for a bug should include:
+
+ - What the problem is, including any error messages that are displayed.
+ - What version of the software it occurred with.
+ - Any relevant information about the system running it, for example the operating system being used.
+ - Versions of any dependent libraries.
+ - How to reproduce it.
+
+
+2. Create a pull request fix the code. You can try to create the code yourself or copy the test code below.
     - Hint: Don't forget to make a new branch from the `main` branch, not your `02-sum-by-astro-feat` branch.
 3. (optional) Have a partner review your pull request.
 3. Merge your pull request
-4. Switch your local computer back to the `main` branch and pull the latest changes.
+4. Switch your local computer back to the `main` branch and pull the latest changes from the remote/origin `main` branch.
 5. (Bonus/Optional) Delete your merged branches from your local computer and in GitHub.
 
 :::::: spoiler
 
-#### Test code to add
+#### Updated function to copy-paste
 
 ```python
-<CODE NEEDED!!!!>
+def sum_duration_by_astronaut(df, output_csv):
+    """
+    Summarize the duration data by each astronaut and saves resulting table to a CSV file
+
+    Args: 
+        df (pd.DataFrame): The input dataframe to be summarized
+        output_csv (str): Path to save the output csv of the table generated
+
+    
+    Returns:
+        sum_by_astro (pd.DataFrame): Data frame with a row for each astronaut and a summarized column 
+    """
+    subset = df.loc[:,['crew', 'duration']] # subset to work with only relevant columns
+    subset.crew = subset.crew.str.split(';').apply(lambda x: [i for i in x if i.strip()]) # splitting the crew into individuals and removing blank string splits from ending ;
+    subset = subset.explode('crew') # separating lists of crew into individual rows
+    subset = add_duration_hours_variable(subset) # need duration_hours for easier calcs
+    subset = subset.drop('duration', axis=1) # dropping extra duration file as those don't calculate correctly
+    subset = subset.groupby('crew').sum() 
+    print(f'Saving to CSV file {output_csv}')
+    subset.to_csv(output_csv) # writing new table to specified location
+    return subset
 ```
 
 :::::
