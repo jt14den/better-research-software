@@ -537,7 +537,9 @@ def sum_duration_by_astronaut(df, output_csv):
 
 #### Reopening an Issue
 
-In practice, a report of incorrect implementation of a new feature might be made as a comment on the original feature request issue rather than via a new issue. The project maintainers might then reopen that issue until the correction is made. For the purposes of this workshop, we wanted you to get more practice by opening a separate issue.
+In practice, a report of incorrect implementation of a new feature might be made as a comment on the original feature request issue rather than via a new issue. 
+The project maintainers might then reopen that issue until the correction is made. 
+For the purposes of this workshop, we want you to get more practice by opening a separate issue.
 
 ::::::::::::::::::
 
