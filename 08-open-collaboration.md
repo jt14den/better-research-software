@@ -489,10 +489,12 @@ We have a bug in our code!  If we look at the results in `results/duration_by_as
  - Any relevant information about the system running it, for example the operating system being used.
  - Versions of any dependent libraries.
  - How to reproduce it.
- - Optionally, description of the expected behaviour, e.g. if there is not an error message but the user thinks the result or behaviour is not correct.
+ - (Optionally) description of the expected behaviour, e.g. if there is not an error message but the user thinks the result or behaviour is not correct.
+ 
+We might also reference the previous issue in the description, to provide even more context (e.g. "related to #N" where N is the number of the feature request issue).
 
 2. Create a pull request fix the code. You can try to create the code yourself or copy the test code below.
-    - Hint: Don't forget to make a new branch from the `main` branch, not your `02-sum-by-astro-feat` branch.
+    - Hint: Do not forget to make a new branch from the `main` branch, not your `02-sum-by-astro-feat` branch.
 3. (optional) Have a partner review your pull request.
 3. Merge your pull request
 4. Switch your local computer back to the `main` branch and pull the latest changes from the remote/origin `main` branch.
