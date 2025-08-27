@@ -232,7 +232,7 @@ Click on this and then click on the green "New Issue" button on the right hand s
 We can then enter a title and description of our issue.
 
 A feature request should include a short title, the key features of the new feature, and a more detailed description of the feature.
-  - Title: Add summary table of eva time by astronaut
+  - Title: Add summary table of EVA time by astronaut
   - Description: A summary table split by astronaut would be helpful for individual level analysis.
 
 <!--- SCREENSHOT NEEDED: of example feature request -->
