@@ -312,7 +312,7 @@ Copy and paste this function to add it to your code
 ```python
 def sum_duration_by_astronaut(df, output_csv):
     """
-    Summarize the duration data by each astronaut and saves resulting table to a CSV file
+    Summarizes the duration data by each astronaut and saves resulting table to a CSV file
 
     Args: 
         df (pd.DataFrame): The input dataframe to be summarized
