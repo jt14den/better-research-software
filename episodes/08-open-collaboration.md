@@ -220,40 +220,25 @@ They also allow us to track problems with that code, for multiple developers to 
 
 ### Tracking issues with code
 
-A key feature of GitHub (as opposed to Git itself) is the issue tracker. 
+As we discussed earlier, a key feature of GitHub (as opposed to Git itself) is the issue tracker. 
 This provides us with a place to keep track of any problems or bugs in the code and to discuss them with other developers. 
 Sometimes advanced users will also use issue trackers of public projects to report problems they are having 
-(and sometimes this is misused by users seeking help using documented features of the program). 
+(and sometimes this is understandably misused by users seeking help using documented features of the program). 
 
-The code from the testing chapter earlier has a bug with an extra bracket in `eva_data_analysis.py` (and if you have fixed that a missing import of `summarise_categorical` in the test).
-Let's go ahead and create a new issue in our GitHub repository to describe this problem. 
+To practice making an issue, we will file a "feature request", where we describe new functionality that may improve the codebase.
+Let's go ahead and create a new issue in our GitHub repository for a feature request that creates a table of total eva/spacewalk time for each astronaut.
 We can find the issue tracker on the "Issues" tab in the top left of the GitHub page for the repository. 
 Click on this and then click on the green "New Issue" button on the right hand side of the screen. 
 We can then enter a title and description of our issue.
 
-A good issue description should include:
+A feature request should include a short title, the key features of the new feature, and a more detailed description of the feature.
+  - Title: Add summary table of EVA time by astronaut
+  - Description: A summary table split by astronaut would be helpful for individual level analysis.
 
- - What the problem is, including any error messages that are displayed.
- - What version of the software it occurred with.
- - Any relevant information about the system running it, for example the operating system being used.
- - Versions of any dependent libraries.
- - How to reproduce it.
+<!--- SCREENSHOT NEEDED: of example feature request -->
 
 After the issue is created it will be assigned a sequential ID number.
 
-:::  challenge
-
-### Create an issue in GitHub to describe our bug
-
-Create a new issue in your repository's issue tracker by doing the following:
-
- - Go to the GitHub webpage for your code
- - Click on the Issues tab
- - Click on the "New issue" button
- - Enter a title and description for the issue
- - Click the "Submit Issue" button to create the issue.
-
-:::
 
 ### Discussing an issue
 
@@ -262,12 +247,12 @@ These can include code snippets and file attachments such as screenshots or logf
 We can also reference other issues (by writing a `#` symbol and the number of the other issue) or mention other collaborators (by writing `@` followed by their GitHub username) to draw their attention to our comment. 
 This is sometimes used to identify related issues or if an issue is a duplicate.
 
-### Closing an issue
-
-Once an issue is solved then it can be closed. 
-This can be done either by pressing the "Close" button in the GitHub web interface or by making a commit which includes the word "fixes", "fixed", "close", "closed" or "closes" followed by a # symbol and the issue number.
 
 ### Working in parallel with Git branches
+
+Next, we will learn how to suggest this change back to the repository.
+So far, we've been working on our own making changes in main.
+However, when we start to have collaborators, we may need to use the [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow) or a similar workflow as these options will work better for multiple collaborators.
 
 Branching is a feature of Git that allows two or more parallel streams of work. 
 Commits can be made to one branch without interfering with another. 
@@ -277,18 +262,18 @@ When those new features or bug fixes are complete, the branch will be merged bac
 #### Creating a new branch
 
 New Git branches are created with the `git branch` command. This should be followed by the name of the branch to create. 
-It is common practice when the bug we are fixing has a corresponding issue to name the branch after the issue number and name. 
-For example, we might call the branch `01-extra-bracket-bug` instead of something less descriptive like `bugfix`. 
+It is common practice when the bug we are fixing or feature we are adding has a corresponding issue to name the branch after the issue number and name. 
+For example, we might call the branch `02-sum-by-astro-feat` instead of something less descriptive like `feature-request` or `bugfix`. 
 
 For example, the command:
 
 ```bash
-(venv_spacewalks) $ git branch 01-extra-bracket-bug
+(venv_spacewalks) $ git branch 02-sum-by-astro-feat
 ```
 
-will create a new branch called `01-extra-bracket-bug`. 
+will create a new branch called `02-sum-by-astro-feat`. 
 We can view the names of all the branches by running `git branch` with no parameters.
-By default there should be one branch called `main` (formerly `master`) and our new `01-extra-bracket-bug` branch.
+By default there should be one branch called `main` (formerly `master`) and our new `02-sum-by-astro-feat` branch.
 The command will put `*` next to the currently active branch.
 
 ```bash
@@ -296,15 +281,15 @@ The command will put `*` next to the currently active branch.
 ```
 
 ```output
-  01-extra-bracket-bug
+  02-sum-by-astro-feat
 * main
 ```
 
-We can see that creating a new branch has not activated that branch. To switch branches we can either
+We can see that creating a new branch has not switched our working branch to that branch. To switch branches we can either
 use the `git switch` or `git checkout` command followed by the branch name. For example:
 
 ```bash
-(venv_spacewalks) $ git switch 01-extra-bracket-bug
+(venv_spacewalks) $ git switch 02-sum-by-astro-feat
 ```
 
 To create a branch and change to it in a single command we can use `git switch` with the `-c` option 
@@ -312,7 +297,7 @@ To create a branch and change to it in a single command we can use `git switch` 
 Note that `git switch` command is only available in more recent versions of Git.
 
 ```bash
-(venv_spacewalks) $ git switch -c 02-another-bug
+(venv_spacewalks) $ git switch -c 03-summarize-categorical-bug
 ```
 
 #### Committing to a branch
@@ -320,30 +305,71 @@ Note that `git switch` command is only available in more recent versions of Git.
 Once we have switched to a branch any further commits that are made will go to that branch. 
 When we run a `git commit` command we will see the name of the
 branch we are committing to in the output of `git commit`. 
-Let's edit our code and fix the lack of default values bug that we entered into the issue tracker earlier on.
+Let's edit add the following function to our code.
 
-Change your code from:
-
-```python
-<call to pandas without checks identified in testing section>
-```
-
-to:
+Copy and paste this function to add it to your code
 
 ```python
-<call to pandas with checks identified in testing section>
+def sum_duration_by_astronaut(df, output_csv):
+    """
+    Summarizes the duration data by each astronaut and saves resulting table to a CSV file
+
+    Args: 
+        df (pd.DataFrame): The input dataframe to be summarized
+        output_csv (str): Path to save the output csv of the table generated
+
+    
+    Returns:
+        sum_by_astro (pd.DataFrame): Data frame with a row for each astronaut and a summarized column 
+    """
+    subset = df.loc[:,['crew', 'duration']] # subset to work with only relevant columns
+    subset = add_duration_hours_variable(subset) # need duration_hours for easier calcs
+    subset = subset.drop('duration', axis=1) # dropping extra duration file as those don't calculate correctly
+    subset = subset.groupby('crew').sum() 
+    print(f'Saving to CSV file {output_csv}')
+    subset.to_csv(output_csv) # writing new table to specified location
+    return subset
 ```
 
-and now commit it.
+Then add the following to your main function, after the `eva_data` variable is created
+
+```python
+dur_by_astro = sum_duration_by_astronaut(eva_data, dur_by_astro_csv)
+```
+
+And we will add this line in our code to run if main, before or after we define the `graph_file` variable.
+```python
+dur_by_astro_csv = 'results/duration_by_astronaut.csv'
+```
+
+Now, lets test run our script, make sure we don't get any errors.
+```bash
+(venv_spacewalks) $ python3 eva_data_analysis.py
+```
+
+Now let's add and commit the new version of the code to our `02-sum-by-astro-feat` branch.
+First we will check that we are on the right branch using either `git branch` or `git status`.
+
+In our previous issue, we closed the issue manually by clicking the "Close" button in the GitHub web interface.
+We can also use keywords such "fixes", "fixed", "close", "closed" or "closes" followed by a # symbol and the issue number and it will automatically close the issue when the code is accepted(merged) into main.
+We will also add this to our commit message.
+
+
+### Closing an issue
+
+Once an issue is solved then it can be closed. 
+This can be done either by pressing the "Close" button in the GitHub web interface or by making a commit which includes the word "fixes", "fixed", "close", "closed" or "closes" followed by a # symbol and the issue number.
 
 ```bash
-(venv_spacewalks) $ git commit -m "fixed bug" eva_data_analysis.py
+(venv_spacewalks) $ git branch
+(venv_spacewalks) $ git add eva_data_analysis.py
+(venv_spacewalks) $ git commit -m "added duration by astronaut functionality, closes #2"
 ```
 
 In the output of `git commit -m` the first part of the output line will show the name of the branch we just made the commit to.
 
 ```output
-[01-extra-brakcet-bug 330a2b1] fixes missing values bug, closes #01 
+[02-sum-by-astro-feat 330a2b1] added duration by astronaut functionality, closes #2
 ```
 
 If we now switch back to the `main` branch our new commit will no longer be there in the source file or the output of `git log`.
@@ -352,32 +378,39 @@ If we now switch back to the `main` branch our new commit will no longer be ther
 (venv_spacewalks) $ git switch main
 ```
 
-And if we go back to the `01-extra-bracket-bug` branch it will re-appear.
+And if we go back to the `02-sum-by-astro-feat` branch it will re-appear.
 
 ```bash
-(venv_spacewalks) $ git switch 01-extra-bracket-bug
+(venv_spacewalks) $ git switch 02-sum-by-astro-feat
 ```
 
 If we want to push our changes to a remote such as GitHub we have to tell the `git push` command which branch to push to. If the branch doesn't exist on the remote (as it currently won't)
 then it will be created. 
 
 ```bash
-(venv_spacewalks) $ git push origin 01-extra-bracket-bug
+(venv_spacewalks) $ git push origin 02-sum-by-astro-feat
 ```
 
-If we now refresh the GitHub webpage for this repository we should see the bugfix branch has appeared in the list of branches.
+If we now refresh the GitHub webpage for this repository we should see the `02-sum-by-astro-feat` branch has appeared in the list of branches.
 
+
+::: spoiler 
+
+#### How to pull changes from a remote branch 
 If we needed to pull changes from a branch on a remote 
 (for example if we have made changes on another computer or via GitHub's web based editor), 
 then we can specify a branch on a `git pull` command.
 
 ```bash
-git pull origin 01-extra-bracket-bug
+git pull origin 02-sum-by-astro-feat
 ```
+::::::::::
 
-### Merging branches
+:::: spoiler
 
-When we have completed working on a branch (for example fixing a bug) then we can merge our branch back
+#### Merging branches
+
+If we are working alone, when we have completed working on a branch (for example adding a feature or fixing a bug) then we might merge our branch back
 into the main one (or any other branch). 
 This is done with the `git merge` command.
 
@@ -390,25 +423,25 @@ This must be run on the *TARGET* branch of the merge, so we will have to use a `
 Now we are back on the main branch we can go ahead and merge the changes from the bugfix branch:
 
 ```bash
-(venv_spacewalks) $ git merge 01-extra-bracket-bug
+(venv_spacewalks) $ git merge 02-sum-by-astro-feat
 ```
+::::::::::::
 
 ### Pull requests
 
-On larger projects we might need to have a code review process before changes are merged, especially before they are merged onto the main branch that might be what is being released as the public version of the software. 
+On larger projects, with collaborators, we might need to have a code review process before changes are merged, especially before they are merged onto the main branch that might be what is being released as the public version of the software. 
 GitHub has a process for this that is called a **pull request**. 
 Other Git services such as GitLab have different names for this; GitLab calls them **merge requests**.
 Pull requests are situations where one developer requests that another merges code from a branch (or "pull" it from another copy of the repository). 
 The person receiving the request then has the chance to review the code, write comments suggesting changes or even change the code themselves before merging it. 
 It is also very common for automated checks of code to be run on a pull request to ensure the code is of good quality and is passing automated tests.
 
-As a simple example of a pull request, we can now create a pull request for the changes we made on our `01-extra-bracket-bug` branch and pushed to GitHub earlier on. 
-The GitHub webpage for our repository will now be saying something like "bugfix had recent pushes `n` minutes ago - Compare & Pull request". 
+As a simple example of a pull request, we can now create a pull request for the changes we made on our `02-sum-by-astro-feat` branch and pushed to GitHub earlier on. 
+The GitHub webpage for our repository will now be saying something like "02-sum-by-astro-feat had recent pushes `n` minutes ago - Compare & Pull request". 
 Click on this button and create a new pull request. 
 
 Give the pull request a title and write a brief description of it, then click the green "Create pull request" button. 
-GitHub will then check if we can merge this pull request without any problems. 
-We will look at what to do when this is not possible later on. 
+GitHub will then check if we can merge this pull request without any problems.  
 
 There should be a green "Merge pull request" button, but if we click on the down arrow inside this button there are three options on how to handle this request:
 
@@ -417,8 +450,8 @@ There should be a green "Merge pull request" button, but if we click on the down
 3. Rebase and merge
 
 The default is option 1, which will keep all of the commits made on our branch intact. 
-This can be useful for seeing the whole history of our work, but if we've done a lot of minor edits or attempts at fixing a problem to fix one bug it can be excessive to have all of this history saved. 
-This is where the second option comes in, this will place all of our changes from the branch into just a single commit, this might be much more obvious to other developers who will now see our bugfix as a single commit in the history. 
+This can be useful for seeing the whole history of our work, but if we've done a lot of minor edits or attempts at creating the feature it can be excessive to have all of this history saved. 
+This is where the second option comes in, this will place all of our changes from the branch into just a single commit, this might be much more obvious to other developers who will now see our feautre addition as a single commit in the history. 
 The third option merges the branch histories together in a different way that doesn't make merges as obvious, this can make the history easier to read but effectively rewrites the commit history and will change the commit hash IDs. 
 Some projects that you contribute to might have their own rules about what kind of merge they will prefer. 
 For the purposes of this exercise we'll stick with the default merge commit. 
@@ -426,6 +459,8 @@ For the purposes of this exercise we'll stick with the default merge commit.
 Go ahead and click on "Merge pull request", then "Confirm merge". 
 The changes will now be merged together. 
 GitHub gives us the option to delete the branch we were working on, since its history is preserved in the main branch there is no reason to keep it.
+
+:::::: callout
 
 #### Using forks instead of branches
 
@@ -438,31 +473,62 @@ After we create our fork we can make some changes and these could even be on the
 GitHub will track that a fork has been made displays a "Contribute" button to create a pull request back to the original repository. 
 Using this we can request that the changes on our fork are incorporated by the upstream project.
 
+::::::::
+
 :::  challenge
 
-### Practice pull requests
+### Practice with Issues and PRs (Pull Requests)
 
-Work in pairs for this exercise. Share the GitHub link of your repository with your partner. 
-If you have set your repository to private, you will need to add them as a collaborator. 
-Go to the "Settings" page on your GitHub repository's webpage, click on "Collaborators" from the left hand menu and then click the green "Add People" button and enter the GitHub username or email address of your partner. 
-They will get an email and an alert within GitHub to accept your invitation to work on this repository, without doing this they won't be able to access it.
+We have a bug in our code!  If we look at the results in `results/duration_by_astronaut.csv`, the crew column has groups of crew and we wanted to calculate this per astronaut. 
 
- - Make a fork of your partners repository. 
- - Edit the `CITATION.cff` file and add your name to it.
- - Commit these changes to your fork.
- - Create a pull request back to the original repository.
- - Your partner will now receive your pull request and can review.
+1. Create an issue in GitHub to report this bug. A good issue description for a bug should include:
+
+ - What the problem is, including any error messages that are displayed.
+ - What version of the software it occurred with.
+ - Any relevant information about the system running it, for example the operating system being used.
+ - Versions of any dependent libraries.
+ - How to reproduce it.
+
+
+2. Create a pull request fix the code. You can try to create the code yourself or copy the test code below.
+    - Hint: Don't forget to make a new branch from the `main` branch, not your `02-sum-by-astro-feat` branch.
+3. (optional) Have a partner review your pull request.
+3. Merge your pull request
+4. Switch your local computer back to the `main` branch and pull the latest changes from the remote/origin `main` branch.
+5. (Bonus/Optional) Delete your merged branches from your local computer and in GitHub.
+
+:::::: spoiler
+
+#### Updated function to copy-paste
+
+```python
+def sum_duration_by_astronaut(df, output_csv):
+    """
+    Summarize the duration data by each astronaut and saves resulting table to a CSV file
+
+    Args: 
+        df (pd.DataFrame): The input dataframe to be summarized
+        output_csv (str): Path to save the output csv of the table generated
+
+    
+    Returns:
+        sum_by_astro (pd.DataFrame): Data frame with a row for each astronaut and a summarized column 
+    """
+    subset = df.loc[:,['crew', 'duration']] # subset to work with only relevant columns
+    subset.crew = subset.crew.str.split(';').apply(lambda x: [i for i in x if i.strip()]) # splitting the crew into individuals and removing blank string splits from ending ;
+    subset = subset.explode('crew') # separating lists of crew into individual rows
+    subset = add_duration_hours_variable(subset) # need duration_hours for easier calcs
+    subset = subset.drop('duration', axis=1) # dropping extra duration file as those don't calculate correctly
+    subset = subset.groupby('crew').sum() 
+    print(f'Saving to CSV file {output_csv}')
+    subset.to_csv(output_csv) # writing new table to specified location
+    return subset
+```
+
+:::::
+
 
 :::
-
- 
-Do not forget to commit any uncommitted changes you may have and then push your work to GitHub.
-
-```bash
-(venv_spacewalks) $ git add <your_changed_files>
-(venv_spacewalks) $ git commit -m "Your commit message"
-(venv_spacewalks) $ git push origin main
-```
 
 ## Summary
 
