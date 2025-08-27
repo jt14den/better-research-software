@@ -347,7 +347,13 @@ Now, let's test run our script, to make sure we do not get any errors.
 (venv_spacewalks) $ python3 eva_data_analysis.py
 ```
 
-Now let's add and commit the new version of the code to our `02-sum-by-astro-feat` branch.
+If we do:
+```
+venv_spacewalks) $ ls results
+```
+we can see the new result CSV file listed.
+
+Let's add and commit the new version of the code to our `02-sum-by-astro-feat` branch.
 First we will check that we are on the right branch using either `git branch` or `git status`.
 
 ### Closing an issue
