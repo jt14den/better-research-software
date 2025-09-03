@@ -452,7 +452,7 @@ There should be a green "Merge pull request" button, but if we click on the down
 
 The default is option 1, which will keep all of the commits made on our branch intact. 
 This can be useful for seeing the whole history of our work, but if we've done a lot of minor edits or attempts at creating the feature it can be excessive to have all of this history saved. 
-This is where the second option comes in, this will place all of our changes from the branch into just a single commit, this might be much more obvious to other developers who will now see our feautre addition as a single commit in the history. 
+This is where the second option comes in, this will place all of our changes from the branch into just a single commit, this might be much more obvious to other developers who will now see our feature addition as a single commit in the history. 
 The third option merges the branch histories together in a different way that doesn't make merges as obvious, this can make the history easier to read but effectively rewrites the commit history and will change the commit hash IDs. 
 Some projects that you contribute to might have their own rules about what kind of merge they will prefer. 
 For the purposes of this exercise we'll stick with the default merge commit. 

@@ -58,7 +58,7 @@ drwxrwxr-x@   4 mbassan2  staff     128  4 Apr 10:48 astronaut-data-analysis-old
 Over the rest of the course, we will transform a collection of these files into a well-structured software project that 
 follows established good practices in research software engineering.
 
-The first thing you may notice that our software project contains folder `astronout-data-analysis-old` which presumably tries to keep track
+The first thing you may notice that our software project contains folder `astronaut-data-analysis-old` which presumably tries to keep track
 of older versions of the code. There is a better way to do that using version control tool, such as Git, and we can delete 
 this folder so it does not cause confusion:
 
@@ -201,10 +201,10 @@ nothing added to commit but untracked files present (use "git add" to track)
 This tells us that Git has noticed two files in our directory, but unlike Dropbox or OneDrive,
 it does not *automatically* track them. We need to tell Git explicitly which files we want it to track.
 This is not a handicap, but rather helpful, since scientific code can have vast inputs or outputs we might not want 
-Git to track and store (GBs ot TBs of space telescope data) or require sensitive information we cannot share
+Git to track and store (GBs to TBs of space telescope data) or require sensitive information we cannot share
 (for example, medical records).
 
-Before we commit this inital version, we should try to run it. This is often the first thing you might do upon recieving someone's code.
+Before we commit this initial version, we should try to run it. This is often the first thing you might do upon receiving someone's code.
 
 ```bash
 $ python3 my\ code\ v2.py
@@ -219,7 +219,7 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: '/home/sarah/Projects/astronaut-analysis/data.json'
 ```
 
-We get this error because the paths to the data files have been hard coded as absoulte paths for the original developer's machine.
+We get this error because the paths to the data files have been hard coded as absolute paths for the original developer's machine.
 Hard-coding paths is not very reproducible, as it means the paths need to be changed whenever the code is run on a new computer.
 Instead, we will soon change the code to use the relative paths within the project structure and eventually we will change the code to take in arguments from the command line when it is run.
 When we commit the files, we will note that the code is broken in our commit message.
@@ -287,7 +287,7 @@ Use this additional space to explain why you made changes and/or what their impa
 
 At this point in the lesson, you may choose to demonstrate how the same steps of staging and committing changes can also be achieved with the VS Code graphical interface.
 
-![The Source Control interface to Git in VS Code](fig/vscode-source-control.png){alt="Screenshot of VS Code with the SOURCE CONTROL interface open in the left hand pane of the window. The interface shows one modified file staged for commit, an empty text input box where a commit meesage can be entered, and a green button labeled 'Commit & Push'"}
+![The Source Control interface to Git in VS Code](fig/vscode-source-control.png){alt="Screenshot of VS Code with the SOURCE CONTROL interface open in the left hand pane of the window. The interface shows one modified file staged for commit, an empty text input box where a commit message can be entered, and a green button labeled 'Commit & Push'"}
 
 Depending on your relative levels of comfort working with that graphical interface and the command line interface to Git, you can choose how you want to demonstrate the remaining steps in this episode and when we use Git again elsewhere.
 The lesson will continue to present version control steps with the command line interface only.
