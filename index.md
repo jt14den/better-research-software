@@ -33,7 +33,7 @@ Please also make sure you have [all the required software](./index.md#setup) ins
 After attending this training, you **will be able** to:
 
 - List challenges typically faced by researchers developing software and managing data for modern computational, reproducible research, including those commensurate with the FAIR (Findable, Accessible, Interoperable, Reusable) principles.
-- Build on top of your existing knowledge of Python, Git and command line computing to enhance your research software development workflow with some good open and reproducible research software practices around structuring, writing, documenting, testing, sharing and reusing code (including software licencing and citation).
+- Build on top of your existing knowledge of Python, Git and command line computing to enhance your research software development workflow with some good open and reproducible research software practices around structuring, writing, documenting, testing, sharing and reusing code (including software licensing and citation).
 
 ## Acknowledgements
 
