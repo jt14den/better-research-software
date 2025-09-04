@@ -64,6 +64,7 @@ any links that you are not going to use.
 [free-software]: https://www.gnu.org/philosophy/free-sw.en.html
 
 [github]: https://github.com/
+[github-copilot]: https://github.com/features/copilot
 [gitlab]: https://about.gitlab.com/
 [git-commit-avoid]: https://wiki.openstack.org/wiki/GitCommitMessages#Things_to_avoid_when_creating_commits
 [git-commit-good-practice]: https://wiki.openstack.org/wiki/GitCommitMessages
@@ -75,7 +76,6 @@ any links that you are not going to use.
 [glosario]: https://glosario.carpentries.org/
 [good-commit-message]: https://cbea.ms/git-commit/
 [good-enough-practices]: https://carpentries-lab.github.io/good-enough-practices/index.html
-[google-copilot]: https://github.com/features/copilot
 [google-doc-string]: https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 [google-oxford-dict]: https://languages.oup.com/google-dictionary-en/
 [grch-documenting]: https://goodresearch.dev/docs
