@@ -6,8 +6,9 @@
 This short course is teaching tools and practices for producing and sharing quality and sustainable research software to support open and reproducible research (including [FAIR (Findable, Accessible, Interoperable and Reusable)](https://www.nature.com/articles/s41597-022-01710-x)). 
 
 The lesson uses the [example software project that **does not** follow good research software practices](https://github.com/carpentries-incubator/bbrs-software-project) and has no documentation which learners “inherit” from a pretend team member that has left the team/organisation. 
-Learners need to read, understand and run the software in order to be able to fix and improve it gradually over the course of this lesson following the good software practices the course teaches - including using reproducible software environments and version control, improving code readability and structure, adding tests and documentation to the code and learning about open software management & collaboration.
-The course finishes with a **better version of the software** which can be found at [the "final" branch of the software project repository](https://github.com/carpentries-incubator/bbrs-software-project/tree/final).
+Learners need to read, understand and run the software in order to be able to fix and improve it gradually over the course of this lesson following the good software practices the course teaches.
+These practices include (but are not limited to) using reproducible software environments and version control, improving code readability and structure, adding tests and documentation to the code and learning about open software management & collaboration.
+The course finishes with a [**better version of the software**](https://github.com/carpentries-incubator/bbrs-software-project/tree/final).
 
 
 The course can be delivered over 2 full or 4 half days.
