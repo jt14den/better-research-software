@@ -183,15 +183,15 @@ computational resources grows.
 This impact is driven by the energy consumption and carbon footprint of the hardware infrastructure that supports 
 software development, execution, and data storage.
 
-- Energy consumption: research software often relies on large-scale data centers for storage and computation,
+- Energy consumption: research software often relies on large-scale data centres for storage and computation,
   or the use of HPC systems and supercomputers for complex simulations and data analysis, which can significantly
   increase energy usage (much of which may come from non-renewable sources).
-- Carbon footprint: the electricity used to power data centers and HPC systems contributes to CO2 emissions,
+- Carbon footprint: the electricity used to power data centres and HPC systems contributes to CO2 emissions,
   particularly if the energy comes from fossil fuels.
 
 Here are some strategies to mitigate the environmental impact of computational research:
 
-- Using data centers and cloud providers that use renewable energy sources (e.g., wind, solar) can reduce the
+- Using data centres and cloud providers that use renewable energy sources (e.g., wind, solar) can reduce the
   carbon footprint of research software.
 - Regular maintenance and upgrades can extend the life of existing hardware, reducing the need 
 for new equipment and the environmental impact of manufacturing and disposal.
