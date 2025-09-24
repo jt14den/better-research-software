@@ -1,21 +1,23 @@
-name: Pilot Workshop Feedback
-description: Share feedback from a pilot workshop of this lesson.
-title: "[Pilot workshop feedback]: "
+name: Workshop Details and Feedback
+description: Share details, number of participants and feedback from a workshop that delivered this lesson.
+title: "[Workshop details and feedback]: "
 labels: ["type:discussion"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for teaching this lesson and sharing feedback! 
+        Thank you for planning to teach this lesson and agreeing to share feedback! 
         Please answer the questions below, 
         and note that feedback submitted with this form will be publicly visible.
+        If you do not have any feedback to share at the moment (e.g. you have not delivered the workshop yet) - 
+        you can come back to this issue later and fill in the missing details.
   - type: textarea
     id: workshop
     attributes:
       label: 1. Workshop details
       description: |
-        Tell us about the pilot workshop. 
-        When and where did it take place? Who hosted it? Who were the Instructors? 
+        Tell us about the workshop. 
+        When and where it is taking/took place? Who hosted it? Who were the Instructors? 
         How many Learners were there? What the background of the Learners e.g. their career stage, domain, prior knowledge of the lesson topic, etc?
     validations:
       required: true
