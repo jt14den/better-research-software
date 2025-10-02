@@ -52,10 +52,12 @@ If you run into problems not mentioned here, please open an [issue in the lesson
 
 If we have a look at our script, we may notice a few `import` lines such as: `import json`, `import csv`, 
 `import datetime as dt` and `import matplotlib.pyplot as plt` throughout the code.
-This means that our code depends on or requires several **external libraries**
-(also called third-party packages or **dependencies**) to function - namely `json`, `csv`, `datetime` and `matplotlib`.
+This means that our code depends on or requires several **libraries** to function - namely `json`, `csv`, `datetime` and `matplotlib`.
 
-Python applications often use external libraries that do not come as part of the standard Python distribution.
+`json`, `csv`, `datetime` are now **standard Python libraries** - this means that they come included in a Python distribution and they will be provided for you to import out of the box.
+If you are using some older Python distributions - you may still need to install these libraries manually.
+
+Python applications also use external libraries that do not come as part of the standard Python distribution - such as `matplotlib` or `pandas`.
 This means that you will have to use a **package manager** tool to install them on your system.
 Applications will also sometimes need a
 specific version of an external library
