@@ -250,7 +250,7 @@ We noticed earlier that our code depends on four **external packages/libraries**
 As of Python 3.5, Python comes with in-built JSON and CSV libraries - this means there is no need to install these
 additional packages (if you are using a fairly recent version of Python), but you still need to import them in any
 script that uses them.
-However, we still need to install packages such as `matplotlib` as they do not come as standard with Python distribution.
+However, we still need to install packages such as `matplotlib` and `pandas` as they do not come as standard with Python distribution.
 
 To install the latest version of `matplotlib` package with `pip` you use pip's `install` command and specify the package’s name, e.g.:
 
