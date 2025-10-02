@@ -54,8 +54,8 @@ If we have a look at our script, we may notice a few `import` lines such as: `im
 `import datetime as dt` and `import matplotlib.pyplot as plt` throughout the code.
 This means that our code depends on or requires several **libraries** to function - namely `json`, `csv`, `datetime` and `matplotlib`.
 
-`json`, `csv`, `datetime` are now **standard Python libraries** - this means that they come included in a Python distribution and they will be provided for you to import out of the box.
-If you are using some older Python distributions - you may still need to install these libraries manually.
+`json`, `csv`, `datetime` are **standard Python libraries** - this means that they come included in a Python distribution and they will be provided for you to import out of the box.
+If you are using some much older Python distributions for any reason, they may not include these libraries out of the box and you may still need to install these libraries manually.
 
 Python applications also use external libraries that do not come as part of the standard Python distribution - such as `matplotlib` or `pandas`.
 This means that you will have to use a **package manager** tool to install them on your system.
