@@ -358,7 +358,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reproducible software environments</h1>
-        <p>Last updated on 2025-08-27 |
+        <p>Last updated on 2025-10-09 |
 
         <a href="https://github.com/carpentries-incubator/better-research-software/edit/main/episodes/03-reproducible-dev-environment.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -460,21 +460,27 @@ material accordingly.</p>
 <code>import</code> lines such as: <code>import json</code>,
 <code>import csv</code>, <code>import datetime as dt</code> and
 <code>import matplotlib.pyplot as plt</code> throughout the code. This
-means that our code depends on or requires several <strong>external
-libraries</strong> (also called third-party packages or
-<strong>dependencies</strong>) to function - namely <code>json</code>,
+means that our code depends on or requires several
+<strong>libraries</strong> to function - namely <code>json</code>,
 <code>csv</code>, <code>datetime</code> and <code>matplotlib</code>.</p>
-<p>Python applications often use external libraries that do not come as
-part of the standard Python distribution. This means that you will have
-to use a <strong>package manager</strong> tool to install them on your
-system. Applications will also sometimes need a specific version of an
-external library (e.g. because they were written to work with feature,
-class, or function that may have been updated in more recent versions),
-or a specific version of Python interpreter. This means that each Python
-application you work with may require a different setup and a set of
-dependencies so it is useful to be able to keep these configurations
-separate to avoid confusion between projects. The solution for this
-problem is to create a self-contained <strong>virtual
+<p><code>json</code>, <code>csv</code>, <code>datetime</code> are
+<strong>standard Python libraries</strong> - this means that they come
+included in a Python distribution and they will be provided for you to
+import out of the box. If you are using some much older Python
+distributions for any reason, they may not include these libraries out
+of the box and you may still need to install them manually.</p>
+<p>Python applications also use external libraries that do not come as
+part of the standard Python distribution - such as
+<code>matplotlib</code> or <code>pandas</code>. This means that you will
+have to use a <strong>package manager</strong> tool to install them on
+your system. Applications will also sometimes need a specific version of
+an external library (e.g. because they were written to work with
+feature, class, or function that may have been updated in more recent
+versions), or a specific version of Python interpreter. This means that
+each Python application you work with may require a different setup and
+a set of dependencies so it is useful to be able to keep these
+configurations separate to avoid confusion between projects. The
+solution for this problem is to create a self-contained <strong>virtual
 environment</strong> per project, which contains a particular version of
 Python installation plus a number of additional external libraries.</p>
 </section><section><h2 class="section-heading" id="what-are-virtual-software-environments">What are virtual software environments?<a class="anchor" aria-label="anchor" href="#what-are-virtual-software-environments"></a></h2>
@@ -691,28 +697,27 @@ packages/libraries</strong> - <code>json</code>, <code>csv</code>,
 Python comes with in-built JSON and CSV libraries - this means there is
 no need to install these additional packages (if you are using a fairly
 recent version of Python), but you still need to import them in any
-script that uses them. However, we still need to install packages
-<code>datetime</code> and <code>matplotlib</code> as they do not come as
-standard with Python distribution.</p>
-<p>To install the latest version of packages <code>datetime</code> and
-<code>matplotlib</code> with <code>pip</code> you use pip’s
-<code>install</code> command and specify the package’s name, e.g.:</p>
+script that uses them. However, we still need to install packages such
+as <code>matplotlib</code> and <code>pandas</code> as they do not come
+as standard with Python distribution.</p>
+<p>To install the latest version of <code>matplotlib</code> package with
+<code>pip</code> you use pip’s <code>install</code> command and specify
+the package’s name, e.g.:</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python3 <span class="at">-m</span> pip install datetime</span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python3 <span class="at">-m</span> pip install matplotlib</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python3 <span class="at">-m</span> pip install matplotlib</span></code></pre>
 </div>
-<p>or like this to install multiple packages at once for short:</p>
+<p>You can install multiple packages at once by listing them all,
+e.g.:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python3 <span class="at">-m</span> pip install datetime matplotlib</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv_spacewalks</span><span class="kw">)</span> <span class="ex">$</span> python3 <span class="at">-m</span> pip install matplotlib pandas</span></code></pre>
 </div>
-<p>The above commands have installed packages <code>datetime</code> and
-<code>matplotlib</code> in our currently active
-<code>venv_spacewalks</code> environment and will not affect any other
-Python projects we may have on our machines.</p>
+<p>The above command has installed package <code>matplotlib</code> in
+our currently active <code>venv_spacewalks</code> environment and will
+not affect any other Python projects we may have on our machines.</p>
 <p>If you run the <code>python3 -m pip install</code> command on a
 package that is already installed, <code>pip</code> will notice this and
 do nothing.</p>
@@ -1101,8 +1106,8 @@ any links that you are not going to use.
   "url": "https://carpentries-incubator.github.io/better-research-software/instructor/03-reproducible-dev-environment.html",
   "identifier": "https://carpentries-incubator.github.io/better-research-software/instructor/03-reproducible-dev-environment.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2025-08-27",
-  "datePublished": "2025-10-07"
+  "dateModified": "2025-10-09",
+  "datePublished": "2025-10-09"
 }
 
   </script><script>
