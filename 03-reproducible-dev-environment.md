@@ -52,10 +52,12 @@ If you run into problems not mentioned here, please open an [issue in the lesson
 
 If we have a look at our script, we may notice a few `import` lines such as: `import json`, `import csv`, 
 `import datetime as dt` and `import matplotlib.pyplot as plt` throughout the code.
-This means that our code depends on or requires several **external libraries**
-(also called third-party packages or **dependencies**) to function - namely `json`, `csv`, `datetime` and `matplotlib`.
+This means that our code depends on or requires several **libraries** to function - namely `json`, `csv`, `datetime` and `matplotlib`.
 
-Python applications often use external libraries that do not come as part of the standard Python distribution.
+`json`, `csv`, `datetime` are **standard Python libraries** - this means that they come included in a Python distribution and they will be provided for you to import out of the box.
+If you are using some much older Python distributions for any reason, they may not include these libraries out of the box and you may still need to install them manually.
+
+Python applications also use external libraries that do not come as part of the standard Python distribution - such as `matplotlib` or `pandas`.
 This means that you will have to use a **package manager** tool to install them on your system.
 Applications will also sometimes need a
 specific version of an external library
@@ -250,25 +252,21 @@ We noticed earlier that our code depends on four **external packages/libraries**
 As of Python 3.5, Python comes with in-built JSON and CSV libraries - this means there is no need to install these
 additional packages (if you are using a fairly recent version of Python), but you still need to import them in any
 script that uses them.
-However, we still need to install packages `datetime` and `matplotlib` as they do not come as standard with
-Python distribution.
+However, we still need to install packages such as `matplotlib` and `pandas` as they do not come as standard with Python distribution.
 
-To install the latest version of packages `datetime` and `matplotlib` with `pip`
-you use pip's `install` command and specify the package’s name, e.g.:
+To install the latest version of `matplotlib` package with `pip` you use pip's `install` command and specify the package’s name, e.g.:
 
 ```bash
-(venv_spacewalks) $ python3 -m pip install datetime
 (venv_spacewalks) $ python3 -m pip install matplotlib
 ```
 
-or like this to install multiple packages at once for short:
+You can install multiple packages at once by listing them all, e.g.:
 
 ```bash
-(venv_spacewalks) $ python3 -m pip install datetime matplotlib
+(venv_spacewalks) $ python3 -m pip install matplotlib pandas
 ```
 
-The above commands have installed packages `datetime` and `matplotlib` in our currently active `venv_spacewalks`
-environment and will not affect any other Python projects we may have on our machines.
+The above command has installed package `matplotlib` in our currently active `venv_spacewalks` environment and will not affect any other Python projects we may have on our machines.
 
 If you run the `python3 -m pip install` command on a package that is already installed,
 `pip` will notice this and do nothing.
