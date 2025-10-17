@@ -342,9 +342,9 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Installation instructions</h1>
-        <p>Last updated on 2025-07-30 |
+        <p>Last updated on 2025-10-17 |
 
-        <a href="https://github.com/carpentries-incubator/better-research-software/edit/main/learners/installation-instructions.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/jt14den/better-research-software/edit/main/learners/installation-instructions.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
 
 
@@ -354,465 +354,199 @@
 
         
 
-<p>To go through the course material on your own or at a workshop, you
-will need the following software installed and working correctly on your
-system:</p>
+<div class="section level1">
+<h1 id="setup-for-the-building-better-research-software-course">Setup for the “Building Better Research Software” Course<a class="anchor" aria-label="anchor" href="#setup-for-the-building-better-research-software-course"></a></h1>
+<p>These steps prepare your computer for the workshop.<br>
+They work on <strong>Windows, macOS, and Linux</strong> — look for notes
+marked<br>
+🪟 <em>Windows only</em> or 🐧 <em>macOS/Linux only</em> where steps
+differ.</p>
+<p>We’ll use <strong>Visual Studio Code (VS Code)</strong> as the main
+workspace and terminal for all steps.</p>
+<hr><div class="section level2">
+<h2 id="step-1-install-visual-studio-code">Step 1 — Install Visual Studio Code<a class="anchor" aria-label="anchor" href="#step-1-install-visual-studio-code"></a></h2>
+<p>Download and install <strong>VS Code</strong> for your
+computer:<br>
+👉 <a href="https://code.visualstudio.com/Download" class="external-link uri">https://code.visualstudio.com/Download</a></p>
+<p>After installation, open VS Code once so it can finish setup.<br>
+You’ll see a screen like this:</p>
+<figure><img src="fig/vscode-home.png" class="image-with-shadow figure mx-auto d-block" alt="VS Code start screen showing welcome tab and extensions icon highlighted"><div class="figcaption">VS Code Home Screen</div>
+</figure><hr><div class="section level3">
+<h3 id="add-helpful-extensions">Add helpful extensions<a class="anchor" aria-label="anchor" href="#add-helpful-extensions"></a></h3>
+<p>From the menu, choose <strong>View → Extensions</strong> (or press
+<code>Ctrl+Shift+X</code> / <code>Cmd+Shift+X</code> on Mac).<br>
+Search for and install these:</p>
 <ul><li>
-<a href="#command-line-terminal">Command line terminal (shell)</a>
-(such as <strong>Bash</strong>, <strong>Zsh</strong> or <strong>Git
-Bash</strong>)<br></li>
-<li><a href="#git-version-control-tool">Git version control
-tool</a></li>
-<li><a href="#python-3-distribution">Python 3</a></li>
+<strong>Python (by Microsoft)</strong> – enables Python coding and
+linting<br></li>
 <li>
-<a href="#visual-studio-code">Visual Studio Code (VS Code)</a>
-integrated development environment (IDE)</li>
-</ul><p>You will also need to <a href="#github-account">create a GitHub
-account</a> if you do not have one already, make sure that you are able
-to log into it, and download the <a href="#spacewalks">Spacewalks data
-and analysis code</a> which we will be used for exercises in the
-course.</p>
-<section><h2 class="section-heading" id="command-line-terminal">Command line terminal<a class="anchor" aria-label="anchor" href="#command-line-terminal"></a></h2>
-<hr class="half-width"><p>You will need a command line terminal (also referred to as a shell)
-in order to run Python scripts and various command like tools (such as
-Git and tools that interact with your filesystem).</p>
-<div class="tabs">
-<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
-<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
-  <h3 class="tab-header" id="nav-tab-heading-1-1">
-  Windows
-  </h3>
-</button>
-<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
-  <h3 class="tab-header" id="nav-tab-heading-1-2">
-  macOS &amp; Linux
-  </h3>
-</button>
-</div>
-</nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
-<p>Windows users <em>will have to</em> install <strong>Git Bash</strong>
-(which is included in <a href="https://gitforwindows.org/" class="external-link">Git For
-Windows package</a>). This will install the Bash command line terminal
-emulation and Git command line tool together (which will behave in the
-same way as in Linux environments).</p>
-<p>Note that the use of Windows command line terminals
-<strong>Powershell</strong> or <code>cmd</code> is not suitable for the
-course. We also advise against using <a href="https://learn.microsoft.com/en-us/windows/wsl/" class="external-link">Windows Subsystem
-for Linux (WSL)</a> for this course as we do not provide instructions
-for troubleshooting any potential issues between WSL and Visual Studio
-Code (VS Code).</p>
-<p>The Git Bash installation presents the user with lots of
-configuration options - we recommend changing the following two and
-accepting the default values for all of the others:</p>
-<ul><li>“Git Editor” option for Git Bash - by default this is set to
-<strong>Vim</strong>; make sure to select <strong>VS Code</strong>
-instead -<br>
-if that option is available to you - otherwise accept the default option
-and we will help you change that later on;</li>
-<li>“Adjusting the name of the initial branch in new repositories”
-option - by default this is set to “Let Git decide”; make sure to select
-the “Override the default branch name for new repositories” option and
-type the name “main” in the text field.</li>
-</ul></div>
-<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
-<p>MacOS and Linux users will already have a command line terminal
-available on their systems. You can use a command line terminal such as
-<a href="https://www.gnu.org/software/bash/" class="external-link">Bash</a>, or any other <a href="https://en.wikipedia.org/wiki/Comparison_of_command_shells" class="external-link">command
-line terminal that has similar syntax to Bash</a>, since none of the
-content of this course is specific to Bash. Note that starting with
-macOS Catalina, Macs will use <a href="https://www.zsh.org/" class="external-link">Zsh (Z
-shell)</a> as the default command line terminal instead of Bash.</p>
-</div>
-</div>
-</div>
+<strong>GitLens</strong> – adds Git history and collaboration
+features<br></li>
+<li>
+<strong>Git Graph</strong> – shows branch and commit history
+visually<br></li>
+<li>
+<strong>Excel Viewer</strong> – lets you view CSV and Excel
+files<br></li>
+<li>
+<strong>JSON Editor</strong> – improves JSON file readability<br></li>
+<li>🪟 <strong>Start git-bash</strong> – adds a Git Bash terminal inside
+VS Code (Windows only)</li>
+</ul><figure><img src="fig/vscode-extensions.png" class="image-with-shadow figure mx-auto d-block" alt="Screenshot of VS Code Extensions sidebar with Python, GitLens, Git Graph, Excel Viewer, JSON Editor, and Start git-bash visible and install buttons highlighted"><div class="figcaption">Installing VS Code Extensions</div>
+</figure><hr></div>
 <div class="section level3">
-<h3 id="testing-command-line-terminal">Testing command line terminal<a class="anchor" aria-label="anchor" href="#testing-command-line-terminal"></a></h3>
-<p>To test your command line terminal, start it up and type:</p>
+<h3 id="set-up-the-integrated-terminal">Set up the integrated terminal<a class="anchor" aria-label="anchor" href="#set-up-the-integrated-terminal"></a></h3>
+<ol style="list-style-type: decimal"><li>Go to <strong>Terminal → New Terminal</strong>.<br></li>
+<li>Click the <strong>▼</strong> arrow next to the <code>+</code> and
+select <strong>Select Default Profile</strong>.<br></li>
+<li>Choose:
+<ul><li>🪟 <strong>Git Bash</strong> (after installing Start git-bash)</li>
+<li>🐧 <strong>bash</strong> or <strong>zsh</strong> (default on macOS
+or Linux)<br></li>
+</ul></li>
+<li>Open a new terminal tab. You should see your shell name (e.g.,
+<code>bash</code>) on the right side.</li>
+</ol><figure><img src="fig/vscode-terminal.png" class="image-with-shadow figure mx-auto d-block" alt="Screenshot of the VS Code integrated terminal with Git Bash selected as the current shell"><div class="figcaption">VS Code Terminal set to Git Bash</div>
+</figure><p>You’ll use this terminal for <strong>all remaining
+steps</strong>.</p>
+<hr></div>
+</div>
+<div class="section level2">
+<h2 id="step-2-install-git">Step 2 — Install Git<a class="anchor" aria-label="anchor" href="#step-2-install-git"></a></h2>
+<ul><li>
+<p>🪟 <strong>Windows only:</strong><br>
+Download <strong>Git for Windows</strong> from <a href="https://gitforwindows.org/" class="external-link uri">https://gitforwindows.org/</a></p>
+<p>During setup:</p>
+<ul><li>Set <strong>Editor</strong> to <strong>Visual Studio
+Code</strong><br></li>
+<li>Set the <strong>default branch name</strong> to
+<code>main</code><br></li>
+<li>Leave other options as default</li>
+</ul><p>This also installs <strong>Git Bash</strong>, which you’ll now use
+inside VS Code.</p>
+</li>
+<li><p>🐧 <strong>macOS/Linux only:</strong><br>
+Git is already included on most systems. If not, install it with your
+package manager or from <a href="https://git-scm.com/downloads" class="external-link uri">https://git-scm.com/downloads</a>.</p></li>
+</ul><p>Once installed, return to VS Code.</p>
+<hr></div>
+<div class="section level2">
+<h2 id="step-3-check-your-terminal-and-git">Step 3 — Check your terminal and Git<a class="anchor" aria-label="anchor" href="#step-3-check-your-terminal-and-git"></a></h2>
+<p>In the VS Code terminal, type:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> date</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code></pre>
 </div>
-<p>If your command line terminal is working - it should return the
-current date and time similar to:</p>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<p>You’re ready if you see today’s date and a Git version number.<br>
+Keep this terminal open for the next step.</p>
+<hr></div>
+<div class="section level2">
+<h2 id="step-4-install-python-using-uv">Step 4 — Install Python using uv<a class="anchor" aria-label="anchor" href="#step-4-install-python-using-uv"></a></h2>
+<p>We use <strong>uv</strong> to install Python and manage project
+environments automatically.<br>
+It’s faster and easier than installing Python manually.</p>
+<p>In your VS Code terminal, run:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>Wed 21 Apr 2021 11:38:19 BST</code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-LsSf</span> https://astral.sh/uv/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre>
 </div>
-</div>
-</section><section><h2 class="section-heading" id="git-version-control-tool">Git Version Control Tool<a class="anchor" aria-label="anchor" href="#git-version-control-tool"></a></h2>
-<hr class="half-width"><p>Git is a command line program that is run from within a command line
-terminal to provide version control for your work. Git is also used to
-interact with online code and project sharing platform GitHub.</p>
-<p>Follow the installation instructions below, then proceed to test and
-configure Git on your machine in additional steps.</p>
-<div class="tabs">
-<nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
-<button class="nav-link active" id="nav-tab-2-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-1" type="button" role="tab" aria-controls="nav-tabpanel-2-1" aria-selected="true">
-  <h3 class="tab-header" id="nav-tab-heading-2-1">
-  Windows
-  </h3>
-</button>
-<button class="nav-link" id="nav-tab-2-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-2" type="button" role="tab" aria-controls="nav-tabpanel-2-2" aria-selected="false">
-  <h3 class="tab-header" id="nav-tab-heading-2-2">
-  macOS &amp; Linux
-  </h3>
-</button>
-</div>
-</nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-1" class="tab-pane show active" aria-labelledby="nav-tab-2-1" role="tabpanel">
-<p>Windows users <em>will have to</em> use <strong>Git Bash</strong> -
-as explained in the <a href="index.html#command-line-tool">command line
-terminal installation section</a>.</p>
-</div>
-<div id="nav-tabpanel-2-2" class="tab-pane" aria-labelledby="nav-tab-2-2" role="tabpanel">
-<p>On macOS, Git is included as part of Apple’s <a href="https://en.wikipedia.org/wiki/Xcode" class="external-link">Xcode tools</a> and should be
-available from the command line as long as you have Xcode. If you do not
-have Xcode installed, you can download it from <a href="https://apps.apple.com/us/app/xcode/id497799835?mt=12" class="external-link">Apple’s App
-Store</a> or you can <a href="https://git-scm.com/download/mac" class="external-link">install
-Git using alternative methods</a>.</p>
-<p>On Linux, Git can be installed using your favourite package
-manager.</p>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="testing-git">Testing Git<a class="anchor" aria-label="anchor" href="#testing-git"></a></h3>
-<p>To test your Git installation, start your command line terminal and
-type:</p>
+<p>When it finishes, <strong>close and reopen the terminal</strong> in
+VS Code, then verify:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> git help</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">uv</span> <span class="at">--version</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="ex">uv</span> python <span class="at">--version</span></span></code></pre>
 </div>
-<p>If your Git installation is working you should see something
-like:</p>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>usage: git [-v | --version] [-h | --help] [-C &lt;path&gt;] [-c &lt;name&gt;=&lt;value&gt;]
-           [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]
-           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]
-           [--config-env=&lt;name&gt;=&lt;envvar&gt;] &lt;command&gt; [&lt;args&gt;]
-
-These are common Git commands used in various situations:
-
-start a working area (see also: git help tutorial)
-   clone     Clone a repository into a new directory
-   init      Create an empty Git repository or reinitialize an existing one
-
-work on the current change (see also: git help everyday)
-   add       Add file contents to the index
-   mv        Move or rename a file, a directory, or a symlink
-   restore   Restore working tree files
-   rm        Remove files from the working tree and from the index
-
-examine the history and state (see also: git help revisions)
-   bisect    Use binary search to find the commit that introduced a bug
-   diff      Show changes between commits, commit and working tree, etc
-   grep      Print lines matching a pattern
-   log       Show commit logs
-   show      Show various types of objects
-   status    Show the working tree status
-
-grow, mark and tweak your common history
-   branch    List, create, or delete branches
-   commit    Record changes to the repository
-   merge     Join two or more development histories together
-   rebase    Reapply commits on top of another base tip
-   reset     Reset current HEAD to the specified state
-   switch    Switch branches
-   tag       Create, list, delete or verify a tag object signed with GPG
-
-collaborate (see also: git help workflows)
-   fetch     Download objects and refs from another repository
-   pull      Fetch from and integrate with another repository or a local branch
-   push      Update remote refs along with associated objects
-
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help &lt;command&gt;' or 'git help &lt;concept&gt;'
-to read about a specific subcommand or concept.
-See 'git help git' for an overview of the system.</code></pre>
-</div>
-</div>
-<div class="section level3">
-<h3 id="configuring-git">Configuring Git<a class="anchor" aria-label="anchor" href="#configuring-git"></a></h3>
-<p>When you use Git on a machine for the first time, you also need to
-configure a few additional things:</p>
-<ul><li>your name,</li>
-<li>your email address (the one you used to open <a href="index.html#github-account">your GitHub account</a> with, which
-will be used to identify your commits),</li>
-<li>preferred text editor for Git to use (e.g. <strong>Nano</strong> or
-another text editor of your choice),</li>
-<li>the default branch name to be <code>main</code> (instead of
-<code>master</code>)</li>
-<li>whether you want to use these settings globally (i.e. for every Git
-project on your machine) by using the <code>--global</code> option.</li>
-</ul><p>This can be done from a command line terminal as follows:</p>
-<div class="codewrapper sourceCode" id="cb5">
+<p>You’re done when both commands show version numbers.</p>
+<figure><img src="fig/vscode-test-uv.png" class="image-with-shadow figure mx-auto d-block" alt="VS Code terminal showing successful output from 'uv --version' and 'uv python --version' commands"><div class="figcaption">Testing uv in VS Code terminal</div>
+</figure><blockquote>
+<p>🪟 <strong>Tip for Windows users:</strong><br>
+You don’t need PowerShell or separate installers — everything runs
+inside VS Code’s Git Bash.</p>
+</blockquote>
+<hr></div>
+<div class="section level2">
+<h2 id="step-5-download-the-course-files">Step 5 — Download the course files<a class="anchor" aria-label="anchor" href="#step-5-download-the-course-files"></a></h2>
+<p>Download the practice data:<br>
+👉 <a href="https://github.com/carpentries-incubator/better-research-software/raw/refs/heads/main/learners/spacewalks.zip" class="external-link uri">https://github.com/carpentries-incubator/better-research-software/raw/refs/heads/main/learners/spacewalks.zip</a></p>
+<p>Unzip <code>spacewalks.zip</code> to an easy location (like
+Desktop).<br>
+In VS Code, open that folder (<strong>File → Open
+Folder…</strong>)<br>
+and you’ll see the files listed in the Explorer panel.</p>
+<figure><img src="fig/vscode-explorer-spacewalks.png" class="image-with-shadow figure mx-auto d-block" alt="VS Code Explorer panel displaying the extracted spacewalks folder and files"><div class="figcaption">VS Code Explorer showing spacewalks folder</div>
+</figure><hr></div>
+<div class="section level2">
+<h2 id="step-6-set-up-your-project-environment">Step 6 — Set up your project environment<a class="anchor" aria-label="anchor" href="#step-6-set-up-your-project-environment"></a></h2>
+<p>In the VS Code terminal (bottom panel), run:</p>
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> user.email <span class="st">"name@example.com"</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> core.editor <span class="st">"nano -w"</span></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> init.defaultBranch main</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">uv</span> init</span></code></pre>
 </div>
+<p>That creates a <code>pyproject.toml</code> file.<br>
+Edit it in VS Code so it looks like this:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode toml" tabindex="0"><code class="sourceCode toml"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">[project]</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"spacewalks"</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[</span><span class="st">"pandas"</span><span class="op">,</span> <span class="st">"matplotlib"</span><span class="op">]</span></span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="github-account">GitHub account<a class="anchor" aria-label="anchor" href="#github-account"></a></h2>
-<hr class="half-width"><p>GitHub is a free, online host for Git repositories that you will use
-during the course to store your work in so you will need to open a free
-<a href="https://github.com/" class="external-link">GitHub</a> account unless you do not
-already have one.</p>
-<div class="section level3">
-<h3 id="configuring-github-account">Configuring GitHub account<a class="anchor" aria-label="anchor" href="#configuring-github-account"></a></h3>
-<p>In order to access GitHub using Git from your machine securely, you
-need to set up a way of authenticating yourself with GitHub through Git.
-The recommended way to do that for this course is to set up <a href="https://www.ssh.com/academy/ssh/public-key-authentication" class="external-link"><strong>SSH
-authentication</strong></a> which requires a pair of keys - one public
-that you upload to your GitHub account, and one private that remains on
-your machine.</p>
-<p>GitHub provides full documentation and guides on how to:</p>
-<ul><li>
-<a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" class="external-link">generate
-an SSH key</a>, and</li>
-<li>
-<a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account" class="external-link">add
-an SSH key to a GitHub account</a>.</li>
-</ul><p>A short summary of the commands you need to perform is shown
-below.</p>
-<p>To generate an SSH key pair, you will need to run the
-<code>ssh-keygen</code> command line tool (included with your command
-line terminal) and provide <strong>your identity for the key
-pair</strong> (e.g. the email address you used to register with GitHub)
-via the <code>-C</code> parameter as shown below.</p>
-<p>You will then be prompted to answer a few questions - e.g. where to
-save the keys on your machine and a passphrase to use to protect your
-private key. Pressing ‘Enter’ on these prompts will get
-<code>ssh-keygen</code> to use the default key location (within
-<code>.ssh</code> folder in your home directory) and set the passphrase
-to empty.</p>
+<p>Then install and run the code:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">$</span> ssh-keygen <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">"your-github-email@example.com"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">uv</span> sync</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="ex">uv</span> run python spacewalks.py</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>Generating public/private ed25519 key pair.
-Enter file in which to save the key (/Users/&lt;YOUR_USERNAME&gt;/.ssh/id_ed25519):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /Users/&lt;YOUR_USERNAME&gt;/.ssh/id_ed25519
-Your public key has been saved in /Users/&lt;YOUR_USERNAME&gt;/.ssh/id_ed25519.pub
-The key fingerprint is:
-SHA256:qjhN/iO42nnYmlpink2UTzaJpP8084yx6L2iQkVKdHk your-github-email@example.com
-The key's randomart image is:
-+--[ED25519 256]--+
-|.. ..            |
-| ..o A           |
-|. o..            |
-| .o.o .          |
-| ..+ =  B        |
-| .o = ..         |
-|o..X *.          |
-|++B=@.X          |
-|+*XOoOo+         |
-+----[SHA256]-----+</code></pre>
-</div>
-<p>Next, you need to copy your public key (<strong>not your private key
-- this is important!</strong>) over to your GitHub account. The
-<code>ssh-keygen</code> command above will let you know where your
-public key is saved (the file should have the extension “.pub”), and you
-can get its contents from a command line terminal as follows:</p>
-<div class="codewrapper sourceCode" id="cb8">
+<p>If you see a plot or printed output, everything works!</p>
+<figure><img src="fig/vscode-spacewalks-plot.png" class="image-with-shadow figure mx-auto d-block" alt="Example plot output window from running the spacewalks.py analysis"><div class="figcaption">Python plot result</div>
+</figure><hr></div>
+<div class="section level2">
+<h2 id="step-7-optional-set-up-github">Step 7 — (Optional) Set up GitHub<a class="anchor" aria-label="anchor" href="#step-7-optional-set-up-github"></a></h2>
+<p>If you want to save or share your work later:</p>
+<ol style="list-style-type: decimal"><li><p>Create a free GitHub account: <a href="https://github.com/" class="external-link uri">https://github.com/</a><br></p></li>
+<li><p>Follow GitHub’s SSH setup guide: <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh" class="external-link uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh</a><br></p></li>
+<li>
+<p>Test your connection:</p>
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">$</span> cat /Users/<span class="op">&lt;</span>YOUR_USERNAME<span class="op">&gt;</span>/.ssh/id_ed25519.pub</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>ssh-ed25519 AABAC3NzaC1lZDI1NTE5AAAAICWGVRsl/pZsxx85QHLwSgJWyfMB1L8RCkEvYNkP4mZC your-github-email@example.com</code></pre>
+<p>You should see a greeting message from GitHub.</p>
+</li>
+</ol><hr></div>
 </div>
-<p>Copy the line of output that starts with “ssh-ed25519” and ends with
-your email address (it may start with a different algorithm name based
-on which one you used to generate the key pair and it may have gone over
-multiple lines if your command line terminal window is not wide
-enough).</p>
-<p>Finally, go to your <a href="https://github.com/settings/ssh/new" class="external-link">GitHub Settings -&gt; SSH and
-GPG keys -&gt; Add New</a> page to add a new SSH public key. Give your
-key a memorable name (e.g. the name of the computer you are working on
-that contains the private key counterpart), paste the public key from
-your clipboard into the box labelled “Key” (making sure it does not
-contain any line breaks), then click the “Add SSH key” button.</p>
-<p>To test if you can successfully authenticate to GitHub using your new
-key pair, do:</p>
-<div class="codewrapper sourceCode" id="cb10">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">$</span> ssh <span class="at">-T</span> git@github.com</span></code></pre>
-</div>
-<p>You may be asked to add GitHub to the list of trusted hosts on your
-machine (say ‘yes’ to that) and then you should see a line similar
-to:</p>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>Hi anenadic! You've successfully authenticated, but GitHub does not provide shell access.</code></pre>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="python-3-distribution">Python 3 distribution<a class="anchor" aria-label="anchor" href="#python-3-distribution"></a></h2>
-<hr class="half-width"><p>You will need Python 3 for this course (note that while Python 2 may
-work as well, it is not supported by this course). You may already have
-Python 3 installed on your system, in which case you do not have to do
-anything.</p>
-<p>To download the latest Python distribution for your operating system,
-please head to <a href="https://www.python.org/downloads/" class="external-link">Python.org</a>. Then use an
-appropriate command for your platform (see below) to test your
-installation.</p>
-<p>Windows users should make sure to tick the “Add python.exe to PATH”
-check box at the bottom of the first page of the installer wizard to
-make sure that Python executable is found after installation.</p>
-<div class="section level3">
-<h3 id="testing-python-3">Testing Python 3<a class="anchor" aria-label="anchor" href="#testing-python-3"></a></h3>
-<p>You can check that you have Python 3 installed correctly from the
-command line terminal using the command below.</p>
-<div class="codewrapper sourceCode" id="cb12">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="co"># on macOS/Linux</span></span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="ex">$</span> python <span class="at">--version</span> <span class="co"># on Windows — Windows installation comes with a python.exe file rather than a python3.exe file </span></span></code></pre>
-</div>
-<p>You should see something like the output below.</p>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>Python 3.11.7</code></pre>
-</div>
-<div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-<p>If you are using Windows and invoking <code>python</code> command
-causes your Git Bash terminal to hang with no error message or output,
-you may need to create an alias for the Python executable
-<code>python.exe</code> like so:</p>
-<div class="codewrapper sourceCode" id="cb14">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="ex">$</span> alias python=<span class="st">"winpty python.exe"</span></span></code></pre>
-</div>
-<p>This alias will be valid for the duration of the shell session. For a
-more permanent solution, from the shell do:</p>
-<div class="codewrapper sourceCode" id="cb15">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"alias python='winpty python.exe'"</span> <span class="op">&gt;&gt;</span> ~/.bashrc</span></code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="visual-studio-code">Visual Studio Code<a class="anchor" aria-label="anchor" href="#visual-studio-code"></a></h2>
-<hr class="half-width"><p>We will use Microsoft <a href="https://code.visualstudio.com/" class="external-link">Visual
-Studio Code (VS Code)</a> as an Integrated Development Environment (IDE)
-to type and execute Python code and run command line terminal and Git
-commands (through its integrations with the tools we have installed
-separately so far).</p>
-<p>Please make sure to <a href="https://code.visualstudio.com/Download" class="external-link">download VS Code</a> for
-your platform.</p>
-<div class="section level3">
-<h3 id="command-line-terminal-git-integration-in-vs-code">Command line terminal &amp; Git integration in VS Code<a class="anchor" aria-label="anchor" href="#command-line-terminal-git-integration-in-vs-code"></a></h3>
-<p>On macOS and Linux systems, VS Code will typically recognise a
-command line terminal you already have on your system (along with all
-programs/commands such as Git you can run from it) and you will not need
-to do anything and it will be available as a “Terminal” in VS Code.</p>
-<p>On Windows, if VS Code does not automatically recognise Git Bash as a
-command line terminal to be used as a “Terminal”, installing VS Code
-extension “Start git-bash” should help (to view available and installed
-extensions, go to <code>View &gt; Extensions</code> from the top-level
-menu).</p>
-<figure><img src="fig/vscode-gitbash-extension.png" class="image-with-shadow figure mx-auto d-block" alt="Screenshot of Extension Marketplace View in VS Code showing the 'Start git-bash' extension selected in the search result list on the left and the extension details in the pane on the right with a button to install it"><div class="figcaption"><em>Git Bash extension for VS Code</em></div>
-</figure><p>To check the command line integration and that VS Code knows about
-different command line terminal(s) installed on your system select
-“Terminal -&gt; New Terminal” from the top level menu. This should open
-a terminal window within VS Code. Within the terminal window, the type
-of the current terminal is indicated towards the right of the window
-(e.g. in the image below, the current command line terminal is
-<code>bash</code> - but note that you may have different terminal types
-installed on your machine). This can be changed (provided you have
-several command line terminal programmes installed on your machine) by
-clicking the “+” drop-down menu button next to the command line terminal
-indicator. Windows users may have “Powershell” selected by default here
-- you should select “Git Bash” from the list.</p>
-<p>You can also change the default command line terminal from the same
-drop down menu by using the option “Select Default Profile” (so it will
-use that one next time you open a terminal window).</p>
-<figure><img src="fig/vscode-terminal.png" alt="Screenshot of the terminal pane in VS Code highlighting the current terminal type and dropdown menu to open a new terminal with 'Select Default Profile' option highlighted in the menu" class="figure mx-auto d-block"><div class="figcaption"><em>Terminal window in VS Code</em></div>
-</figure></div>
-<div class="section level3">
-<h3 id="vs-code-extensions-for-git">VS Code extensions for Git<a class="anchor" aria-label="anchor" href="#vs-code-extensions-for-git"></a></h3>
-<p>You could also install the following VS Code extensions (from
-<code>View &gt; Extensions</code> top-level menu) to make your Git
-experience in VS Code better:</p>
-<ul><li>GitLense - Git Supercharged (adds a few nice additions to Git
-support in VS Code)</li>
-<li>Git Graph (provides nice graphs and visualisations of a Git
-repository in VS Code)</li>
-</ul><figure><img src="fig/vscode-git-extensions.png" class="image-with-shadow figure mx-auto d-block" alt="Screenshot of Extension Marketplace View in VS Code showing the GitLens and Git Graph extensions under installed extensions on the left with the GitLens extension selected and details of GitLens extension in the pane on the right with buttons to uninstall and disable it"><div class="figcaption"><em>GitLens and Git Graph extensions for VS
-Code</em></div>
-</figure></div>
-<div class="section level3">
-<h3 id="python-integration-in-vs-code">Python integration in VS Code<a class="anchor" aria-label="anchor" href="#python-integration-in-vs-code"></a></h3>
-<p>If you open an existing Python file or create a new blank one (with
-extension “.py”) from VS Code - it should recognise it as a Python file
-already. VS Code may ask you to select a Python interpreter if you try
-to run the file, at which point you should select the Python 3 you
-installed.</p>
-</div>
-<div class="section level3">
-<h3 id="vs-code-extensions-for-python">VS Code extensions for Python<a class="anchor" aria-label="anchor" href="#vs-code-extensions-for-python"></a></h3>
-<p>You should also install the Python extension for VS Code by Microsoft
-(from <code>View &gt; Extensions</code> top-level menu) to make your
-Python experience in VS Code better.</p>
-<figure><img src="fig/vscode-python-extension.png" class="image-with-shadow figure mx-auto d-block" alt="Screenshot of Extension Marketplace View in VS Code showing the search results for the term 'python' in the search result list on the left with the 'Python by Microsoft' extension selected and details of this extension showing in the pane on the right with a button to install it"><div class="figcaption"><em>Python extension for VS Code by
-Microsoft</em></div>
-</figure></div>
-<div class="section level3">
-<h3 id="vs-code-extensions-for-viewing-data">VS Code extensions for viewing data<a class="anchor" aria-label="anchor" href="#vs-code-extensions-for-viewing-data"></a></h3>
-<p>You should install the following extensions for viewing and editing
-data in VS Code:</p>
-<ul><li>Excel Viewer - custom editor and previewer for CSV files and Excel
-spreadsheets</li>
-<li>JSON - custom editor and previewer for JSON files</li>
-</ul><figure><img src="fig/vscode-data-viewer-extensions.png" class="image-with-shadow figure mx-auto d-block" alt="Screenshot of Extension Marketplace View in VS Code showing the CSV and JSON data editor and viewer extensions among the installed extensions on the left with the JSON extension selected and details of this extension showing in the pane on the right with buttons to uninstall and disable it"><div class="figcaption"><em>CSV and JSON data editor and viewer
-extensions for VS Code</em></div>
-</figure></div>
-</section><section><h2 class="section-heading" id="spacewalks">Spacewalks data and analysis code<a class="anchor" aria-label="anchor" href="#spacewalks"></a></h2>
-<hr class="half-width"><p>As part of the course, you may receive the
-<code>spacewalks.zip</code> archive from your instructors via email,
-which contains data and code to be used for examples and exercises
-throughout the course. Alternatively, you can download the <a href="https://github.com/carpentries-incubator/better-research-software/raw/refs/heads/main/learners/spacewalks.zip" class="external-link"><code>spacewalks.zip</code>
-archive</a> from GitHub.</p>
-<p>The archive contains <a href="https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/data_preview" class="external-link">NASA’s
-open data on spacewalks</a> (i.e. extravehicular activities - EVAs)
-undertaken by astronauts and cosmonauts from 1965 to 2013 and a Python
-script to analyse and plot this data.</p>
-<p>Save the <code>spacewalks.zip</code> archive to your home directory
-and extract it - you should get a directory called
-<code>spacewalks</code>.</p>
+<div class="section level1">
+<h1 id="youre-ready-for-the-workshop">You’re ready for the workshop<a class="anchor" aria-label="anchor" href="#youre-ready-for-the-workshop"></a></h1>
+<p>You now have:</p>
+<ul><li>
+<strong>Visual Studio Code</strong> for editing and running
+code<br></li>
+<li>
+<strong>Git + Git Bash</strong> for version control and command line
+work<br></li>
+<li>
+<strong>uv + Python</strong> for reproducible, easy project
+management</li>
+</ul><p>We’ll use these same tools during the session.<br>
+Keep this page open in case you need to revisit a step.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></div> <!-- / div.lesson-content -->
+</div>
+
+
+
+      </div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -836,12 +570,12 @@ any links that you are not going to use.
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/carpentries-incubator/better-research-software/edit/main/learners/installation-instructions.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/jt14den/better-research-software/edit/main/learners/installation-instructions.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/carpentries-incubator/better-research-software/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/carpentries-incubator/better-research-software/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/carpentries-incubator/better-research-software/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:a.nenadic@software.ac.uk">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="https://github.com/jt14den/better-research-software/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/jt14den/better-research-software/" class="external-link">Source</a></p>
+				<p><a href="https://github.com/jt14den/better-research-software/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:a.nenadic@software.ac.uk">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
 
@@ -860,18 +594,18 @@ any links that you are not going to use.
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://carpentries-incubator.github.io/better-research-software/installation-instructions.html",
+  "@id": "https://jt14den.github.io/better-research-software/installation-instructions.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "research software, good practices, FAIR, reproducibility, sustainability, open, research, lesson, The Carpentries",
   "name": "Installation instructions",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries-incubator.github.io/better-research-software/installation-instructions.html",
-  "identifier": "https://carpentries-incubator.github.io/better-research-software/installation-instructions.html",
+  "url": "https://jt14den.github.io/better-research-software/installation-instructions.html",
+  "identifier": "https://jt14den.github.io/better-research-software/installation-instructions.html",
   "dateCreated": "2023-10-03",
-  "dateModified": "2025-07-30",
-  "datePublished": "2025-10-14"
+  "dateModified": "2025-10-17",
+  "datePublished": "2025-10-17"
 }
 
   </script><script>
