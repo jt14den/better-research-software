@@ -1,8 +1,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12666088.svg)](https://zenodo.org/doi/10.5281/zenodo.12666088)
 
-
 # Building Better Research Software
-
+  
 This short course is teaching tools and practices for producing and sharing quality and sustainable research software to support open and reproducible research (including [FAIR (Findable, Accessible, Interoperable and Reusable)](https://www.nature.com/articles/s41597-022-01710-x)). 
 
 The lesson uses the [example software project that **does not** follow good research software practices](https://github.com/carpentries-incubator/bbrs-software-project) and has no documentation which learners “inherit” from a pretend team member that has left the team/organisation. 
