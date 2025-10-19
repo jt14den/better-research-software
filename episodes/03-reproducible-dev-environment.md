@@ -59,22 +59,17 @@ Each project often needs **specific versions** of libraries. To avoid one projec
 
 ### Key terms
 
-+------------------+-----------------------------------------------------------+
-| Term             | Meaning                                                   |
-+==================+===========================================================+
-| **Environment**  | A self-contained directory holding a Python interpreter   |
-|                  | and installed packages.                                   |
-+------------------+-----------------------------------------------------------+
-| **Dependency**   | A library your code needs to run.                         |
-+------------------+-----------------------------------------------------------+
-| **Package manager** | A tool that installs and tracks dependencies           |
-|                  | (e.g., `uv`, `pip`, or `conda`).                         |
-+------------------+-----------------------------------------------------------+
-| **Lockfile**     | A record of *exact* versions of dependencies for          |
-|                  | reproducibility.                                          |
-+------------------+-----------------------------------------------------------+
+Table: Glossary of terms used in this episode
+
+| Term              | Meaning                                                                                 |
+| ----------------- | --------------------------------------------------------------------------------------- |
+| **Environment**   | A self-contained directory holding a Python interpreter and its installed packages.     |
+| **Dependency**    | A library your code needs to run.                                                       |
+| **Package manager** | A tool that installs and tracks dependencies (e.g., `uv`, `pip`, or `conda`).        |
+| **Lockfile**      | A record of *exact* versions of dependencies for reproducibility.                       |
 
 :::::::::::::::::::::::::::::::
+
 
 ## What are virtual software environments?
 
