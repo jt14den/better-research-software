@@ -439,12 +439,11 @@ workflow look like?
 environments</a>
 </td>
 <td>
-What are virtual environments in software development and why use
-them?<br>How can we manage Python virtual coding environments and
-external (third-party) libraries on our machines?
+What are virtual environments and why do we use them?<br>How can we
+manage Python and external libraries reliably and repeatably?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 50m
+<span class="visually-hidden">Duration: </span>02h 10m
 </td>
 <td>
  4. <a href="04-code-readability.html">Code readability</a>
@@ -455,7 +454,7 @@ more readable?<br>What types of documentation can I include to improve
 the readability of my code?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>03h 20m
+<span class="visually-hidden">Duration: </span>03h 40m
 </td>
 <td>
  5. <a href="05-code-structure.html">Code structure</a>
@@ -468,7 +467,7 @@ tests, auxiliary information and metadata<br>within our software or
 research project?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>04h 50m
+<span class="visually-hidden">Duration: </span>05h 10m
 </td>
 <td>
  6. <a href="06-code-correctness.html">Code correctness</a>
@@ -479,7 +478,7 @@ software tests?<br>What makes a “good” test?<br>Which parts of our
 code should we prioritise for testing?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>06h 20m
+<span class="visually-hidden">Duration: </span>06h 40m
 </td>
 <td>
  7. <a href="07-software-documentation.html">Software documentation</a>
@@ -490,7 +489,7 @@ repository metadata important?<br>What are the minimum elements of
 documentation needed?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>07h 50m
+<span class="visually-hidden">Duration: </span>08h 10m
 </td>
 <td>
  8. <a href="08-open-collaboration.html">Open software management &amp;
@@ -502,7 +501,7 @@ in GitHub?<br>How can we ensure that multiple developers can work on
 the same files simultaneously?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>09h 20m
+<span class="visually-hidden">Duration: </span>09h 40m
 </td>
 <td>
  9. <a href="09-wrap-up.html">Wrap-up</a>
@@ -514,7 +513,7 @@ software development principles in the context of you team, peers and
 the world?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>10h 05m
+<span class="visually-hidden">Duration: </span>10h 25m
 </td>
 <td>
 Finish
@@ -579,6 +578,51 @@ to install everything and verify your setup before the workshop.</p>
 <p>If you’ve used older Git or Python workflows, note that these
 instructions reflect the <strong>current recommended Carpentries
 practices</strong> for reproducible, low-friction setup.</p>
+<hr><div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+  Instructor Notes
+  </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div class="accordion-body">
+<p><strong>Timing:</strong><br>
+- Allow <strong>20–30 minutes</strong> at the start of the workshop (or
+in a separate install session).<br>
+- Encourage participants to complete installation
+<strong>before</strong> the workshop if possible.</p>
+<p><strong>Verification steps:</strong><br>
+Ask learners to open the VS Code terminal and confirm the following
+commands return without errors:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">uv</span> <span class="at">--version</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ex">python3</span> <span class="at">--version</span>  <span class="co"># or python --version on Windows</span></span></code></pre>
+</div>
+<p><strong>Common issues to check:</strong><br>
+- On Windows: Git Bash must be selected as the default VS Code
+terminal.<br>
+- On macOS/Linux: If <code>uv</code> is not found, VS Code may need to
+be restarted.<br>
+- If pushing to GitHub fails, confirm <strong>Git Credential
+Manager</strong> is active with:<br><code>bash   git config --global credential.helper manager</code></p>
+<p><strong>Troubleshooting resources:</strong><br>
+- <a href="https://gitforwindows.org/" class="external-link">Git for Windows
+documentation</a><br>
+- <a href="https://code.visualstudio.com/docs/terminal/basics" class="external-link">Visual
+Studio Code integrated terminal guide</a><br>
+- <a href="https://docs.astral.sh/uv/getting-started/" class="external-link">Astral uv
+installation docs</a><br>
+- <a href="https://docs.github.com/en/get-started/getting-started-with-git/set-up-git" class="external-link">GitHub
+authentication help</a></p>
+</div>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.

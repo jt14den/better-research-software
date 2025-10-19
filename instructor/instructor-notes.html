@@ -453,39 +453,15 @@ version control steps with the command line interface only.</p>
 <h3 id="03-reproducible-dev-environment-headingInstructor1">
 <a href="03-reproducible-dev-environment.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#03-reproducible-dev-environment-headingInstructor1"></a>
 </h3>
-<p>Some learners may encounter various issues when creating and managing
-virtual development environments or configuring the Python interpreter
-path, depending on their specific system setup.</p>
-<p>To assist with troubleshooting during workshops, we have compiled a
-list of common issues that instructors have observed in the past.</p>
-<ul>
-<li>learners sometimes forget to activate the virtual environment -
-instructors should remind the learners about this at the start of each
-episode and also check for this during episodes, e.g. each time a new
-command line terminal window is started.</li>
-<li>adding a Python installation to the beginning of the environment
-variable PATH, causes it to override Python from the virtual environment
-- always check for this with <code>which python3</code> and
-<code>python3 --version</code>.</li>
-<li>some learners have other environment variables set that can
-influence the Python interpreter and modules being loaded and used -
-e.g. <code>PYTHONHOME</code> (changes the location of the standard
-Python libraries), <code>PYTHONPATH</code> (augments the default search
-path for Python module files) or <code>PYTHONSTARTUP</code> (points to a
-Python script that is run before starting Python interactive mode for
-various enhancements like preloading modules, setting colors, etc.).
-Make sure they are unset before activating the environment,
-e.g. with:</li>
-</ul>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> unset PYTHONHOME PYTHONPATH PYTHONSTARTUP</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">-m</span> venv ./venv_spacewalks</span></code></pre>
-</div>
-<p>If you run into problems not mentioned here, please open an <a href="https://github.com/carpentries-incubator/better-research-software/issues/" class="external-link">issue
-in the lesson repository</a> so we can track them and update the lesson
-material accordingly.</p>
+<p>With <strong>uv</strong>, we reduce many setup problems common to
+Python packaging. Remind learners that they don’t need to “activate”
+environments — <code>uv run</code> always uses the right one.<br>
+If learners previously set <code>PYTHONHOME</code> or
+<code>PYTHONPATH</code>, have them <code>unset</code> these before using
+uv.</p>
+<p>If <code>uv</code> isn’t found on Windows, fully <strong>restart VS
+Code</strong>, not just the terminal.<br>
+Test this workflow yourself on Windows before the workshop.</p>
 <hr>
 <br></section><section id="04-code-readability"><h2 class="section-heading"><a href="04-code-readability.html">Code readability</a></h2>
 <hr class="half-width"></section><section id="05-code-structure"><h2 class="section-heading"><a href="05-code-structure.html">Code structure</a></h2>
