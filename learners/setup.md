@@ -37,3 +37,38 @@ Follow the step-by-step [**Installation Instructions**](installation-instruction
 to install everything and verify your setup before the workshop.
 
 If you’ve used older Git or Python workflows, note that these instructions reflect the **current recommended Carpentries practices** for reproducible, low-friction setup.
+
+---
+
+::::::::::::::::::::: instructor
+
+### Instructor Notes
+
+**Timing:**  
+- Allow **20–30 minutes** at the start of the workshop (or in a separate install session).  
+- Encourage participants to complete installation **before** the workshop if possible.
+
+**Verification steps:**  
+Ask learners to open the VS Code terminal and confirm the following commands return without errors:
+
+```bash
+git --version
+uv --version
+python3 --version  # or python --version on Windows
+```
+
+**Common issues to check:**  
+- On Windows: Git Bash must be selected as the default VS Code terminal.  
+- On macOS/Linux: If `uv` is not found, VS Code may need to be restarted.  
+- If pushing to GitHub fails, confirm **Git Credential Manager** is active with:  
+  ```bash
+  git config --global credential.helper manager
+  ```
+
+**Troubleshooting resources:**  
+- [Git for Windows documentation](https://gitforwindows.org/)  
+- [Visual Studio Code integrated terminal guide](https://code.visualstudio.com/docs/terminal/basics)  
+- [Astral uv installation docs](https://docs.astral.sh/uv/getting-started/)  
+- [GitHub authentication help](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git)
+
+::::::::::::::::::::::::::::::::::
