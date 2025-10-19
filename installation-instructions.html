@@ -362,8 +362,8 @@
 <div class="callout-inner">
 <div class="callout-content">
 <p>You’ll need basic familiarity with opening applications, downloading
-files, and copy-pasting commands.<br>
-No prior experience with programming or Git is required.</p>
+files, and copying text.<br>
+No prior programming or Git experience is required.</p>
 </div>
 </div>
 </div>
@@ -373,11 +373,10 @@ They work on <strong>Windows, macOS, and Linux</strong> — look for tabs
 marked<br>
 🪟 <em>Windows only</em> or 🐧 <em>macOS/Linux only</em> where steps
 differ.</p>
-<p>We’ll use <strong>Visual Studio Code (VS Code)</strong> as the main
+<p>We’ll use <strong>Visual Studio Code (VS Code)</strong> as our
 workspace and terminal.</p>
 <hr></section><section><h2 class="section-heading" id="step-1-install-visual-studio-code">Step 1 — Install Visual Studio Code<a class="anchor" aria-label="anchor" href="#step-1-install-visual-studio-code"></a></h2>
-<hr class="half-width"><p>Download and install <strong>VS Code</strong> for your operating
-system:<br>
+<hr class="half-width"><p>Download and install <strong>VS Code</strong>:<br>
 👉 <a href="https://code.visualstudio.com/Download" class="external-link uri">https://code.visualstudio.com/Download</a></p>
 <p>After installation, open VS Code once to complete setup.</p>
 <div id="what-to-expect" class="callout">
@@ -388,37 +387,16 @@ system:<br>
 <div id="what-to-expect" class="callout-inner">
 <h3 class="callout-title">What to expect</h3>
 <div class="callout-content">
-<p>You should see the <strong>Welcome screen</strong> with tabs for
-“Start” and “Extensions.”</p>
+<p>You should see the <strong>Welcome screen</strong> with “Start” and
+“Extensions.”<br>
+If you’re on Windows, open VS Code as your regular user (not
+Administrator) so extensions install correctly.</p>
 </div>
 </div>
 </div>
 <figure><img src="fig/vscode-home.png" alt="VS Code start screen showing welcome tab and extensions icon highlighted" class="figure mx-auto d-block"><div class="figcaption">VS Code Home Screen</div>
-</figure><hr><div class="section level3">
-<h3 id="add-helpful-extensions">Add Helpful Extensions<a class="anchor" aria-label="anchor" href="#add-helpful-extensions"></a></h3>
-<p>From the menu, choose <strong>View → Extensions</strong> (or press
-<code>Ctrl+Shift+X</code> / <code>Cmd+Shift+X</code>).<br>
-Search for and install these extensions:</p>
-<ul><li>
-<strong>Python (by Microsoft)</strong> – enables Python coding and
-linting<br></li>
-<li>
-<strong>GitLens</strong> – adds Git history and collaboration
-features<br></li>
-<li>
-<strong>Git Graph</strong> – shows branch and commit history
-visually<br></li>
-<li>
-<strong>Excel Viewer</strong> – view CSV and Excel files<br></li>
-<li>
-<strong>JSON Editor</strong> – improve JSON readability<br></li>
-<li>🪟 <strong>Start git-bash</strong> – adds a Git Bash terminal inside
-VS Code (Windows only)</li>
-</ul><figure><img src="fig/vscode-extensions.png" alt="VS Code Extensions sidebar with Python, GitLens, Git Graph, Excel Viewer, JSON Editor, and Start git-bash visible" class="figure mx-auto d-block"><div class="figcaption">Installing VS Code Extensions</div>
-</figure><hr></div>
-<div class="section level3">
-<h3 id="set-up-the-integrated-terminal">Set up the Integrated Terminal<a class="anchor" aria-label="anchor" href="#set-up-the-integrated-terminal"></a></h3>
-<div class="tabs">
+</figure><hr></section><section><h2 class="section-heading" id="step-2-install-git">Step 2 — Install Git<a class="anchor" aria-label="anchor" href="#step-2-install-git"></a></h2>
+<hr class="half-width"><div class="tabs">
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
   <h3 class="tab-header" id="nav-tab-heading-1-1">
@@ -427,16 +405,16 @@ VS Code (Windows only)</li>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
-<ol style="list-style-type: decimal"><li>Install <strong>Start git-bash</strong> (from the Extensions
-Marketplace).<br></li>
-<li>Go to <strong>Terminal → New Terminal</strong>.<br></li>
-<li>Click the <strong>▼</strong> next to <code>+</code>, choose
-<strong>Select Default Profile</strong>, and select <strong>Git
-Bash</strong>.<br></li>
-<li>Open a new terminal tab — you should see <code>bash</code> on the
-right.</li>
-</ol></div>
+<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
+<p>Download <strong>Git for Windows</strong> from <a href="https://gitforwindows.org/" class="external-link uri">https://gitforwindows.org/</a></p>
+<p>During setup:<br>
+- Set <strong>Editor</strong> to <strong>Visual Studio
+Code</strong><br>
+- Set <strong>default branch name</strong> to <code>main</code><br>
+- Leave other options at default</p>
+<p>This also installs <strong>Git Bash</strong>, which you’ll use inside
+VS Code.</p>
+</div>
 </div>
 </div>
 <div class="tabs">
@@ -448,21 +426,34 @@ right.</li>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-1">
-<ol style="list-style-type: decimal"><li>Go to <strong>Terminal → New Terminal</strong>.<br></li>
-<li>Click the <strong>▼</strong> next to <code>+</code>, choose
-<strong>Select Default Profile</strong>, and select
-<strong>bash</strong> or <strong>zsh</strong>.<br></li>
-<li>Open a new terminal tab to verify the shell name on the right.</li>
-</ol></div>
+<div id="nav-tabpanel-2-1" class="tab-pane show active" aria-labelledby="nav-tab-2-1" role="tabpanel">
+<p>Git is usually pre-installed.<br>
+If not, install it with your package manager or from <a href="https://git-scm.com/downloads" class="external-link uri">https://git-scm.com/downloads</a>.</p>
 </div>
 </div>
-<figure><img src="fig/vscode-terminal.png" alt="VS Code integrated terminal with Git Bash selected as the current shell" class="figure mx-auto d-block"><div class="figcaption">VS Code Terminal set to Git Bash</div>
-</figure><p>You’ll use this terminal for <strong>all remaining
-steps</strong>.</p>
-<hr></div>
-</section><section><h2 class="section-heading" id="step-2-install-git">Step 2 — Install Git<a class="anchor" aria-label="anchor" href="#step-2-install-git"></a></h2>
-<hr class="half-width"><div class="tabs">
+</div>
+<hr></section><section><h2 class="section-heading" id="step-3-add-helpful-vs-code-extensions">Step 3 — Add Helpful VS Code Extensions<a class="anchor" aria-label="anchor" href="#step-3-add-helpful-vs-code-extensions"></a></h2>
+<hr class="half-width"><p>From the <strong>View → Extensions</strong> menu (or press
+<code>Ctrl+Shift+X</code> / <code>Cmd+Shift+X</code>), search for and
+install these:</p>
+<ul><li>
+<strong>Python (by Microsoft)</strong> – enables Python coding and
+linting<br></li>
+<li>
+<strong>GitLens</strong> – shows Git history and collaboration
+tools<br></li>
+<li>
+<strong>Git Graph</strong> – visualizes branches and commits<br></li>
+<li>
+<strong>Excel Viewer</strong> – view CSV and Excel files<br></li>
+<li>
+<strong>JSON Editor</strong> – makes JSON files easier to read<br></li>
+<li>🪟 <strong>Start git-bash</strong> – enables Git Bash inside VS Code
+(Windows only)</li>
+</ul><figure><img src="fig/vscode-extensions.png" alt="VS Code Extensions sidebar with Python, GitLens, Git Graph, Excel Viewer, JSON Editor, and Start git-bash visible" class="figure mx-auto d-block"><div class="figcaption">Installing VS Code Extensions</div>
+</figure><hr><div class="section level3">
+<h3 id="set-up-the-integrated-terminal">Set up the Integrated Terminal<a class="anchor" aria-label="anchor" href="#set-up-the-integrated-terminal"></a></h3>
+<div class="tabs">
 <nav><div id="nav-tab-3" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-3-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-1" type="button" role="tab" aria-controls="nav-tabpanel-3-1" aria-selected="true">
   <h3 class="tab-header" id="nav-tab-heading-3-1">
@@ -471,16 +462,15 @@ steps</strong>.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-1">
-<p>Download <strong>Git for Windows</strong> from <a href="https://gitforwindows.org/" class="external-link uri">https://gitforwindows.org/</a>.<br>
-During setup:<br>
-- Set <strong>Editor</strong> to <strong>Visual Studio
-Code</strong><br>
-- Set <strong>default branch name</strong> to <code>main</code><br>
-- Leave other options at default</p>
-<p>This also installs <strong>Git Bash</strong>, which you’ll now use
-inside VS Code.</p>
-</div>
+<div id="nav-tabpanel-3-1" class="tab-pane show active" aria-labelledby="nav-tab-3-1" role="tabpanel">
+<ol style="list-style-type: decimal"><li>After installing <strong>Start git-bash</strong>, go to
+<strong>Terminal → New Terminal</strong>.<br></li>
+<li>Click the <strong>▼</strong> next to <code>+</code>, choose
+<strong>Select Default Profile</strong>, and pick <strong>Git
+Bash</strong>.<br></li>
+<li>Open a new terminal tab — you should see <code>bash</code> in the
+prompt.</li>
+</ol></div>
 </div>
 </div>
 <div class="tabs">
@@ -492,13 +482,19 @@ inside VS Code.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-4" class="tab-content">
-<div id="nav-tabpanel-4-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-4-1">
-<p>Git is usually pre-installed.<br>
-If not, install with your package manager or from <a href="https://git-scm.com/downloads" class="external-link uri">https://git-scm.com/downloads</a>.</p>
+<div id="nav-tabpanel-4-1" class="tab-pane show active" aria-labelledby="nav-tab-4-1" role="tabpanel">
+<ol style="list-style-type: decimal"><li>Go to <strong>Terminal → New Terminal</strong>.<br></li>
+<li>Click the <strong>▼</strong> next to <code>+</code>, choose
+<strong>Select Default Profile</strong>, and select
+<strong>bash</strong> or <strong>zsh</strong>.<br></li>
+<li>Open a new terminal tab and check the shell name.</li>
+</ol></div>
 </div>
 </div>
-</div>
-<hr></section><section><h2 class="section-heading" id="step-3-check-terminal-and-git">Step 3 — Check Terminal and Git<a class="anchor" aria-label="anchor" href="#step-3-check-terminal-and-git"></a></h2>
+<figure><img src="fig/vscode-terminal.png" alt="VS Code integrated terminal with Git Bash selected as the current shell" class="figure mx-auto d-block"><div class="figcaption">VS Code Terminal set to Git Bash</div>
+</figure><p>Use this terminal for <strong>all remaining steps</strong>.</p>
+<hr></div>
+</section><section><h2 class="section-heading" id="step-4-check-terminal-and-git">Step 4 — Check Terminal and Git<a class="anchor" aria-label="anchor" href="#step-4-check-terminal-and-git"></a></h2>
 <hr class="half-width"><div id="verify-your-setup" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
@@ -519,7 +515,7 @@ Keep this terminal open for the next step.</p>
 </div>
 </div>
 </div>
-<hr></section><section><h2 class="section-heading" id="step-4-install-python-using-uv">Step 4 — Install Python using uv<a class="anchor" aria-label="anchor" href="#step-4-install-python-using-uv"></a></h2>
+<hr></section><section><h2 class="section-heading" id="step-5-install-python-using-uv">Step 5 — Install Python using uv<a class="anchor" aria-label="anchor" href="#step-5-install-python-using-uv"></a></h2>
 <hr class="half-width"><p>We use <strong>uv</strong> to install Python and manage project
 environments automatically.</p>
 <p>Run this in your VS Code terminal:</p>
@@ -528,44 +524,47 @@ environments automatically.</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-LsSf</span> https://astral.sh/uv/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre>
 </div>
-<p>When it finishes, <strong>close and reopen the terminal</strong>,
-then verify:</p>
+<p>When it finishes, <strong>close and restart VS Code</strong>, then
+verify:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">uv</span> <span class="at">--version</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="ex">uv</span> python <span class="at">--version</span></span></code></pre>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="ex">uv</span> python install</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="ex">uv</span> python <span class="at">--version</span></span></code></pre>
 </div>
-<div id="tip-for-windows-users" class="callout">
+<div id="windows-tip" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="tip-for-windows-users" class="callout-inner">
-<h3 class="callout-title">🪟 Tip for Windows users</h3>
+<div id="windows-tip" class="callout-inner">
+<h3 class="callout-title">🪟 Windows tip</h3>
 <div class="callout-content">
 <p>You don’t need PowerShell or separate installers — everything runs
-inside VS Code’s Git Bash.</p>
+inside VS Code’s Git Bash.<br>
+If <code>uv</code> isn’t found, close and reopen VS Code to refresh your
+PATH.</p>
 </div>
 </div>
 </div>
 <figure><img src="fig/vscode-test-uv.png" alt="VS Code terminal showing successful output from 'uv --version' and 'uv python --version' commands" class="figure mx-auto d-block"><div class="figcaption">Testing uv in VS Code terminal</div>
-</figure><hr></section><section><h2 class="section-heading" id="step-5-download-course-files">Step 5 — Download Course Files<a class="anchor" aria-label="anchor" href="#step-5-download-course-files"></a></h2>
+</figure><hr></section><section><h2 class="section-heading" id="step-6-download-course-files">Step 6 — Download Course Files<a class="anchor" aria-label="anchor" href="#step-6-download-course-files"></a></h2>
 <hr class="half-width"><p>Download the practice data:<br>
 👉 <a href="https://github.com/carpentries-incubator/better-research-software/raw/refs/heads/main/learners/spacewalks.zip" class="external-link uri">https://github.com/carpentries-incubator/better-research-software/raw/refs/heads/main/learners/spacewalks.zip</a></p>
 <p>Unzip <code>spacewalks.zip</code> to an easy location (e.g.,
 Desktop).<br>
 In VS Code, open the folder (<strong>File → Open Folder…</strong>) to
-see the files in the Explorer panel.</p>
+view its files.</p>
 <figure><img src="fig/vscode-explorer-spacewalks.png" alt="VS Code Explorer showing extracted spacewalks folder and files" class="figure mx-auto d-block"><div class="figcaption">VS Code Explorer showing spacewalks folder</div>
-</figure><hr></section><section><h2 class="section-heading" id="step-6-set-up-your-project-environment">Step 6 — Set up Your Project Environment<a class="anchor" aria-label="anchor" href="#step-6-set-up-your-project-environment"></a></h2>
+</figure><hr></section><section><h2 class="section-heading" id="step-7-set-up-your-project-environment">Step 7 — Set up Your Project Environment<a class="anchor" aria-label="anchor" href="#step-7-set-up-your-project-environment"></a></h2>
 <hr class="half-width"><p>In the VS Code terminal:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">uv</span> init</span></code></pre>
 </div>
-<p>Edit the new <code>pyproject.toml</code> so it looks like:</p>
+<p>Edit the new <code>pyproject.toml</code> so it looks like this:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">TOML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -574,7 +573,7 @@ see the files in the Explorer panel.</p>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
 <span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[</span><span class="st">"pandas"</span><span class="op">,</span> <span class="st">"matplotlib"</span><span class="op">]</span></span></code></pre>
 </div>
-<p>Then install and run the code:</p>
+<p>Then install and run:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -589,29 +588,140 @@ see the files in the Explorer panel.</p>
 <div id="test-your-setup" class="callout-inner">
 <h3 class="callout-title">Test your setup</h3>
 <div class="callout-content">
-<p>If you see a plot or printed output, everything works!</p>
+<p>If you see a plot or printed output, everything works!<br>
+🪟 <em>If Windows Defender Firewall prompts you, you can safely allow
+access.</em></p>
 </div>
 </div>
 </div>
 <figure><img src="fig/vscode-spacewalks-plot.png" alt="Example plot output from running the spacewalks.py analysis" class="figure mx-auto d-block"><div class="figcaption">Python plot result</div>
-</figure><hr></section><section><h2 class="section-heading" id="step-7-optional-set-up-github">Step 7 — (Optional) Set up GitHub<a class="anchor" aria-label="anchor" href="#step-7-optional-set-up-github"></a></h2>
-<hr class="half-width"><div id="optional-save-your-work-online" class="callout checklist">
+</figure><hr></section><section><h2 class="section-heading" id="step-8-connect-to-github-simplified-setup">Step 8 — Connect to GitHub (Simplified Setup)<a class="anchor" aria-label="anchor" href="#step-8-connect-to-github-simplified-setup"></a></h2>
+<hr class="half-width"><div id="create-your-github-account" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
 <span class="callout-header">Checklist</span>
-<div id="optional-save-your-work-online" class="callout-inner">
-<h3 class="callout-title">Optional: Save your work online</h3>
+<div id="create-your-github-account" class="callout-inner">
+<h3 class="callout-title">Create your GitHub account</h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li>Create a GitHub account: <a href="https://github.com/" class="external-link uri">https://github.com/</a><br></li>
-<li>Follow the SSH setup guide: <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh" class="external-link uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh</a><br></li>
-<li>Test your connection:</li>
-</ol><div class="codewrapper sourceCode" id="cb7">
+<ol style="list-style-type: decimal"><li>Go to <a href="https://github.com/signup" class="external-link uri">https://github.com/signup</a> and create a free
+account.<br></li>
+<li>Verify your email before continuing.<br></li>
+<li>Keep your username and password handy — you’ll use them once.</li>
+</ol></div>
+</div>
+</div>
+<div id="why-we-use-https" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="why-we-use-https" class="callout-inner">
+<h3 class="callout-title">Why we use HTTPS</h3>
+<div class="callout-content">
+<p>GitHub now recommends <strong>signing in with your browser</strong>
+instead of SSH keys or manual tokens.<br>
+This uses <strong>Git Credential Manager (GCM)</strong>, which securely
+remembers your login on your computer.</p>
+</div>
+</div>
+</div>
+<hr><div class="section level3">
+<h3 id="check-your-git-configuration">1. Check your Git configuration<a class="anchor" aria-label="anchor" href="#check-your-git-configuration"></a></h3>
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"your.email@example.com"</span></span></code></pre>
 </div>
-<p>✅ You should see a greeting message from GitHub.</p>
+<p>These identify you in Git commits.</p>
+<hr></div>
+<div class="section level3">
+<h3 id="create-a-test-repository-on-github">2. Create a test repository on GitHub<a class="anchor" aria-label="anchor" href="#create-a-test-repository-on-github"></a></h3>
+<ol style="list-style-type: decimal"><li>Visit <a href="https://github.com/new" class="external-link uri">https://github.com/new</a><br></li>
+<li>Name it <code>test-repo</code><br></li>
+<li>Choose <strong>Public</strong> and click <strong>Create
+repository</strong>
+</li>
+</ol><p>You’ll see the repository page with command-line instructions.</p>
+<hr></div>
+<div class="section level3">
+<h3 id="connect-from-vs-code">3. Connect from VS Code<a class="anchor" aria-label="anchor" href="#connect-from-vs-code"></a></h3>
+<p>In your VS Code terminal:</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">git</span> init</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"first commit"</span></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-M</span> main</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/YOUR-USERNAME/test-repo.git</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
+</div>
+<p>When you run the last command, Git opens a browser window asking you
+to <strong>sign in to GitHub</strong>.<br>
+This uses <strong>Git Credential Manager</strong>, which:</p>
+<ul><li>Authenticates in your browser<br></li>
+<li>Stores credentials in the OS keychain<br></li>
+<li>Works automatically for future pushes</li>
+</ul><p>Once signed in, the push completes — no SSH keys or tokens
+required.</p>
+<hr><div id="windows-tip-1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="windows-tip-1" class="callout-inner">
+<h3 class="callout-title">🪟 Windows tip</h3>
+<div class="callout-content">
+<p>Git Credential Manager is installed automatically with Git for
+Windows.<br>
+When you push, a browser window appears — just follow the prompts.<br>
+Your credentials are saved securely.</p>
+</div>
+</div>
+</div>
+<div id="macos-linux-tip" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="macos-linux-tip" class="callout-inner">
+<h3 class="callout-title">🐧 macOS / Linux tip</h3>
+<div class="callout-content">
+<p>If you don’t see the sign-in prompt, enable GCM manually:</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper manager</span></code></pre>
+</div>
+<p>Then push again to trigger the browser login.</p>
+</div>
+</div>
+</div>
+<hr><div id="a-note-on-github-authentication-changes" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="a-note-on-github-authentication-changes" class="callout-inner">
+<h3 class="callout-title">A note on GitHub authentication changes</h3>
+<div class="callout-content">
+<p>GitHub’s login process has evolved significantly in recent
+years.<br>
+Older tutorials often ask you to create <strong>SSH keys</strong> or
+<strong>Personal Access Tokens (PATs)</strong> to connect Git with
+GitHub.<br>
+Those steps are no longer necessary for most users.</p>
+<p>Today, GitHub supports secure <strong>browser-based sign-in</strong>
+through <strong>Git Credential Manager (GCM)</strong>.<br>
+This tool is installed automatically with Git for Windows and included
+with most modern macOS and Linux Git distributions.<br>
+When you push code for the first time, Git opens a browser window where
+you sign in — GitHub handles the rest and securely stores your
+credentials.</p>
+<p>If you learned Git before 2022, this method replaces SSH and PAT
+authentication.</p>
 </div>
 </div>
 </div>
@@ -622,25 +732,29 @@ see the files in the Explorer panel.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Use <strong>VS Code</strong> as your coding workspace and
-terminal.<br></li>
+<ul><li>Install <strong>VS Code</strong>, then <strong>Git for
+Windows</strong>, then the <strong>Start git-bash</strong>
+extension.<br></li>
+<li>Use <strong>Git Bash inside VS Code</strong> for all commands.<br></li>
 <li>
-<strong>Git</strong> manages version control and integrates with VS
-Code.<br></li>
+<strong>uv</strong> manages Python quickly and reproducibly.<br></li>
+<li>Restart VS Code after installing uv.<br></li>
+<li>Connect to GitHub using <strong>HTTPS with browser sign-in</strong>,
+not SSH keys.<br></li>
 <li>
-<strong>uv</strong> simplifies Python installation and environment
-management.<br></li>
-<li>You’re now fully set up for the workshop!</li>
+<strong>Git Credential Manager</strong> stores your login securely —
+no tokens needed.<br></li>
+<li>GitHub authentication has changed — browser-based login is now the
+default.</li>
 </ul></div>
 </div>
 </div>
-<p>This version should paste cleanly and render correctly within the
-Carpentries Workbench build system (sandpaper::build_lesson()) without
-breaking from nested code blocks.</p>
+
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
