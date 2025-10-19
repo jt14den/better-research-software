@@ -4,13 +4,36 @@ title: Setup
 
 ## Software Setup
 
-To go through the course material on your own or at a workshop, you will need the following software installed and working correctly on your system:
+Before starting the course, make sure you have the following tools installed and working:
 
-- [Command line terminal (shell)](installation-instructions.html#command-line-tool) (such as **Bash**, **Zsh** or **Git Bash**)  
-- [Git version control tool](installation-instructions.html#git-version-control-tool)
-- [Python 3](installation-instructions.html#python-3-distribution)
-- [Visual Studio Code (VS Code)](installation-instructions.html#visual-studio-code) integrated development environment (IDE)
+- [**Visual Studio Code (VS Code)**](installation-instructions.html#step-1--install-visual-studio-code) — your main workspace and terminal  
+- [**Git + Git Bash**](installation-instructions.html#step-2--install-git) — for version control and running commands  
+- [**Python 3 (via uv)**](installation-instructions.html#step-5--install-python-using-uv) — for running and managing code  
+- [**GitHub account**](installation-instructions.html#step-8--connect-to-github-simplified-setup) — for saving and sharing work  
+- [**Spacewalks data and example code**](installation-instructions.html#step-6--download-course-files) — used in the exercises
 
-You will also need to [create a GitHub account](installation-instructions.html#github-account) if you do not have one already, make sure that you are able to log into it, and download the [Spacewalks data and analysis code](installation-instructions.html#spacewalks) which we will be used for exercises in the course.
+These steps work on **Windows, macOS, and Linux**.  
+Windows users will use **Git Bash inside VS Code** instead of PowerShell.
 
-Please follow the [installation instructions](installation-instructions.md) to install the above tools and set up for the course.
+---
+
+## What’s New
+
+::::::::::::::::::::: callout
+
+### Updated authentication and environment setup
+
+- **GitHub authentication is simpler** — sign in through your browser using **Git Credential Manager** (no SSH keys or tokens needed).  
+- **Python installation uses uv**, a modern, fast installer that avoids manual setup.  
+- **VS Code is your single workspace** — all setup steps run inside its built-in terminal.
+
+::::::::::::::::::::::::::::::::
+
+---
+
+## Get Started
+
+Follow the step-by-step [**Installation Instructions**](installation-instructions.md)  
+to install everything and verify your setup before the workshop.
+
+If you’ve used older Git or Python workflows, note that these instructions reflect the **current recommended Carpentries practices** for reproducible, low-friction setup.
