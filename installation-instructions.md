@@ -1,55 +1,91 @@
 ---
-title: Installation instructions
+title: "Installation Instructions"
 ---
 
-# Setup for the “Building Better Research Software” Course
+::::::::::::::::::::: objectives
+
+- Prepare your computer for the “Building Better Research Software” workshop.
+- Install Visual Studio Code (VS Code), Git, and Python using **uv**.
+- Verify everything works in the integrated VS Code terminal.
+
+::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::: prereq
+
+You’ll need basic familiarity with opening applications, downloading files, and copy-pasting commands.  
+No prior experience with programming or Git is required.
+
+::::::::::::::::::::::::::::::::::
+
+## Setup Overview
 
 These steps prepare your computer for the workshop.  
-They work on **Windows, macOS, and Linux** — look for notes marked  
+They work on **Windows, macOS, and Linux** — look for tabs marked  
 🪟 *Windows only* or 🐧 *macOS/Linux only* where steps differ.
 
-We’ll use **Visual Studio Code (VS Code)** as the main workspace and terminal for all steps.
+We’ll use **Visual Studio Code (VS Code)** as the main workspace and terminal.
 
 ---
 
 ## Step 1 — Install Visual Studio Code
 
-Download and install **VS Code** for your computer:  
+Download and install **VS Code** for your operating system:  
 👉 <https://code.visualstudio.com/Download>
 
-After installation, open VS Code once so it can finish setup.  
-You’ll see a screen like this:
+After installation, open VS Code once to complete setup.
 
-![VS Code Home Screen](fig/vscode-home.png){alt="VS Code start screen showing welcome tab and extensions icon highlighted" .image-with-shadow }
+::::::::::::::::::::: callout
+
+### What to expect
+
+You should see the **Welcome screen** with tabs for “Start” and “Extensions.”
+
+::::::::::::::::::::::::::::::::
+
+![VS Code Home Screen](fig/vscode-home.png){alt="VS Code start screen showing welcome tab and extensions icon highlighted"}
 
 ---
 
-### Add helpful extensions
+### Add Helpful Extensions
 
-From the menu, choose **View → Extensions** (or press `Ctrl+Shift+X` / `Cmd+Shift+X` on Mac).  
-Search for and install these:
+From the menu, choose **View → Extensions** (or press `Ctrl+Shift+X` / `Cmd+Shift+X`).  
+Search for and install these extensions:
 
 - **Python (by Microsoft)** – enables Python coding and linting  
 - **GitLens** – adds Git history and collaboration features  
 - **Git Graph** – shows branch and commit history visually  
-- **Excel Viewer** – lets you view CSV and Excel files  
-- **JSON Editor** – improves JSON file readability  
+- **Excel Viewer** – view CSV and Excel files  
+- **JSON Editor** – improve JSON readability  
 - 🪟 **Start git-bash** – adds a Git Bash terminal inside VS Code (Windows only)
 
-![Installing VS Code Extensions](fig/vscode-extensions.png){alt="Screenshot of VS Code Extensions sidebar with Python, GitLens, Git Graph, Excel Viewer, JSON Editor, and Start git-bash visible and install buttons highlighted" .image-with-shadow }
+![Installing VS Code Extensions](fig/vscode-extensions.png){alt="VS Code Extensions sidebar with Python, GitLens, Git Graph, Excel Viewer, JSON Editor, and Start git-bash visible"}
 
 ---
 
-### Set up the integrated terminal
+### Set up the Integrated Terminal
+
+::::::::::::::::::::: tab
+
+### 🪟 Windows
+
+1. Install **Start git-bash** (from the Extensions Marketplace).  
+2. Go to **Terminal → New Terminal**.  
+3. Click the **▼** next to `+`, choose **Select Default Profile**, and select **Git Bash**.  
+4. Open a new terminal tab — you should see `bash` on the right.
+
+::::::::::::::::::::::::::::::
+
+::::::::::::::::::::: tab
+
+### 🐧 macOS / Linux
 
 1. Go to **Terminal → New Terminal**.  
-2. Click the **▼** arrow next to the `+` and select **Select Default Profile**.  
-3. Choose:
-   - 🪟 **Git Bash** (after installing Start git-bash)
-   - 🐧 **bash** or **zsh** (default on macOS or Linux)  
-4. Open a new terminal tab. You should see your shell name (e.g., `bash`) on the right side.
+2. Click the **▼** next to `+`, choose **Select Default Profile**, and select **bash** or **zsh**.  
+3. Open a new terminal tab to verify the shell name on the right.
 
-![VS Code Terminal set to Git Bash](fig/vscode-terminal.png){alt="Screenshot of the VS Code integrated terminal with Git Bash selected as the current shell" .image-with-shadow }
+::::::::::::::::::::::::::::::
+
+![VS Code Terminal set to Git Bash](fig/vscode-terminal.png){alt="VS Code integrated terminal with Git Bash selected as the current shell"}
 
 You’ll use this terminal for **all remaining steps**.
 
@@ -57,87 +93,101 @@ You’ll use this terminal for **all remaining steps**.
 
 ## Step 2 — Install Git
 
-- 🪟 **Windows only:**  
-  Download **Git for Windows** from <https://gitforwindows.org/>  
+::::::::::::::::::::: tab
 
-  During setup:  
-  - Set **Editor** to **Visual Studio Code**  
-  - Set the **default branch name** to `main`  
-  - Leave other options as default  
+### 🪟 Windows
 
-  This also installs **Git Bash**, which you’ll now use inside VS Code.
+Download **Git for Windows** from <https://gitforwindows.org/>.  
+During setup:  
+- Set **Editor** to **Visual Studio Code**  
+- Set **default branch name** to `main`  
+- Leave other options at default  
 
-- 🐧 **macOS/Linux only:**  
-  Git is already included on most systems. If not, install it with your package manager or from <https://git-scm.com/downloads>.
+This also installs **Git Bash**, which you’ll now use inside VS Code.
 
-Once installed, return to VS Code.
+::::::::::::::::::::::::::::::
+
+::::::::::::::::::::: tab
+
+### 🐧 macOS / Linux
+
+Git is usually pre-installed.  
+If not, install with your package manager or from <https://git-scm.com/downloads>.
+
+::::::::::::::::::::::::::::::
 
 ---
 
-## Step 3 — Check your terminal and Git
+## Step 3 — Check Terminal and Git
 
-In the VS Code terminal, type:
+::::::::::::::::::::: checklist
+
+### Verify your setup
+
+In VS Code’s terminal, type:
 
 ```bash
 date
 git --version
 ```
 
-You’re ready if you see today’s date and a Git version number.  
+✅ You should see today’s date and a Git version number.  
 Keep this terminal open for the next step.
+
+::::::::::::::::::::::::::::::::::
 
 ---
 
 ## Step 4 — Install Python using uv
 
-We use **uv** to install Python and manage project environments automatically.  
-It’s faster and easier than installing Python manually.
+We use **uv** to install Python and manage project environments automatically.
 
-In your VS Code terminal, run:
+Run this in your VS Code terminal:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-When it finishes, **close and reopen the terminal** in VS Code, then verify:
+When it finishes, **close and reopen the terminal**, then verify:
 
 ```bash
 uv --version
 uv python --version
 ```
 
-You’re done when both commands show version numbers.
+::::::::::::::::::::: callout
 
-![Testing uv in VS Code terminal](fig/vscode-test-uv.png){alt="VS Code terminal showing successful output from 'uv --version' and 'uv python --version' commands" .image-with-shadow }
+### 🪟 Tip for Windows users
 
-> 🪟 **Tip for Windows users:**  
-> You don’t need PowerShell or separate installers — everything runs inside VS Code’s Git Bash.
+You don’t need PowerShell or separate installers — everything runs inside VS Code’s Git Bash.
+
+::::::::::::::::::::::::::::::
+
+![Testing uv in VS Code terminal](fig/vscode-test-uv.png){alt="VS Code terminal showing successful output from 'uv --version' and 'uv python --version' commands"}
 
 ---
 
-## Step 5 — Download the course files
+## Step 5 — Download Course Files
 
 Download the practice data:  
 👉 <https://github.com/carpentries-incubator/better-research-software/raw/refs/heads/main/learners/spacewalks.zip>
 
-Unzip `spacewalks.zip` to an easy location (like Desktop).  
-In VS Code, open that folder (**File → Open Folder…**)  
-and you’ll see the files listed in the Explorer panel.
+Unzip `spacewalks.zip` to an easy location (e.g., Desktop).  
+In VS Code, open the folder (**File → Open Folder…**) to see the files in the Explorer panel.
 
-![VS Code Explorer showing spacewalks folder](fig/vscode-explorer-spacewalks.png){alt="VS Code Explorer panel displaying the extracted spacewalks folder and files" .image-with-shadow }
+![VS Code Explorer showing spacewalks folder](fig/vscode-explorer-spacewalks.png){alt="VS Code Explorer showing extracted spacewalks folder and files"}
 
 ---
 
-## Step 6 — Set up your project environment
+## Step 6 — Set up Your Project Environment
 
-In the VS Code terminal (bottom panel), run:
+In the VS Code terminal:
 
 ```bash
 uv init
 ```
 
-That creates a `pyproject.toml` file.  
-Edit it in VS Code so it looks like this:
+Edit the new `pyproject.toml` so it looks like:
 
 ```toml
 [project]
@@ -153,35 +203,45 @@ uv sync
 uv run python spacewalks.py
 ```
 
+::::::::::::::::::::: challenge
+
+### Test your setup
+
 If you see a plot or printed output, everything works!
 
-![Python plot result](fig/vscode-spacewalks-plot.png){alt="Example plot output window from running the spacewalks.py analysis" .image-with-shadow }
+::::::::::::::::::::::::::::::
+
+![Python plot result](fig/vscode-spacewalks-plot.png){alt="Example plot output from running the spacewalks.py analysis"}
 
 ---
 
 ## Step 7 — (Optional) Set up GitHub
 
-If you want to save or share your work later:
+::::::::::::::::::::: checklist
 
-1. Create a free GitHub account: <https://github.com/>  
-2. Follow GitHub’s SSH setup guide: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh>  
+### Optional: Save your work online
+
+1. Create a GitHub account: <https://github.com/>  
+2. Follow the SSH setup guide: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh>  
 3. Test your connection:
 
-   ```bash
-   ssh -T git@github.com
-   ```
+```bash
+ssh -T git@github.com
+```
 
-   You should see a greeting message from GitHub.
+✅ You should see a greeting message from GitHub.
+
+::::::::::::::::::::::::::::::::::
 
 ---
 
-# You’re ready for the workshop
+::::::::::::::::::::: keypoints
 
-You now have:
+- Use **VS Code** as your coding workspace and terminal.  
+- **Git** manages version control and integrates with VS Code.  
+- **uv** simplifies Python installation and environment management.  
+- You’re now fully set up for the workshop!
 
-- **Visual Studio Code** for editing and running code  
-- **Git + Git Bash** for version control and command line work  
-- **uv + Python** for reproducible, easy project management  
+::::::::::::::::::::::::::::::::::
 
-We’ll use these same tools during the session.  
-Keep this page open in case you need to revisit a step.
+This version should paste cleanly and render correctly within the Carpentries Workbench build system (sandpaper::build_lesson()) without breaking from nested code blocks.
