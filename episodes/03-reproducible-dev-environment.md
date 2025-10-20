@@ -90,16 +90,27 @@ For most research projects, environment management like this is *good enough* �
 
 ::::::::::::::::::::::::::::::
 
-## Managing environments with uv
+::::::::::::::::: callout
 
-Historically, we used `venv` + `pip` and shared a `requirements.txt`.  
-Now, **uv** does this in one step:
+### Note on environment managers
 
-- Creates and manages a project environment (`.venv/`)  
-- Declares dependencies in `pyproject.toml`  
-- Locks exact versions in `uv.lock`  
-- Runs commands in the environment (`uv run`)  
-- Installs Python if needed
+Python packaging and environment management tools are changing quickly.  
+This lesson uses **uv** because it provides a simple, modern interface that unifies
+dependency installation, environment creation, and project management in one step.  
+
+The broader Python community is still exploring which tools will become the long-term
+standard. Tools such as **Pixi**, **Poetry**, and **PDM** offer similar goals, and each
+has its own strengths and trade-offs:
+
+- **Pixi** builds on Conda’s solver and supports multiple languages.
+- **Poetry** and **PDM** emphasize packaging and publishing workflows.
+- **uv** is new and fast, but it’s developed by a company (Astral) rather than a community-governed project, which some researchers consider when choosing tools.
+
+The core idea stays the same: isolate dependencies and record exact versions for
+reproducibility. As the ecosystem matures, you may wish to test more than one tool and
+see which fits your workflow best.
+
+::::::::::::::::::::::::::::::
 
 ::::::::::::::::: checklist
 
@@ -293,25 +304,31 @@ How might using an environment manager like uv help your **future self** or a **
 
 ### Other environment managers
 
-You may encounter other tools that manage environments differently:
+You may encounter other tools that manage environments differently or focus on
+different workflows:
 
-- [**Pixi**](https://pixi.sh) — Rust-based, cross-language environment manager using Conda’s solver.  
-- [**Poetry**](https://python-poetry.org) — established dependency and packaging manager.  
-- [**Conda / Mamba**](https://docs.conda.io/) — popular in data science for compiled libraries.  
-- [**Pipenv**](https://pipenv.pypa.io/) — older tool combining pip and virtualenv.
+| Tool | Distinguishing feature |
+|------|------------------------|
+| **Pixi** | Rust-based, cross-language manager using Conda’s dependency solver |
+| **Poetry** | Long-standing project manager emphasizing packaging and publishing |
+| **PDM** | Modern, PEP-compliant tool similar to Poetry but lighter-weight |
+| **Conda / Mamba** | Popular in data science for compiled packages and cross-language use |
 
-Each uses the same core idea: isolate dependencies and record them for reproducibility.  
-This lesson uses **uv** for its speed, simplicity, and alignment with current best practices.
+Each follows the same principle: isolate dependencies and record them for
+reproducibility.  
+
+This workshop focuses on **uv** for its straightforward, fast setup and
+beginner-friendly interface, but we encourage exploring these other tools as you
+grow more comfortable with Python project management.
 
 ::::::::::::::::::::::::::::::
 
 ::::::::::::::::: keypoints
-
 - A virtual environment isolates your project’s Python version and dependencies.  
-- `uv` replaces older tools like `pip` and `venv` with a faster, simpler workflow.  
-- `pyproject.toml` declares what you need; `uv.lock` records exact versions.  
+- Tools such as `uv`, `pixi`, and `poetry` automate this process in different ways.  
+- `pyproject.toml` declares what you need; `uv.lock` (or equivalent) records exact versions.  
+- Reproducibility depends on capturing this metadata, not on which specific tool you use.  
 - `uv run` executes code safely inside the environment.  
 - Share `pyproject.toml` + `uv.lock`; ignore `.venv/`.  
-- Recreate an environment anytime with `uv sync`.
-
+- Recreate an environment anytime with `uv sync` or the equivalent for your tool of choice.
 ::::::::::::::::::::::::::::::
