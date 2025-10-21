@@ -217,16 +217,15 @@ If you see a plot or printed output, everything works!
 ![Python plot result](fig/vscode-spacewalks-plot.png){alt="Example plot output from running the spacewalks.py analysis"}
 
 ---
-
-## Step 8 — Connect to GitHub (Simplified Setup)
+## Step 8 — Connect to GitHub
 
 ::::::::::::::::::::: checklist
 
 ### Create your GitHub account
 
-1. Go to <https://github.com/signup> and create a free account.  
-2. Verify your email before continuing.  
-3. Keep your username and password handy — you’ll use them once.
+1. Go to <https://github.com/signup> and create a free account.
+2. Verify your email before continuing.
+3. Keep your username and password handy — you will sign in through your browser once.
 
 ::::::::::::::::::::::::::::::::::
 
@@ -234,8 +233,8 @@ If you see a plot or printed output, everything works!
 
 ### Why we use HTTPS
 
-GitHub now recommends **signing in with your browser** instead of SSH keys or manual tokens.  
-This uses **Git Credential Manager (GCM)**, which securely remembers your login on your computer.
+GitHub now recommends browser-based sign-in instead of SSH keys or manual tokens.
+This uses the Git Credential Manager (GCM), which securely remembers your login in your operating system’s keychain.
 
 ::::::::::::::::::::::::::::::::::
 
@@ -243,72 +242,76 @@ This uses **Git Credential Manager (GCM)**, which securely remembers your login 
 
 ### 1. Check your Git configuration
 
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-```
+    git config --global user.name "Your Name"
+    git config --global user.email "your.email@example.com"
 
 These identify you in Git commits.
 
 ---
 
-### 2. Create a test repository on GitHub
+### 2. Install Git Credential Manager (GCM)
 
-1. Visit <https://github.com/new>  
-2. Name it `test-repo`  
-3. Choose **Public** and click **Create repository**
+::::::::::::::::::::: tab
 
-You’ll see the repository page with command-line instructions.
+### 🪟 Windows
+
+Git Credential Manager is installed automatically with Git for Windows.
+You can skip this step.
+
+:::::::::::::::::::::::::
+
+### 🍎 macOS
+
+Apple’s built-in Git does not include GCM. Install it once using Microsoft’s signed package:
+
+    1.  Go to https://github.com/git-ecosystem/git-credential-manager/releases/latest
+    2.  Under Assets, download the .pkg for your Mac:
+        • gcm-osx-arm64.pkg for Apple Silicon
+        • gcm-osx-x64.pkg for Intel
+    3.  Double-click the .pkg and follow the installer.
+    4.  In Terminal, verify installation:
+           git-credential-manager version
+           git config --global credential.helper manager
+
+:::::::::::::::::::::::::
+
+### 🐧 Linux
+
+Many Linux distributions do not include GCM by default. Install it via your package manager or from the same GitHub releases page:
+
+    # Debian / Ubuntu
+    sudo apt install git-credential-manager-core
+
+    # Or install manually on any distro
+    curl -L https://aka.ms/gcm/latest/linux-install.sh | bash
+    git config --global credential.helper manager
+
+:::::::::::::::::::::::::
 
 ---
 
-### 3. Connect from VS Code
+### 3. Create a test repository on GitHub
 
-In your VS Code terminal:
+1. Visit <https://github.com/new>
+2. Name it `test-repo`
+3. Choose Public and click Create repository
 
-```bash
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/test-repo.git
-git push -u origin main
-```
-
-When you run the last command, Git opens a browser window asking you to **sign in to GitHub**.  
-This uses **Git Credential Manager**, which:
-
-- Authenticates in your browser  
-- Stores credentials in the OS keychain  
-- Works automatically for future pushes  
-
-Once signed in, the push completes — no SSH keys or tokens required.
+You will see the repository page with command-line instructions.
 
 ---
 
-::::::::::::::::::::: callout
+### 4. Connect from VS Code or Terminal
 
-### 🪟 Windows tip
+    git init
+    git add .
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin https://github.com/YOUR-USERNAME/test-repo.git
+    git push -u origin main
 
-Git Credential Manager is installed automatically with Git for Windows.  
-When you push, a browser window appears — just follow the prompts.  
-Your credentials are saved securely.
-
-::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::: callout
-
-### 🐧 macOS / Linux tip
-
-If you don’t see the sign-in prompt, enable GCM manually:
-
-```bash
-git config --global credential.helper manager
-```
-
-Then push again to trigger the browser login.
-
-::::::::::::::::::::::::::::::::::
+When you run the last command, Git opens a browser window asking you to sign in to GitHub.
+Once signed in, the push completes. No SSH keys or tokens required.
+Your credentials are stored securely and reused automatically.
 
 ---
 
@@ -316,31 +319,18 @@ Then push again to trigger the browser login.
 
 ### A note on GitHub authentication changes
 
-GitHub’s login process has evolved significantly in recent years.  
-Older tutorials often ask you to create **SSH keys** or **Personal Access Tokens (PATs)** to connect Git with GitHub.  
-Those steps are no longer necessary for most users.
+Older tutorials often tell you to set up SSH keys or create Personal Access Tokens (PATs).
+That is no longer required for most users.
 
-Today, GitHub supports secure **browser-based sign-in** through **Git Credential Manager (GCM)**.  
-This tool is installed automatically with Git for Windows and included with most modern macOS and Linux Git distributions.  
-When you push code for the first time, Git opens a browser window where you sign in — GitHub handles the rest and securely stores your credentials.
+Today, GitHub supports secure, one-time browser authentication through Git Credential Manager.
+• Installed automatically on Windows.
+• Installable on macOS and Linux as shown above.
 
-If you learned Git before 2022, this method replaces SSH and PAT authentication.
-
-::::::::::::::::::::::::::::::::::
-
----
-
-::::::::::::::::::::: keypoints
-
-- Install **VS Code**, then **Git for Windows**, then the **Start git-bash** extension.  
-- Use **Git Bash inside VS Code** for all commands.  
-- **uv** manages Python quickly and reproducibly.  
-- Restart VS Code after installing uv.  
-- Connect to GitHub using **HTTPS with browser sign-in**, not SSH keys.  
-- **Git Credential Manager** stores your login securely — no tokens needed.  
-- GitHub authentication has changed — browser-based login is now the default.
+When you push for the first time, Git opens a browser window for you to sign in and stores your credentials securely in the system keychain.
 
 ::::::::::::::::::::::::::::::::::
+
+
 
 ::::::::::::::::::::: instructor
 
@@ -351,5 +341,18 @@ If learners encounter authentication issues:
 - Have them run `git config --global credential.helper manager`.  
 - On Windows, credentials can be reset via **Windows Credential Manager → Generic Credentials → git:https://github.com**.  
 - On macOS/Linux, credentials are stored in the keychain and can be cleared with `git credential reject`.
+
+::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::: keypoints
+
+- Install **VS Code**, then **Git for Windows**, then the **Start git-bash** extension.  
+- Use **Git Bash inside VS Code** for all commands.  
+- **uv** manages Python quickly and reproducibly.  
+- Restart VS Code after installing uv.  
+- Connect to GitHub using **HTTPS with browser sign-in**, not SSH keys.  
+- **Git Credential Manager** stores your login securely — no tokens needed.  
+- GitHub authentication has changed — browser-based login is now the default.
 
 ::::::::::::::::::::::::::::::::::
