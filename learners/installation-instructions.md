@@ -2,20 +2,6 @@
 title: "Installation Instructions"
 ---
 
-::::::::::::::::::::: objectives
-
-- Prepare your computer for the “Building Better Research Software” workshop.  
-- Install Visual Studio Code (VS Code), Git, and Python using **uv**.  
-- Verify that everything runs smoothly inside the VS Code terminal.
-
-::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::: prereq
-
-You’ll need basic familiarity with opening applications, downloading files, and copying text.  
-No prior programming or Git experience is required.
-
-::::::::::::::::::::::::::::::::::
 
 ## Setup Overview
 
@@ -36,7 +22,7 @@ After installation, open VS Code once to complete setup.
 
 ::::::::::::::::::::: callout
 
-### What to expect
+## What to expect
 
 You should see the **Welcome screen** with “Start” and “Extensions.”  
 If you’re on Windows, open VS Code as your regular user (not Administrator) so extensions install correctly.
@@ -49,9 +35,9 @@ If you’re on Windows, open VS Code as your regular user (not Administrator) so
 
 ## Step 2 — Install Git
 
-::::::::::::::::::::: tab
+::::::::::::::::::::: group-tab
 
-### 🪟 Windows
+## 🪟 Windows
 
 Download **Git for Windows** from <https://gitforwindows.org/>  
 
@@ -62,11 +48,8 @@ During setup:
 
 This also installs **Git Bash**, which you’ll use inside VS Code.
 
-::::::::::::::::::::::::::::::
 
-::::::::::::::::::::: tab
-
-### 🐧 macOS / Linux
+## 🐧 macOS / Linux
 
 Git is usually pre-installed.  
 If not, install it with your package manager or from <https://git-scm.com/downloads>.
@@ -92,19 +75,16 @@ From the **View → Extensions** menu (or press `Ctrl+Shift+X` / `Cmd+Shift+X`),
 
 ### Set up the Integrated Terminal
 
-::::::::::::::::::::: tab
+::::::::::::::::::::: group-tab
 
-### 🪟 Windows
+## 🪟 Windows
 
 1. After installing **Start git-bash**, go to **Terminal → New Terminal**.  
 2. Click the **▼** next to `+`, choose **Select Default Profile**, and pick **Git Bash**.  
 3. Open a new terminal tab — you should see `bash` in the prompt.
 
-::::::::::::::::::::::::::::::
 
-::::::::::::::::::::: tab
-
-### 🐧 macOS / Linux
+## 🐧 macOS / Linux
 
 1. Go to **Terminal → New Terminal**.  
 2. Click the **▼** next to `+`, choose **Select Default Profile**, and select **bash** or **zsh**.  
@@ -337,7 +317,6 @@ When you push for the first time, Git opens a browser window for you to sign in 
 ::::::::::::::::::::::::::::::::::
 
 
-
 ::::::::::::::::::::: instructor
 
 ### Instructor Notes
@@ -347,18 +326,5 @@ If learners encounter authentication issues:
 - Have them run `git config --global credential.helper manager`.  
 - On Windows, credentials can be reset via **Windows Credential Manager → Generic Credentials → git:https://github.com**.  
 - On macOS/Linux, credentials are stored in the keychain and can be cleared with `git credential reject`.
-
-::::::::::::::::::::::::::::::::::
-
-
-::::::::::::::::::::: keypoints
-
-- Install **VS Code**, then **Git for Windows**, then the **Start git-bash** extension.  
-- Use **Git Bash inside VS Code** for all commands.  
-- **uv** manages Python quickly and reproducibly.  
-- Restart VS Code after installing uv.  
-- Connect to GitHub using **HTTPS with browser sign-in**, not SSH keys.  
-- **Git Credential Manager** stores your login securely — no tokens needed.  
-- GitHub authentication has changed — browser-based login is now the default.
 
 ::::::::::::::::::::::::::::::::::
