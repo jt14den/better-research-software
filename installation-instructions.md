@@ -2,6 +2,22 @@
 title: "Installation Instructions"
 ---
 
+:::::::::::::::::::::::::::::::::::::::::::: questions
+
+- What tools do I need installed before the workshop begins?
+- How can I verify my setup is working correctly?
+- What should I do if something doesn’t install properly?
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::: objectives
+
+- Install required software for your operating system (Windows, macOS, or Linux).
+- Confirm that Git, VS Code, and Python are working correctly.
+- Understand how browser-based authentication with GitHub works via Git Credential Manager.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Setup Overview
 
 These steps prepare your computer for the workshop.  
