@@ -481,7 +481,7 @@ Let's push our **local repository** to [GitHub](https://github.com) and share it
    You should see instructions that look like this:
 
    ```bash
-   git remote add origin git@github.com/<YOUR_GITHUB_HANDLE>/spacewalks.git
+   git remote add origin https://github.com/<YOUR_GITHUB_HANDLE>/spacewalks.git
    git branch -M main
    git push -u origin main
    ```
@@ -502,7 +502,7 @@ Let's push our **local repository** to [GitHub](https://github.com) and share it
 If you were wondering about what those commands did, here is the explanation.
 
 ```bash
-git remote add origin git@github.com/<YOUR_GITHUB_HANDLE>/spacewalks.git
+git remote add origin https://github.com/<YOUR_GITHUB_HANDLE>/spacewalks.git
 ```
 
 This command tells Git to create a `remote` called "origin" and link it to the URL of your GitHub repository.
