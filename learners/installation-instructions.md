@@ -238,57 +238,61 @@ This uses the Git Credential Manager (GCM), which securely remembers your login 
 
 ::::::::::::::::::::::::::::::::::
 
----
-
 ### 1. Check your Git configuration
 
-    git config --global user.name "Your Name"
-    git config --global user.email "your.email@example.com"
+```
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
 
 These identify you in Git commits.
 
----
-
 ### 2. Install Git Credential Manager (GCM)
 
-::::::::::::::::::::: tab
+::::::::::::::::::::: group-tab
 
-### 🪟 Windows
+## 🪟 Windows
 
 Git Credential Manager is installed automatically with Git for Windows.
 You can skip this step.
 
-:::::::::::::::::::::::::
-
-### 🍎 macOS
+## 🍎 macOS
 
 Apple’s built-in Git does not include GCM. Install it once using Microsoft’s signed package:
 
-    1.  Go to https://github.com/git-ecosystem/git-credential-manager/releases/latest
-    2.  Under Assets, download the .pkg for your Mac:
-        • gcm-osx-arm64.pkg for Apple Silicon
-        • gcm-osx-x64.pkg for Intel
-    3.  Double-click the .pkg and follow the installer.
-    4.  In Terminal, verify installation:
-           git-credential-manager version
-           git config --global credential.helper manager
+1. Go to https://github.com/git-ecosystem/git-credential-manager/releases/latest
+2. Under Assets, download the .pkg for your Mac:
 
-:::::::::::::::::::::::::
+```
+gcm-osx-arm64.pkg for Apple Silicon
+gcm-osx-x64.pkg for Intel
+```
 
-### 🐧 Linux
+4. Double-click the .pkg and follow the installer.
+5. In Terminal, verify installation:
+
+```
+git-credential-manager version
+git config --global credential.helper manager
+```
+
+## 🐧 Linux
 
 Many Linux distributions do not include GCM by default. Install it via your package manager or from the same GitHub releases page:
 
-    # Debian / Ubuntu
-    sudo apt install git-credential-manager-core
+```
+# Debian / Ubuntu
+sudo apt install git-credential-manager-core
+```
 
-    # Or install manually on any distro
-    curl -L https://aka.ms/gcm/latest/linux-install.sh | bash
-    git config --global credential.helper manager
+```
+# Or install manually on any distro
+curl -L https://aka.ms/gcm/latest/linux-install.sh | bash
+git config --global credential.helper manager
+```
 
 :::::::::::::::::::::::::
 
----
 
 ### 3. Create a test repository on GitHub
 
@@ -302,12 +306,14 @@ You will see the repository page with command-line instructions.
 
 ### 4. Connect from VS Code or Terminal
 
-    git init
-    git add .
-    git commit -m "first commit"
-    git branch -M main
-    git remote add origin https://github.com/YOUR-USERNAME/test-repo.git
-    git push -u origin main
+```
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/YOUR-USERNAME/test-repo.git
+git push -u origin main
+```
 
 When you run the last command, Git opens a browser window asking you to sign in to GitHub.
 Once signed in, the push completes. No SSH keys or tokens required.
