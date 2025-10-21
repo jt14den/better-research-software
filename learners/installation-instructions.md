@@ -2,7 +2,6 @@
 title: "Installation Instructions"
 ---
 
-
 ## Setup Overview
 
 These steps prepare your computer for the workshop.  
