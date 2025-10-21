@@ -214,7 +214,7 @@ Checking Python:
 Checking Git and GitHub:
 
 9. `$ git --help`
-10. `$ git config --list`
+10. `$ git config --global --get credential.helper`
 11. `$ ssh -T git@github.com`
 
 Checking VS Code:
@@ -235,7 +235,7 @@ The expected out put of each command is:
 7. The file path to where the Python version you are calling is installed.
 8. If you have more than one version these should be different paths, if both 5. and 6. gave the same result then 7. and 8. should match as well.
 9. The help message explaining how to use the `git` command.
-10. You should have `user.name`, `user.email` and `core.editor` set in your Git configuration. Check that the editor listed is one you know how to use.
+10. You should see all checks marked [OK], confirming that Git Credential Manager is correctly installed, connected to GitHub, and ready for secure browser-based authentication.
 11. This checks if you have set up your connection to GitHub correctly. If is says `permission denied` you may need to look at the instructions for setting up SSH keys again on the Setup page.
 12. This should open VS Code in your current working directory. macOS users may need to first open VS Code and [add it to the PATH](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line).
 13. You should have the extensions GitLens, Git Graph, Python, JSON and Excel Viewer installed to use in this course.
