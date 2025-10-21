@@ -343,3 +343,12 @@ If learners encounter authentication issues:
 - On macOS/Linux, credentials are stored in the keychain and can be cleared with `git credential reject`.
 
 ::::::::::::::::::::::::::::::::::
+
+
+:::::::::::::::::::::::::::::::::::::::::::: keypoints
+
+- All learners must have Git, VS Code, and Python installed before the workshop.
+- Git Credential Manager enables secure browser-based authentication with GitHub.
+- Verify your setup by running `git --version`, `python --version`, and pushing to a test GitHub repo.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
