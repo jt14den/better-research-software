@@ -1,25 +1,3 @@
----
-title: "Installation Instructions"
-teaching: 0
-exercises: 40
----
-
-:::::::::::::::::::::::::::::::::::::::::::: questions
-
-- What tools do I need installed before the workshop begins?
-- How can I verify my setup is working correctly?
-- What should I do if something doesn’t install properly?
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::::::: objectives
-
-- Install required software for your operating system (Windows, macOS, or Linux).
-- Confirm that Git, VS Code, and Python are working correctly.
-- Understand how browser-based authentication with GitHub works via Git Credential Manager.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
 ## Setup Overview
 
 These steps prepare your computer for the workshop.  
@@ -28,9 +6,8 @@ They work on **Windows, macOS, and Linux** — look for tabs marked
 
 We’ll use **Visual Studio Code (VS Code)** as our workspace and terminal.
 
----
 
-## Step 1 — Install Visual Studio Code
+## Step 1 Install Visual Studio Code
 
 Download and install **VS Code**:  
 👉 <https://code.visualstudio.com/Download>
@@ -48,13 +25,12 @@ If you’re on Windows, open VS Code as your regular user (not Administrator) so
 
 ![VS Code Home Screen](fig/vscode-home.png){alt="VS Code start screen showing welcome tab and extensions icon highlighted"}
 
----
 
-## Step 2 — Install Git
+## Step 2 Install Git
 
 ::::::::::::::::::::: group-tab
 
-## 🪟 Windows
+### 🪟 Windows
 
 Download **Git for Windows** from <https://gitforwindows.org/>  
 
@@ -66,16 +42,15 @@ During setup:
 This also installs **Git Bash**, which you’ll use inside VS Code.
 
 
-## 🐧 macOS / Linux
+### 🐧 macOS / Linux
 
 Git is usually pre-installed.  
 If not, install it with your package manager or from <https://git-scm.com/downloads>.
 
 ::::::::::::::::::::::::::::::
 
----
 
-## Step 3 — Add Helpful VS Code Extensions
+## Step 3 Add Helpful VS Code Extensions
 
 From the **View → Extensions** menu (or press `Ctrl+Shift+X` / `Cmd+Shift+X`), search for and install these:
 
@@ -88,20 +63,19 @@ From the **View → Extensions** menu (or press `Ctrl+Shift+X` / `Cmd+Shift+X`),
 
 ![Installing VS Code Extensions](fig/vscode-extensions.png){alt="VS Code Extensions sidebar with Python, GitLens, Git Graph, Excel Viewer, JSON Editor, and Start git-bash visible"}
 
----
 
 ### Set up the Integrated Terminal
 
 ::::::::::::::::::::: group-tab
 
-## 🪟 Windows
+### 🪟 Windows
 
 1. After installing **Start git-bash**, go to **Terminal → New Terminal**.  
 2. Click the **▼** next to `+`, choose **Select Default Profile**, and pick **Git Bash**.  
 3. Open a new terminal tab — you should see `bash` in the prompt.
 
 
-## 🐧 macOS / Linux
+### 🐧 macOS / Linux
 
 1. Go to **Terminal → New Terminal**.  
 2. Click the **▼** next to `+`, choose **Select Default Profile**, and select **bash** or **zsh**.  
@@ -113,9 +87,8 @@ From the **View → Extensions** menu (or press `Ctrl+Shift+X` / `Cmd+Shift+X`),
 
 Use this terminal for **all remaining steps**.
 
----
 
-## Step 4 — Check Terminal and Git
+## Step 4 Check Terminal and Git
 
 ::::::::::::::::::::: checklist
 
@@ -133,9 +106,7 @@ Keep this terminal open for the next step.
 
 ::::::::::::::::::::::::::::::::::
 
----
-
-## Step 5 — Install Python using uv
+## Step 5 Install Python using uv
 
 We use **uv** to install Python and manage project environments automatically.
 
@@ -164,9 +135,8 @@ If `uv` isn’t found, close and reopen VS Code to refresh your PATH.
 
 ![Testing uv in VS Code terminal](fig/vscode-test-uv.png){alt="VS Code terminal showing successful output from 'uv --version' and 'uv python --version' commands"}
 
----
 
-## Step 6 — Download Course Files
+## Step 6 Download Course Files
 
 Download the practice data:  
 👉 <https://github.com/carpentries-incubator/better-research-software/raw/refs/heads/main/learners/spacewalks.zip>
@@ -176,9 +146,8 @@ In VS Code, open the folder (**File → Open Folder…**) to view its files.
 
 ![VS Code Explorer showing spacewalks folder](fig/vscode-explorer-spacewalks.png){alt="VS Code Explorer showing extracted spacewalks folder and files"}
 
----
 
-## Step 7 — Set up Your Project Environment
+## Step 7 Set up Your Project Environment
 
 In the VS Code terminal:
 
@@ -213,8 +182,7 @@ If you see a plot or printed output, everything works!
 
 ![Python plot result](fig/vscode-spacewalks-plot.png){alt="Example plot output from running the spacewalks.py analysis"}
 
----
-## Step 8 — Connect to GitHub
+## Step 8 Connect to GitHub
 
 ::::::::::::::::::::: checklist
 
@@ -248,12 +216,12 @@ These identify you in Git commits.
 
 ::::::::::::::::::::: group-tab
 
-## 🪟 Windows
+### 🪟 Windows
 
 Git Credential Manager is installed automatically with Git for Windows.
 You can skip this step.
 
-## 🍎 macOS
+### 🍎 macOS
 
 Apple’s built-in Git does not include GCM. Install it once using Microsoft’s signed package:
 
@@ -273,7 +241,7 @@ git-credential-manager version
 git config --global credential.helper manager
 ```
 
-## 🐧 Linux
+### 🐧 Linux
 
 Many Linux distributions do not include GCM by default. Install it via your package manager or from the same GitHub releases page:
 
@@ -299,8 +267,6 @@ git config --global credential.helper manager
 
 You will see the repository page with command-line instructions.
 
----
-
 ### 4. Connect from VS Code or Terminal
 
 ```
@@ -315,8 +281,6 @@ git push -u origin main
 When you run the last command, Git opens a browser window asking you to sign in to GitHub.
 Once signed in, the push completes. No SSH keys or tokens required.
 Your credentials are stored securely and reused automatically.
-
----
 
 ::::::::::::::::::::: callout
 
