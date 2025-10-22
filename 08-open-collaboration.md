@@ -1,5 +1,5 @@
 ---
-title: Open software management & collaboration
+title: "Open software management & collaboration"
 teaching: 60
 exercises: 30
 ---
@@ -11,7 +11,6 @@ After completing this episode, participants should be able to:
 - Track issues with code in GitHub.
 - Use Git branches to work on code in parallel and merge code back using pull requests.
 - Apply issue tracking, branching and pull requests together to fix bugs while allowing other developers to work on the same code.
-
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::: questions 
