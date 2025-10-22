@@ -6,11 +6,11 @@ title: Setup
 
 Before starting the course, make sure you have the following tools installed and working:
 
-- [**Visual Studio Code (VS Code)**](installation-instructions.html#step-1--install-visual-studio-code) — your main workspace and terminal  
-- [**Git + Git Bash**](installation-instructions.html#step-2--install-git) — for version control and running commands  
-- [**Python 3 (via uv)**](installation-instructions.html#step-5--install-python-using-uv) — for running and managing code  
-- [**GitHub account**](installation-instructions.html#step-8--connect-to-github-simplified-setup) — for saving and sharing work  
-- [**Spacewalks data and example code**](installation-instructions.html#step-6--download-course-files) — used in the exercises
+- [Visual Studio Code (VS Code)](installation-instructions.html#step-1--install-visual-studio-code) — your main workspace and terminal
+- [Git + Git Bash](installation-instructions.html#step-2--install-git) — for version control and running commands 
+- [Python 3 (via uv)](installation-instructions.html#step-5--install-python-using-uv) — for running and managing code
+- [GitHub account](installation-instructions.html#step-8--connect-to-github-simplified-setup) — for saving and sharing work 
+- [Spacewalks data and example code](installation-instructions.html#step-6--download-course-files) — used in the exercises
 
 These steps work on **Windows, macOS, and Linux**.  
 Windows users will use **Git Bash inside VS Code** instead of PowerShell.
