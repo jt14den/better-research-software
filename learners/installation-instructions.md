@@ -1,5 +1,7 @@
 ---
 title: "Installation Instructions"
+teaching: 0
+exercises: 40
 ---
 
 :::::::::::::::::::::::::::::::::::::::::::: questions
